@@ -1,2 +1,0 @@
-- driving style estimation OR characterization OR detection OR monitoring 2023 fatto
-- driving behavior estimation OR characterization OR detection OR monitoring

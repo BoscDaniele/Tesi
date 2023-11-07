@@ -107,3 +107,4 @@ subplot(3,2,6);
 plot(t,-newAcc(:,3),LineWidth=1,Color="g");
 subtitle("Z", Color="g");
 
+%acc(1,:)=(0,0,g)*matriceDiRotazione

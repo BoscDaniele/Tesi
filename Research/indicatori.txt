@@ -1,0 +1,5 @@
+accelerazioni
+velocità
+cadenza
+movimento laterale
+azionecdel freno

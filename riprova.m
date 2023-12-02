@@ -71,20 +71,19 @@ lastMedia = newMedia*mRoty;
 % disp("  - media z: " + num2str(lastMedia(3)));
 
 %% Matrice di rotazione
-mRot=mRotX;
-% mRot=mRotX*mRoty;
+% mRot=mRotX;
+mRot=mRotX*mRoty;
 % mRot=mRotX*mRoty*[-1,0,0;0,-1,0;0,0,1];
 
 %% Accelerazione di prova
-
+g=norm(media)*1e-2;
 %import dati accelerazioni
 % % dbA=importdata("dbdm\BlueCoin_Log_N004.csv");
 % % acc=dbA.data(2:end,2:4);
 
 dbA=importdata("dbdm\nuovo\BlueCoin_Log_N001.csv");
-acc=dbA.data(2:end,2:4);
+acc=dbA.data(2:end,2:4)*g*1e-3;
 
-acc=acc./100;
 % acc=acc.*9.81/(sqrt(sum(newMedia.^2)));
 
 % acc=lowpass(acc,40,1e3);
@@ -100,10 +99,10 @@ newAcc=acc*mRot;
 % acc=newAcc;
 % newAcc=newAcc-newAccMean;
 
-angY=-real(acos(newAcc(:,3)/-9.81));
-for i=1:length(acc)
-    newAcc(i,:)=newAcc(i,:)*[cos(angY(i)), 0, sin(angY(i)); 0, 1, 0; -sin(angY(i)), 0, cos(angY(i))]*[-1,0,0;0,-1,0;0,0,1];
-end
+% angY=-real(acos(newAcc(:,3)/-9.81));
+% for i=1:length(acc)
+%     newAcc(i,:)=newAcc(i,:)*[cos(angY(i)), 0, sin(angY(i)); 0, 1, 0; -sin(angY(i)), 0, cos(angY(i))]*[-1,0,0;0,-1,0;0,0,1];
+% end
 
 newAcc=lowpass(newAcc,40,1e3);
 
@@ -140,7 +139,7 @@ subtitle("Z", Color="g");
 
 %% Calcolo velocità di prova
 
-vel=cumtrapz(t,newAcc);
+vel=cumsum(newAcc)*0.04;
 
 %plot
 figure(Name="Velocità assi ruotati")

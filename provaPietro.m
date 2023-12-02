@@ -33,7 +33,7 @@ db=importdata("dbdm\nuovo\BlueCoin_Log_N001.csv");
 %impostazioni
 inizio=2;
 fine=length(db.data);
-g=sqrt(sum(media.^2));
+g=sqrt(sum(media.^2))*1e-2;
 
 % proviamo a lasciare le accelerazioni così come sono, usando quindi un
 % sistema di riferimento solidale alla bicicletta
@@ -45,52 +45,53 @@ ang=db.data(inizio:fine,5:7)*2*pi/360*mRot*1e-3;
 t=db.data(inizio:fine,1)*1e-3;
 t=t-t(1);
 
-acc=lowpass(acc,40,1e3);
+acc=lowpass(acc,25,1e0);
+% acc=highpass(acc,1,1e3);
 ang=lowpass(ang,40,1e3);
 
-% figure(Name="Accelerazioni");
-% subplot(3,1,1);
-% plot(t,acc(:,1),LineWidth=1,Color="b");
-% grid
-% xlabel("s");
-% ylabel("m/s^2")
-% title("Accelerazioni");
-% subtitle("X");
-% subplot(3,1,2);
-% plot(t,acc(:,2),LineWidth=1,Color="r");
-% grid
-% xlabel("s");
-% ylabel("m/s^2")
-% subtitle("Y");
-% subplot(3,1,3);
-% plot(t,acc(:,3),LineWidth=1,Color="g");
-% grid
-% xlabel("s");
-% ylabel("m/s^2")
-% subtitle("Z");
+figure(Name="Accelerazioni");
+subplot(3,1,1);
+plot(t,acc(:,1),LineWidth=1,Color="r");
+grid
+xlabel("s");
+ylabel("m/s^2")
+title("Accelerazioni");
+subtitle("X");
+subplot(3,1,2);
+plot(t,acc(:,2),LineWidth=1,Color="g");
+grid
+xlabel("s");
+ylabel("m/s^2")
+subtitle("Y");
+subplot(3,1,3);
+plot(t,acc(:,3),LineWidth=1,Color="b");
+grid
+xlabel("s");
+ylabel("m/s^2")
+subtitle("Z");
 
-vel=cumtrapz(t,acc);
+vel=cumsum(acc)*0.04;
 
-% figure(Name="Velocità");
-% subplot(3,1,1);
-% plot(t,vel(:,1),LineWidth=1,Color="b");
-% grid
-% xlabel("s");
-% ylabel("m/s")
-% title("Velocità");
-% subtitle("X");
-% subplot(3,1,2);
-% plot(t,vel(:,2),LineWidth=1,Color="r");
-% grid
-% xlabel("s");
-% ylabel("m/s")
-% subtitle("Y");
-% subplot(3,1,3);
-% plot(t,vel(:,3),LineWidth=1,Color="g");
-% grid
-% xlabel("s");
-% ylabel("m/s")
-% subtitle("Z");
+figure(Name="Velocità");
+subplot(3,1,1);
+plot(t,vel(:,1),LineWidth=1,Color="r");
+grid
+xlabel("s");
+ylabel("m/s")
+title("Velocità");
+subtitle("X");
+subplot(3,1,2);
+plot(t,vel(:,2),LineWidth=1,Color="g");
+grid
+xlabel("s");
+ylabel("m/s")
+subtitle("Y");
+subplot(3,1,3);
+plot(t,vel(:,3),LineWidth=1,Color="b");
+grid
+xlabel("s");
+ylabel("m/s")
+subtitle("Z");
 
 theta=asin(-acc(:,1)/g);
 
@@ -103,50 +104,50 @@ phi1=phi1';
 phi2=phi2';
 
 for i=1:length(phi1)
-componenteg(i,:)=[-g*sin(theta(i)),g*cos(theta(i))*sin(phi1(i)),g*cos(theta(i))*cos(phi1(i))];
+    componenteg(i,:)=[-g*sin(theta(i)),g*cos(theta(i))*sin(phi1(i)),g*cos(theta(i))*cos(phi1(i))];
 end
 
 acc=acc+componenteg;
 
 figure(Name="Accelerazioni");
 subplot(3,1,1);
-plot(t,acc(:,1),LineWidth=1,Color="b");
+plot(t,acc(:,1),LineWidth=1,Color="r");
 grid
 xlabel("s");
 ylabel("m/s^2")
 title("Accelerazioni");
 subtitle("X");
 subplot(3,1,2);
-plot(t,acc(:,2),LineWidth=1,Color="r");
+plot(t,acc(:,2),LineWidth=1,Color="g");
 grid
 xlabel("s");
 ylabel("m/s^2")
 subtitle("Y");
 subplot(3,1,3);
-plot(t,acc(:,3),LineWidth=1,Color="g");
+plot(t,acc(:,3),LineWidth=1,Color="b");
 grid
 xlabel("s");
 ylabel("m/s^2")
 subtitle("Z");
 
-vel=cumtrapz(t,acc);
+vel=cumsum(acc)*0.04;
 
 figure(Name="Velocità");
 subplot(3,1,1);
-plot(t,vel(:,1),LineWidth=1,Color="b");
+plot(t,vel(:,1),LineWidth=1,Color="r");
 grid
 xlabel("s");
 ylabel("m/s")
 title("Velocità");
 subtitle("X");
 subplot(3,1,2);
-plot(t,vel(:,2),LineWidth=1,Color="r");
+plot(t,vel(:,2),LineWidth=1,Color="g");
 grid
 xlabel("s");
 ylabel("m/s")
 subtitle("Y");
 subplot(3,1,3);
-plot(t,vel(:,3),LineWidth=1,Color="g");
+plot(t,vel(:,3),LineWidth=1,Color="b");
 grid
 xlabel("s");
 ylabel("m/s")
@@ -163,16 +164,16 @@ orientation=eulerd(orientation,'XYZ','frame');
 
 figure(Name="orientation");
 subplot(3,1,1);
-plot(t,orientation(:,1),LineWidth=1,Color="b");
+plot(t,orientation(:,1),LineWidth=1,Color="r");
 grid
 title("orientation");
 subtitle("X");
 subplot(3,1,2);
-plot(t,orientation(:,2),LineWidth=1,Color="r");
+plot(t,orientation(:,2),LineWidth=1,Color="g");
 grid
 subtitle("Y");
 subplot(3,1,3);
-plot(t,orientation(:,3),LineWidth=1,Color="g");
+plot(t,orientation(:,3),LineWidth=1,Color="b");
 grid
 subtitle("Z");
 
@@ -185,16 +186,16 @@ subtitle("Z");
 
 figure(Name="angularVelocity");
 subplot(3,1,1);
-plot(t,angularVelocity(:,1),LineWidth=1,Color="b");
+plot(t,angularVelocity(:,1),LineWidth=1,Color="r");
 grid
 title("angularVelocity");
 subtitle("X");
 subplot(3,1,2);
-plot(t,angularVelocity(:,2),LineWidth=1,Color="r");
+plot(t,angularVelocity(:,2),LineWidth=1,Color="g");
 grid
 subtitle("Y");
 subplot(3,1,3);
-plot(t,angularVelocity(:,3),LineWidth=1,Color="g");
+plot(t,angularVelocity(:,3),LineWidth=1,Color="b");
 grid
 subtitle("Z");
 

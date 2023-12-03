@@ -93,7 +93,7 @@ xlabel("s");
 ylabel("m/s")
 subtitle("Z");
 
-theta=asin(-acc(:,1)/g);
+theta=asin(acc(:,1)/g);
 
 for i=1:fine-1
 phi1(i)=asin(acc(i,2)/(g*cos(theta(i))));

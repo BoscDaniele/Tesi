@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-dbg=importdata("dbdm\secchia\BlueCoin_Log_N001.csv");
+dbg=importdata("dbdm\portico\BlueCoin_Log_N000.csv");
 g=dbg.data(2+150:375,2:4);
 t=dbg.data(2+150:375,1)*1e-3;
 t=t-t(1);
@@ -41,7 +41,7 @@ mRoty=[cos(thetaXz),0,sin(thetaXz);0,1,0;-sin(thetaXz),0,cos(thetaXz)];
 
 mRot=mRotX*mRoty;
 
-gmedio*mRot
+% gmedio*mRot
 
 % lastgmedio=gmedio*mRot;
 % 
@@ -55,7 +55,7 @@ gmedio*mRot
 % plot3([0,0],[0,0],[-500,500],LineWidth=1,Color="b");
 
 %%
-db=importdata("dbdm\secchia\BlueCoin_Log_N001.csv");
+db=importdata("dbdm\portico\BlueCoin_Log_N007.csv");
 
 inizio=2;
 fine=length(db.data);
@@ -83,13 +83,37 @@ velR=cumsum(accr)*0.04;
 posR=cumsum(velR)*0.04;
 % angR=cumsum(vangr)*0.04;
 
-% plotta3(t,acc, "accelerazione")
-% plotta3(t,accr, "accelerazione ruotata");
+plotta3(t,acc, "accelerazione")
+plotta3(t,accr, "accelerazione ruotata");
 
-% plotta3(t,vang, "velocità angoli");
-% plotta3(t,ang, "angoli");
+plotta3(t,vang, "velocità angoli");
+plotta3(t,ang, "angoli");
 
 plotta3(t,accr,"accelerazione ruotata");
 plotta3(t,velR,"velocità ruotata");
 plotta3(t,posR,"posizione ruotata");
+
+% plotta3(25/fine*(0:fine-2),abs(fft(acc)),"fourier");
+
+% db=importdata("dbdm\provaAngoli\BlueCoin_Log_N003.csv");
+
+
+% acc=db.data(inizio:length(db.data),2:4)*-g*1e-3;
+% vang=db.data(inizio:length(db.data),5:7)*2*pi/360*1e-3;
+% t=db.data(inizio:length(db.data),1)*1e-3;
+% t=t-t(1);
+% 
+% acc=lowpass(acc,1,25);
+% vang=lowpass(vang,1,25);
+% 
+% FUSE=imufilter('SampleRate',25);
+% % t= (0:2:size(acc,1)-1)/25;
+% 
+% [orientation,angularVelocity] = FUSE(acc,vang);
+% orientation=euler(orientation,'XYZ','frame');
+% 
+% multiPlotta3(t,vang,angularVelocity, "vang","angularVelocity");
+% multiPlotta3(t, ang, orientation, "ang","orientation");
+
+
 

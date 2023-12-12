@@ -2,15 +2,31 @@ clear
 close all
 clc
 
+%% Rilevamento
 path="dbdm\salita-discesa\";
+rilievo=6;
+
 
 %% Sistema di riferimento sensore = sistema di riferimento bicicletta
 inizioG=1;
 fineG=inizioG+675;
-rilievo=1;
 
 db=importdata(path + "BlueCoin_Log_N00"+rilievo+".csv").data;
 [gRot,gMedio]=GRot(inizioG,fineG,db);
+
+% g=db(inizioG:fineG,2:4)*gRot;
+% gMediov=mean(g);
+% 
+% figure
+% plot3([0,gMediov(:,1)],[0,gMediov(:,2)],[0,gMediov(:,3)],LineWidth=1,Color="black");
+% hold on
+% grid
+% axis equal
+% plot3([-500,500],[0,0],[0,0],LineWidth=1,Color="r");
+% plot3([0,0],[-500,500],[0,0],LineWidth=1,Color="g");
+% plot3([0,0],[0,0],[-500,500],LineWidth=1,Color="b");
+
+
 
 %% Impostazioni
 inizio=1;
@@ -32,24 +48,37 @@ vel=cumsum(acc)*0.04;
 pos=cumsum(vel)*0.04;
 ang=cumsum(vang)*0.04;
 
-multiPlotta3(t,acc,vel,"accelerazione","velocità");
-multiPlotta3(t,vel,pos, "velocità","posizione");
-multiPlotta3(t,vang,ang,"velocità angolare", "angoli");
+% multiPlotta3(t,acc,vel,"accelerazione","velocità");
+% multiPlotta3(t,vel,pos, "velocità","posizione");
+% multiPlotta3(t,vang,ang,"velocità angolare", "angoli");
+
+vangr=vang*gRot;
+angr=cumsum(vangr)*0.04;
+
+% multiPlotta3(t,vang,vangr,"velocità angolare", "velocità angolare ruotata");
+multiPlotta3(t,ang,angr,"angoli", "angoli ruotati");
 
 
 %% Aggiusto l'orientamento della bicicletta con gli angoli calcolati
 
 for i=1:length(acc)
     mRot=RotMat(ang(i,:));
+    mRotR=RotMat(angr(i,:));
     accr(i,:)=acc(i,:)*mRot;
+    accrR(i,:)=acc(i,:)*mRotR;
 end
 
 velR=cumsum(accr)*0.04;
 posR=cumsum(velR)*0.04;
 
-multiPlotta3(t,acc,accr,"accelerazione","accelerazione ruotata");
-multiPlotta3(t,vel,velR, "velocità","velocità ruotata");
-multiPlotta3(t,pos,posR, "posizione","posizione ruotata");
+velRR=cumsum(accrR)*0.04;
+posRR=cumsum(velRR)*0.04;
+
+% multiPlotta3(t,acc,accr,"accelerazione","accelerazione ruotata");
+% multiPlotta3(t,vel,velR, "velocità","velocità ruotata");
+% multiPlotta3(t,pos,posR, "posizione","posizione ruotata");
+% multiPlotta3(t,pos,posRR, "posizione","posizione ruotata ruotata");
+% multiPlotta3(t,posR,posRR, "posizione ruotata","posizione ruotata ruotata");
 
 
 % %% Prova Pietro
@@ -88,25 +117,34 @@ multiPlotta3(t,pos,posR, "posizione","posizione ruotata");
 % multiPlotta3(t,vel,velR, "velocità","velocità ruotata");
 % multiPlotta3(t,pos,posR, "posizione","posizione ruotata");
 
-% %% Provo imufilter
-% 
-% acc=db(inizio:fine,2:4)*9.81/gMedio;
-% acc=lowpass(acc,1,25);
-% 
-% FUSE=ahrsfilter('SampleRate',25,OrientationFormat='Rotation matrix');
-% 
-% [orientation,angularVelocity] = FUSE(acc,vang);
-% % orientation=euler(orientation,'XYZ','frame');
-% 
-% multiPlotta3(t,vang,angularVelocity, "vang","angularVelocity");
-% % multiPlotta3(t, ang, orientation, "ang","orientation");
-% 
-% for i=1:length(acc)
-%     % mRot=RotMat(orientation(i,:));
-%     % imuAccr(i,:)=acc(i,:)*mRot;
-%     imuAccr(i,:)=acc(i,:)*orientation(:,:,i);
-% end
-% 
+%% Provo imufilter
+
+mag=db(inizio:fine,2:4)*gRot*1e-3;
+mag=lowpass(mag,1,25);
+
+FUSE=imufilter('SampleRate',25,'ReferenceFrame','ENU',OrientationFormat='Rotation matrix');
+
+[orientation,angularVelocity] = FUSE(acc,vangr);
+% orientation=euler(orientation,'XYZ','frame');
+
+% multiPlotta3(t,vangr,angularVelocity, "vangr","angularVelocity");
+% multiPlotta3(t, angr, orientation, "angr","orientation");
+
+for i=1:length(acc)
+    % mRot=RotMat(orientation(i,:));
+    % imuAccr(i,:)=acc(i,:)*mRot;
+
+    vangR(i,:)=orientation(:,:,i)*vangr(i,:)';
+
+    gravity=orientation(:,:,i)*[0;0;-9.81];
+    imuAccr(i,:)=acc(i,:)-gravity';
+end
+
+angR=cumsum(vangR)*0.04;
+
+% multiPlotta3(t,vangr,vangR,"vangr", "vangR");
+% multiPlotta3(t,angr,angR,"angr", "angR");
+
 % imuVelR=cumsum(imuAccr)*0.04;
 % imuPosR=cumsum(imuVelR)*0.04;
 % 
@@ -115,4 +153,15 @@ multiPlotta3(t,pos,posR, "posizione","posizione ruotata");
 % multiPlotta3(t,pos,imuPosR, "posizione","posizione imu ruotata");
 
 
+for i=1:length(imuAccr)
+    mRot=RotMat(-angR(i,:));
+    accr(i,:)=imuAccr(i,:)*mRot;
+end
 
+velR=cumsum(accr)*0.04;
+posR=cumsum(velR)*0.04;
+
+
+multiPlotta3(t,acc,accr,"accelerazione","accelerazione ruotata");
+multiPlotta3(t,vel,velR, "velocità","velocità ruotata");
+multiPlotta3(t,pos,posR, "posizione","posizione ruotata");

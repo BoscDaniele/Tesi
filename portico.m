@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-dbg=importdata("dbdm\portico\BlueCoin_Log_N000.csv");
+dbg=importdata("dbdm\portico\BlueCoin_Log_N001.csv");
 g=dbg.data(2+150:end-75,2:4);
 t=dbg.data(2+150:end-75,1)*1e-3;
 t=t-t(1);
@@ -53,7 +53,7 @@ mRot=mRotX*mRoty;
 % plot3([0,0],[0,0],[-500,500],LineWidth=1,Color="b");
 
 %%
-db1=importdata("dbdm\portico\BlueCoin_Log_N005.csv");
+db1=importdata("dbdm\portico\BlueCoin_Log_N007.csv");
 
 inizio=2;
 fine=length(db1.data);

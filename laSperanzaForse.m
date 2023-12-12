@@ -55,7 +55,7 @@ mRot=mRotX*mRoty;
 % plot3([0,0],[0,0],[-500,500],LineWidth=1,Color="b");
 
 %%
-db=importdata("dbdm\portico\BlueCoin_Log_N007.csv");
+db=importdata("dbdm\portico\BlueCoin_Log_N001.csv");
 
 inizio=2;
 fine=length(db.data);
@@ -86,11 +86,13 @@ posR=cumsum(velR)*0.04;
 plotta3(t,acc, "accelerazione")
 plotta3(t,accr, "accelerazione ruotata");
 
-plotta3(t,vang, "velocità angoli");
-plotta3(t,ang, "angoli");
+% plotta3(t,vang, "velocità angoli");
+% plotta3(t,ang, "angoli");
 
-plotta3(t,accr,"accelerazione ruotata");
+plotta3(t,vel,"velocità ruotata");
 plotta3(t,velR,"velocità ruotata");
+
+plotta3(t,pos,"posizione ruotata");
 plotta3(t,posR,"posizione ruotata");
 
 % plotta3(25/fine*(0:fine-2),abs(fft(acc)),"fourier");

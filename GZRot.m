@@ -22,6 +22,15 @@ gRot=mRotX*mRoty;
 
 gMedio=-norm(vettG);
 
+% figure
+% plot3([0, vettG(1)],[0, vettG(2)],[0, vettG(3)],LineWidth=1,Color="black");
+% hold on
+% grid
+% axis equal
+% plot3([-500,500],[0,0],[0,0],LineWidth=1,Color="r");
+% plot3([0,0],[-500,500],[0,0],LineWidth=1,Color="g");
+% plot3([0,0],[0,0],[-500,500],LineWidth=1,Color="b");
+
 
 %% Rotazione attorno all'asse z
 dbz=importdata(path + "BlueCoin_Log_N001.csv").data;
@@ -36,5 +45,14 @@ thetaxy=-acos(vettY(2)/modY);
 mRotz=[cos(thetaxy), -sin(thetaxy), 0; sin(thetaxy), cos(thetaxy), 0; 0, 0, 1];
 
 gzRot=gRot*mRotz;
+
+% figure
+% plot3([0, vettY(1)],[0, vettY(2)],[0, vettY(3)],LineWidth=1,Color="black");
+% hold on
+% grid
+% axis equal
+% plot3([-500,500],[0,0],[0,0],LineWidth=1,Color="r");
+% plot3([0,0],[-500,500],[0,0],LineWidth=1,Color="g");
+% plot3([0,0],[0,0],[-500,500],LineWidth=1,Color="b");
 
 end

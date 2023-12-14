@@ -2,22 +2,25 @@ clear
 close all
 clc
 
-% Questo nuovo approccio parte male... Le misure per resettare la gravità e
-% la rotazione attorno all'asse z non ci sono
-
 %% Rilevamento
-path="dbdm\nuovoApproccio\";
+path="dbdm\nuovoApproccio2\";
 
 % Questi rilievi sono sati fatti in fondo alla via secchia
-% rilievo 0: discesa
-% rilievo 1: salita
-% rilievo 2: discesa
-% rilievo 3: dalla via secchia alla via beita
-% rilievo 4: dalla via beita alla via secchia
-% rilievo 5: salita
-% rilievo 6: parte "piana" della via secchia
+% rilievo 0: vettore g
+% rilievo 1: angolo z
+% rilievo 2: secchia a scendere
+% da qui i dati vengono salvati una volta ogni quando gli pare al sensore
+% rilievo 3: salita
+% rilievo 4: discesa + frenata
+% rilievo 5: discesa + curva a "zig-zag"
+% rilievo 6: andata + ritorno secchia-gromlongo
+% rilievo 7: secchia a salire
 
-rilievo=4;
+rilievo=2;
+
+%% Sistema di riferimento sensore = sistema di riferimento bicicletta
+[gzRot,gMedio] = GZRot(path);
+
 
 %% Import + impostaioni
 db=importdata(path + "BlueCoin_Log_N00"+rilievo+".csv").data;
@@ -29,7 +32,14 @@ fine=length(db);
 t=db(inizio:fine,1)*1e-3;
 t=t-t(1);
 
-acc=db(inizio:fine,2:4);
+for i=2:length(t)
+    intervalloT(i)=t(i)-t(i-1);
+end
+
+disp("intervallo minimo di tempo: "+num2str(min(intervalloT(2:end))));
+disp("intervallo massimo di tempo: "+num2str(max(intervalloT(2:end))));
+
+acc=db(inizio:fine,2:4)*gzRot;
 vang=db(inizio:fine,5:7)*2*pi/360*1e-3;
 mag=db(inizio:fine,8:10)*1e-3;
 
@@ -39,16 +49,16 @@ vang=lowpass(vang,1,25);
 mag=lowpass(mag,1,25);
 
 %% Plot accelerazioni
-plotta3(t,acc,"accelerazioni");
+% plotta3(t,acc,"accelerazioni");
 
-movacc=movmean(acc,250);
-plotta3(t,movacc,"media mobile accelerazioni");
-
-newacc=acc-movacc;
-plotta3(t,newacc,"accelerazioni tolta la media mobile");
-
-newvel=cumsum(newacc)*0.04;
-plotta3(t,newvel,"velocità calcolata togliendo la media mobile dalle accelerazioni");
+% movacc=movmean(acc,250);
+% plotta3(t,movacc,"media mobile accelerazioni");
+% 
+% newacc=acc-movacc;
+% plotta3(t,newacc,"accelerazioni tolta la media mobile");
+% 
+% newvel=cumsum(newacc)*0.04;
+% plotta3(t,newvel,"velocità calcolata togliendo la media mobile dalle accelerazioni");
 
 % acc=newacc;
 
@@ -99,4 +109,3 @@ plotta3(t,newvel,"velocità calcolata togliendo la media mobile dalle accelerazi
 % multiPlotta3(t,acc,accr,"accelerazione","accelerazione ruotata");
 % multiPlotta3(t,vel,velR, "velocità","velocità ruotata");
 % multiPlotta3(t,pos,posR, "posizione","posizione ruotata");
-

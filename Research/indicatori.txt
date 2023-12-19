@@ -1,5 +1,5 @@
-accelerazioni
+accelerazione
 velocità
 cadenza
 movimento laterale
-azionecdel freno
+azione freno

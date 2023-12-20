@@ -2,8 +2,4 @@ accelerazione
 velocità
 cadenza
 movimento laterale
-<<<<<<< HEAD
 azione del freno
-=======
-azione freno
->>>>>>> 9b34854f1fac92adc493831a569a4dc1b41cfecf

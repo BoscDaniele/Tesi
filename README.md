@@ -43,7 +43,15 @@ Determinare lo stile di guida di una bicicletta (forte/aggresivo, piano/rilassat
       
       - Research: qui dentro metto gli articoli interessanti che trovo e il db degli articoli che potenzialmente possono essere interesanti ma che ancora non ho letto
 
-      - Gli altri file sono file Matlab (più o meno uno per ogni rilievo che ho fatto + alcune funzioni)
+      - GRot funzione matlab per calcolare la matrice di rotazione per portare l'accelerazione gravitazionale lungo l'asse z
+      - GZRot come sopra ma aggiusta anche la rotazione attorno all'asse z
+      
+      - plotta3 esegue il plot di una matrice n*3 (per esempio gli passi la matrice delle accelerazioni e lui ti stampa 3 grafici, uno per la x, uno per la y e uno per la z)
+      - multiPlotta3 come sopra ma stampa due matrici
+
+      - RotMat funzione che riceve in ingresso un vettore di angoli e restituisce la matrice di rotazione, al momento non so se sarà ancora utiile
+
+      - Gli altri file sono file Matlab (più o meno uno per ogni rilievo che ho fatto)
 ## Tech
 1. Matlab? si, in futuro anche simulink
 2. Python? no

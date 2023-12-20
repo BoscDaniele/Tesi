@@ -2,4 +2,4 @@ accelerazioni
 velocità
 cadenza
 movimento laterale
-azionecdel freno
+azione del freno

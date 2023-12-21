@@ -3,7 +3,7 @@ close all
 clc
 
 %% Rilevamento
-path="dbdm\pedalate\";
+path="..\dbdm\pedalate\";
 % path="dbdm\nuovoApproccio2\";
 
 % Questi rilievi sono sati fatti in fondo alla via beita con lo scopo di

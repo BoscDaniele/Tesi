@@ -38,20 +38,19 @@ Determinare lo stile di guida di una bicicletta (forte/aggresivo, piano/rilassat
 
 
 ## Procedure
- * Come si leggono sti file danny?!
-      - dbdm (DataBase Di/Della Merda): ogni cartella è una sequenza di letture (di solito la prima o le prime due servono per ruotare il sistema di riferimento del sensore al fine di farlo coincidere con quello della bicicletta), per ogni rilievo il sensore raccoglie dati con una frequenza di 25Hz (una sequenza di dati ogni 0.04s) finchè il sensore non decide diversamente (nuovoApproccio2), nella prima colonna abbiamo il tempo (per renderlo leggibile sottrai la prima misura a ogni altra), nelle colonne 2, 3 e 4 abbiamo le accelerazioni in x, y e z espresse in mg (millesimi di g, quindi, in teoria ma non nella pratica, 1000 corrisponde a g, cioè 9.81m/s^2), nelle colonne 5, 6 e 7 abbiamo le velocità angolari attorno agli assi x, y e z espresse in mdegree al secondo(degree: 360° corrisponde all'angolo giro, dato che la misura è in milli degree l'angolo giro sono 360000) dovrai fare la conversione in radianti ovvero moltiplicare per pi/180. Nelle altre colonne abbiamo le misure del magnetometro (di cui possiamo fare a meno al momento), della pressione e della temperatura (che non penso ci serviranno)
-      
-      - Research: qui dentro metto gli articoli interessanti che trovo e il db degli articoli che potenzialmente possono essere interesanti ma che ancora non ho letto
+   - dbdm: ogni cartella è una sequenza di letture (di solito la prima o le prime due servono per ruotare il sistema di riferimento del sensore al fine di farlo coincidere con quello della bicicletta), per ogni rilievo il sensore raccoglie dati con una frequenza di 25Hz (una sequenza di dati ogni 0.04s) finchè il sensore non decide diversamente (nuovoApproccio2), nella prima colonna abbiamo il tempo (per renderlo leggibile sottrai la prima misura a ogni altra), nelle colonne 2, 3 e 4 abbiamo le accelerazioni in x, y e z espresse in mg (millesimi di g, quindi, in teoria ma non nella pratica, 1000 corrisponde a g, cioè 9.81m/s^2), nelle colonne 5, 6 e 7 abbiamo le velocità angolari attorno agli assi x, y e z espresse in mdegree al secondo(degree: 360° corrisponde all'angolo giro, dato che la misura è in milli degree l'angolo giro sono 360000) dovrai fare la conversione in radianti ovvero moltiplicare per pi/180. Nelle altre colonne abbiamo le misure del magnetometro (di cui possiamo fare a meno al momento), della pressione e della temperatura (che non penso ci serviranno)
+   
+   - Research: qui dentro metto gli articoli interessanti che trovo e il db degli articoli che potenzialmente possono essere interesanti ma che ancora non ho letto
 
-      - GRot funzione matlab per calcolare la matrice di rotazione per portare l'accelerazione gravitazionale lungo l'asse z
-      - GZRot come sopra ma aggiusta anche la rotazione attorno all'asse z
-      
-      - plotta3 esegue il plot di una matrice n*3 (per esempio gli passi la matrice delle accelerazioni e lui ti stampa 3 grafici, uno per la x, uno per la y e uno per la z)
-      - multiPlotta3 come sopra ma stampa due matrici
+   - GRot funzione matlab per calcolare la matrice di rotazione per portare l'accelerazione gravitazionale lungo l'asse z
+   - GZRot come sopra ma aggiusta anche la rotazione attorno all'asse z
+   
+   - plotta3 esegue il plot di una matrice n*3 (per esempio gli passi la matrice delle accelerazioni e lui ti stampa 3 grafici, uno per la x, uno per la y e uno per la z)
+   - multiPlotta3 come sopra ma stampa due matrici
 
-      - RotMat funzione che riceve in ingresso un vettore di angoli e restituisce la matrice di rotazione, al momento non so se sarà ancora utiile
+   - RotMat funzione che riceve in ingresso un vettore di angoli e restituisce la matrice di rotazione, al momento non so se sarà ancora utiile
 
-      - Gli altri file sono file Matlab (più o meno uno per ogni rilievo che ho fatto)
+   - Gli altri file sono file Matlab (più o meno uno per ogni rilievo che ho fatto)
 ## Tech
 1. Matlab? si, in futuro anche simulink
 2. Python? no

@@ -4,21 +4,16 @@ clc
 
 %% Import dati
 
-% selezionare il database dalla quale caricare i dati
-path="dbdm\pedalate\";
-
-% in questa cartella ci sono 7 file (numerati da 0 a 6), i primi due
-% servono solo a orientare il sensore, negli altri sfortunatamente non
-% ricordo cosa ho fatto nello specifico (non ricordo in che ordine), ma
-% queste misure erano state prese con lo scolpo di verificare se in base
-% alla velocità cambiava la frequenza e l'ampiezza delle accelerazioni.
-% Sono state eseguite anche delle prove per vedere se il cambio dei
-% rapporti ("marcia") risultava visibile all'interno del grafico delle
-% accelerazioni (variazione frequenza e picco nell'ampiezza delle
-% oscillazioni). Purtroppo la presenza di un dosso rende le misure meno
-% affidabili.
+path="dbdm\palazzago\";
 
 % selezionare il rilievo da caricare
+% 0 - gravità
+% 1 - inclinazione
+% 2 - frenata leggera
+% 3 - frenata brusca con rimbalzo indietro
+% 4 - inchiodata
+% 5 - frenata brusca (3 frenate)
+% 6 - prevalentemente discesa, al centro non ho pedalato
 rilievo=6;
 
 % import dei dati
@@ -74,6 +69,8 @@ vang=vang*gzRot; % non ne sono sicuro che funzioni così ma sicuramente in qualc
 
 f = (0:length(acc)-1)*25/length(acc);
 
+
+% acc=highpass(acc,0.01,25);
 % Accelerazione
 accf=fft(acc);
 
@@ -87,7 +84,7 @@ accf=fft(acc);
 % title("trasformata discreta di fourier accelerazione in X");
 % xlabel("f (Hz)");
 % ylabel("|X''(f)|");
-%
+% 
 % % Y
 % % il picco visibile tra 0 e 2Hz potrebbe essere dovuto all'effetto delle
 % % pedalate
@@ -96,7 +93,7 @@ accf=fft(acc);
 % title("trasformata discreta di fourier accelerazione in Y");
 % xlabel("f (Hz)");
 % ylabel("|Y''(f)|");
-%
+% 
 % % Z
 % figure
 % plot(f,abs(accf(:,3)),LineWidth=1,Color="b");
@@ -131,11 +128,11 @@ vangf=fft(vang);
 
 %% Filtraggio dati
 sr=25; % frequenza di campionamento (sample rate) del sensore
-lp=5; % frequenza alla quale il filtro passa-basso esegue il taglio
-hp=1; % frequenza alla quale il filtro passa-alto esegue il taglio
+lp=1; % frequenza alla quale il filtro passa-basso esegue il taglio
+hp=0.01; % frequenza alla quale il filtro passa-alto esegue il taglio
 
 filteredAcc=lowpass(acc,lp,sr);
-% filteredAcc=highpass(filteredAcc,hp,sr);
+filteredAcc=highpass(filteredAcc,hp,sr);
 % multiPlotta3(t,acc,filteredAcc,"accelerazione","accelerazione filtrata");
 
 filteredVang=lowpass(vang,lp,sr);
@@ -143,60 +140,125 @@ filteredVang=highpass(filteredVang,hp,sr);
 % multiPlotta3(t,vang,filteredVang,"velocità angolare","velocità angolare filtrata");
 
 plotta3(t,filteredAcc,"accelerazione filtrata tra "+num2str(hp)+" e "+num2str(lp)+"Hz");
-% plotta3(t,filteredVang,"velocità angolare filtrata tra "+num2str(hp)+" e "+num2str(lp)+"Hz");
+plotta3(t,filteredVang,"velocità angolare filtrata tra "+num2str(hp)+" e "+num2str(lp)+"Hz");
+
+moveAcc=movmean(filteredAcc,[15,0]);
+plotta3(t,moveAcc,"media mobile accelerazione");
 
 
-% Nel caso l'ampiezza e la frequnza delle oscillazioni dovesse rivelarsi
-% utile (come penso) nel determinare la cadenza e "l'impegno" del ciclista
-% nel pedalare.
-% La cadenza potrebbe essere determinata valutando quando
-% l'accelerazione (una volta rimossa la componente non oscillante) passa
-% dall'essere positiva all'essere negativa.
-% L'impegno del ciclista (ampiezza delle oscillazioni) potrebbe essere
-% valutato tramite l'inviluppo (sequenza dei massimi)? Sarà possibile, nel
-% caso, farlo anche in real time?
 
 
-%% Cadenza
-cadenceX=zeros(length(acc),1);
-cadenceY=zeros(length(acc),1);
-tx1=1;
-tx2=0;
-ty1=1;
-ty2=0;
+% intervallo=30;
+% 
+% for i=1:ceil(fine/(25*intervallo))
+%     start=(i-1)*(25*intervallo)+1;
+%     if(i*(25*intervallo)-1>fine)
+%         final=fine;
+%     else
+%         final=i*(25*intervallo);
+%     end
+% 
+%    multiPlotta3(t(start:final),filteredAcc(start:final,:),filteredVang(start:final,:),"accelerazione da "+num2str(t(start))+"s a "+num2str(t(final))+"s","velocità angolare da "+num2str(t(start))+"s a "+num2str(t(final))+"s")
+% 
+% end
 
-for i=2:fine
-    if(filteredAcc(i-1,1)>=0 && filteredAcc(i,1)<0)
-        tx2=i;
-        cadenceX(i)=1/((tx2-tx1)*0.04);
-        tx1=i;
-        % disp("rotazione pedale completata in "+num2str(1/cadenceX(i))+"s");
-    end
 
-    if(filteredAcc(i-1,2)>=0 && filteredAcc(i,2)<0)
-        ty2=i;
-        cadenceY(i)=1/((ty2-ty1)*0.04);
-        ty1=i;
-        % disp("rotazione pedale completata in "+num2str(1/cadenceY(i))+"s");
-    end
-end
 
-for i=fine-1:-1:1
-    if(cadenceX(i)==0)
-        cadenceX(i)=cadenceX(i+1);
-    end
+vel=cumsum(acc)*0.04;
+pos=cumsum(vel)*0.04;
 
-    % if(cadenceY(i)==0)
-    %     cadenceY(i)=cadenceY(i+1);
-    % end
-end
+filteredVel=highpass(vel,hp,sr);
+filteredVel=lowpass(filteredVel,lp,sr);
 
-figure
-plot(t,cadenceX,LineWidth=1,Color="g");
-title("cadenza")
-hold on
-plot(t,filteredAcc(:,1)*9.81/-gMedio,LineWidth=1,Color="r");
-grid
-xlabel("t(s)");
-ylabel("rotazioni/s - m/s^2");
-legend("cadenza (rotazioni/s)", "accelerazione (m/s^2)")
+filteredPos=highpass(pos,hp,sr);
+filteredPos=lowpass(filteredPos,lp,sr);
+
+% plotta3(t,filteredVel,"filteredVel");
+% plotta3(t,filteredPos,"filteredPos");
+
+
+% %% Cadenza
+% cadenceX=zeros(length(acc),1);
+% cadenceY=zeros(length(acc),1);
+% tx1=1;
+% tx2=0;
+% ty1=1;
+% ty2=0;
+% 
+% for i=2:fine
+%     if(filteredAcc(i-1,1)>=0 && filteredAcc(i,1)<0)
+%         tx2=i;
+%         cadenceX(i)=1/((tx2-tx1)*0.04);
+%         tx1=i;
+%         % disp("rotazione pedale completata in "+num2str(1/cadenceX(i))+"s");
+%     end
+% 
+%     if(filteredAcc(i-1,2)>=0 && filteredAcc(i,2)<0)
+%         ty2=i;
+%         cadenceY(i)=1/((ty2-ty1)*0.04);
+%         ty1=i;
+%         % disp("rotazione pedale completata in "+num2str(1/cadenceY(i))+"s");
+%     end
+% end
+% 
+% for i=fine-1:-1:1
+%     if(cadenceX(i)==0)
+%         cadenceX(i)=cadenceX(i+1);
+%     end
+% 
+%     % if(cadenceY(i)==0)
+%     %     cadenceY(i)=cadenceY(i+1);
+%     % end
+% end
+% 
+% figure
+% plot(t,cadenceX,LineWidth=1,Color="g");
+% title("cadenza")
+% hold on
+% plot(t,filteredAcc(:,1)*9.81/-gMedio,LineWidth=1,Color="r");
+% grid
+% xlabel("t(s)");
+% ylabel("rotazioni/s - m/s^2");
+% legend("cadenza (rotazioni/s)", "accelerazione (m/s^2)")
+
+% %% Variazione della trasformata di fourier nel tempo (intervalli di 10s)
+% 
+% rilievo=6;
+% 
+% % import dei dati
+% db=importdata(path + "BlueCoin_Log_N00"+rilievo+".csv").data;
+% 
+% % selezione della porzione di dati da estrarre
+% inizio=1;
+% fine=length(db);
+% 
+% intervallo=30;
+% 
+% acc=acc*gzRot;
+% acc=highpass(acc,0.01,25);
+% vang=vang*gzRot;
+% 
+% for i=1:ceil(fine/(25*intervallo))
+%     start=(i-1)*(25*intervallo)+1;
+%     if(i*(25*intervallo)-1>fine)
+%         final=fine;
+%     else
+%         final=i*(25*intervallo);
+%     end
+% 
+%     f = (0:final-start)*25/(final-start);
+% 
+% 
+%     % figure
+%     % plot(t(start:final),acc(start:final,1),LineWidth=1,Color="r");
+% 
+%     facc=fft(acc(start:final,1));
+% 
+%     figure
+%     plot(f,abs(facc),LineWidth=1,Color="r");
+%     title("trasformata discreta di fourier accelerazione in X");
+%     xlabel("f (Hz)");
+%     ylabel("|X''(f)|");
+% 
+% end
+

@@ -128,7 +128,7 @@ vangf=fft(vang);
 
 %% Filtraggio dati
 sr=25; % frequenza di campionamento (sample rate) del sensore
-lp=1; % frequenza alla quale il filtro passa-basso esegue il taglio
+lp=5; % frequenza alla quale il filtro passa-basso esegue il taglio
 hp=0.01; % frequenza alla quale il filtro passa-alto esegue il taglio
 
 filteredAcc=lowpass(acc,lp,sr);

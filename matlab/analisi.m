@@ -5,7 +5,7 @@ clc
 %% Import dati
 
 % selezionare il database dalla quale caricare i dati
-path="dbdm\pedalate\";
+path="db\pedalate\";
 
 % in questa cartella ci sono 7 file (numerati da 0 a 6), i primi due
 % servono solo a orientare il sensore, negli altri sfortunatamente non

@@ -4,17 +4,17 @@ clc
 
 %% Import dati
 
-path="db\palazzago\";
+path="db\palazzago2\";
 
 % selezionare il rilievo da caricare
 % 0 - gravità
 % 1 - inclinazione
-% 2 - frenata leggera
-% 3 - frenata brusca con rimbalzo indietro
-% 4 - inchiodata
-% 5 - frenata brusca (3 frenate)
-% 6 - prevalentemente discesa, al centro non ho pedalato
-rilievo=6;
+% 2 - discesa + curve + alla fine salita
+% 3 - frenata posteriore
+% 4 - frenata anteriore
+% 5 - percorso misto (leggera discesa + rotonda + leggera salita)
+% 6 - discesa + molta salita
+rilievo=5;
 
 % import dei dati
 db=importdata(path + "BlueCoin_Log_N00"+rilievo+".csv").data;
@@ -58,7 +58,7 @@ vang=db(inizio:fine,5:7)*2*pi/360*1e-3;
 
 % rotazione vettori
 acc=acc*gzRot;
-% plotta3(t,acc,"accelerazioni ruotate");
+plotta3(t,acc,"accelerazioni ruotate");
 
 vang=vang*gzRot; % non ne sono sicuro che funzioni così ma sicuramente in qualche modo vanno ruotati anche loro
 % plotta3(t,vang,"velocità angolari ruotate");
@@ -105,14 +105,14 @@ vangf=fft(vang);
 % title("trasformata discreta di fourier Roll'");
 % xlabel("f (Hz)");
 % ylabel("|Roll'(f)|");
-%
+% 
 % % Pitch (rotazione attorno a y)
 % figure
 % plot(f,abs(vangf(:,2)),LineWidth=1,Color="g");
 % title("trasformata discreta di fourier Pitch'");
 % xlabel("f (Hz)");
 % ylabel("|Pitch'(f)|");
-%
+% 
 % % Yaw (rotazione attorno a z)
 % figure
 % plot(f,abs(vangf(:,3)),LineWidth=1,Color="b");
@@ -134,9 +134,9 @@ filteredVang=highpass(filteredVang,hp,sr);
 % multiPlotta3(t,vang,filteredVang,"velocità angolare","velocità angolare filtrata");
 
 plotta3(t,filteredAcc,"accelerazione filtrata tra "+num2str(hp)+" e "+num2str(lp)+"Hz");
-plotta3(t,filteredVang,"velocità angolare filtrata tra "+num2str(hp)+" e "+num2str(lp)+"Hz");
+% plotta3(t,filteredVang,"velocità angolare filtrata tra "+num2str(hp)+" e "+num2str(lp)+"Hz");
 
-moveAcc=movmean(filteredAcc,[15,0]);
+moveAcc=movmean(filteredAcc,[25,0]);
 plotta3(t,moveAcc,"media mobile accelerazione");
 
 

@@ -165,3 +165,4 @@ plotta3(t,filteredVang2,"velocità angolare filtrata tra "+num2str(hp2)+" e "+nu
 
 moveAcc=movmean(filteredAcc2,[15,0]);
 plotta3(t,moveAcc,"media mobile accelerazione");
+

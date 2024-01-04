@@ -12,17 +12,17 @@ rForte=7; % rilievo pedalata forte
 dbp=importdata(path + "BlueCoin_Log_N00"+rPiano+".csv").data;
 dbf=importdata(path + "BlueCoin_Log_N00"+rForte+".csv").data;
 
-% inizioP=20*25;
-% fineP=length(dbp)-20*25;
+inizioP=20*25;
+fineP=length(dbp)-20*25;
+
+inizioF=10*25;
+fineF=length(dbf)-10*25;
+
+% inizioP=1;
+% fineP=length(dbp);
 % 
-% inizioF=10*25;
-% fineF=length(dbf)-10*25;
-
-inizioP=1;
-fineP=length(dbp);
-
-inizioF=1;
-fineF=length(dbf);
+% inizioF=1;
+% fineF=length(dbf);
 
 
 tempoP=dbp(inizioP:fineP)*1e-3;
@@ -36,101 +36,15 @@ tempoF=tempoF-tempoF(1);
 accelerazioneP=dbp(inizioP:fineP,2:4)*gzRot;
 accelerazioneF=dbf(inizioF:fineF,2:4)*gzRot;
 
-figure
-subplot(3,2,1)
-plot(tempoP,accelerazioneP(:,1),LineWidth=1,Color="r");
-title("Accelerazione Tranquila")
-subtitle("X")
-grid
-xlabel("t(s)");
-ylabel("acc(mg)");
+StampaAcc(tempoP,tempoF,accelerazioneP,accelerazioneF,"Accelerazione","Accelerazione Tranquila","Accelerazione Forte")
 
-subplot(3,2,3)
-plot(tempoP,accelerazioneP(:,2),LineWidth=1,Color="g");
-subtitle("Y")
-grid
-xlabel("t(s)");
-ylabel("acc(mg)");
-
-subplot(3,2,5)
-plot(tempoP,accelerazioneP(:,3),LineWidth=1,Color="b");
-subtitle("Z")
-grid
-xlabel("t(s)");
-ylabel("acc(mg)");
-
-
-subplot(3,2,2)
-plot(tempoF,accelerazioneF(:,1),LineWidth=1,Color="r");
-title("Accelerazione Forte")
-subtitle("X")
-grid
-xlabel("t(s)");
-ylabel("acc(mg)");
-
-subplot(3,2,4)
-plot(tempoF,accelerazioneF(:,2),LineWidth=1,Color="g");
-subtitle("Y")
-grid
-xlabel("t(s)");
-ylabel("acc(mg)");
-
-subplot(3,2,6)
-plot(tempoF,accelerazioneF(:,3),LineWidth=1,Color="b");
-subtitle("Z")
-grid
-xlabel("t(s)");
-ylabel("acc(mg)");
 
 % estrazione dati giroscopio e conversione in rad/s
 vAngolareP=dbp(inizioP:fineP,5:7)*2*pi/360*1e-3;
 vAngolareF=dbf(inizioF:fineF,5:7)*2*pi/360*1e-3;
 
-% figure
-% subplot(3,2,1)
-% plot(tempoP,vAngolareP(:,1),LineWidth=1,Color="r");
-% title("Velocità Angolare Tranquila")
-% subtitle("Roll")
-% grid
-% xlabel("t(s)");
-% ylabel("r'(rad/s)");
-% 
-% subplot(3,2,3)
-% plot(tempoP,vAngolareP(:,2),LineWidth=1,Color="g");
-% subtitle("Pitch")
-% grid
-% xlabel("t(s)");
-% ylabel("p'(rad/s)");
-% 
-% subplot(3,2,5)
-% plot(tempoP,vAngolareP(:,3),LineWidth=1,Color="b");
-% subtitle("Yaw")
-% grid
-% xlabel("t(s)");
-% ylabel("y'(rad/s)");
-% 
-% 
-% subplot(3,2,2)
-% plot(tempoF,vAngolareF(:,1),LineWidth=1,Color="r");
-% title("Velocità Angolare Forte")
-% subtitle("Roll")
-% grid
-% xlabel("t(s)");
-% ylabel("r'(rad/s)");
-% 
-% subplot(3,2,4)
-% plot(tempoF,vAngolareF(:,2),LineWidth=1,Color="g");
-% subtitle("Pitch")
-% grid
-% xlabel("t(s)");
-% ylabel("p'(rad/s)");
-% 
-% subplot(3,2,6)
-% plot(tempoF,vAngolareF(:,3),LineWidth=1,Color="b");
-% subtitle("Yaw")
-% grid
-% xlabel("t(s)");
-% ylabel("y'(rad/s)");
+% StampaVang(tempoP,tempoF,vAngolareP,vAngolareF,"Velocità Angolare","Velocità Angolare Tranquila","Velocità Angolare Forte")
+
 
 %% Trasformata Discreta di Fourier
 % Trasformata Accelerazione
@@ -140,104 +54,91 @@ freqForte=(0:length(tempoF)-1)*25/length(tempoF);
 TrasfAccPiano=fft(accelerazioneP);
 TrasfAccForte=fft(accelerazioneF);
 
-figure
-subplot(3,2,1)
-plot(freqPiano,abs(TrasfAccPiano(:,1)),LineWidth=1,Color="r");
-title("Trasformata Accelerazione Tranquila")
-subtitle("X")
-grid
-xlabel("f(Hz)");
-ylabel("|X''(f)|");
-
-subplot(3,2,3)
-plot(freqPiano,abs(TrasfAccPiano(:,2)),LineWidth=1,Color="g");
-subtitle("Y")
-grid
-xlabel("f(Hz)");
-ylabel("|Y''(f)|");
-
-subplot(3,2,5)
-plot(freqPiano,abs(TrasfAccPiano(:,3)),LineWidth=1,Color="b");
-subtitle("Z")
-grid
-xlabel("f(Hz)");
-ylabel("|Z''(f)|");
-
-
-subplot(3,2,2)
-plot(freqForte,abs(TrasfAccForte(:,1)),LineWidth=1,Color="r");
-title("Trasformata Accelerazione Forte")
-subtitle("X")
-grid
-xlabel("f(Hz)");
-ylabel("|X''(f)|");
-
-subplot(3,2,4)
-plot(freqForte,abs(TrasfAccForte(:,2)),LineWidth=1,Color="g");
-subtitle("Y")
-grid
-xlabel("f(Hz)");
-ylabel("|Y''(f)|");
-
-subplot(3,2,6)
-plot(freqForte,abs(TrasfAccForte(:,3)),LineWidth=1,Color="b");
-subtitle("Z")
-grid
-xlabel("f(Hz)");
-ylabel("|Z''(f)|");
+StampaFreqAcc(freqPiano,freqForte,abs(TrasfAccPiano),abs(TrasfAccForte),"Trasformata Accelerazione","Trasformata Accelerazione Tranquila","Trasformata Accelerazione Forte")
 
 
 % Trasformmata Velocità Angolare
 TrasfVAngPiano=fft(vAngolareP);
 TrasfVAngForte=fft(vAngolareF);
 
-figure
+% StampaFreqVAng(freqPiano,freqForte,abs(TrasfVAngPiano),abs(TrasfVAngForte),"Trasformata Velocità Angolare","Trasformata Velocità Angolare Tranquila","Trasformata Velocità Angolare Forte")
+
+
+%% Accelerazione Filtrata
+sr = 25;
+
+% da 0 a 1Hz
+lowFreq_lp=1;
+lowFreqAccP=lowpass(accelerazioneP,lowFreq_lp,sr);
+lowFreqAccF=lowpass(accelerazioneF,lowFreq_lp,sr);
+
+StampaAcc(tempoP,tempoF,lowFreqAccP,lowFreqAccF,"Accelerazione Filtrata","Accelerazione Tranquila Filtrata","Accelerazione Forte Filtrata")
+
+
+
+%% Funzioni
+function Stampa(x1,x2,y1,y2,nome,titolo1,titolo2,sottotitolo,etichettaX,etichettaY)
+
+figure(Name=nome)
 subplot(3,2,1)
-plot(freqPiano,abs(TrasfVAngPiano(:,1)),LineWidth=1,Color="r");
-title("Trasformata Accelerazione Tranquila")
-subtitle("Roll")
+plot(x1,y1(:,1),LineWidth=1,Color="r");
+title(titolo1)
+subtitle(sottotitolo(1))
 grid
-xlabel("f(Hz)");
-ylabel("|r'(f)|");
+xlabel(etichettaX);
+ylabel(etichettaY(1));
 
 subplot(3,2,3)
-plot(freqPiano,abs(TrasfVAngPiano(:,2)),LineWidth=1,Color="g");
-subtitle("Pitch")
+plot(x1,y1(:,2),LineWidth=1,Color="g");
+subtitle(sottotitolo(2))
 grid
-xlabel("f(Hz)");
-ylabel("|p'(f)|");
+xlabel(etichettaX);
+ylabel(etichettaY(2));
 
 subplot(3,2,5)
-plot(freqPiano,abs(TrasfVAngPiano(:,3)),LineWidth=1,Color="b");
-subtitle("Yaw")
+plot(x1,y1(:,3),LineWidth=1,Color="b");
+subtitle(sottotitolo(3))
 grid
-xlabel("f(Hz)");
-ylabel("|y'(f)|");
+xlabel(etichettaX);
+ylabel(etichettaY(3));
 
 
 subplot(3,2,2)
-plot(freqForte,abs(TrasfVAngForte(:,1)),LineWidth=1,Color="r");
-title("Trasformata Accelerazione Forte")
-subtitle("Roll")
+plot(x2,y2(:,1),LineWidth=1,Color="r");
+title(titolo2)
+subtitle(sottotitolo(1))
 grid
-xlabel("f(Hz)");
-ylabel("|r'(f)|");
+xlabel(etichettaX);
+ylabel(etichettaY(1));
 
 subplot(3,2,4)
-plot(freqForte,abs(TrasfVAngForte(:,2)),LineWidth=1,Color="g");
-subtitle("Pitch")
+plot(x2,y2(:,2),LineWidth=1,Color="g");
+subtitle(sottotitolo(2))
 grid
-xlabel("f(Hz)");
-ylabel("|p'(f)|");
+xlabel(etichettaX);
+ylabel(etichettaY(2));
 
 subplot(3,2,6)
-plot(freqForte,abs(TrasfVAngForte(:,3)),LineWidth=1,Color="b");
-subtitle("Yaw")
+plot(x2,y2(:,3),LineWidth=1,Color="b");
+subtitle(sottotitolo(3))
 grid
-xlabel("f(Hz)");
-ylabel("|y'(f)|");
+xlabel(etichettaX);
+ylabel(etichettaY(3));
 
+end
 
+function StampaAcc(x1,x2,y1,y2,nome,titolo1,titolo2)
+Stampa(x1,x2,y1,y2,nome,titolo1,titolo2,["X","Y","Z"],"t(s)",["acc(mg)","acc(mg)","acc(mg)"])
+end
 
+function StampaVang(x1,x2,y1,y2,nome,titolo1,titolo2)
+Stampa(x1,x2,y1,y2,nome,titolo1,titolo2,["Roll","Pitch","Yaw"],"t(s)",["r'(rad/s)","p'(rad/s)","y'(rad/s)"])
+end
 
+function StampaFreqAcc(x1,x2,y1,y2,nome,titolo1,titolo2)
+Stampa(x1,x2,y1,y2,nome,titolo1,titolo2,["X","Y","Z"],"f(Hz)",["|X''(f)|","|Y''(f)|","|Z''(f)|"])
+end
 
+function StampaFreqVAng(x1,x2,y1,y2,nome,titolo1,titolo2)
+Stampa(x1,x2,y1,y2,nome,titolo1,titolo2,["Roll","Pitch","Yaw"],"f(Hz)",["|r'(f)|","|p'(f)|","|y'(f)|"])
+end

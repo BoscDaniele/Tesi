@@ -2,8 +2,11 @@ clear
 close all
 clc
 
+%Questo script serve per controllare che il tempo di campionamento dei
+%rilevamenti fatti durante un'uscita sia effettivamente di 0.04s, cosa, a
+%quanto pare, non scontata
 
-path="db\secchia\";
+path="..\db\secchia\";
 nRilievi=8;
 
 for i=0:nRilievi-1

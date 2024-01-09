@@ -4,7 +4,7 @@ clc
 
 %% Import dati
 
-path="db\secchia\";
+path="..\db\secchia\";
 
 % selezionare il rilievo da caricare
 % 0 - gravità

@@ -4,7 +4,7 @@ clc
 
 %% Import dati
 
-path="db\palazzago2\";
+path="..\db\palazzago2\";
 
 % selezionare il rilievo da caricare
 % 0 - gravità

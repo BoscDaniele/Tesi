@@ -4,7 +4,6 @@ Determinare lo stile di guida di una bicicletta (forte/aggresivo, piano/rilassat
 ## Target
 1. Dare uno stabilizzatore? ?
 2. Capire lo stato attuale del conducente che possono essere
-3. tutto ciò che segue è frutto di ipotesi, molte cose sono da verificare
    1. Fermo: accelerazione lungo l'asse x(asse direzione moto) pari a "zero" accelerazione gravitazionale distribuita lungo gli assi y e z (il peso viene spostato su una gamba, la bicicletta si inclina e così anche il sensore)
    2. Accelerazione:
       * Accelerometro

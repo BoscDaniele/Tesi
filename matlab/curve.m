@@ -3,7 +3,7 @@ close all
 clc
 
 %% Import dati
-
+sr=25;
 path="db\secchia\";
 [gzRot,gMedio] = GZRot(path);
 
@@ -51,7 +51,7 @@ vel=cumsum(acc)*0.04;
 StampaVel(t,vel,"Velocità","Velocità")
 
 %% Velocità Angolare
-vang=db(inizio:fine,5:7)*gzRot*2*pi/360*1e-3;
+vang=deg2rad(db(inizio:fine,5:7)*1e-3);
 StampaVang(t,vang,"Velocità Angolare","Velocità Angolare")
 
 m_vang=movmean(vang,25);
@@ -60,10 +60,94 @@ StampaVang(t,m_vang,"Velocità Angolare Media","Velocità Angolare Media")
 
 %% Angoli
 ang=cumsum(vang)*0.04;
-StampaPos(t,ang,"Posizione Angolare","Posizione Angolare")
+StampaPos(t,ang,"Integrale Velocità Angolare","Integrale Velocità Angolare")
 
 m_ang=movmean(ang,25);
-StampaAng(t,m_ang,"Posizione Angolare Media","Posizione Angolare Media")
+StampaAng(t,m_ang,"Integrale Velocità Angolare Media","Integrale Velocità Angolare Media")
+
+%% Prova DFT
+% N=length(vang);
+% vang_f=fft(vang);
+% f=(0:N-1)*25/N;
+% StampaFreqVAng(f,abs(vang_f.^2)/N,"dft vang","Trasformata Discreta di Fourier della Velocità Angolare")
+% 
+% StampaVang(t,vang,"vang","vang")
+% 
+% vang_filtrata=lowpass(vang,3,25);
+% StampaVang(t,vang_filtrata,"vang_filtrata","vang_filtrata")
+% 
+% ang_filtrato=cumsum(vang_filtrata)*0.04;
+% StampaAng(t,ang_filtrato,"ang_filtrato","ang_filtrato")
+
+
+
+%% Prova: elimino le variazioni troppo piccole della velocità angolare
+% StampaAng(t,ang,"Angolo","Angolo")
+% 
+% diffAng=ang;
+% newAng=ang;
+% newAng(1,:)=[0,0,0];
+% for i=2:length(vang)
+%     diffAng(i,:)=(ang(i,:)+ang(i-1,:))/2;
+% 
+%     if(abs(diffAng(i,1)) <= 0.09)
+%         newAng(i,1)=0;
+%     end
+% 
+%     if(abs(diffAng(i,2)) <= 0.09)
+%         newAng(i,2)=0;
+%     end
+% 
+%     if(abs(diffAng(i,3)) <= 0.09)
+%         newAng(i,3)=0;
+%     end
+% end
+% StampaAng(t,newAng,"Angolo Nuovo","Angolo Nuovo")
+
+
+%% AHRS Filter
+acc=db(inizio:fine,2:4)*9.81/-gMedio;
+vang=deg2rad(db(inizio:fine,5:7)*1e-3);
+
+% Nel codice del sensore il campo magnetico rispetto all'asse y viene preso
+% invertito
+mag=([db(inizio:fine,8),-db(inizio:fine,9),db(inizio:fine,10)]*1e-1);
+
+fuse = ahrsfilter('SampleRate',sr,'OrientationFormat','quaternion', ...
+    'ReferenceFrame','NED');
+% fuse.LinearAccelerationNoise=1e-1;
+% fuse.GyroscopeDriftNoise=1e-1;
+% reset(fuse);
+
+[orientation,angularVelocity] = fuse(acc,vang,mag);
+
+StampaVang(t,angularVelocity,"angularVelocity","angularVelocity")
+StampaAng(t,flip(rad2deg(unwrap(euler(orientation,"ZYX","frame"))),2),"Orientamento","Orientamento");
+
+
+integrale_angularVelocity=cumsum(angularVelocity)*0.04;
+
+StampaAng(t,integrale_angularVelocity,"Integrale angularVelocity","Integrale angularVelocity")
+
+
+%% Prisma che ruota
+% figure
+% pp=poseplot;
+% timestamp = text(2,2,-2,num2str(t(1)));
+% xlabel('North')
+% ylabel('East')
+% for i=1:length(orientation)
+%     tic
+%     % q=fuse(acc(i,:),vang(i,:),mag(i,:));
+%     q = orientation(i);
+%     set(pp,"Orientation",q);
+%     set(timestamp,"String",num2str(t(i)))
+%     drawnow
+%     pause(1/(sr*2)-toc)
+% end
+
+
+
 
 
 %% Funzioni
@@ -109,13 +193,13 @@ Stampa(x,y,nome,titolo,["Roll","Pitch","Yaw"],"t(s)",["r'(rad/s)","p'(rad/s)","y
 end
 
 function StampaAng(x,y,nome,titolo)
-Stampa(x,y,nome,titolo,["Roll","Pitch","Yaw"],"t(s)",["r(rad/s)","p(rad/s)","y(rad/s)"])
+Stampa(x,y,nome,titolo,["Roll","Pitch","Yaw"],"t(s)",["r(rad)","p(rad)","y(rad)"])
 end
 
 function StampaFreqAcc(x,y,nome,titolo)
 Stampa(x,y,nome,titolo,["X","Y","Z"],"f(Hz)",["|X''(f)|","|Y''(f)|","|Z''(f)|"])
 end
 
-function StampaFreqVAng(x,y,nome,titolo)
+function StampaFreqVang(x,y,nome,titolo)
 Stampa(x,y,nome,titolo,["Roll","Pitch","Yaw"],"f(Hz)",["|r'(f)|","|p'(f)|","|y'(f)|"])
 end

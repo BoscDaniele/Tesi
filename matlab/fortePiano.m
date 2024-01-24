@@ -56,6 +56,12 @@ TrasfAccForte=fft(accelerazioneF);
 StampaFreqAcc(freqPiano,freqForte,abs(TrasfAccPiano),abs(TrasfAccForte),"Trasformata Accelerazione","Trasformata Accelerazione Tranquila","Trasformata Accelerazione Forte")
 
 
+%% Spettro di Potenza
+spettroPiano=(abs(TrasfAccPiano).^2)/length(accelerazioneP);
+spettroForte=(abs(TrasfAccForte).^2)/length(accelerazioneF);
+
+StampaSpettroAcc(freqPiano,freqForte,spettroPiano,spettroForte,"Spettro di Potenza Accelerazione","Spettro di Potenza Accelerazione Tranquila","Spettro di Potenza Accelerazione Forte")
+
 %% Accelerazione Filtrata
 sr = 25;
 
@@ -286,6 +292,10 @@ end
 
 function StampaFreqAcc(x1,x2,y1,y2,nome,titolo1,titolo2)
 Stampa(x1,x2,y1,y2,nome,titolo1,titolo2,["X","Y","Z"],"f(Hz)",["|X''(f)|","|Y''(f)|","|Z''(f)|"])
+end
+
+function StampaSpettroAcc(x1,x2,y1,y2,nome,titolo1,titolo2)
+Stampa(x1,x2,y1,y2,nome,titolo1,titolo2,["X","Y","Z"],"f(Hz)",["|X''(f)|^2/N","|Y''(f)|^2/N","|Z''(f)|^2/N"])
 end
 
 function StampaFreqVAng(x1,x2,y1,y2,nome,titolo1,titolo2)

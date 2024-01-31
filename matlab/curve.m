@@ -65,7 +65,7 @@ StampaPos(t,ang,"Integrale Velocità Angolare","Integrale Velocità Angolare")
 m_ang=movmean(ang,25);
 StampaAng(t,m_ang,"Integrale Velocità Angolare Media","Integrale Velocità Angolare Media")
 
-%% Prova DFT
+% %% Prova DFT
 % N=length(vang);
 % vang_f=fft(vang);
 % f=(0:N-1)*25/N;
@@ -81,7 +81,7 @@ StampaAng(t,m_ang,"Integrale Velocità Angolare Media","Integrale Velocità Ango
 
 
 
-%% Prova: elimino le variazioni troppo piccole della velocità angolare
+% %% Prova: elimino le variazioni troppo piccole della velocità angolare
 % StampaAng(t,ang,"Angolo","Angolo")
 % 
 % diffAng=ang;
@@ -130,7 +130,7 @@ integrale_angularVelocity=cumsum(angularVelocity)*0.04;
 StampaAng(t,integrale_angularVelocity,"Integrale angularVelocity","Integrale angularVelocity")
 
 
-%% Prisma che ruota
+% %% Prisma che ruota
 % figure
 % pp=poseplot;
 % timestamp = text(2,2,-2,num2str(t(1)));

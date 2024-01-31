@@ -29,6 +29,7 @@ t=t-t(1);
 
 % controllo il tempo di campionamento
 % normalmente è di 0.04s ma è capitato che così non fosse
+intervalloT=zeros(length(t),1);
 for i=2:length(t)
     intervalloT(i)=t(i)-t(i-1);
 end

@@ -147,38 +147,38 @@ angF=cumsum(vAngolareF)*0.04;
 StampaAng(tempoP,tempoF,angP,angF,"Integrale Velocità Angolare","Integrale Velocità Angolare Tranquilla","Integrale Velocità Angolare Forte")
 
 
-%% AHRS Filter
-accelerazioneP=dbp(inizioP:fineP,2:4)*9.81/-gMedio;
-accelerazioneF=dbf(inizioF:fineF,2:4)*9.81/-gMedio;
+% %% AHRS Filter
+% accelerazioneP=dbp(inizioP:fineP,2:4)*9.81/-gMedio;
+% accelerazioneF=dbf(inizioF:fineF,2:4)*9.81/-gMedio;
+% 
+% vAngolareP=deg2rad(dbp(inizioP:fineP,5:7)*1e-3);
+% vAngolareF=deg2rad(dbf(inizioF:fineF,5:7)*1e-3);
+% 
+% % Nel codice del sensore il campo magnetico rispetto all'asse y viene preso
+% % invertito
+% magP=([dbp(inizioP:fineP,8),-dbp(inizioP:fineP,9),dbp(inizioP:fineP,10)]*1e-1);
+% magF=([dbf(inizioF:fineF,8),-dbf(inizioF:fineF,9),dbf(inizioF:fineF,10)]*1e-1);
+% 
+% fuse = ahrsfilter('SampleRate',sr,'OrientationFormat','quaternion', ...
+%     'ReferenceFrame','NED');
+% % fuse.LinearAccelerationNoise=1e-1;
+% % fuse.GyroscopeDriftNoise=1e-1;
+% % reset(fuse);
+% 
+% [orientationP,angularVelocityP] = fuse(accelerazioneP,vAngolareP,magP);
+% [orientationF,angularVelocityF] = fuse(accelerazioneF,vAngolareF,magF);
+% 
+% StampaVang(tempoP,tempoF,angularVelocityP,angularVelocityF,"angularVelocity","angularVelocityP","angularVelocityF")
+% StampaAng(tempoP,tempoF,flip(rad2deg(unwrap(euler(orientationP,"ZYX","frame"))),2),flip(rad2deg(unwrap(euler(orientationF,"ZYX","frame"))),2),"Orientamento","Orientamento Tranquillo","Orientamento Forte");
+% 
+% 
+% integrale_angularVelocityP=cumsum(angularVelocityP)*0.04;
+% integrale_angularVelocityF=cumsum(angularVelocityF)*0.04;
+% 
+% StampaAng(tempoP,tempoF,integrale_angularVelocityP,integrale_angularVelocityF,"Integrale angularVelocity","Integrale angularVelocity Tranquilla","Integrale angularVelocity Forte")
 
-vAngolareP=deg2rad(dbp(inizioP:fineP,5:7)*1e-3);
-vAngolareF=deg2rad(dbf(inizioF:fineF,5:7)*1e-3);
 
-% Nel codice del sensore il campo magnetico rispetto all'asse y viene preso
-% invertito
-magP=([dbp(inizioP:fineP,8),-dbp(inizioP:fineP,9),dbp(inizioP:fineP,10)]*1e-1);
-magF=([dbf(inizioF:fineF,8),-dbf(inizioF:fineF,9),dbf(inizioF:fineF,10)]*1e-1);
-
-fuse = ahrsfilter('SampleRate',sr,'OrientationFormat','quaternion', ...
-    'ReferenceFrame','NED');
-% fuse.LinearAccelerationNoise=1e-1;
-% fuse.GyroscopeDriftNoise=1e-1;
-% reset(fuse);
-
-[orientationP,angularVelocityP] = fuse(accelerazioneP,vAngolareP,magP);
-[orientationF,angularVelocityF] = fuse(accelerazioneF,vAngolareF,magF);
-
-StampaVang(tempoP,tempoF,angularVelocityP,angularVelocityF,"angularVelocity","angularVelocityP","angularVelocityF")
-StampaAng(tempoP,tempoF,flip(rad2deg(unwrap(euler(orientationP,"ZYX","frame"))),2),flip(rad2deg(unwrap(euler(orientationF,"ZYX","frame"))),2),"Orientamento","Orientamento Tranquillo","Orientamento Forte");
-
-
-integrale_angularVelocityP=cumsum(angularVelocityP)*0.04;
-integrale_angularVelocityF=cumsum(angularVelocityF)*0.04;
-
-StampaAng(tempoP,tempoF,integrale_angularVelocityP,integrale_angularVelocityF,"Integrale angularVelocity","Integrale angularVelocity Tranquilla","Integrale angularVelocity Forte")
-
-
-%% Prisma che ruota
+% %% Prisma che ruota
 % orientationP
 % figure
 % pp=poseplot;
@@ -194,7 +194,7 @@ StampaAng(tempoP,tempoF,integrale_angularVelocityP,integrale_angularVelocityF,"I
 %     drawnow
 %     pause(1/(sr*2)-toc)
 % end
-
+% 
 % orientationF
 % figure
 % pp=poseplot;

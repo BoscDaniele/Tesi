@@ -2,7 +2,7 @@ import open from "open";
 import fs from "fs";
 import { parse } from "csv-parse";
 
-const url = (process.argv[2] || "../controllare.csv").replace("\\", "/");
+const url = (process.argv[2] || "../old/interessanti.csv").replace("\\", "/");
 
 fs.createReadStream(url)
     .pipe(parse({ delimiter: ";", from_line: 2 }))

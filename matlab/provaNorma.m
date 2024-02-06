@@ -15,7 +15,7 @@ path="db\palazzago2\";
 % 4 - frenata anteriore
 % 5 - percorso misto (leggera discesa + rotonda + leggera salita)
 % 6 - discesa + molta salita
-rilievo=5;
+rilievo=7;
 
 sr = 25; %sample rate
 
@@ -97,7 +97,7 @@ StampaAcc(t,newAcc_mean,"media newAcc","media newAcc")
 norma_newAcc=zeros(length(acc),1);
 for i=1:length(acc)
     % norma_Acc(i)=norm(acc(i,:));
-    norma_newAcc(i)=norm([newAcc(i,1),newAcc(i,2)]);
+    norma_newAcc(i)=norm([newAcc(i,:)]);
 end
 
 figure
@@ -116,6 +116,54 @@ title("Norma Accelerazione Media")
 xlabel("t(s)")
 ylabel("Accelerazione(m/s^2)")
 grid
+
+
+v_acc=movvar(acc,[40,0]);
+
+figure
+plot(t,v_acc(:,1),LineWidth=1,Color="r")
+title("Varianza")
+xlabel("t(s)")
+ylabel("varianza")
+grid
+hold on
+plot(t,v_acc(:,2),LineWidth=1,Color="g")
+plot(t,v_acc(:,3),LineWidth=1,Color="b")
+legend("varianza X","varianza Y","varianza Z")
+
+
+figure
+plot(t,v_acc(:,1),LineWidth=1,Color="r")
+xlabel("t(s)")
+grid
+hold on
+plot(t,mean_norma_Acc,LineWidth=1,Color="b")
+legend("varianza","norma")
+
+
+
+v_norma=movvar(norma_Acc,[40,0]);
+
+figure
+plot(t,v_norma,LineWidth=1,Color="r");
+title("Varianza Norma")
+xlabel("t(s)")
+ylabel("varianza")
+grid
+
+figure
+plot(t,v_acc(:,1),LineWidth=1,Color="r")
+title("Varianza")
+xlabel("t(s)")
+ylabel("varianza")
+grid
+hold on
+plot(t,v_acc(:,2),LineWidth=1,Color="g")
+plot(t,v_acc(:,3),LineWidth=1,Color="b")
+plot(t,v_norma,LineWidth=1,Color="black");
+legend("varianza X","varianza Y","varianza Z","varianza Norma")
+
+
 
 
 

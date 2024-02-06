@@ -490,7 +490,28 @@ plot(t,normaYZ_medio,LineWidth=1,Color="b")
 legend("velocità angolare(rad/s)","norma vettore accelerazione YZ(m/s^2)")
 
 
+%% Prova Varianza
+v_acc=movvar(acc,[40,0]);
 
+figure
+plot(t,v_acc(:,1),LineWidth=1,Color="r")
+title("Varianza")
+xlabel("t(s)")
+ylabel("varianza")
+grid
+hold on
+plot(t,v_acc(:,2),LineWidth=1,Color="g")
+plot(t,v_acc(:,3),LineWidth=1,Color="b")
+legend("varianza X","varianza Y","varianza Z")
+
+
+figure
+plot(t,v_acc(:,1),LineWidth=1,Color="black")
+xlabel("t(s)")
+grid
+hold on
+plot(t,ampiezza,LineWidth=1,Color="r")
+legend("varianza","ampiezza")
 
 
 

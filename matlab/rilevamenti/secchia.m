@@ -15,7 +15,7 @@ path="..\db\secchia\";
 % 5 - curve
 % 6 - pedalata tranquilla
 % 7 - pedalata forte
-rilievo=7;
+rilievo=2;
 
 % import dei dati
 db=importdata(path + "BlueCoin_Log_N00"+rilievo+".csv").data;
@@ -42,7 +42,7 @@ acc=db(inizio:fine,2:4);
 
 % estrazione dati giroscopio e conversione in rad/s
 vang=db(inizio:fine,5:7)*2*pi/360*1e-3;
-% plotta3(t,vang,"velocità angolari");
+plotta3(t,db(inizio:fine,5:7)*1e-3,"velocità angolari");
 
 %% Rotazione Sistema di Riferimento
 % rotazione del sistema di riferimento del sensore al fine di farlo

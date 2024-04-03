@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+
+\usepackage{preambolo}
+
+\usepackage[
+style=numeric,
+natbib=true,
+backend=biber,
+sorting=ynt,
+maxbibnames=99
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+\begin{document}
+	
+	% TITOLO
+%	\include{header}
+	
+	% INDICE
+	\pagenumbering{Roman}
+	{
+		\hypersetup{linkcolor=black}
+		\renewcommand*\contentsname{Indice}
+		\tableofcontents
+	}
+	
+	\newpage
+	\pagenumbering{arabic}
+	\import{./Introduzione}{intro}
+	
+	\newpage
+	\import{./StatoArte}{arte}
+	
+	\newpage
+	\import{./Sistema}{sistema}
+
+	\newpage
+	\import{./AnalisiDati}{analisi}
+	
+	\newpage
+	\import{./SviluppiFuturi}{sviluppi}
+
+
+	\newpage
+	\printbibliography[title={Bibliografia}]
+	
+\end{document}}

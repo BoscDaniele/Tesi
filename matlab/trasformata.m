@@ -34,26 +34,25 @@ fine=length(db);
 t=db(inizio:fine,1)*1e-3;
 t=t-t(1);
 
-acc=db(inizio:fine,2:4)*9.81/-gMedio;
+acc=db(inizio:fine,2:4)*gzRot*9.81/-gMedio;
 
-acc_rot=acc*gzRot;
 
 figure("Name","Accelerazione")
 subplot(3,1,1)
-plot(t,acc_rot(:,1),LineWidth=1,Color="r")
+plot(t,acc(:,1),LineWidth=1,Color="r")
 title("Accelerazione")
 subtitle("X")
 xlabel("t(s)")
 ylabel("m/s^2")
 grid
 subplot(3,1,2)
-plot(t,acc_rot(:,2),LineWidth=1,Color="g")
+plot(t,acc(:,2),LineWidth=1,Color="g")
 subtitle("Y")
 xlabel("t(s)")
 ylabel("m/s^2")
 grid
 subplot(3,1,3)
-plot(t,acc_rot(:,3),LineWidth=1,Color="b")
+plot(t,acc(:,3),LineWidth=1,Color="b")
 subtitle("Z")
 xlabel("t(s)")
 ylabel("m/s^2")
@@ -151,12 +150,12 @@ grid
 %% Spettro Accelerazione
 xdft=fft(acc);
 xdft=xdft(1:L/2+1,:);
-dens_acc=(1/(sr*L))*abs(xdft).^2;
-dens_acc(2:end-1,:)=2*dens_acc(2:end-1,:);
+spettro_acc=(1/(sr*L))*abs(xdft).^2;
+spettro_acc(2:end-1,:)=2*spettro_acc(2:end-1,:);
 
 figure("Name","Spettro Accelerazione")
 subplot(3,1,1)
-plot(f(inizio_f:end),dens_acc(inizio_f:end,1),LineWidth=1,Color="r");
+plot(f(inizio_f:end),spettro_acc(inizio_f:end,1),LineWidth=1,Color="r");
 title("Spettro Accelerazione")
 subtitle("X''(f)")
 xlabel("f(Hz)")
@@ -164,17 +163,49 @@ ylabel("X''(f)")
 % ylim([0,8])
 grid
 subplot(3,1,2)
-plot(f(inizio_f:end),dens_acc(inizio_f:end,2),LineWidth=1,Color="g");
+plot(f(inizio_f:end),spettro_acc(inizio_f:end,2),LineWidth=1,Color="g");
 subtitle("Y''(f)")
 xlabel("f(Hz)")
 ylabel("Y''(f)")
 % ylim([0,2])
 grid
 subplot(3,1,3)
-plot(f(inizio_f:end),dens_acc(inizio_f:end,3),LineWidth=1,Color="b");
+plot(f(inizio_f:end),spettro_acc(inizio_f:end,3),LineWidth=1,Color="b");
 subtitle("Z''(f)")
 xlabel("f(Hz)")
 ylabel("Z''(f)")
+% ylim([0,8])
+grid
+
+
+%% Densità Spettrale di Potenza Accelerazione
+xdft=fft(acc);
+xdft=xdft(1:L/2+1,:);
+dens_acc=(1/(2*pi*L))*abs(xdft).^2;
+dens_acc(2:end-1,:)=2*dens_acc(2:end-1,:);
+freq=0:2*pi/L:pi;
+
+figure("Name","Densità Spettrale di Potenza Accelerazione")
+subplot(3,1,1)
+plot(freq,pow2db(dens_acc(:,1)),LineWidth=1,Color="r");
+title("Densità Spettrale di Potenza Accelerazione")
+subtitle("X''(f)")
+xlabel("Normalized Frequency (\times\pi rad/sample)")
+ylabel("Power/Frequency (dB/(rad/sample))")
+% ylim([0,8])
+grid
+subplot(3,1,2)
+plot(freq,pow2db(dens_acc(:,2)),LineWidth=1,Color="g");
+subtitle("Y''(f)")
+xlabel("Normalized Frequency (\times\pi rad/sample)")
+ylabel("Power/Frequency (dB/(rad/sample))")
+% ylim([0,2])
+grid
+subplot(3,1,3)
+plot(freq,pow2db(dens_acc(:,3)),LineWidth=1,Color="b");
+subtitle("Z''(f)")
+xlabel("Normalized Frequency (\times\pi rad/sample)")
+ylabel("Power/Frequency (dB/(rad/sample))")
 % ylim([0,8])
 grid
 
@@ -213,12 +244,12 @@ grid
 %% Spettro Velocità Angolare
 xdft=fft(vang);
 xdft=xdft(1:L/2+1,:);
-dens_vang=(1/(sr*L))*abs(xdft).^2;
-dens_vang(2:end-1,:)=2*dens_vang(2:end-1,:);
+spettro_vang=(1/(sr*L))*abs(xdft).^2;
+spettro_vang(2:end-1,:)=2*spettro_vang(2:end-1,:);
 
 figure("Name","Spettro Velocità Angolare")
 subplot(3,1,1)
-plot(f(inizio_f:end),dens_vang(inizio_f:end,1),LineWidth=1,Color="r");
+plot(f(inizio_f:end),spettro_vang(inizio_f:end,1),LineWidth=1,Color="r");
 title("Spettro Spettro Velocità Angolare")
 subtitle("X''(f)")
 xlabel("f(Hz)")
@@ -226,14 +257,14 @@ ylabel("X''(f)")
 % ylim([0,8])
 grid
 subplot(3,1,2)
-plot(f(inizio_f:end),dens_vang(inizio_f:end,2),LineWidth=1,Color="g");
+plot(f(inizio_f:end),spettro_vang(inizio_f:end,2),LineWidth=1,Color="g");
 subtitle("Y''(f)")
 xlabel("f(Hz)")
 ylabel("Y''(f)")
 % ylim([0,2])
 grid
 subplot(3,1,3)
-plot(f(inizio_f:end),dens_vang(inizio_f:end,3),LineWidth=1,Color="b");
+plot(f(inizio_f:end),spettro_vang(inizio_f:end,3),LineWidth=1,Color="b");
 subtitle("Z''(f)")
 xlabel("f(Hz)")
 ylabel("Z''(f)")

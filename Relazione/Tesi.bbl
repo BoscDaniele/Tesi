@@ -1,0 +1,126 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{leoni}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ed3f98c6457c60ca4fba99edb4e287c2}{%
+           family={Leoni},
+           familyi={L\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cde3455c30d807aa4246eb754c48508a}{%
+           family={Tanelli},
+           familyi={T\bibinitperiod},
+           given={Mara},
+           giveni={M\bibinitperiod}}}%
+        {{hash=afd1a7ad922c30d582db1d4abaed1f8f}{%
+           family={Strada},
+           familyi={S\bibinitperiod},
+           given={Silvia\bibnamedelima Carla},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=c95cb365e399dc350e2db14c99b20303}{%
+           family={Savaresi},
+           familyi={S\bibinitperiod},
+           given={Sergio\bibnamedelima Matteo},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc251bcc5d401d5177a3a601b6a87d11}
+      \strng{fullhash}{3386b677278475e0a70bad94d8d4d6f5}
+      \strng{bibnamehash}{3386b677278475e0a70bad94d8d4d6f5}
+      \strng{authorbibnamehash}{3386b677278475e0a70bad94d8d4d6f5}
+      \strng{authornamehash}{dc251bcc5d401d5177a3a601b6a87d11}
+      \strng{authorfullhash}{3386b677278475e0a70bad94d8d4d6f5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{E-scooters are now massively present in urban environments as a shared last-mile solution. Their apparent ease of drivability favored their diffusion, but also actually raises safety concerns. In this work, we propose a data-driven approach to map e-scooters mechanical specifications to drivability and safety metrics, the latter appropriately defined and computed based on experimental data. An ad-hoc HW/SW platform was designed for this purpose, so as to be portable and installed on seven different e-Scooters that were tested in trips carried out in the city of Milan. The proposed approach allowed us to characterize both stability and comfort metrics on the different vehicles, and compare them also with a qualitative driving test carried out by a journalist making driving tests. The quantitative analysis matched the impressions of the human driver, and it disclosed an interesting mapping between the perceived risk and the vehicle characteristics evaluated according to the two metrics proposed.}
+      \field{issn}{2405-8963}
+      \field{journaltitle}{IFAC-PapersOnLine}
+      \field{note}{10th IFAC Symposium on Advances in Automotive Control AAC 2022}
+      \field{number}{24}
+      \field{title}{Assessing e-scooters safety and drivability: a quantitative analysis}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{pages}{260\bibrangedash 265}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ifacol.2022.10.294
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2405896322023266
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2405896322023266
+      \endverb
+      \keyw{E-scooters,drivability,safety,comfort,vehicle dynamics}
+    \endentry
+    \entry{chen}{article}{}
+      \name{author}{3}{}{%
+        {{hash=156547ae78e1a840d1a511fd19df87d3}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9977c03c4025bd86cbe014ceb976aabe}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ke},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bad3fad568db86f6f27c52a74ab1b45e}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jian\bibnamedelima John},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{fullhash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{bibnamehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{authorbibnamehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{authornamehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{authorfullhash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Driver’s driving style and driving skill have an essential influence on traffic safety, capacity, and efficiency. Through clustering algorithms, extensive studies explore the risk assessment, classification, and recognition of driving style and driving skill. This paper proposes a feature selection method for driving style and skill clustering. We create a supervised machine learning model of driver identification for driving behavior data with no ground truth labels on driving style and driving skill. The key features are selected based on permutation importance with the underlying assumption that the key features for clustering should also play an important role in characterizing individual drivers. The proposed method is tested on naturalistic driving data. We introduce 18 feature extraction methods and generate 72 feature candidates. We find five key features: longitudinal acceleration, frequency centroid of longitudinal acceleration, shape factor of lateral acceleration, root mean square of lateral acceleration, and standard deviation of speed. With the key features, drivers are clustered into three groups: novice, experienced cautious, and experienced reckless drivers. The ability of each feature to describe individuals’ driving style and skill is evaluated using the Driving Behavior Questionnaire (DBQ). For each group, the driver’s response to DBQ key questions and their distribution of key features are analyzed to prove the validity of the feature selection result. The feature selection method has the potential to understand driver’s characteristics better and improve the accuracy of driving behavior modeling.}
+      \field{issn}{0001-4575}
+      \field{journaltitle}{Accident Analysis & Prevention}
+      \field{title}{Feature selection for driving style and skill clustering using naturalistic driving data and driving behavior questionnaire}
+      \field{volume}{185}
+      \field{year}{2023}
+      \field{pages}{107022}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.aap.2023.107022
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457523000696
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457523000696
+      \endverb
+      \keyw{Driving behavior,Feature selection,Cluster analysis,Driving behavior questionnaire,Driving skill,Driving style}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

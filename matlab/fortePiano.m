@@ -43,7 +43,54 @@ StampaAcc(tempoP,tempoF,accelerazioneP,accelerazioneF,"Accelerazione","Acceleraz
 vAngolareP=deg2rad(dbp(inizioP:fineP,5:7)*1e-3);
 vAngolareF=deg2rad(dbf(inizioF:fineF,5:7)*1e-3);
 
-StampaVang(tempoP,tempoF,vAngolareP,vAngolareF,"Velocità Angolare","Velocità Angolare Tranquila","Velocità Angolare Forte")
+figure(Name="Velocità Angolare")
+subplot(3,2,1)
+plot(tempoP,vAngolareP(:,1),LineWidth=1,Color="r")
+title("Velocità Angolare Tranquilla")
+subtitle("Roll")
+xlabel("t(s)")
+ylabel("rad/s")
+ylim([-0.5,0.5]);
+grid
+subplot(3,2,3)
+plot(tempoP,vAngolareP(:,2),LineWidth=1,Color="g")
+subtitle("Pitch")
+xlabel("t(s)")
+ylabel("rad/s")
+ylim([-0.5,0.5]);
+grid
+subplot(3,2,5)
+plot(tempoP,vAngolareP(:,3),LineWidth=1,Color="b")
+subtitle("Yaw")
+xlabel("t(s)")
+ylabel("rad/s")
+ylim([-0.5,0.5]);
+grid
+
+subplot(3,2,2)
+plot(tempoF,vAngolareF(:,1),LineWidth=1,Color="r")
+title("Velocità Angolare Forte")
+subtitle("Roll")
+xlabel("t(s)")
+ylabel("rad/s")
+ylim([-0.5,0.5]);
+grid
+subplot(3,2,4)
+plot(tempoF,vAngolareF(:,2),LineWidth=1,Color="g")
+subtitle("Pitch")
+xlabel("t(s)")
+ylabel("rad/s")
+ylim([-0.5,0.5]);
+grid
+subplot(3,2,6)
+plot(tempoF,vAngolareF(:,3),LineWidth=1,Color="b")
+subtitle("Yaw")
+xlabel("t(s)")
+ylabel("rad/s")
+ylim([-0.5,0.5]);
+grid
+
+% StampaVang(tempoP,tempoF,vAngolareP,vAngolareF,"Velocità Angolare","Velocità Angolare Tranquila","Velocità Angolare Forte")
 
 
 %% Trasformata Discreta di Fourier Accelerazione

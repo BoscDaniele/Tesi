@@ -50,41 +50,41 @@ accF_lowpass=lowpass(accF,0.5,25);
 
 
 
-% %% Accelerazione XY Forte/Piano
-% limX=[floor(min(min(accP(:,1)),min(accF(:,1)))),ceil(max(max(accP(:,1)),max(accF(:,1))))];
-% limY=[floor(min(min(accP(:,2)),min(accF(:,2)))),ceil(max(max(accP(:,2)),max(accF(:,2))))];
-% 
-% figure
-% subplot(2,2,1)
-% plot(tP,accP(:,1),LineWidth=1,Color="r")
-% title("Accelerazione Piano")
-% subtitle("X")
-% xlabel("t(s)")
-% ylabel("m/s^2")
-% ylim(limX)
-% grid
-% subplot(2,2,3)
-% plot(tP,accP(:,2),LineWidth=1,Color="g")
-% subtitle("Y")
-% xlabel("t(s)")
-% ylabel("m/s^2")
-% ylim(limY)
-% grid
-% subplot(2,2,2)
-% plot(tF,accF(:,1),LineWidth=1,Color="r")
-% title("Accelerazione Forte")
-% subtitle("X")
-% xlabel("t(s)")
-% ylabel("m/s^2")
-% ylim(limX)
-% grid
-% subplot(2,2,4)
-% plot(tF,accF(:,2),LineWidth=1,Color="g")
-% subtitle("Y")
-% xlabel("t(s)")
-% ylabel("m/s^2")
-% ylim(limY)
-% grid
+%% Accelerazione XY Forte/Piano
+limX=[floor(min(min(accP(:,1)),min(accF(:,1)))),ceil(max(max(accP(:,1)),max(accF(:,1))))];
+limY=[floor(min(min(accP(:,2)),min(accF(:,2)))),ceil(max(max(accP(:,2)),max(accF(:,2))))];
+
+figure
+subplot(2,2,1)
+plot(tP,accP(:,1),LineWidth=1,Color="r")
+title("Accelerazione Piano")
+subtitle("X")
+xlabel("t(s)")
+ylabel("m/s^2")
+ylim(limX)
+grid
+subplot(2,2,3)
+plot(tP,accP(:,2),LineWidth=1,Color="g")
+subtitle("Y")
+xlabel("t(s)")
+ylabel("m/s^2")
+ylim(limY)
+grid
+subplot(2,2,2)
+plot(tF,accF(:,1),LineWidth=1,Color="r")
+title("Accelerazione Forte")
+subtitle("X")
+xlabel("t(s)")
+ylabel("m/s^2")
+ylim(limX)
+grid
+subplot(2,2,4)
+plot(tF,accF(:,2),LineWidth=1,Color="g")
+subtitle("Y")
+xlabel("t(s)")
+ylabel("m/s^2")
+ylim(limY)
+grid
 
 
 % %% LowPass Accelerazione
@@ -122,17 +122,6 @@ accF_lowpass=lowpass(accF,0.5,25);
 % plot(tF,accF_media(:,1),LineWidth=1)
 % plot(tF,zeros(length(tF),1),LineWidth=.1,Color="black")
 % legend("Accelerazione X", "Media Accelerazione X")
-
-
-% %% Media vs Media Post
-% figure
-% plot(tF,accF_media(:,1),LineWidth=1)
-% xlabel("t(s)")
-% ylabel("m/s^2")
-% grid
-% hold on
-% plot(tF,accF_mediaPost(:,1),LineWidth=1)
-% legend("Media Accelerazione","Media Accelerazione Postuma")
 
 
 % %% Trasformata e Spettro Accelerazione
@@ -259,6 +248,17 @@ accF_lowpass=lowpass(accF,0.5,25);
 % plot(tF,zeros(length(tF)),LineWidth=.1,Color="black")
 
 
+% %% Media vs Media Post
+% figure
+% plot(tF,accF_media(:,1),LineWidth=1)
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% grid
+% hold on
+% plot(tF,accF_mediaPost(:,1),LineWidth=1)
+% legend("Media Accelerazione","Media Accelerazione Postuma")
+
+
 % %% Varianza Accelerazione
 % accP_var=movvar(accP,40);
 % accF_var=movvar(accF,40);
@@ -334,6 +334,101 @@ accF_lowpass=lowpass(accF,0.5,25);
 % grid
 % subplot(2,2,4)
 % plot(tF,accF_std(:,2),LineWidth=1,Color="g")
+% subtitle("Y")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limY)
+% grid
+
+
+% %% Max Accelerazione  // QUI!!!
+% n_max=40;
+% 
+% accP_max=movmax(accP,n_max);
+% accF_max=movmax(accF,n_max);
+% 
+% limX=[floor(min(min(accP_max(:,1)),min(accF_max(:,1)))),ceil(max(max(accP_max(:,1)),max(accF_max(:,1))))];
+% limY=[floor(min(min(accP_max(:,2)),min(accF_max(:,2)))),ceil(max(max(accP_max(:,2)),max(accF_max(:,2))))];
+% 
+% figure
+% subplot(2,2,1)
+% plot(tP,accP_max(:,1),LineWidth=1,Color="r")
+% title("Accelerazione Piano")
+% subtitle("X")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limX)
+% grid
+% subplot(2,2,3)
+% plot(tP,accP_max(:,2),LineWidth=1,Color="g")
+% subtitle("Y")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limY)
+% grid
+% 
+% subplot(2,2,2)
+% plot(tF,accF_max(:,1),LineWidth=1,Color="r")
+% title("Accelerazione Forte")
+% subtitle("X")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limX)
+% grid
+% subplot(2,2,4)
+% plot(tF,accF_max(:,2),LineWidth=1,Color="g")
+% subtitle("Y")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limY)
+% grid
+
+
+% %% Peak Accelerazione  // QUI!!!
+% n_Peak=40;
+% 
+% accP_m=movmean(accP,n_Peak);
+% accF_m=movmean(accF,n_Peak);
+% 
+% accP_max=movmax(accP,n_Peak);
+% accF_max=movmax(accF,n_Peak);
+% 
+% accP_min=movmin(accP,n_Peak);
+% accF_min=movmin(accF,n_Peak);
+% 
+% accP_peak=accP_max-accP_min;
+% accF_peak=accF_max-accF_min;
+% 
+% limX=[floor(min(min(accP_peak(:,1)),min(accF_peak(:,1)))),ceil(max(max(accP_peak(:,1)),max(accF_peak(:,1))))];
+% limY=[floor(min(min(accP_peak(:,2)),min(accF_peak(:,2)))),ceil(max(max(accP_peak(:,2)),max(accF_peak(:,2))))];
+% 
+% figure
+% subplot(2,2,1)
+% plot(tP,accP_peak(:,1),LineWidth=1,Color="r")
+% title("Accelerazione Piano")
+% subtitle("X")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limX)
+% grid
+% subplot(2,2,3)
+% plot(tP,accP_peak(:,2),LineWidth=1,Color="g")
+% subtitle("Y")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limY)
+% grid
+% 
+% subplot(2,2,2)
+% plot(tF,accF_peak(:,1),LineWidth=1,Color="r")
+% title("Accelerazione Forte")
+% subtitle("X")
+% xlabel("t(s)")
+% ylabel("m/s^2")
+% ylim(limX)
+% grid
+% subplot(2,2,4)
+% plot(tF,accF_peak(:,2),LineWidth=1,Color="g")
 % subtitle("Y")
 % xlabel("t(s)")
 % ylabel("m/s^2")
@@ -470,5 +565,13 @@ accF_lowpass=lowpass(accF,0.5,25);
 
 
 
-
+function [arv] = movarv(vet, n)
+    arv = zeros(length(vet),3);
+    for i=1:length(vet)
+        if(i<n/2)
+            
+        else
+        end
+    end
+end
 

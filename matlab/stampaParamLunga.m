@@ -231,379 +231,38 @@ stampa(t,acc,"Accelerazione",['X','Y'],'t(s)','m/s^2')
 % stampa_gen(t,acc_min(:,1:2),"AccMin",['X','Y'],'t(s)','m/s^2',limY,textLimY)
 
 
-%% Peak Accelerazione
-n_Peak=10;
-acc_max=movmax(acc,n_Peak);
-acc_min=movmin(acc,n_Peak);
+% %% Peak Accelerazione
+% n_Peak=10;
+% acc_max=movmax(acc,n_Peak);
+% acc_min=movmin(acc,n_Peak);
+% 
+% acc_peak=acc_max-acc_min;
+% 
+% stampa(t,acc_peak(:,1:2),"AccPeak",['X','Y'],'t(s)','m/s^2')
 
-acc_peak=acc_max-acc_min;
 
-stampa(t,acc_peak(:,1:2),"AccPeak",['X','Y'],'t(s)','m/s^2')
+% %% Trasformata e Spettro Accelerazione
+% stampa_freq(acc)
 
 
-%% Trasformata e Spettro Accelerazione
-stampa_freq(acc)
+% %% Ampiezza Media Accelerazione
+% stampa_AvAmp(acc)
+
+
+% %% Frequency Centroid Accelerazione
+% stampa_FrCen(acc)
+
+
+% %% Frequency Variance Accelerazione
+% stampa_FrVar(acc)
+
+
+% %% Spectral Entropy Accelerazione
+% stampa_SpEnt(acc)
+
 
 
 %% QUI
-
-
-% %% Ampiezza Media
-% LP=length(accP(:,1));
-% fP=sr/LP*(0:(LP/2));
-%
-% LF=length(accF(:,1));
-% fF=sr/LF*(0:(LF/2));
-%
-% % trasformata
-% YP=fft(accP);
-% P2P=abs(YP/LP);
-% trasform_accP=P2P(1:(LP/2+1),:);
-% trasform_accP(2:end-1,:)=2*trasform_accP(2:end-1,:);
-%
-% YF=fft(accF);
-% P2F=abs(YF/LF);
-% trasform_accF=P2F(1:(LF/2+1),:);
-% trasform_accF(2:end-1,:)=2*trasform_accF(2:end-1,:);
-%
-% average_trasform_accP=mean(trasform_accP);
-% average_trasform_accF=mean(trasform_accF);
-%
-% % trasformata no media
-% YP_noMedia=fft(accP-accP_media);
-% P2P_noMedia=abs(YP_noMedia/LP);
-% trasform_accP_noMedia=P2P_noMedia(1:(LP/2+1),:);
-% trasform_accP_noMedia(2:end-1,:)=2*trasform_accP_noMedia(2:end-1,:);
-%
-% YF_noMedia=fft(accF-accF_media);
-% P2F_noMedia=abs(YF_noMedia/LF);
-% trasform_accF_noMedia=P2F_noMedia(1:(LF/2+1),:);
-% trasform_accF_noMedia(2:end-1,:)=2*trasform_accF_noMedia(2:end-1,:);
-%
-% average_trasform_accP_noMedia=mean(trasform_accP_noMedia);
-% average_trasform_accF_noMedia=mean(trasform_accF_noMedia);
-%
-% figure(Name="Trasformata")
-% subplot(2,1,1)
-% plot(fP,trasform_accP(:,1),LineWidth=1,Color="b");
-% title("Trasformata Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,average_trasform_accP(1)*ones(length(trasform_accP(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Ampiezza Media",FontName=font)
-% subplot(2,1,2)
-% plot(fF,trasform_accF(:,1),LineWidth=1,Color="r")
-% title("Trasformata Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,average_trasform_accF(1)*ones(length(trasform_accF(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Ampiezza Media",FontName=font)
-%
-%
-% figure(Name="Trasformata No Media")
-% subplot(2,1,1)
-% plot(fP,trasform_accP_noMedia(:,1),LineWidth=1,Color="b");
-% title("Trasformata No Media Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,average_trasform_accP_noMedia(1)*ones(length(trasform_accP(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Ampiezza Media",FontName=font)
-% subplot(2,1,2)
-% plot(fF,trasform_accF_noMedia(:,1),LineWidth=1,Color="r")
-% title("Trasformata No Media Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,average_trasform_accF_noMedia(1)*ones(length(trasform_accF(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Ampiezza Media",FontName=font)
-
-
-% %% Frequency Centroid
-% LP=length(accP(:,1));
-% fP=sr/LP*(0:(LP/2));
-%
-% LF=length(accF(:,1));
-% fF=sr/LF*(0:(LF/2));
-%
-% % trasformata
-% YP=fft(accP);
-% P2P=abs(YP/LP);
-% trasform_accP=P2P(1:(LP/2+1),:);
-% trasform_accP(2:end-1,:)=2*trasform_accP(2:end-1,:);
-%
-% YF=fft(accF);
-% P2F=abs(YF/LF);
-% trasform_accF=P2F(1:(LF/2+1),:);
-% trasform_accF(2:end-1,:)=2*trasform_accF(2:end-1,:);
-%
-% centroid_trasform_accP=mean(trasform_accP.*fP');
-% centroid_trasform_accF=mean(trasform_accF.*fF');
-%
-% % trasformata no media
-% YP_noMedia=fft(accP-accP_media);
-% P2P_noMedia=abs(YP_noMedia/LP);
-% trasform_accP_noMedia=P2P_noMedia(1:(LP/2+1),:);
-% trasform_accP_noMedia(2:end-1,:)=2*trasform_accP_noMedia(2:end-1,:);
-%
-% YF_noMedia=fft(accF-accF_media);
-% P2F_noMedia=abs(YF_noMedia/LF);
-% trasform_accF_noMedia=P2F_noMedia(1:(LF/2+1),:);
-% trasform_accF_noMedia(2:end-1,:)=2*trasform_accF_noMedia(2:end-1,:);
-%
-% centroid_trasform_accP_noMedia=mean(trasform_accP_noMedia.*fP');
-% centroid_trasform_accF_noMedia=mean(trasform_accF_noMedia.*fF');
-%
-% figure(Name="Trasformata")
-% subplot(2,1,1)
-% plot(fP,trasform_accP(:,1),LineWidth=1,Color="b");
-% title("Trasformata Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,centroid_trasform_accP(1)*ones(length(trasform_accP(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Centroid",FontName=font)
-% subplot(2,1,2)
-% plot(fF,trasform_accF(:,1),LineWidth=1,Color="r")
-% title("Trasformata Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,centroid_trasform_accF(1)*ones(length(trasform_accF(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Centroid",FontName=font)
-%
-%
-% figure(Name="Trasformata No Media")
-% subplot(2,1,1)
-% plot(fP,trasform_accP_noMedia(:,1),LineWidth=1,Color="b");
-% title("Trasformata No Media Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,centroid_trasform_accP_noMedia(1)*ones(length(trasform_accP(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Centroid",FontName=font)
-% subplot(2,1,2)
-% plot(fF,trasform_accF_noMedia(:,1),LineWidth=1,Color="r")
-% title("Trasformata No Media Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,centroid_trasform_accF_noMedia(1)*ones(length(trasform_accF(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Centroid",FontName=font)
-
-
-% %% Frequency Variance
-% LP=length(accP(:,1));
-% fP=sr/LP*(0:(LP/2));
-%
-% LF=length(accF(:,1));
-% fF=sr/LF*(0:(LF/2));
-%
-% % trasformata
-% YP=fft(accP);
-% P2P=abs(YP/LP);
-% trasform_accP=P2P(1:(LP/2+1),:);
-% trasform_accP(2:end-1,:)=2*trasform_accP(2:end-1,:);
-%
-% YF=fft(accF);
-% P2F=abs(YF/LF);
-% trasform_accF=P2F(1:(LF/2+1),:);
-% trasform_accF(2:end-1,:)=2*trasform_accF(2:end-1,:);
-%
-% centroidP=mean(trasform_accP.*fP');
-% centroidF=mean(trasform_accF.*fF');
-%
-%
-% var_trasform_accP=sum((fP'-centroidP).*trasform_accP(:,1))/sum(trasform_accP(:,1));
-% var_trasform_accF=sum((fF'-centroidF).*trasform_accF(:,1))/sum(trasform_accF(:,1));
-%
-% % trasformata no media
-% YP_noMedia=fft(accP-accP_media);
-% P2P_noMedia=abs(YP_noMedia/LP);
-% trasform_accP_noMedia=P2P_noMedia(1:(LP/2+1),:);
-% trasform_accP_noMedia(2:end-1,:)=2*trasform_accP_noMedia(2:end-1,:);
-%
-% YF_noMedia=fft(accF-accF_media);
-% P2F_noMedia=abs(YF_noMedia/LF);
-% trasform_accF_noMedia=P2F_noMedia(1:(LF/2+1),:);
-% trasform_accF_noMedia(2:end-1,:)=2*trasform_accF_noMedia(2:end-1,:);
-%
-% centroidP_noMedia=mean(trasform_accP_noMedia.*fP');
-% centroidF_noMedia=mean(trasform_accF_noMedia.*fF');
-%
-%
-% var_trasform_accP_noMedia=sum((fP'-centroidP_noMedia).*trasform_accP_noMedia(:,1))/sum(trasform_accP_noMedia(:,1));
-% var_trasform_accF_noMedia=sum((fF'-centroidF_noMedia).*trasform_accF_noMedia(:,1))/sum(trasform_accF_noMedia(:,1));
-%
-%
-% figure(Name="Trasformata")
-% subplot(2,1,1)
-% plot(fP,trasform_accP(:,1),LineWidth=1,Color="b");
-% title("Trasformata Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,var_trasform_accP(1)*ones(length(trasform_accP(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Variance",FontName=font)
-% subplot(2,1,2)
-% plot(fF,trasform_accF(:,1),LineWidth=1,Color="r")
-% title("Trasformata Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,var_trasform_accF(1)*ones(length(trasform_accF(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Variance",FontName=font)
-%
-%
-% figure(Name="Trasformata No Media")
-% subplot(2,1,1)
-% plot(fP,trasform_accP_noMedia(:,1),LineWidth=1,Color="b");
-% title("Trasformata No Media Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,var_trasform_accP_noMedia(1)*ones(length(trasform_accP(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Variance",FontName=font)
-% subplot(2,1,2)
-% plot(fF,trasform_accF_noMedia(:,1),LineWidth=1,Color="r")
-% title("Trasformata No Media Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,var_trasform_accF_noMedia(1)*ones(length(trasform_accF(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Frequency Variance",FontName=font)
-
-
-% %% Spectral Entropy
-% LP=length(accP(:,1));
-% fP=sr/LP*(0:(LP/2));
-%
-% LF=length(accF(:,1));
-% fF=sr/LF*(0:(LF/2));
-%
-% % Spettro
-% YP=fft(accP);
-% xdftP=YP(1:LP/2+1,:);
-% spettro_accP=(1/(sr*LP))*abs(xdftP).^2;
-% spettro_accP(2:end-1,:)=2*spettro_accP(2:end-1,:);
-%
-% YF=fft(accF);
-% xdftF=YF(1:LF/2+1,:);
-% spettro_accF=(1/(sr*LF))*abs(xdftF).^2;
-% spettro_accF(2:end-1,:)=2*spettro_accF(2:end-1,:);
-%
-%
-% pP=zeros(length(spettro_accP),1);
-% spettro_accP_tot=sum(spettro_accP(:,1));
-%
-% for i=1:length(spettro_accP)
-%     pP(i)=spettro_accP(i,1)/spettro_accP_tot;
-% end
-%
-% entropiaP=-sum(pP.*log2(pP));
-%
-%
-% pF=zeros(length(spettro_accF),1);
-% spettro_accF_tot=sum(spettro_accF(:,1));
-%
-% for i=1:length(spettro_accF)
-%     pF(i)=spettro_accF(i,1)/spettro_accF_tot;
-% end
-%
-% entropiaF=-sum(pF.*log2(pF));
-%
-%
-% % Spettro no Media
-% YP_noMedia=fft(accP-accP_media);
-% xdftP_noMedia=YP_noMedia(1:LP/2+1,:);
-% spettro_accP_noMedia=(1/(sr*LP))*abs(xdftP_noMedia).^2;
-% spettro_accP_noMedia(2:end-1,:)=2*spettro_accP_noMedia(2:end-1,:);
-%
-% YF_noMedia=fft(accF-accF_media);
-% xdftF_noMedia=YF_noMedia(1:LF/2+1,:);
-% spettro_accF_noMedia=(1/(sr*LF))*abs(xdftF_noMedia).^2;
-% spettro_accF_noMedia(2:end-1,:)=2*spettro_accF_noMedia(2:end-1,:);
-%
-%
-% pP_noMedia=zeros(length(spettro_accP_noMedia),1);
-% spettro_accP_noMedia_tot=sum(spettro_accP_noMedia(:,1));
-%
-% for i=1:length(spettro_accP_noMedia)
-%     pP_noMedia(i)=spettro_accP_noMedia(i,1)/spettro_accP_noMedia_tot;
-% end
-%
-% entropiaP_noMedia=-sum(pP_noMedia.*log2(pP_noMedia));
-%
-%
-% pF_noMedia=zeros(length(spettro_accF_noMedia),1);
-% spettro_accF_noMedia_tot=sum(spettro_accF_noMedia(:,1));
-%
-% for i=1:length(spettro_accF_noMedia)
-%     pF_noMedia(i)=spettro_accF_noMedia(i,1)/spettro_accF_noMedia_tot;
-% end
-%
-% entropiaF_noMedia=-sum(pF_noMedia.*log2(pF_noMedia));
-%
-%
-% figure(Name="Spettro")
-% subplot(2,1,1)
-% plot(fP,spettro_accP(:,1),LineWidth=1,Color="b");
-% title("Spettro Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,entropiaP*ones(length(spettro_accP(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Spectral Entropy",FontName=font)
-% subplot(2,1,2)
-% plot(fF,spettro_accF(:,1),LineWidth=1,Color="r")
-% title("Trasformata Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,entropiaF*ones(length(spettro_accF(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Spectral Entropy",FontName=font)
-%
-%
-% figure(Name="Spettro No Media")
-% subplot(2,1,1)
-% plot(fP,spettro_accP_noMedia(:,1),LineWidth=1,Color="b");
-% title("Spettro No Media Acc X Piano",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fP,entropiaP_noMedia*ones(length(spettro_accP_noMedia(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Spectral Entropy",FontName=font)
-% subplot(2,1,2)
-% plot(fF,spettro_accF_noMedia(:,1),LineWidth=1,Color="r")
-% title("Spettro No Media Acc X Forte",FontName=font)
-% xlabel("Hz",FontName=font)
-% ylabel("X''(f)",FontName=font)
-% grid
-% hold on
-% plot(fF,entropiaF_noMedia*ones(length(spettro_accF_noMedia(:,1)),1),LineWidth=1,Color="black")
-% legend("Trasformata","Spectral Entropy",FontName=font)
-
-
-
-
-%%
 
 
 % %% Velocità Angolare
@@ -864,7 +523,7 @@ subplot(2,1,2)
 plot(freq,trasform(:,2),LineWidth=1,Color="g")
 subtitle("Y''",FontName=font)
 xlabel('Hz',FontName=font)
-ylabel("X''(Hz)",FontName=font)
+ylabel("Y''(Hz)",FontName=font)
 grid
 
 % exportgraphics(f,"D:\Users\Daniele\Desktop\Trasformata.png")
@@ -900,13 +559,269 @@ for i=1:length(sezione)
     plot(freq,trasform(:,2),LineWidth=1,Color="g")
     subtitle("Y''",FontName=font)
     xlabel('Hz',FontName=font)
-    ylabel("X''(Hz)",FontName=font)
+    ylabel("Y''(Hz)",FontName=font)
     ylim([0 1.5])
     grid
 
     % exportgraphics(f,"D:\Users\Daniele\Desktop\Tr"+str(i)+".png")
 end
 
+end
+
+function stampa_AvAmp(fun)
+font="Times New Roman";
+sr = 25; %sample rate
+
+sezione=ones(5,2);
+sezione(1,:)=[1 15];
+sezione(2,:)=[15 19.4];
+sezione(3,:)=[19.5 23.76];
+sezione(4,:)=[23.76 25.4];
+sezione(5,:)=[25.4 29.76];
+
+str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]';
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasform=P2_noMedia(1:(L/2+1),:);
+    trasform(2:end-1,:)=2*trasform(2:end-1,:);
+
+    trasform_mean=mean(trasform);
+
+    plot(freq,trasform_mean(1)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("X''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Average Amplitude X",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\AvgAmpX"+str(i)+".png")
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasform=P2_noMedia(1:(L/2+1),:);
+    trasform(2:end-1,:)=2*trasform(2:end-1,:);
+
+    trasform_mean=mean(trasform);
+
+    plot(freq,trasform_mean(2)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("Y''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Average Amplitude Y",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\AvgAmpY"+str(i)+".png")
+end
+
+function stampa_FrCen(fun)
+font="Times New Roman";
+sr = 25; %sample rate
+
+sezione=ones(5,2);
+sezione(1,:)=[1 15];
+sezione(2,:)=[15 19.4];
+sezione(3,:)=[19.5 23.76];
+sezione(4,:)=[23.76 25.4];
+sezione(5,:)=[25.4 29.76];
+
+str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]';
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasform=P2_noMedia(1:(L/2+1),:);
+    trasform(2:end-1,:)=2*trasform(2:end-1,:);
+
+    trasform_cent=mean(trasform.*freq');
+
+    plot(freq,trasform_cent(1)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("X''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Frequency Centroid X",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\FrCentX"+str(i)+".png")
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasform=P2_noMedia(1:(L/2+1),:);
+    trasform(2:end-1,:)=2*trasform(2:end-1,:);
+
+    trasform_cent=mean(trasform.*freq');
+
+    plot(freq,trasform_cent(2)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("Y''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Frequency Centroid Y",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\FrCentY"+str(i)+".png")
+end
+
+function stampa_FrVar(fun)
+font="Times New Roman";
+sr = 25; %sample rate
+
+sezione=ones(5,2);
+sezione(1,:)=[1 15];
+sezione(2,:)=[15 19.4];
+sezione(3,:)=[19.5 23.76];
+sezione(4,:)=[23.76 25.4];
+sezione(5,:)=[25.4 29.76];
+
+str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]';
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasform=P2_noMedia(1:(L/2+1),:);
+    trasform(2:end-1,:)=2*trasform(2:end-1,:);
+
+    centroid=mean(trasform.*freq');
+    trasform_var=sum((freq'-centroid).*trasform(:,1))/sum(trasform(:,1));
+
+    plot(freq,trasform_var(1)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("X''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Frequency Variance X",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\FrVarX"+str(i)+".png")
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasform=P2_noMedia(1:(L/2+1),:);
+    trasform(2:end-1,:)=2*trasform(2:end-1,:);
+
+    centroid=mean(trasform.*freq');
+    trasform_var=sum((freq'-centroid).*trasform(:,1))/sum(trasform(:,1));
+
+    plot(freq,trasform_var(2)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("Y''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Frequency Variance Y",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\FrVarY"+str(i)+".png")
+end
+
+function stampa_SpEnt(fun)
+font="Times New Roman";
+sr = 25; %sample rate
+
+sezione=ones(5,2);
+sezione(1,:)=[1 15];
+sezione(2,:)=[15 19.4];
+sezione(3,:)=[19.5 23.76];
+sezione(4,:)=[23.76 25.4];
+sezione(5,:)=[25.4 29.76];
+
+str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]';
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    xdftP=Y_noMedia(1:L/2+1,:);
+    spettro=(1/(sr*L))*abs(xdftP).^2;
+    spettro(2:end-1,:)=2*spettro(2:end-1,:);
+
+    p=zeros(length(spettro),1);
+    spettro_tot=sum(spettro(:,1));
+
+    for j=1:length(spettro)
+        p(j)=spettro(j,1)/spettro_tot;
+    end
+    
+    entropia=-sum(p.*log2(p));
+
+    plot(freq,entropia*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("X''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Spectral Entropy X",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\SpEntX"+str(i)+".png")
+
+f=figure;
+for i=1:5
+    L=(sezione(i,2)-sezione(i,1))*25;
+    freq=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
+    xdftP=Y_noMedia(1:L/2+1,:);
+    spettro=(1/(sr*L))*abs(xdftP).^2;
+    spettro(2:end-1,:)=2*spettro(2:end-1,:);
+
+    p=zeros(length(spettro),1);
+    spettro_tot=sum(spettro(:,2));
+
+    for j=1:length(spettro)
+        p(j)=spettro(j,2)/spettro_tot;
+    end
+    
+    entropia=-sum(p.*log2(p));
+
+    plot(freq,entropia*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
+    xlabel('Hz',FontName=font)
+    ylabel("Y''(Hz)",FontName=font)
+    grid
+    hold on
+end
+title("Spectral Entropy Y",FontName=font)
+legend
+
+% exportgraphics(f,"D:\Users\Daniele\Desktop\SpEntY"+str(i)+".png")
 end
 
 

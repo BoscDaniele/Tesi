@@ -3,6 +3,7 @@ close all
 clc
 
 path=".\dati\lunga_forte\";
+sr=25; % sample rate
 
 rilievo=2;
 
@@ -19,393 +20,215 @@ mag_rotta=([db(:,8),-db(:,9),db(:,10)]*1e-1);
 
 [t,acc,vang,mag]=AggiustaFrequenza(t_rotta,acc_rotta,vang_rotta,mag_rotta);
 
+fun=[{acc(:,1:2)},{vang}];
+fun_str=["Acc","V_Ang"];
+fun_axes=[{['X','Y']},{['R','P','Y']}];
+fun_units=['m/s^2','rad/s'];
 
-%% Accelerazione
-stampa(t,acc,"Accelerazione",['X','Y'],'t(s)','m/s^2')
+for f=1:length(fun)
+    funzione=cell2mat(fun(f));
 
+    %% Parametro
+    % stampa(t,funzione,fun_str(f),cell2mat(fun_axes(f)),fun_str(f),'t(s)',fun_units(f))
 
-% %% LowPass Accelerazione
-% acc_low=lowpass(acc,0.5,25);
-%
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_low(:,i))),ceil(max(acc_low(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+1;
-% limY(2,2)=limY(2,2)+0.5;
-%
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-1)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-%
-% stampa_gen(t,acc_low(:,1:2),"AccLowPass",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% LowPass
+    % fun_low=lowpass(funzione,0.5,25);
+    % stampa(t,fun_low,fun_str(f),cell2mat(fun_axes(f)),"LowPass",'t(s)',fun_units(f))
 
 
-% %% Media Accelerazione
-% acc_media=movmean(acc,40);
-%
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_media(:,i))),ceil(max(acc_media(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+1;
-% limY(2,2)=limY(2,2);
-%
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-1)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-%
-% stampa_gen(t,acc_media(:,1:2),"AccMedia",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Media
+    % fun_media=movmean(funzione,40);
+    % stampa(t,fun_media,fun_str(f),cell2mat(fun_axes(f)),"Media",'t(s)',fun_units(f))
 
 
-% %% Valore Medio Rettificato
-% acc_arv=movmean(abs(acc),40);
-%
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_arv(:,i))),ceil(max(acc_arv(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+0.5;
-% limY(2,2)=limY(2,2);
-%
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-1)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-%
-% stampa_gen(t,acc_arv(:,1:2),"AccMediaRett",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Valore Medio Rettificato
+    % fun_arv=movmean(abs(funzione),40);
+    % stampa(t,fun_arv,fun_str(f),cell2mat(fun_axes(f)),"Media Rettificata",'t(s)',fun_units(f))
 
 
-% %% Varianza Accelerazione
-% acc_var=movvar(acc,40);
-% stampa(t,acc_var,"AccVar",['X','Y'],'t(s)','m/s^2')
+    % %% Varianza
+    % fun_var=movvar(funzione,40);
+    % stampa(t,fun_var,fun_str(f),cell2mat(fun_axes(f)),"Varianza",'t(s)',fun_units(f))
 
 
-% %% Deviazione Standard Accelerazione
-% acc_std=movstd(acc,40);
-%
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_std(:,i))),ceil(max(acc_std(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+1;
-% limY(2,2)=limY(2,2);
-%
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-0.5)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-%
-% stampa_gen(t,acc_std(:,1:2),"AccStd",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Deviazione Standard
+    % fun_std=movstd(funzione,40);
+    % stampa(t,fun_std,fun_str(f),cell2mat(fun_axes(f)),"Deviazione Standard",'t(s)',fun_units(f))
 
 
-% %% Scarto Quadratico Medio Accelerazione
-% acc_rms=movrms(acc,40);
-%
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_rms(:,i))),ceil(max(acc_rms(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+0.5;
-% limY(2,2)=limY(2,2);
-%
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-1)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-%
-% stampa_gen(t,acc_rms(:,1:2),"AccRms",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Scarto Quadratico Medio
+    % fun_rms=movrms(funzione,40);
+    % stampa(t,fun_rms,fun_str(f),cell2mat(fun_axes(f)),"Scarto Quadratico Medio",'t(s)',fun_units(f))
 
 
-% %% Kurtosi Accelerazione
-% acc_krt=movkurt(acc,40);
-% stampa(t,acc_krt,"AccKurtosi",['X','Y'],'t(s)','m/s^2')
+    % %% Kurtosi
+    % fun_krt=movkurt(funzione,40);
+    % stampa(t,fun_krt,fun_str(f),cell2mat(fun_axes(f)),"Kurtosi",'t(s)',fun_units(f))
 
 
-% %% Skewness Accelerazione
-% acc_skw=movskw(acc,40);
-% 
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_skw(:,i))),ceil(max(acc_skw(:,i)))];
-% end
-% limY(1,2)=limY(1,2);
-% limY(2,2)=limY(2,2)+0.5;
-% 
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-0.5)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-% 
-% stampa_gen(t,acc_skw(:,1:2),"AccSkewness",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Skewness
+    % fun_skw=movskw(funzione,40);
+    % stampa(t,fun_skw,fun_str(f),cell2mat(fun_axes(f)),"Skewness",'t(s)',fun_units(f))
 
 
-% %% Shape Factor Accelerazione
-% acc_rms=movrms(acc,40);
-% acc_arv=movmean(abs(acc),40);
-% 
-% acc_shf=acc_rms./acc_arv;
-% 
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_shf(:,i))),ceil(max(acc_shf(:,i)))];
-% end
-% limY(1,2)=limY(1,2)-0.5;
-% limY(2,1)=limY(2,1)+0.5;
-% limY(2,2)=limY(2,2)+0.5;
-% 
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-0.5)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-% 
-% stampa_gen(t,acc_shf(:,1:2),"AccShape",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Shape Factor
+    % fun_rms=movrms(funzione,40);
+    % fun_arv=movmean(abs(funzione),40);
+    %
+    % fun_shf=fun_rms./fun_arv;
+    % stampa(t,fun_shf,fun_str(f),cell2mat(fun_axes(f)),"Shape Factor",'t(s)',fun_units(f))
 
 
-% %% Crest Factor Accelerazione
-% acc_max=movmax(acc,40);
-% acc_rms=movrms(acc,40);
-% 
-% acc_crf=acc_max./acc_rms;
-% 
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_crf(:,i))),ceil(max(acc_crf(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+1;
-% limY(2,2)=limY(2,2)+1;
-% 
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-0.5)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-0.5)*ones(5,1);
-% 
-% stampa_gen(t,acc_crf(:,1:2),"AccCrest",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Crest Factor
+    % fun_max=movmax(funzione,40);
+    % fun_rms=movrms(funzione,40);
+    %
+    % fun_crf=fun_max./fun_rms;
+    % stampa(t,fun_crf,fun_str(f),cell2mat(fun_axes(f)),"Crest Factor",'t(s)',fun_units(f))
 
 
-% %% Impulse Factor Accelerazione
-% acc_max=movmax(acc,40);
-% acc_arv=movmean(abs(acc),40);
-% 
-% acc_impf=acc_max./acc_arv;
-% 
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_impf(:,i))),ceil(max(acc_impf(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+1;
-% limY(2,2)=limY(2,2)+1;
-% 
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-1)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-1)*ones(5,1);
-% 
-% stampa_gen(t,acc_impf(:,1:2),"AccImp",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Impulse Factor
+    % fun_max=movmax(funzione,40);
+    % fun_arv=movmean(abs(funzione),40);
+    %
+    % fun_impf=fun_max./fun_arv;
+    % stampa(t,fun_impf,fun_str(f),cell2mat(fun_axes(f)),"Impulse Factor",'t(s)',fun_units(f))
 
 
-% %% Margin Factor Accelerazione
-% acc_max=movmax(acc,40);
-% acc_arvq=movmean(sqrt(abs(acc)),40).^2;
-% 
-% acc_mrgf=acc_max./acc_arvq;
-% 
-% stampa(t,acc_mrgf(:,1:2),"AccMargin",['X','Y'],'t(s)','m/s^2')
+    % %% Margin Factor
+    % fun_max=movmax(funzione,40);
+    % fun_arvq=movmean(sqrt(abs(funzione)),40).^2;
+    %
+    % fun_mrgf=fun_max./fun_arvq;
+    % stampa(t,fun_mrgf,fun_str(f),cell2mat(fun_axes(f)),"Margin Factor",'t(s)',fun_units(f))
 
 
-% %% Max Accelerazione
-% n_max=10;
-% acc_max=movmax(acc,n_max);
-% 
-% stampa(t,acc_max,"AccMax",['X','Y'],'t(s)','m/s^2')
+    % %% Max
+    % n_max=10;
+    % fun_max=movmax(funzione,n_max);
+    % stampa(t,fun_max,fun_str(f),cell2mat(fun_axes(f)),"Max",'t(s)',fun_units(f))
 
 
-% %% Min Accelerazione
-% n_min=10;
-% acc_min=movmin(acc,n_min);
-% 
-% limY=ones(3,2);
-% for i=1:3
-%     limY(i,:)=[floor(min(acc_min(:,i))),ceil(max(acc_min(:,i)))];
-% end
-% limY(1,2)=limY(1,2)+1;
-% limY(2,2)=limY(2,2)+1.5;
-% 
-% textLimY=ones(2,5);
-% textLimY(1,:)=(limY(1,2)-1)*ones(5,1);
-% textLimY(2,:)=(limY(2,2)-1)*ones(5,1);
-% 
-% stampa_gen(t,acc_min(:,1:2),"AccMin",['X','Y'],'t(s)','m/s^2',limY,textLimY)
+    % %% Min
+    % n_min=10;
+    % fun_min=movmin(funzione,n_min);
+    %
+    % n=length(cell2mat(fun_axes(f)));
+    % f_min=floor(min(funzione));
+    % f_max=ceil(max(funzione));
+    % limY=[f_min',f_max'];
+    %
+    % textLimY=ones(n,5);
+    %
+    % for i=1:n
+    %     textLimY(i,:)=(limY(i,2))*ones(5,1);
+    % end
+    %
+    % limY(:,2)=(limY(:,2)+1).*1.25;
+    %
+    % stampa_gen(t,fun_min,fun_str(f),cell2mat(fun_axes(f)),"Min",'t(s)',fun_units(f),limY,textLimY)
 
 
-% %% Peak Accelerazione
-% n_Peak=10;
-% acc_max=movmax(acc,n_Peak);
-% acc_min=movmin(acc,n_Peak);
-% 
-% acc_peak=acc_max-acc_min;
-% 
-% stampa(t,acc_peak(:,1:2),"AccPeak",['X','Y'],'t(s)','m/s^2')
+    % %% Peak
+    % n_Peak=10;
+    % fun_max=movmax(funzione,n_Peak);
+    % fun_min=movmin(funzione,n_Peak);
+    %
+    % fun_peak=fun_max-fun_min;
+    % stampa(t,fun_peak,fun_str(f),cell2mat(fun_axes(f)),"Peak",'t(s)',fun_units(f))
 
 
-% %% Trasformata e Spettro Accelerazione
-% stampa_freq(acc)
+    %% Trasformata
+    sezione=ones(5,2);
+    sezione(1,:)=[1 15];
+    sezione(2,:)=[15 19.4];
+    sezione(3,:)=[19.5 23.76];
+    sezione(4,:)=[23.76 25.4];
+    sezione(5,:)=[25.4 29.76];
+
+    str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"];
+
+    L=length(funzione);
+    frequenza=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(funzione-movmean(funzione,40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasformata=P2_noMedia(1:(L/2+1),:);
+    trasformata(2:end-1,:)=2*trasformata(2:end-1,:);
+
+    % stampa_freq(frequenza,trasformata,cell2mat(fun_axes(f)),"Trasformata")
 
 
-% %% Ampiezza Media Accelerazione
-% stampa_AvAmp(acc)
+    xdftP=Y_noMedia(1:L/2+1,:);
+    spettro=(1/(sr*L))*abs(xdftP).^2;
+    spettro(2:end-1,:)=2*spettro(2:end-1,:);
+
+    stampa_freq(frequenza,spettro,cell2mat(fun_axes(f)),"Spettro")
 
 
-% %% Frequency Centroid Accelerazione
-% stampa_FrCen(acc)
+    trasform_mean=zeros(length(sezione),length(cell2mat(fun_axes(f))));
+    trasform_cent=zeros(length(sezione),length(cell2mat(fun_axes(f))));
+    trasform_var=zeros(length(sezione),length(cell2mat(fun_axes(f))));
+    entropia=zeros(length(sezione),length(cell2mat(fun_axes(f))));
+
+    for i=1:length(sezione)
+        L=(sezione(i,2)-sezione(i,1))*25;
+        frequenza=sr/L*(0:(L/2));
+
+        Y_noMedia=fft(funzione(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(funzione(sr*sezione(i,1):sr*sezione(i,2),:),40));
+        P2_noMedia=abs(Y_noMedia/L);
+        trasformata=P2_noMedia(1:(L/2+1),:);
+        trasformata(2:end-1,:)=2*trasformata(2:end-1,:);
+
+        trasform_mean(i,:)=mean(trasformata);
+        trasform_cent(i,:)=mean(trasformata.*frequenza');
+
+        for j=1:length(cell2mat(fun_axes(f)))
+            trasform_var(i,j)=sum((frequenza'-trasform_cent(i,j)).*trasformata(:,j))/sum(trasformata(:,j));
+        end
+
+        % stampa_freq(frequenza,trasformata,cell2mat(fun_axes(f)),"Trasformata "+str(i))
 
 
-% %% Frequency Variance Accelerazione
-% stampa_FrVar(acc)
+        xdftP=Y_noMedia(1:L/2+1,:);
+        spettro=(1/(sr*L))*abs(xdftP).^2;
+        spettro(2:end-1,:)=2*spettro(2:end-1,:);
+
+        % stampa_freq(frequenza,spettro,cell2mat(fun_axes(f)),"Spettro "+str(i))
+
+        for j=1:length(cell2mat(fun_axes(f)))
+            p=spettro(:,j)/sum(spettro(:,j));
+            entropia(i,j)=-sum(p.*log2(p));
+        end
+
+    end
+
+    % %% Ampiezza Media
+    % stampa_freqAmp(trasform_mean,cell2mat(fun_axes(f)),"Ampiezza Media",str)
 
 
-% %% Spectral Entropy Accelerazione
-% stampa_SpEnt(acc)
+    % %% Frequency Centroid
+    % stampa_freqParam(trasform_cent,cell2mat(fun_axes(f)),"Frequency Centroid",str)
 
 
-
-%% QUI
-
-
-% %% Velocità Angolare
-%
-% limX=[floor(min(min(vangP(:,1)),min(vangF(:,1)))),ceil(max(max(vangP(:,1)),max(vangF(:,1))))];
-% limY=[floor(min(min(vangP(:,2)),min(vangF(:,2)))),ceil(max(max(vangP(:,2)),max(vangF(:,2))))];
-% limZ=[floor(min(min(vangP(:,3)),min(vangF(:,3)))),ceil(max(max(vangP(:,3)),max(vangF(:,3))))];
-%
-% f=figure;
-% subplot(3,2,1)
-% plot(tP,vangP(:,1),LineWidth=1,Color="r")
-% title("Velocità Angolare Piano",FontName=font)
-% subtitle("Roll",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limX)
-% grid
-% subplot(3,2,3)
-% plot(tP,vangP(:,2),LineWidth=1,Color="g")
-% subtitle("Pitch",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limY)
-% grid
-% subplot(3,2,5)
-% plot(tP,vangP(:,3),LineWidth=1,Color="b")
-% subtitle("Yaw",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limZ)
-% grid
-%
-% subplot(3,2,2)
-% plot(tF,vangF(:,1),LineWidth=1,Color="r")
-% title("Velocità Angolare Forte",FontName=font)
-% subtitle("Roll",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limX)
-% grid
-% subplot(3,2,4)
-% plot(tF,vangF(:,2),LineWidth=1,Color="g")
-% subtitle("Pitch",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limY)
-% grid
-% subplot(3,2,6)
-% plot(tF,vangF(:,3),LineWidth=1,Color="b")
-% subtitle("Yaw",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limZ)
-% grid
-%
-% if(stampa)
-%     exportgraphics(f,figurePath+"lungaFP_VangXYZ.png")
-% end
+    % %% Frequency Variance
+    % stampa_freqParam(trasform_var,cell2mat(fun_axes(f)),"Frequency Variance",str)
 
 
-% %% Varianza Velocità Angolare
-% vangP_var=movvar(vangP,40);
-% vangF_var=movvar(vangF,40);
-%
-%
-% limX=[floor(min(min(vangP_var(:,1)),min(vangF_var(:,1)))),ceil(max(max(vangP_var(:,1)),max(vangF_var(:,1))))];
-% limZ=[floor(min(min(vangP_var(:,3)),min(vangF_var(:,3)))),ceil(max(max(vangP_var(:,3)),max(vangF_var(:,3))))];
-%
-% f=figure;
-% subplot(2,2,1)
-% plot(tP,vangP_var(:,1),LineWidth=1,Color="r")
-% title("Varianza Velocità Angolare Piano",FontName=font)
-% subtitle("Roll",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limX)
-% grid
-% subplot(2,2,3)
-% plot(tP,vangP_var(:,3),LineWidth=1,Color="b")
-% subtitle("Yaw",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limZ)
-% grid
-%
-% subplot(2,2,2)
-% plot(tF,vangF_var(:,1),LineWidth=1,Color="r")
-% title("Varianza Velocità Angolare Forte",FontName=font)
-% subtitle("Roll",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limX)
-% grid
-% subplot(2,2,4)
-% plot(tF,vangF_var(:,3),LineWidth=1,Color="b")
-% subtitle("Yaw",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("deg/s",FontName=font)
-% ylim(limZ)
-% grid
-%
-% if(stampa)
-%     exportgraphics(f,figurePath+"lungaFP_varVangXZ.png")
-% end
+    % %% Spectral Entropy
+    % stampa_freqParam(entropia,cell2mat(fun_axes(f)),"Spectral Entropy",str)
+
+end
 
 
-% %% Velocità
-% velP=cumsum(accP(:,1));
-% velF=cumsum(accF(:,1));
-%
-% lim=[floor(min(min(velP),min(velF))),ceil(max(max(velP),max(velF)))];
-%
-% f=figure;
-% subplot(2,1,1)
-% plot(tP,velP,LineWidth=1)
-% title("Velocità",FontName=font)
-% subtitle("Piano",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("m/s",FontName=font)
-% ylim(lim)
-% grid
-% hold on
-% plot(tP,zeros(length(velP)),LineWidth=.1,Color="black")
-% subplot(2,1,2)
-% plot(tF,velF,LineWidth=1)
-% subtitle("Forte",FontName=font)
-% xlabel("t(s)",FontName=font)
-% ylabel("m/s",FontName=font)
-% ylim(lim)
-% grid
-% hold on
-% plot(tF,zeros(length(velF)),LineWidth=.1,Color="black")
-%
-% if(stampa)
-%     exportgraphics(f,figurePath+"lungaFP_velX.png")
-% end
 
 
 %% Funzioni
 function[sqm] = movrms(f,n)
-newf=[zeros(n/2,3);f;zeros(n/2,3)];
+w=width(f);
+newf=[zeros(n/2,w);f;zeros(n/2,w)];
 
-sqm=zeros(length(f),3);
+sqm=zeros(length(f),w);
 
 for i=1:length(f)
     sqm(i,:)=rms(newf(i:i+n,:));
@@ -414,9 +237,10 @@ end
 end
 
 function[kurt] = movkurt(f,n)
-newf=[zeros(n/2,3);f;zeros(n/2,3)];
+w=width(f);
+newf=[zeros(n/2,w);f;zeros(n/2,w)];
 
-kurt=zeros(length(f),3);
+kurt=zeros(length(f),w);
 
 for i=1:length(f)
     kurt(i,:)=kurtosis(newf(i:i+n,:));
@@ -425,9 +249,10 @@ end
 end
 
 function[skew] = movskw(f,n)
-newf=[zeros(n/2,3);f;zeros(n/2,3)];
+w=width(f);
+newf=[zeros(n/2,w);f;zeros(n/2,w)];
 
-skew=zeros(length(f),3);
+skew=zeros(length(f),w);
 
 for i=1:length(f)
     skew(i,:)=skewness(newf(i:i+n,:));
@@ -437,22 +262,26 @@ end
 
 
 %% Grafici
-function stampa(t,fun,tit,ax,xlbl,ylbl)
-n=length(ax);
-limY=ones(n,2);
+function stampa(t,fun,fun_str,fun_axes,tit,xlbl,ylbl)
+n=length(fun_axes);
+
+fun_min=floor(min(fun));
+fun_max=ceil(max(fun));
+limY=[fun_min',fun_max'];
 
 textLimY=ones(n,5);
 
 for i=1:n
-    limY(i,:)=[floor(min(fun(:,i))), ceil(max(fun(:,i)))];
-    textLimY(i,:)=(limY(i,2)-1)*ones(5,1);
+    textLimY(i,:)=(limY(i,2)+1)*ones(5,1);
 end
 
-stampa_gen(t,fun,tit,ax,xlbl,ylbl,limY,textLimY)
+limY(:,2)=(limY(:,2)+1).*1.25;
+
+stampa_gen(t,fun,fun_str,fun_axes,tit,xlbl,ylbl,limY,textLimY)
 end
 
-function stampa_gen(t,fun,tit,ax,xlbl,ylbl,limY,textLimY)
-n=length(ax);
+function stampa_gen(t,fun,fun_str,fun_axes,tit,xlbl,ylbl,limY,textLimY)
+n=length(fun_axes);
 font="Times New Roman";
 
 linee=ones(5,2);
@@ -463,12 +292,12 @@ linee(4,:)=[23.76 23.76];
 linee(5,:)=[25.4 25.4];
 % linee(6,:)=[29.76 29.76];
 
-str={'Accelerate','Idle','Accelerate','Idle','Brake'};
+str={'Accelerate','Idle','Accelerate','Idle','Brake + Tourning'};
 
 for i=1:n
-    if (ax(i)=='X')
+    if (fun_axes(i)=='X')
         c(i)='r';
-    elseif (ax(i)=='Y')
+    elseif (fun_axes(i)=='Y')
         c(i)='g';
     else
         c(i)='b';
@@ -482,7 +311,7 @@ for i=1:n
     if(i==1)
         title(tit,FontName=font)
     end
-    subtitle(ax(i),FontName=font)
+    subtitle(fun_axes(i),FontName=font)
     xlabel(xlbl,FontName=font)
     ylabel(ylbl,FontName=font)
     ylim(limY(i,:))
@@ -495,260 +324,76 @@ for i=1:n
 
 end
 
-% exportgraphics(f,"D:\Users\Daniele\Desktop\"+tit+".png")
+% exportgraphics(f,"D:\Users\Daniele\Desktop\"+fun_str+"\"+tit+".png")
 
 end
 
-function stampa_freq(fun)
+function stampa_freq(freq,trasform,fun_axes,tit)
 font="Times New Roman";
-sr = 25; %sample rate
-
-L=length(fun);
-freq=sr/L*(0:(L/2));
-
-Y_noMedia=fft(fun-movmean(fun,40));
-P2_noMedia=abs(Y_noMedia/L);
-trasform=P2_noMedia(1:(L/2+1),:);
-trasform(2:end-1,:)=2*trasform(2:end-1,:);
 
 f=figure;
-subplot(2,1,1)
-plot(freq,trasform(:,1),LineWidth=1,Color="r")
-title("Trasformata",FontName=font)
-subtitle("X''",FontName=font)
-xlabel('Hz',FontName=font)
-ylabel("X''(Hz)",FontName=font)
-grid
-subplot(2,1,2)
-plot(freq,trasform(:,2),LineWidth=1,Color="g")
-subtitle("Y''",FontName=font)
-xlabel('Hz',FontName=font)
-ylabel("Y''(Hz)",FontName=font)
-grid
+for i=1:length(fun_axes)
+    subplot(length(fun_axes),1,i)
+    plot(freq,trasform(:,i),LineWidth=1,Color="r")
+    if(i == 1)
+        title(tit,FontName=font)
+    end
+    subtitle(fun_axes(i),FontName=font)
+    xlabel('Hz',FontName=font)
+    ylabel(fun_axes(i)+"(Hz)",FontName=font)
+    grid
+end
 
-% exportgraphics(f,"D:\Users\Daniele\Desktop\Trasformata.png")
+% exportgraphics(f,"D:\Users\Daniele\Desktop\Trasformata\"+tit+".png")
 
-sezione=ones(5,2);
-sezione(1,:)=[1 15];
-sezione(2,:)=[15 19.4];
-sezione(3,:)=[19.5 23.76];
-sezione(4,:)=[23.76 25.4];
-sezione(5,:)=[25.4 29.76];
+end
 
-str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]
+function stampa_freqAmp(param,fun_axes,tit,sezioni)
+n=length(sezioni);
+font="Times New Roman";
 
-for i=1:length(sezione)
-    L=(sezione(i,2)-sezione(i,1))*25;
-    freq=sr/L*(0:(L/2));
-
-    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    P2_noMedia=abs(Y_noMedia/L);
-    trasform=P2_noMedia(1:(L/2+1),:);
-    trasform(2:end-1,:)=2*trasform(2:end-1,:);
+for j=1:length(fun_axes)
+    limY=[floor(min(param(:,j))),ceil(max(param(:,j)))];
 
     f=figure;
-    subplot(2,1,1)
-    plot(freq,trasform(:,1),LineWidth=1,Color="r")
-    title("Trasformata "+str(i),FontName=font)
-    subtitle("X''",FontName=font)
-    xlabel('Hz',FontName=font)
-    ylabel("X''(Hz)",FontName=font)
-    ylim([0 3])
-    grid
-    subplot(2,1,2)
-    plot(freq,trasform(:,2),LineWidth=1,Color="g")
-    subtitle("Y''",FontName=font)
-    xlabel('Hz',FontName=font)
-    ylabel("Y''(Hz)",FontName=font)
-    ylim([0 1.5])
-    grid
-
-    % exportgraphics(f,"D:\Users\Daniele\Desktop\Tr"+str(i)+".png")
+    for i=1:n
+        plot(1:100,param(i,j)*ones(100,1),LineWidth=1,DisplayName=sezioni(i))
+        ylabel(fun_axes(j)+"(Hz)",FontName=font)
+        ylim(limY)
+        grid
+        hold on
+    end
+    title(tit+" "+fun_axes(j),FontName=font)
+    legend
+    
+    % exportgraphics(f,"D:\Users\Daniele\Desktop\Trasformata\"+tit+" "+fun_axes(j)+".png")
 end
 
 end
 
-function stampa_AvAmp(fun)
+function stampa_freqParam(param,fun_axes,tit,sezioni)
+n=length(sezioni);
 font="Times New Roman";
-sr = 25; %sample rate
 
-sezione=ones(5,2);
-sezione(1,:)=[1 15];
-sezione(2,:)=[15 19.4];
-sezione(3,:)=[19.5 23.76];
-sezione(4,:)=[23.76 25.4];
-sezione(5,:)=[25.4 29.76];
-
-str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]';
-
-f=figure;
-for i=1:5
-    L=(sezione(i,2)-sezione(i,1))*25;
-    freq=sr/L*(0:(L/2));
-
-    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    P2_noMedia=abs(Y_noMedia/L);
-    trasform=P2_noMedia(1:(L/2+1),:);
-    trasform(2:end-1,:)=2*trasform(2:end-1,:);
-
-    trasform_mean=mean(trasform);
-
-    plot(freq,trasform_mean(1)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
-    xlabel('Hz',FontName=font)
-    ylabel("X''(Hz)",FontName=font)
-    grid
-    hold on
-end
-title("Average Amplitude X",FontName=font)
-legend
-
-% exportgraphics(f,"D:\Users\Daniele\Desktop\AvgAmpX"+str(i)+".png")
-
-f=figure;
-for i=1:5
-    L=(sezione(i,2)-sezione(i,1))*25;
-    freq=sr/L*(0:(L/2));
-
-    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    P2_noMedia=abs(Y_noMedia/L);
-    trasform=P2_noMedia(1:(L/2+1),:);
-    trasform(2:end-1,:)=2*trasform(2:end-1,:);
-
-    trasform_mean=mean(trasform);
-
-    plot(freq,trasform_mean(2)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
-    xlabel('Hz',FontName=font)
-    ylabel("Y''(Hz)",FontName=font)
-    grid
-    hold on
-end
-title("Average Amplitude Y",FontName=font)
-legend
-
-% exportgraphics(f,"D:\Users\Daniele\Desktop\AvgAmpY"+str(i)+".png")
+for j=1:length(fun_axes)
+    f=figure;
+    for i=1:n
+        plot(param(i,j)*ones(100,1),0:99,LineWidth=1,DisplayName=sezioni(i))
+        ylabel(fun_axes(j)+"(Hz)",FontName=font)
+        ylim([0,100])
+        grid
+        hold on
+    end
+    title(tit+" "+fun_axes(j),FontName=font)
+    legend
+    
+    % exportgraphics(f,"D:\Users\Daniele\Desktop\Trasformata\"+tit+" "+fun_axes(j)+".png")
 end
 
-function stampa_FrCen(fun)
-font="Times New Roman";
-sr = 25; %sample rate
-
-sezione=ones(5,2);
-sezione(1,:)=[1 15];
-sezione(2,:)=[15 19.4];
-sezione(3,:)=[19.5 23.76];
-sezione(4,:)=[23.76 25.4];
-sezione(5,:)=[25.4 29.76];
-
-str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]';
-
-f=figure;
-for i=1:5
-    L=(sezione(i,2)-sezione(i,1))*25;
-    freq=sr/L*(0:(L/2));
-
-    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    P2_noMedia=abs(Y_noMedia/L);
-    trasform=P2_noMedia(1:(L/2+1),:);
-    trasform(2:end-1,:)=2*trasform(2:end-1,:);
-
-    trasform_cent=mean(trasform.*freq');
-
-    plot(freq,trasform_cent(1)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
-    xlabel('Hz',FontName=font)
-    ylabel("X''(Hz)",FontName=font)
-    grid
-    hold on
-end
-title("Frequency Centroid X",FontName=font)
-legend
-
-% exportgraphics(f,"D:\Users\Daniele\Desktop\FrCentX"+str(i)+".png")
-
-f=figure;
-for i=1:5
-    L=(sezione(i,2)-sezione(i,1))*25;
-    freq=sr/L*(0:(L/2));
-
-    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    P2_noMedia=abs(Y_noMedia/L);
-    trasform=P2_noMedia(1:(L/2+1),:);
-    trasform(2:end-1,:)=2*trasform(2:end-1,:);
-
-    trasform_cent=mean(trasform.*freq');
-
-    plot(freq,trasform_cent(2)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
-    xlabel('Hz',FontName=font)
-    ylabel("Y''(Hz)",FontName=font)
-    grid
-    hold on
-end
-title("Frequency Centroid Y",FontName=font)
-legend
-
-% exportgraphics(f,"D:\Users\Daniele\Desktop\FrCentY"+str(i)+".png")
 end
 
-function stampa_FrVar(fun)
-font="Times New Roman";
-sr = 25; %sample rate
 
-sezione=ones(5,2);
-sezione(1,:)=[1 15];
-sezione(2,:)=[15 19.4];
-sezione(3,:)=[19.5 23.76];
-sezione(4,:)=[23.76 25.4];
-sezione(5,:)=[25.4 29.76];
 
-str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"]';
-
-f=figure;
-for i=1:5
-    L=(sezione(i,2)-sezione(i,1))*25;
-    freq=sr/L*(0:(L/2));
-
-    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    P2_noMedia=abs(Y_noMedia/L);
-    trasform=P2_noMedia(1:(L/2+1),:);
-    trasform(2:end-1,:)=2*trasform(2:end-1,:);
-
-    centroid=mean(trasform.*freq');
-    trasform_var=sum((freq'-centroid).*trasform(:,1))/sum(trasform(:,1));
-
-    plot(freq,trasform_var(1)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
-    xlabel('Hz',FontName=font)
-    ylabel("X''(Hz)",FontName=font)
-    grid
-    hold on
-end
-title("Frequency Variance X",FontName=font)
-legend
-
-% exportgraphics(f,"D:\Users\Daniele\Desktop\FrVarX"+str(i)+".png")
-
-f=figure;
-for i=1:5
-    L=(sezione(i,2)-sezione(i,1))*25;
-    freq=sr/L*(0:(L/2));
-
-    Y_noMedia=fft(fun(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(fun(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    P2_noMedia=abs(Y_noMedia/L);
-    trasform=P2_noMedia(1:(L/2+1),:);
-    trasform(2:end-1,:)=2*trasform(2:end-1,:);
-
-    centroid=mean(trasform.*freq');
-    trasform_var=sum((freq'-centroid).*trasform(:,1))/sum(trasform(:,1));
-
-    plot(freq,trasform_var(2)*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
-    xlabel('Hz',FontName=font)
-    ylabel("Y''(Hz)",FontName=font)
-    grid
-    hold on
-end
-title("Frequency Variance Y",FontName=font)
-legend
-
-% exportgraphics(f,"D:\Users\Daniele\Desktop\FrVarY"+str(i)+".png")
-end
 
 function stampa_SpEnt(fun)
 font="Times New Roman";
@@ -779,7 +424,7 @@ for i=1:5
     for j=1:length(spettro)
         p(j)=spettro(j,1)/spettro_tot;
     end
-    
+
     entropia=-sum(p.*log2(p));
 
     plot(freq,entropia*ones(length(freq),1),LineWidth=1,DisplayName=str(i))
@@ -809,7 +454,7 @@ for i=1:5
     for j=1:length(spettro)
         p(j)=spettro(j,2)/spettro_tot;
     end
-    
+
     entropia=-sum(p.*log2(p));
 
     plot(freq,entropia*ones(length(freq),1),LineWidth=1,DisplayName=str(i))

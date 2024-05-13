@@ -73,38 +73,6 @@ for f=1:length(fun)
     stampa(t,fun_skw,fun_str(f),axes,"Skewness",'t(s)',fun_units(f))
 
 
-    %% Shape Factor
-    fun_rms=movrms(funzione,40);
-    fun_arv=movmean(abs(funzione),40);
-
-    fun_shf=fun_rms./fun_arv;
-    stampa(t,fun_shf,fun_str(f),axes,"Shape Factor",'t(s)',fun_units(f))
-
-
-    %% Crest Factor
-    fun_max=movmax(funzione,40);
-    fun_rms=movrms(funzione,40);
-
-    fun_crf=fun_max./fun_rms;
-    stampa(t,fun_crf,fun_str(f),axes,"Crest Factor",'t(s)',fun_units(f))
-
-
-    %% Impulse Factor
-    fun_max=movmax(funzione,40);
-    fun_arv=movmean(abs(funzione),40);
-
-    fun_impf=fun_max./fun_arv;
-    stampa(t,fun_impf,fun_str(f),axes,"Impulse Factor",'t(s)',fun_units(f))
-
-
-    %% Margin Factor
-    fun_max=movmax(funzione,40);
-    fun_arvq=movmean(sqrt(abs(funzione)),40).^2;
-
-    fun_mrgf=fun_max./fun_arvq;
-    stampa(t,fun_mrgf,fun_str(f),axes,"Margin Factor",'t(s)',fun_units(f))
-
-
     %% Max
     n_max=10;
     fun_max=movmax(funzione,n_max);
@@ -138,6 +106,38 @@ for f=1:length(fun)
 
     fun_peak=fun_max-fun_min;
     stampa(t,fun_peak,fun_str(f),axes,"Peak",'t(s)',fun_units(f))
+
+
+    %% Shape Factor
+    fun_rms=movrms(funzione,40);
+    fun_arv=movmean(abs(funzione),40);
+
+    fun_shf=fun_rms./fun_arv;
+    stampa(t,fun_shf,fun_str(f),axes,"Shape Factor",'t(s)',fun_units(f))
+
+
+    %% Crest Factor
+    fun_max=movmax(funzione,40);
+    fun_rms=movrms(funzione,40);
+
+    fun_crf=fun_max./fun_rms;
+    stampa(t,fun_crf,fun_str(f),axes,"Crest Factor",'t(s)',fun_units(f))
+
+
+    %% Impulse Factor
+    fun_max=movmax(funzione,40);
+    fun_arv=movmean(abs(funzione),40);
+
+    fun_impf=fun_max./fun_arv;
+    stampa(t,fun_impf,fun_str(f),axes,"Impulse Factor",'t(s)',fun_units(f))
+
+
+    %% Margin Factor
+    fun_max=movmax(funzione,40);
+    fun_arvq=movmean(sqrt(abs(funzione)),40).^2;
+
+    fun_mrgf=fun_max./fun_arvq;
+    stampa(t,fun_mrgf,fun_str(f),axes,"Margin Factor",'t(s)',fun_units(f))
 
 
     % %% Trasformata
@@ -327,7 +327,7 @@ for i=1:n
 
 end
 
-% exportgraphics(f,"D:\Users\Daniele\Desktop\"+fun_str+"\"+tit+".png")
+% exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\"+tit+".png")
 
 end
 
@@ -355,7 +355,7 @@ for i=1:length(fun_axes)
     end
 end
 
-% exportgraphics(f,"D:\Users\Daniele\Desktop\"+fun_str+"\Trasformata\"+tit+".png")
+% exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\Trasformata\"+tit+".png")
 
 end
 
@@ -377,7 +377,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    % exportgraphics(f,"D:\Users\Daniele\Desktop\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    % exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end
@@ -398,7 +398,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    % exportgraphics(f,"D:\Users\Daniele\Desktop\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    % exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end

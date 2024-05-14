@@ -140,87 +140,87 @@ for f=1:length(fun)
     stampa(t,fun_mrgf,fun_str(f),axes,"Margin Factor",'t(s)',fun_units(f))
 
 
-    % %% Trasformata
-    % sezione=ones(5,2);
-    % sezione(1,:)=[1 15];
-    % sezione(2,:)=[15 19.4];
-    % sezione(3,:)=[19.5 23.76];
-    % sezione(4,:)=[23.76 25.4];
-    % sezione(5,:)=[25.4 29.76];
-    %
-    % str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"];
-    %
-    % L=length(funzione);
-    % frequenza=sr/L*(0:(L/2));
-    %
-    % Y_noMedia=fft(funzione-movmean(funzione,40));
-    % P2_noMedia=abs(Y_noMedia/L);
-    % trasformata=P2_noMedia(1:(L/2+1),:);
-    % trasformata(2:end-1,:)=2*trasformata(2:end-1,:);
-    %
-    % stampa_freq(frequenza,trasformata,axes,fun_str(f),"Trasformata")
-    %
-    %
-    % xdftP=Y_noMedia(1:L/2+1,:);
-    % spettro=(1/(sr*L))*abs(xdftP).^2;
-    % spettro(2:end-1,:)=2*spettro(2:end-1,:);
-    %
-    % stampa_freq(frequenza,spettro,axes,fun_str(f),"Spettro")
-    %
-    %
-    % trasform_mean=zeros(length(sezione),length(axes));
-    % trasform_cent=zeros(length(sezione),length(axes));
-    % trasform_var=zeros(length(sezione),length(axes));
-    % entropia=zeros(length(sezione),length(axes));
-    %
-    % for i=1:length(sezione)
-    %     L=(sezione(i,2)-sezione(i,1))*25;
-    %     frequenza=sr/L*(0:(L/2));
-    %
-    %     Y_noMedia=fft(funzione(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(funzione(sr*sezione(i,1):sr*sezione(i,2),:),40));
-    %     P2_noMedia=abs(Y_noMedia/L);
-    %     trasformata=P2_noMedia(1:(L/2+1),:);
-    %     trasformata(2:end-1,:)=2*trasformata(2:end-1,:);
-    %
-    %     trasform_mean(i,:)=mean(trasformata);
-    %     trasform_cent(i,:)=mean(trasformata.*frequenza');
-    %
-    %     for j=1:length(axes)
-    %         trasform_var(i,j)=sum((frequenza'-trasform_cent(i,j)).*trasformata(:,j))/sum(trasformata(:,j));
-    %     end
-    %
-    %     stampa_freq(frequenza,trasformata,axes,fun_str(f),"Trasformata "+str(i))
-    %
-    %
-    %     xdftP=Y_noMedia(1:L/2+1,:);
-    %     spettro=(1/(sr*L))*abs(xdftP).^2;
-    %     spettro(2:end-1,:)=2*spettro(2:end-1,:);
-    %
-    %     stampa_freq(frequenza,spettro,axes,fun_str(f),"Spettro "+str(i))
-    %
-    %     for j=1:length(axes)
-    %         p=spettro(:,j)/sum(spettro(:,j));
-    %         entropia(i,j)=-sum(p.*log2(p));
-    %     end
-    %
-    % end
-    %
-    % %% Ampiezza Media
-    % stampa_freqAmp(trasform_mean,axes,fun_str(f),"Ampiezza Media",str)
-    %
-    %
-    % %% Frequency Centroid
-    % stampa_freqParam(trasform_cent,axes,fun_str(f),"Frequency Centroid",str)
-    %
-    %
-    % %% Frequency Variance
-    % stampa_freqParam(trasform_var,axes,fun_str(f),"Frequency Variance",str)
-    %
-    %
-    % %% Spectral Entropy
-    % stampa_freqParam(entropia,axes,fun_str(f),"Spectral Entropy",str)
+    %% Trasformata
+    sezione=ones(5,2);
+    sezione(1,:)=[1 15];
+    sezione(2,:)=[15 19.4];
+    sezione(3,:)=[19.5 23.76];
+    sezione(4,:)=[23.76 25.4];
+    sezione(5,:)=[25.4 29.76];
 
-    % close all
+    str=["Accelerazione 1","Idle 1","Accelerazione 2","Idle 2","Brake"];
+
+    L=length(funzione);
+    frequenza=sr/L*(0:(L/2));
+
+    Y_noMedia=fft(funzione-movmean(funzione,40));
+    P2_noMedia=abs(Y_noMedia/L);
+    trasformata=P2_noMedia(1:(L/2+1),:);
+    trasformata(2:end-1,:)=2*trasformata(2:end-1,:);
+
+    stampa_freq(frequenza,trasformata,axes,fun_str(f),"Trasformata")
+
+
+    xdftP=Y_noMedia(1:L/2+1,:);
+    spettro=(1/(sr*L))*abs(xdftP).^2;
+    spettro(2:end-1,:)=2*spettro(2:end-1,:);
+
+    stampa_freq(frequenza,spettro,axes,fun_str(f),"Spettro")
+
+
+    trasform_mean=zeros(length(sezione),length(axes));
+    trasform_cent=zeros(length(sezione),length(axes));
+    trasform_var=zeros(length(sezione),length(axes));
+    entropia=zeros(length(sezione),length(axes));
+
+    for i=1:length(sezione)
+        L=(sezione(i,2)-sezione(i,1))*25;
+        frequenza=sr/L*(0:(L/2));
+
+        Y_noMedia=fft(funzione(sr*sezione(i,1):sr*sezione(i,2),:)-movmean(funzione(sr*sezione(i,1):sr*sezione(i,2),:),40));
+        P2_noMedia=abs(Y_noMedia/L);
+        trasformata=P2_noMedia(1:(L/2+1),:);
+        trasformata(2:end-1,:)=2*trasformata(2:end-1,:);
+
+        trasform_mean(i,:)=mean(trasformata);
+        trasform_cent(i,:)=mean(trasformata.*frequenza');
+
+        for j=1:length(axes)
+            trasform_var(i,j)=sum((frequenza'-trasform_cent(i,j)).*trasformata(:,j))/sum(trasformata(:,j));
+        end
+
+        stampa_freq(frequenza,trasformata,axes,fun_str(f),"Trasformata "+str(i))
+
+
+        xdftP=Y_noMedia(1:L/2+1,:);
+        spettro=(1/(sr*L))*abs(xdftP).^2;
+        spettro(2:end-1,:)=2*spettro(2:end-1,:);
+
+        stampa_freq(frequenza,spettro,axes,fun_str(f),"Spettro "+str(i))
+
+        for j=1:length(axes)
+            p=spettro(:,j)/sum(spettro(:,j));
+            entropia(i,j)=-sum(p.*log2(p));
+        end
+
+    end
+
+    %% Ampiezza Media
+    stampa_freqAmp(trasform_mean,axes,fun_str(f),"Ampiezza Media",str)
+
+
+    %% Frequency Centroid
+    stampa_freqParam(trasform_cent,axes,fun_str(f),"Frequency Centroid",str)
+
+
+    %% Frequency Variance
+    stampa_freqParam(trasform_var,axes,fun_str(f),"Frequency Variance",str)
+
+
+    %% Spectral Entropy
+    stampa_freqParam(entropia,axes,fun_str(f),"Spectral Entropy",str)
+
+    close all
 end
 
 
@@ -327,7 +327,7 @@ for i=1:n
 
 end
 
-% exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\"+tit+".png")
+exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\"+tit+".png")
 
 end
 
@@ -355,7 +355,7 @@ for i=1:length(fun_axes)
     end
 end
 
-% exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+".png")
+exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+".png")
 
 end
 
@@ -377,7 +377,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    % exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end
@@ -398,7 +398,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    % exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end

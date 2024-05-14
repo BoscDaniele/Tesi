@@ -327,7 +327,7 @@ for i=1:n
 
 end
 
-% exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\"+tit+".png")
+% exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\"+tit+".png")
 
 end
 
@@ -355,7 +355,7 @@ for i=1:length(fun_axes)
     end
 end
 
-% exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\Trasformata\"+tit+".png")
+% exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+".png")
 
 end
 
@@ -377,7 +377,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    % exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    % exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end
@@ -398,7 +398,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    % exportgraphics(f,"..\slide\dritto\figure\dritto"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    % exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end

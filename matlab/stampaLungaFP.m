@@ -327,7 +327,7 @@ for i=2:2:2*n
     grid
 end
 
-% exportgraphics(f,"..\slide\dritto\figure\drittoFP"+fun_str+"\"+tit+".png")
+% exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\"+tit+".png")
 
 end
 
@@ -383,7 +383,7 @@ for i=2:2:2*n
     end
 end
 
-% exportgraphics(f,"..\slide\dritto\figure\drittoFP"+fun_str+"\Trasformata\"+tit+".png")
+% exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+".png")
 
 end
 
@@ -400,7 +400,7 @@ for i=1:length(fun_axes)
     plot(1:100,paramF(i)*ones(100,1),LineWidth=1,DisplayName=tit+" Forte");
 
     legend
-    % exportgraphics(f,"..\slide\dritto\figure\drittoFP"+fun_str+"\Trasformata\"+tit+".png")
+    % exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+".png")
 end
 
 end
@@ -419,7 +419,7 @@ for i=1:length(fun_axes)
     plot(paramF(i)*ones(100,1),0:99,LineWidth=1,DisplayName=tit+" Forte")
 
     legend
-    % exportgraphics(f,"..\slide\dritto\figure\drittoFP"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    % exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 
 end
 

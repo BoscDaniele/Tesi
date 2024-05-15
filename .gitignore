@@ -4,3 +4,10 @@ node_modules
 slprj
 matlab/prova*.m
 matlab/*.asv
+slide/*/*.aux
+slide/*/*.log
+slide/*/*.nav
+slide/*/*.out
+slide/*/*.synctex.gz
+slide/*/*.toc
+slide/*/*.snm

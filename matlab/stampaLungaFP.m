@@ -3,7 +3,7 @@ close all
 clc
 
 pathF=".\dati\lunga_forte\";
-pathP=".\dati\lunga_forte\";
+pathP=".\dati\lunga_piano\";
 
 sr=25; % sample rate
 
@@ -47,8 +47,8 @@ vang={vangP,vangF};
 mag={magP,magF};
 vel={velP(:,1:2),velF(:,1:2)};
 
-% fun={acc,vang,mag,vel};
-fun={acc};
+fun={acc,vang,mag,vel};
+% fun={acc};
 fun_str=["Acc","VAng","Mag","Vel"];
 fun_axes={["X","Y"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y"]};
 fun_units=["m/s^2","deg/s","µT","m/s"];
@@ -58,104 +58,104 @@ for f=1:length(fun)
     funzioneF=fun{f}{2};
     axes=fun_axes{f};
 
-    % %% Parametro
-    % stampa(tP,tF,funzioneP,funzioneF,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
-    % 
-    % 
-    % %% LowPass
-    % funP_low=lowpass(funzioneP,0.5,25);
-    % funF_low=lowpass(funzioneF,0.5,25);
-    % stampa(tP,tF,funP_low,funF_low,fun_str(f),axes,"LowPass",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Media
-    % funP_media=movmean(funzioneP,40);
-    % funF_media=movmean(funzioneF,40);
-    % stampa(tP,tF,funP_media,funF_media,fun_str(f),axes,"Media",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Valore Medio Rettificato
-    % funP_arv=movmean(abs(funzioneP),40);
-    % funF_arv=movmean(abs(funzioneF),40);
-    % stampa(tP,tF,funP_arv,funF_arv,fun_str(f),axes,"Media Rettificata",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Varianza
-    % funP_var=movvar(funzioneP,40);
-    % funF_var=movvar(funzioneF,40);
-    % stampa(tP,tF,funP_var,funF_var,fun_str(f),axes,"Varianza",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Deviazione Standard
-    % funP_std=movstd(funzioneP,40);
-    % funF_std=movstd(funzioneF,40);
-    % stampa(tP,tF,funP_std,funF_std,fun_str(f),axes,"Deviazione Standard",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Scarto Quadratico Medio
-    % funP_rms=movrms(funzioneP,40);
-    % funF_rms=movrms(funzioneF,40);
-    % stampa(tP,tF,funP_rms,funF_rms,fun_str(f),axes,"Scarto Quadratico Medio",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Kurtosi
-    % funP_krt=movkurt(funzioneP,40);
-    % funF_krt=movkurt(funzioneF,40);
-    % stampa(tP,tF,funP_krt,funF_krt,fun_str(f),axes,"Kurtosi",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Skewness
-    % funP_skw=movskw(funzioneP,40);
-    % funF_skw=movskw(funzioneF,40);
-    % stampa(tP,tF,funP_skw,funF_skw,fun_str(f),axes,"Skewness",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Max
-    % n_max=10;
-    % funP_max=movmax(funzioneP,n_max);
-    % funF_max=movmax(funzioneF,n_max);
-    % stampa(tP,tF,funP_max,funF_max,fun_str(f),axes,"Max",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Min
-    % n_min=10;
-    % funP_min=movmin(funzioneP,n_min);
-    % funF_min=movmin(funzioneF,n_min);
-    % 
-    % stampa(tP,tF,funP_min,funF_min,fun_str(f),axes,"Min",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Peak
-    % funP_peak=funP_max-funP_min;
-    % funF_peak=funF_max-funF_min;
-    % stampa(tP,tF,funP_peak,funF_peak,fun_str(f),axes,"Peak",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Shape Factor
-    % funP_shf=funP_rms./funP_arv;
-    % funF_shf=funF_rms./funF_arv;
-    % stampa(tP,tF,funP_shf,funF_shf,fun_str(f),axes,"Shape Factor",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Crest Factor
-    % funP_crf=funP_max./funP_rms;
-    % funF_crf=funF_max./funF_rms;
-    % stampa(tP,tF,funP_crf,funF_crf,fun_str(f),axes,"Crest Factor",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Impulse Factor
-    % funP_impf=funP_max./funP_arv;
-    % funF_impf=funF_max./funF_arv;
-    % stampa(tP,tF,funP_impf,funF_impf,fun_str(f),axes,"Impulse Factor",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Margin Factor
-    % funP_arvq=movmean(sqrt(abs(funzioneP)),40).^2;
-    % funF_arvq=movmean(sqrt(abs(funzioneF)),40).^2;
-    % 
-    % funP_mrgf=funP_max./funP_arvq;
-    % funF_mrgf=funF_max./funF_arvq;
-    % stampa(tP,tF,funP_mrgf,funF_mrgf,fun_str(f),axes,"Margin Factor",'t(s)',fun_units(f))
+    %% Parametro
+    stampa(tP,tF,funzioneP,funzioneF,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
+
+
+    %% LowPass
+    funP_low=lowpass(funzioneP,0.5,25);
+    funF_low=lowpass(funzioneF,0.5,25);
+    stampa(tP,tF,funP_low,funF_low,fun_str(f),axes,"LowPass",'t(s)',fun_units(f))
+
+
+    %% Media
+    funP_media=movmean(funzioneP,40);
+    funF_media=movmean(funzioneF,40);
+    stampa(tP,tF,funP_media,funF_media,fun_str(f),axes,"Media",'t(s)',fun_units(f))
+
+
+    %% Valore Medio Rettificato
+    funP_arv=movmean(abs(funzioneP),40);
+    funF_arv=movmean(abs(funzioneF),40);
+    stampa(tP,tF,funP_arv,funF_arv,fun_str(f),axes,"Media Rettificata",'t(s)',fun_units(f))
+
+
+    %% Varianza
+    funP_var=movvar(funzioneP,40);
+    funF_var=movvar(funzioneF,40);
+    stampa(tP,tF,funP_var,funF_var,fun_str(f),axes,"Varianza",'t(s)',fun_units(f))
+
+
+    %% Deviazione Standard
+    funP_std=movstd(funzioneP,40);
+    funF_std=movstd(funzioneF,40);
+    stampa(tP,tF,funP_std,funF_std,fun_str(f),axes,"Deviazione Standard",'t(s)',fun_units(f))
+
+
+    %% Scarto Quadratico Medio
+    funP_rms=movrms(funzioneP,40);
+    funF_rms=movrms(funzioneF,40);
+    stampa(tP,tF,funP_rms,funF_rms,fun_str(f),axes,"Scarto Quadratico Medio",'t(s)',fun_units(f))
+
+
+    %% Kurtosi
+    funP_krt=movkurt(funzioneP,40);
+    funF_krt=movkurt(funzioneF,40);
+    stampa(tP,tF,funP_krt,funF_krt,fun_str(f),axes,"Kurtosi",'t(s)',fun_units(f))
+
+
+    %% Skewness
+    funP_skw=movskw(funzioneP,40);
+    funF_skw=movskw(funzioneF,40);
+    stampa(tP,tF,funP_skw,funF_skw,fun_str(f),axes,"Skewness",'t(s)',fun_units(f))
+
+
+    %% Max
+    n_max=10;
+    funP_max=movmax(funzioneP,n_max);
+    funF_max=movmax(funzioneF,n_max);
+    stampa(tP,tF,funP_max,funF_max,fun_str(f),axes,"Max",'t(s)',fun_units(f))
+
+
+    %% Min
+    n_min=10;
+    funP_min=movmin(funzioneP,n_min);
+    funF_min=movmin(funzioneF,n_min);
+
+    stampa(tP,tF,funP_min,funF_min,fun_str(f),axes,"Min",'t(s)',fun_units(f))
+
+
+    %% Peak
+    funP_peak=funP_max-funP_min;
+    funF_peak=funF_max-funF_min;
+    stampa(tP,tF,funP_peak,funF_peak,fun_str(f),axes,"Peak",'t(s)',fun_units(f))
+
+
+    %% Shape Factor
+    funP_shf=funP_rms./funP_arv;
+    funF_shf=funF_rms./funF_arv;
+    stampa(tP,tF,funP_shf,funF_shf,fun_str(f),axes,"Shape Factor",'t(s)',fun_units(f))
+
+
+    %% Crest Factor
+    funP_crf=funP_max./funP_rms;
+    funF_crf=funF_max./funF_rms;
+    stampa(tP,tF,funP_crf,funF_crf,fun_str(f),axes,"Crest Factor",'t(s)',fun_units(f))
+
+
+    %% Impulse Factor
+    funP_impf=funP_max./funP_arv;
+    funF_impf=funF_max./funF_arv;
+    stampa(tP,tF,funP_impf,funF_impf,fun_str(f),axes,"Impulse Factor",'t(s)',fun_units(f))
+
+
+    %% Margin Factor
+    funP_arvq=movmean(sqrt(abs(funzioneP)),40).^2;
+    funF_arvq=movmean(sqrt(abs(funzioneF)),40).^2;
+
+    funP_mrgf=funP_max./funP_arvq;
+    funF_mrgf=funF_max./funF_arvq;
+    stampa(tP,tF,funP_mrgf,funF_mrgf,fun_str(f),axes,"Margin Factor",'t(s)',fun_units(f))
 
 
     %% Trasformata
@@ -230,7 +230,7 @@ for f=1:length(fun)
 
     stampa_freqParam(entropiaP,entropiaF,axes,fun_str(f),"Spectral Entropy")
 
-    % close all
+    close all
 end
 
 
@@ -327,7 +327,7 @@ for i=2:2:2*n
     grid
 end
 
-% exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\"+tit+".png")
+exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\"+tit+".png")
 
 end
 
@@ -383,7 +383,7 @@ for i=2:2:2*n
     end
 end
 
-% exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+".png")
+exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+".png")
 
 end
 
@@ -400,7 +400,7 @@ for i=1:length(fun_axes)
     plot(1:100,paramF(i)*ones(100,1),LineWidth=1,DisplayName=tit+" Forte");
 
     legend
-    % exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+".png")
+    exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 end
 
 end
@@ -419,7 +419,7 @@ for i=1:length(fun_axes)
     plot(paramF(i)*ones(100,1),0:99,LineWidth=1,DisplayName=tit+" Forte")
 
     legend
-    % exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 
 end
 

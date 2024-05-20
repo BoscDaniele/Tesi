@@ -278,8 +278,12 @@ end
 function stampa(tP,tF,funP,funF,fun_str,fun_axes,tit,xlbl,ylbl)
 n=length(fun_axes);
 
-fun_min=floor(min([funP;funF]));
-fun_max=ceil(max([funP;funF]));
+% fun_min=floor(min([funP;funF]));
+% fun_max=ceil(max([funP;funF]));
+
+fun_min=(min([funP;funF]));
+fun_max=(max([funP;funF]));
+
 limY=[fun_min',fun_max'];
 
 stampa_gen(tP,tF,funP,funF,fun_str,fun_axes,tit,xlbl,ylbl,limY)
@@ -335,8 +339,12 @@ function stampa_freq(freqP,freqF,trasformP,trasformF,fun_axes,fun_str,tit)
 font="Times New Roman";
 n=length(fun_axes);
 
-limY_min=floor(min([trasformP;trasformF]));
-limY_max=ceil(max([trasformP;trasformF]));
+% limY_min=floor(min([trasformP;trasformF]));
+% limY_max=ceil(max([trasformP;trasformF]));
+
+limY_min=(min([trasformP;trasformF]));
+limY_max=(max([trasformP;trasformF]));
+
 limY=[limY_min',limY_max'];
 
 f=figure;

@@ -2,13 +2,13 @@ clear all
 close all
 clc
 
-pathF=".\dati\lunga_forte\";
-pathP=".\dati\lunga_piano\";
+pathF=".\dati\curvaU_forte\";
+pathP=".\dati\curvaU_piano\";
 
 sr=25; % sample rate
 
-rilievoF=2;
-rilievoP=3;
+rilievoF=4;
+rilievoP=2;
 
 %% Forte
 [gzRotF,gMedioF] = GZRot(pathF);
@@ -42,15 +42,15 @@ magP_rotta=([dbP(:,8),-dbP(:,9),dbP(:,10)]*1e-1)*gzRotP;
 velP=cumsum(accP)*0.04;
 
 %% Fun
-acc={accP(:,1:2),accF(:,1:2)};
+acc={accP,accF};
 vang={vangP,vangF};
 mag={magP,magF};
-vel={velP(:,1:2),velF(:,1:2)};
+vel={velP,velF};
 
 fun={acc,vang,mag,vel};
-% fun={acc};
+% fun={acc,vang,mag};
 fun_str=["Acc","VAng","Mag","Vel"];
-fun_axes={["X","Y"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y"]};
+fun_axes={["X","Y","Z"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y","Z"]};
 fun_units=["m/s^2","deg/s","µT","m/s"];
 
 for f=1:length(fun)
@@ -193,14 +193,14 @@ for f=1:length(fun)
     %% Ampiezza Media
     trasformP_mean=mean(trasformataP);
     trasformF_mean=mean(trasformataF);
-    
+
     stampa_freqAmp(trasformP_mean,trasformF_mean,axes,fun_str(f),"Ampiezza Media")
 
 
     %% Frequency Centroid
     trasformP_cent=mean(trasformataP.*frequenzaP');
     trasformF_cent=mean(trasformataF.*frequenzaF');
-    
+
     stampa_freqParam(trasformP_cent,trasformF_cent,axes,fun_str(f),"Frequency Centroid")
 
 
@@ -327,7 +327,7 @@ for i=2:2:2*n
     grid
 end
 
-exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\"+tit+".png")
+exportgraphics(f,"..\slide\curvaU_FP\figure\"+fun_str+"\"+tit+".png")
 
 end
 
@@ -383,7 +383,7 @@ for i=2:2:2*n
     end
 end
 
-exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+".png")
+exportgraphics(f,"..\slide\curvaU_FP\figure\"+fun_str+"\Trasformata\"+tit+".png")
 
 end
 
@@ -400,7 +400,7 @@ for i=1:length(fun_axes)
     plot(1:100,paramF(i)*ones(100,1),LineWidth=1,DisplayName=tit+" Forte");
 
     legend
-    exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
+    exportgraphics(f,"..\slide\curvaU_FP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 end
 
 end
@@ -419,7 +419,7 @@ for i=1:length(fun_axes)
     plot(paramF(i)*ones(100,1),0:99,LineWidth=1,DisplayName=tit+" Forte")
 
     legend
-    exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
+    exportgraphics(f,"..\slide\curvaU_FP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 
 end
 

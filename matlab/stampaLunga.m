@@ -16,7 +16,7 @@ t_rotta=t_rotta-t_rotta(1);
 
 acc_rotta=db(:,2:4)*gzRot*9.81/-gMedio;
 vang_rotta=(db(:,5:7)*1e-3);
-mag_rotta=([db(:,8),-db(:,9),db(:,10)]*1e-1);
+mag_rotta=([db(:,8),-db(:,9),db(:,10)]*1e-1)*gzRot;
 
 [t,acc,vang,mag]=AggiustaFrequenza(t_rotta,acc_rotta,vang_rotta,mag_rotta);
 vel=cumsum(acc)*0.04;

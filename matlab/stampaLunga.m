@@ -3,9 +3,12 @@ close all
 clc
 
 path=".\dati\lunga_forte\";
-sr=25; % sample rate
-
 rilievo=2;
+
+% path=".\db\secchia\";
+% rilievo=3;
+
+sr=25; % sample rate
 
 [gzRot,gMedio] = GZRot(path);
 
@@ -22,8 +25,10 @@ mag_rotta=([db(:,8),-db(:,9),db(:,10)]*1e-1)*gzRot;
 vel=cumsum(acc)*0.04;
 
 fun={acc(:,1:2),vang,mag,vel(:,1:2)};
+% fun={acc};
 fun_str=["Acc","VAng","Mag","Vel"];
 fun_axes={["X","Y"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y"]};
+% fun_axes={["X","Y","Z"]};
 fun_units=["m/s^2","deg/s","µT","m/s"];
 
 for f=1:length(fun)
@@ -278,7 +283,8 @@ for i=1:n
     textLimY(i,:)=(limY(i,2)+1)*ones(5,1);
 end
 
-limY(:,2)=(limY(:,2)+1).*1.25;
+% limY(:,2)=(limY(:,2)+1).*1.25;
+limY(:,2)=(limY(:,2)+1)+abs(limY(:,2)+1).*0.25;
 
 stampa_gen(t,fun,fun_str,fun_axes,tit,xlbl,ylbl,limY,textLimY)
 end

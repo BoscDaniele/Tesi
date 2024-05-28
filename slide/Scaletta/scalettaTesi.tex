@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+
+\usepackage{preambolo}
+
+\begin{document}
+	% TITOLO
+	\include{header}
+	
+	% INDICE
+	\pagenumbering{Roman}
+	{
+		\hypersetup{linkcolor=black}
+		\renewcommand*\contentsname{Indice}
+		\tableofcontents
+	}
+	
+	\newpage
+	\pagenumbering{arabic}
+	\section{Introduzione}
+	\begin{enumerate}
+		\item cosa e perchè si sta facendo quello che si sta facendo
+	\end{enumerate}
+	
+	\newpage
+	\section{Stato dell'Arte}
+	\begin{enumerate}
+		\item come è stato affrontato il problema da altre parti
+		\begin{enumerate}
+			\item sensore sul manubrio
+			\item encoder sulla ruota etc.
+			\item (sensore di tensione in ingresso alla batteria di una bicicletta elettrica)
+			\item ...
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	\section{Fisica della Bicicletta}
+	\begin{enumerate}
+		\item breve descrizione di come funziona fisicamente una bicicletta (forze a cui è soggetta durante la corsa)
+		\item cosa mi aspetto di vedere dai dati raccolti dal sensore
+		\begin{enumerate}
+			\item percorso rettilineo
+			\item curva
+			\item salita/discesa
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	\section{Il Sistema}
+	\begin{enumerate}
+		\item da che elementi è composto il sistema utilizzato per raccogliere i dati
+		\begin{enumerate}
+			\item bicicletta
+			\item sensore
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	\section{Raccolta Dati}
+	\begin{enumerate}
+		\item come e dove si sono svolti gli "esperimenti" di raccolta dati
+		\begin{enumerate}
+			\item Orientamento del Vettore Gravitazionale
+			\item Percorso Rettilineo
+			\item Curva
+			\item Curva a U
+		\end{enumerate}		
+		\item dati raccolti dal sistema
+		\begin{enumerate}
+			\item Accelerazione
+			\item Velocità Angolare
+			\item Campo Magnetico
+			\item Velocità
+		\end{enumerate}
+		durante le fasi di
+		\begin{enumerate}
+			\item Accelerazione/Decelerazione
+			\item Curva
+			\item Frenata
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	\section{Indicatori}
+	\begin{enumerate}
+		\item Indicatori presi in considerazione
+		\begin{enumerate}
+			\item media, media rettificata
+			\item root mean square (rms)
+			\item varianza, deviazione standard
+			\item massimo, minimo e distanza picco-picco
+			\item etc
+		\end{enumerate}
+		\item come si comportano gli indicatori durante le fasi di
+		\begin{enumerate}
+			\item Accelerazione/Decelerazione
+			\item Curva
+			\item Frenata
+		\end{enumerate}
+		e quali scegliere al fine di stabilire cosa e come (con che "intensità") sta avvenendo.
+	\end{enumerate}
+	
+	\newpage
+	\section{Sviluppi Futuri}
+	\begin{enumerate}
+		\item ulteriori test
+		\begin{enumerate}
+			\item Cambio dei Rapporti (Marcia)
+			\item Salita/Discesa
+		\end{enumerate}
+		\item come interpretare i dati ottenuti
+		\begin{enumerate}
+			\item impostare di valori soglia
+			\item machine learning
+			\item dynamic time warping
+			\item altro
+		\end{enumerate}
+		
+	\end{enumerate}
+	
+	\newpage
+	\section{Conclusioni}
+	\begin{enumerate}
+		\item come utilizzare gli indicatori ottenuti
+		\begin{enumerate}
+			\item capire quanto un forte sta andando un ciclista
+			\item sicurezza/riconoscimento di comportamenti pericolosi (zig-zag, etc)
+			\item riconoscimento di chi sta guidando all'interno di un gruppo di persone (per esempio un nucleo familiare)
+		\end{enumerate}
+	\end{enumerate}
+	
+\end{document}

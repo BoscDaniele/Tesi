@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Tesi.blg'
-[292] biber-MSWIN64:340> INFO - === 
-[382] Biber.pm:418> INFO - Reading 'Tesi.bcf'
-[735] Biber.pm:978> INFO - Found 2 citekeys in bib section 0
-[778] Biber.pm:4401> INFO - Processing section 0
-[812] Biber.pm:4592> INFO - Looking for bibtex file 'bibliografia.bib' for section 0
-[911] bibtex.pm:1713> INFO - LaTeX decoding ...
-[933] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliografia.bib'
-[1064] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1065] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1065] Biber.pm:4221> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[1065] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[1085] bbl.pm:654> INFO - Writing 'Tesi.bbl' with encoding 'UTF-8'
-[1090] bbl.pm:757> INFO - Output to Tesi.bbl
+[301] biber-MSWIN64:340> INFO - === 
+[389] Biber.pm:418> INFO - Reading 'Tesi.bcf'
+[702] Biber.pm:978> INFO - Found 2 citekeys in bib section 0
+[743] Biber.pm:4401> INFO - Processing section 0
+[777] Biber.pm:4592> INFO - Looking for bibtex file 'bibliografia.bib' for section 0
+[875] bibtex.pm:1713> INFO - LaTeX decoding ...
+[897] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliografia.bib'
+[1051] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1051] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1051] Biber.pm:4221> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[1052] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[1077] bbl.pm:654> INFO - Writing 'Tesi.bbl' with encoding 'UTF-8'
+[1082] bbl.pm:757> INFO - Output to Tesi.bbl

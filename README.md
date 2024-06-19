@@ -5,7 +5,7 @@ Definizione di Indicatori per la Caratterizzazione dello Stile di Guida di Veico
    1. Fermo: accelerazione lungo l'asse x(asse direzione moto) pari a "zero" accelerazione gravitazionale distribuita lungo gli assi y e z (il peso viene spostato su una gamba, la bicicletta si inclina e così anche il sensore)
    2. Accelerazione:
       * Accelerometro
-         - asse x: composta da una componente "costante" (nel senso che varia lentamente nel tempo, sembra essere molto inaffidabile) e da una componente variabile/oscillante (azione delle pedalate sull'accelerazione della bicicletta)
+         - asse x: composta da una componente "costante" (nel senso che varia lentamente nel tempo) e da una componente variabile/oscillante (azione delle pedalate sull'accelerazione della bicicletta)
          - asse y: accelerazione oscillante dovuta all'azione del pedale
       * Giroscopio
          - rollio/roll (rotazione attorno a x): azione del pedale
@@ -16,7 +16,7 @@ Definizione di Indicatori per la Caratterizzazione dello Stile di Guida di Veico
          - beccheggio/pitch (rotazione attorno a y): si dovrebbe notare l'azione del freno anteriore (sopratutto se la bici, come nel mio caso, è dotata di ammortizzatori)
    4. In Corsa
       * Accelerometro
-         - asse x: l'accelerazione "costante" diminuisce in quanto la bicicletta è già a "regime" (ho mai detto che questa componente è altamente inaffidabile?), anche la parte oscillante dovuta alle pedalate dovrebbe ridursi in ampiezza (in quanto le pedalate riescono a trasferire una minore accelerazione) dovrebbe esserci anche un'aumento della frequenza delle pedalate in quanto la ruota non fornisce (quasi) più "resistenza"
+         - asse x: l'accelerazione "costante" diminuisce in quanto la bicicletta è già a "regime", anche la parte oscillante dovuta alle pedalate dovrebbe ridursi in ampiezza (in quanto le pedalate riescono a trasferire una minore accelerazione) dovrebbe esserci anche un'aumento della frequenza delle pedalate in quanto la ruota non fornisce (quasi) più "resistenza"
       * Giroscopio
          - rollio/roll (rotazione attorno a x): azione del pedale
    5. Cambio Rapporti (marcia)

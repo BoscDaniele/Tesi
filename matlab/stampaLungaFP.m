@@ -24,6 +24,7 @@ magF_rotta=([dbF(:,8),-dbF(:,9),dbF(:,10)]*1e-1)*gzRotF;
 
 [tF,accF,vangF,magF]=AggiustaFrequenza(tF_rotta,accF_rotta,vangF_rotta,magF_rotta);
 velF=cumsum(accF)*0.04;
+angF=cumsum(vangF)*0.04;
 
 
 %% Piano
@@ -40,17 +41,19 @@ magP_rotta=([dbP(:,8),-dbP(:,9),dbP(:,10)]*1e-1)*gzRotP;
 
 [tP,accP,vangP,magP]=AggiustaFrequenza(tP_rotta,accP_rotta,vangP_rotta,magP_rotta);
 velP=cumsum(accP)*0.04;
+angP=cumsum(vangP)*0.04;
 
 %% Fun
-acc={accP(:,1:2),accF(:,1:2)};
+acc={accP,accF};
 vang={vangP,vangF};
 mag={magP,magF};
-vel={velP(:,1:2),velF(:,1:2)};
+vel={velP,velF};
+ang={angP,angF};
 
+% fun={acc,vang,mag,vel,ang};
 fun={acc,vang,mag,vel};
-% fun={acc};
 fun_str=["Acc","VAng","Mag","Vel"];
-fun_axes={["X","Y"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y"]};
+fun_axes={["X","Y","Z"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y","Z"]};
 fun_units=["m/s^2","deg/s","µT","m/s"];
 
 for f=1:length(fun)
@@ -193,14 +196,14 @@ for f=1:length(fun)
     %% Ampiezza Media
     trasformP_mean=mean(trasformataP);
     trasformF_mean=mean(trasformataF);
-    
+
     stampa_freqAmp(trasformP_mean,trasformF_mean,axes,fun_str(f),"Ampiezza Media")
 
 
     %% Frequency Centroid
     trasformP_cent=mean(trasformataP.*frequenzaP');
     trasformF_cent=mean(trasformataF.*frequenzaF');
-    
+
     stampa_freqParam(trasformP_cent,trasformF_cent,axes,fun_str(f),"Frequency Centroid")
 
 

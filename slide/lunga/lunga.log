@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  15 MAY 2024 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  17 JUN 2024 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1086,900 +1086,1427 @@ LaTeX Info: Redefining \it@ccap on input line 6.
  [2
 
 ]
-<./figure/Acc/Acc.png, id=38, 361.8318pt x 304.9794pt>
+<./figure/Acc/Acc.png, id=38, 362.3136pt x 292.9344pt>
 File: ./figure/Acc/Acc.png Graphic file (type png)
 <use ./figure/Acc/Acc.png>
-Package pdftex.def Info: ./figure/Acc/Acc.png  used on input line 10.
-(pdftex.def)             Requested size: 255.46136pt x 215.31812pt.
+Package pdftex.def Info: ./figure/Acc/Acc.png  used on input line 173.
+(pdftex.def)             Requested size: 266.32217pt x 215.31812pt.
  [3
 
  <./figure/Acc/Acc.png (PNG copy)>]
-<./figure/Acc/Media.png, id=45, 359.9046pt x 304.9794pt>
+<./figure/Acc/Media.png, id=45, 362.3136pt x 292.9344pt>
 File: ./figure/Acc/Media.png Graphic file (type png)
 <use ./figure/Acc/Media.png>
-Package pdftex.def Info: ./figure/Acc/Media.png  used on input line 14.
-(pdftex.def)             Requested size: 254.10071pt x 215.31812pt.
+Package pdftex.def Info: ./figure/Acc/Media.png  used on input line 177.
+(pdftex.def)             Requested size: 266.32217pt x 215.31812pt.
  [4
 
  <./figure/Acc/Media.png (PNG copy)>]
-<./figure/Acc/Media Rettificata.png, id=51, 357.0138pt x 304.9794pt>
+<./figure/Acc/Media Rettificata.png, id=51, 359.4228pt x 292.9344pt>
 File: ./figure/Acc/Media Rettificata.png Graphic file (type png)
 <use ./figure/Acc/Media Rettificata.png>
 Package pdftex.def Info: ./figure/Acc/Media Rettificata.png  used on input line
- 18.
-(pdftex.def)             Requested size: 252.05974pt x 215.31812pt.
+ 181.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
  [5
 
  <./figure/Acc/Media Rettificata.png (PNG copy)>]
-<./figure/Acc/Varianza.png, id=57, 361.8318pt x 304.9794pt>
+<./figure/Acc/Varianza.png, id=57, 359.4228pt x 292.9344pt>
 File: ./figure/Acc/Varianza.png Graphic file (type png)
 <use ./figure/Acc/Varianza.png>
-Package pdftex.def Info: ./figure/Acc/Varianza.png  used on input line 22.
-(pdftex.def)             Requested size: 255.46136pt x 215.31812pt.
+Package pdftex.def Info: ./figure/Acc/Varianza.png  used on input line 185.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
  [6
 
  <./figure/Acc/Varianza.png (PNG copy)>]
-<./figure/Acc/Max.png, id=63, 361.8318pt x 304.4976pt>
-File: ./figure/Acc/Max.png Graphic file (type png)
-<use ./figure/Acc/Max.png>
-Package pdftex.def Info: ./figure/Acc/Max.png  used on input line 34.
-(pdftex.def)             Requested size: 255.86993pt x 215.31812pt.
+<./figure/Acc/Deviazione Standard.png, id=63, 354.6048pt x 292.9344pt>
+File: ./figure/Acc/Deviazione Standard.png Graphic file (type png)
+<use ./figure/Acc/Deviazione Standard.png>
+Package pdftex.def Info: ./figure/Acc/Deviazione Standard.png  used on input li
+ne 189.
+(pdftex.def)             Requested size: 260.65573pt x 215.31812pt.
  [7
 
- <./figure/Acc/Max.png (PNG copy)>]
-<./figure/Acc/Peak.png, id=70, 361.8318pt x 304.4976pt>
-File: ./figure/Acc/Peak.png Graphic file (type png)
-<use ./figure/Acc/Peak.png>
-Package pdftex.def Info: ./figure/Acc/Peak.png  used on input line 42.
-(pdftex.def)             Requested size: 255.86993pt x 215.31812pt.
+ <./figure/Acc/Deviazione Standard.png (PNG copy)>]
+<./figure/Acc/Scarto Quadratico Medio.png, id=70, 359.4228pt x 292.9344pt>
+File: ./figure/Acc/Scarto Quadratico Medio.png Graphic file (type png)
+<use ./figure/Acc/Scarto Quadratico Medio.png>
+Package pdftex.def Info: ./figure/Acc/Scarto Quadratico Medio.png  used on inpu
+t line 193.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
  [8
 
- <./figure/Acc/Peak.png (PNG copy)>]
-<./figure/Acc/Kurtosi.png, id=76, 361.8318pt x 304.9794pt>
-File: ./figure/Acc/Kurtosi.png Graphic file (type png)
-<use ./figure/Acc/Kurtosi.png>
-Package pdftex.def Info: ./figure/Acc/Kurtosi.png  used on input line 46.
-(pdftex.def)             Requested size: 255.46136pt x 215.31812pt.
+ <./figure/Acc/Scarto Quadratico Medio.png (PNG copy)>]
+<./figure/Acc/Max.png, id=76, 362.3136pt x 292.9344pt>
+File: ./figure/Acc/Max.png Graphic file (type png)
+<use ./figure/Acc/Max.png>
+Package pdftex.def Info: ./figure/Acc/Max.png  used on input line 197.
+(pdftex.def)             Requested size: 266.32217pt x 215.31812pt.
  [9
 
- <./figure/Acc/Kurtosi.png (PNG copy)>]
-<./figure/Acc/Skewness.png, id=82, 359.9046pt x 304.9794pt>
-File: ./figure/Acc/Skewness.png Graphic file (type png)
-<use ./figure/Acc/Skewness.png>
-Package pdftex.def Info: ./figure/Acc/Skewness.png  used on input line 50.
-(pdftex.def)             Requested size: 254.10071pt x 215.31812pt.
+ <./figure/Acc/Max.png (PNG copy)>]
+<./figure/Acc/Min.png, id=82, 362.3136pt x 292.9344pt>
+File: ./figure/Acc/Min.png Graphic file (type png)
+<use ./figure/Acc/Min.png>
+Package pdftex.def Info: ./figure/Acc/Min.png  used on input line 201.
+(pdftex.def)             Requested size: 266.32217pt x 215.31812pt.
  [10
 
- <./figure/Acc/Skewness.png (PNG copy)>]
-<./figure/Acc/Crest Factor.png, id=88, 357.0138pt x 304.9794pt>
-File: ./figure/Acc/Crest Factor.png Graphic file (type png)
-<use ./figure/Acc/Crest Factor.png>
-Package pdftex.def Info: ./figure/Acc/Crest Factor.png  used on input line 58.
-(pdftex.def)             Requested size: 252.05974pt x 215.31812pt.
+ <./figure/Acc/Min.png (PNG copy)>]
+<./figure/Acc/Peak.png, id=88, 359.4228pt x 292.9344pt>
+File: ./figure/Acc/Peak.png Graphic file (type png)
+<use ./figure/Acc/Peak.png>
+Package pdftex.def Info: ./figure/Acc/Peak.png  used on input line 205.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+ [11
 
-[11
-
- <./figure/Acc/Crest Factor.png (PNG copy)>]
-<./figure/Acc/Impulse Factor.png, id=94, 361.8318pt x 304.4976pt>
-File: ./figure/Acc/Impulse Factor.png Graphic file (type png)
-<use ./figure/Acc/Impulse Factor.png>
-Package pdftex.def Info: ./figure/Acc/Impulse Factor.png  used on input line 62
-.
-(pdftex.def)             Requested size: 255.86993pt x 215.31812pt.
+ <./figure/Acc/Peak.png (PNG copy)>]
+<./figure/Acc/Kurtosi.png, id=94, 359.4228pt x 292.9344pt>
+File: ./figure/Acc/Kurtosi.png Graphic file (type png)
+<use ./figure/Acc/Kurtosi.png>
+Package pdftex.def Info: ./figure/Acc/Kurtosi.png  used on input line 209.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
  [12
 
- <./figure/Acc/Impulse Factor.png (PNG copy)>]
-<./figure/Acc/Margin Factor.png, id=100, 361.8318pt x 304.9794pt>
-File: ./figure/Acc/Margin Factor.png Graphic file (type png)
-<use ./figure/Acc/Margin Factor.png>
-Package pdftex.def Info: ./figure/Acc/Margin Factor.png  used on input line 66.
-
-(pdftex.def)             Requested size: 255.46136pt x 215.31812pt.
+ <./figure/Acc/Kurtosi.png (PNG copy)>]
+<./figure/Acc/Skewness.png, id=100, 359.4228pt x 292.9344pt>
+File: ./figure/Acc/Skewness.png Graphic file (type png)
+<use ./figure/Acc/Skewness.png>
+Package pdftex.def Info: ./figure/Acc/Skewness.png  used on input line 213.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
  [13
 
+ <./figure/Acc/Skewness.png (PNG copy)>]
+<./figure/Acc/Shape Factor.png, id=107, 354.6048pt x 292.9344pt>
+File: ./figure/Acc/Shape Factor.png Graphic file (type png)
+<use ./figure/Acc/Shape Factor.png>
+Package pdftex.def Info: ./figure/Acc/Shape Factor.png  used on input line 217.
+
+(pdftex.def)             Requested size: 260.65573pt x 215.31812pt.
+ [14
+
+ <./figure/Acc/Shape Factor.png (PNG copy)>]
+<./figure/Acc/Crest Factor.png, id=113, 357.4956pt x 292.9344pt>
+File: ./figure/Acc/Crest Factor.png Graphic file (type png)
+<use ./figure/Acc/Crest Factor.png>
+Package pdftex.def Info: ./figure/Acc/Crest Factor.png  used on input line 221.
+
+(pdftex.def)             Requested size: 262.78065pt x 215.31812pt.
+ [15
+
+ <./figure/Acc/Crest Factor.png (PNG copy)>]
+<./figure/Acc/Impulse Factor.png, id=119, 359.4228pt x 292.9344pt>
+File: ./figure/Acc/Impulse Factor.png Graphic file (type png)
+<use ./figure/Acc/Impulse Factor.png>
+Package pdftex.def Info: ./figure/Acc/Impulse Factor.png  used on input line 22
+5.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+ [16
+
+ <./figure/Acc/Impulse Factor.png (PNG copy)>]
+<./figure/Acc/Margin Factor.png, id=125, 359.4228pt x 292.9344pt>
+File: ./figure/Acc/Margin Factor.png Graphic file (type png)
+<use ./figure/Acc/Margin Factor.png>
+Package pdftex.def Info: ./figure/Acc/Margin Factor.png  used on input line 229
+.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+ [17
+
  <./figure/Acc/Margin Factor.png (PNG copy)>]
-<./figure/Acc/Trasformata/Trasformata.png, id=107, 361.8318pt x 302.5704pt>
+<./figure/Acc/Trasformata/Trasformata.png, id=131, 358.941pt x 291.0072pt>
 File: ./figure/Acc/Trasformata/Trasformata.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Trasformata.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Trasformata.png  used on inpu
-t line 70.
-(pdftex.def)             Requested size: 257.49313pt x 215.31812pt.
- [14
+t line 233.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [18
 
  <./figure/Acc/Trasformata/Trasformata.png (PNG copy)>]
-<./figure/Acc/Trasformata/Spettro.png, id=113, 361.8318pt x 302.5704pt>
+<./figure/Acc/Trasformata/Spettro.png, id=137, 356.532pt x 291.0072pt>
 File: ./figure/Acc/Trasformata/Spettro.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Spettro.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spettro.png  used on input li
-ne 74.
-(pdftex.def)             Requested size: 257.49313pt x 215.31812pt.
- [15
+ne 237.
+(pdftex.def)             Requested size: 263.80234pt x 215.31812pt.
+ [19
 
- <./figure/Acc/Trasformata/Spettro.png (PNG copy)>] [16
+ <./figure/Acc/Trasformata/Spettro.png (PNG copy)>] [20
 
 ]
-<./figure/Acc/Trasformata/Trasformata Accelerazione 1.png, id=124, 361.8318pt x
- 302.5704pt>
+<./figure/Acc/Trasformata/Trasformata Accelerazione 1.png, id=149, 358.941pt x 
+291.0072pt>
 File: ./figure/Acc/Trasformata/Trasformata Accelerazione 1.png Graphic file (ty
 pe png)
 <use ./figure/Acc/Trasformata/Trasformata Accelerazione 1.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Trasformata Accelerazione 1.p
-ng  used on input line 82.
-(pdftex.def)             Requested size: 257.49313pt x 215.31812pt.
- [17
+ng  used on input line 245.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [21
 
  <./figure/Acc/Trasformata/Trasformata Accelerazione 1.png (PNG copy)>]
-<./figure/Acc/Trasformata/Trasformata Idle 1.png, id=130, 366.6498pt x 302.5704
-pt>
+<./figure/Acc/Trasformata/Trasformata Idle 1.png, id=155, 358.941pt x 291.0072p
+t>
 File: ./figure/Acc/Trasformata/Trasformata Idle 1.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Trasformata Idle 1.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Trasformata Idle 1.png  used 
-on input line 86.
-(pdftex.def)             Requested size: 260.92178pt x 215.31812pt.
- [18
+on input line 249.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [22
 
  <./figure/Acc/Trasformata/Trasformata Idle 1.png (PNG copy)>]
-<./figure/Acc/Trasformata/Trasformata Accelerazione 2.png, id=136, 361.8318pt x
- 302.5704pt>
+<./figure/Acc/Trasformata/Trasformata Accelerazione 2.png, id=161, 358.941pt x 
+291.0072pt>
 File: ./figure/Acc/Trasformata/Trasformata Accelerazione 2.png Graphic file (ty
 pe png)
 <use ./figure/Acc/Trasformata/Trasformata Accelerazione 2.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Trasformata Accelerazione 2.p
-ng  used on input line 90.
-(pdftex.def)             Requested size: 257.49313pt x 215.31812pt.
- [19
+ng  used on input line 253.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [23
 
  <./figure/Acc/Trasformata/Trasformata Accelerazione 2.png (PNG copy)>]
-<./figure/Acc/Trasformata/Trasformata Idle 2.png, id=143, 366.6498pt x 302.5704
-pt>
+<./figure/Acc/Trasformata/Trasformata Idle 2.png, id=167, 363.759pt x 291.0072p
+t>
 File: ./figure/Acc/Trasformata/Trasformata Idle 2.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Trasformata Idle 2.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Trasformata Idle 2.png  used 
-on input line 94.
-(pdftex.def)             Requested size: 260.92178pt x 215.31812pt.
- [20
+on input line 257.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+ [24
 
  <./figure/Acc/Trasformata/Trasformata Idle 2.png (PNG copy)>]
-<./figure/Acc/Trasformata/Trasformata Brake.png, id=149, 361.8318pt x 302.5704p
-t>
+<./figure/Acc/Trasformata/Trasformata Brake.png, id=173, 358.941pt x 291.0072pt
+>
 File: ./figure/Acc/Trasformata/Trasformata Brake.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Trasformata Brake.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Trasformata Brake.png  used o
-n input line 98.
-(pdftex.def)             Requested size: 257.49313pt x 215.31812pt.
-
-[21
+n input line 261.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [25
 
  <./figure/Acc/Trasformata/Trasformata Brake.png (PNG copy)>]
-<./figure/Acc/Trasformata/Ampiezza MediaX.png, id=155, 369.0588pt x 286.671pt>
+<./figure/Acc/Trasformata/Ampiezza MediaX.png, id=180, 369.0588pt x 286.671pt>
 File: ./figure/Acc/Trasformata/Ampiezza MediaX.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Ampiezza MediaX.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Ampiezza MediaX.png  used on 
-input line 108.
+input line 271.
 (pdftex.def)             Requested size: 124.4507pt x 96.66635pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 108
+LaTeX Font Info:    Trying to load font information for U+msa on input line 271
 .
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 108
+LaTeX Font Info:    Trying to load font information for U+msb on input line 271
 .
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./figure/Acc/Trasformata/Ampiezza MediaY.png, id=156, 369.0588pt x 286.671pt>
+<./figure/Acc/Trasformata/Ampiezza MediaY.png, id=181, 369.0588pt x 286.671pt>
 File: ./figure/Acc/Trasformata/Ampiezza MediaY.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Ampiezza MediaY.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Ampiezza MediaY.png  used on 
-input line 108.
+input line 271.
 (pdftex.def)             Requested size: 124.4507pt x 96.66635pt.
 
-[22
+[26
 
  <./figure/Acc/Trasformata/Ampiezza MediaX.png (PNG copy)> <./figure/Acc/Trasfo
 rmata/Ampiezza MediaY.png (PNG copy)>]
-<./figure/Acc/Trasformata/Frequency CentroidX.png, id=162, 369.0588pt x 286.671
+<./figure/Acc/Trasformata/Frequency CentroidX.png, id=187, 369.0588pt x 286.671
 pt>
 File: ./figure/Acc/Trasformata/Frequency CentroidX.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Frequency CentroidX.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Frequency CentroidX.png  used
- on input line 118.
+ on input line 281.
 (pdftex.def)             Requested size: 124.4507pt x 96.66635pt.
-<./figure/Acc/Trasformata/Frequency CentroidY.png, id=163, 370.5042pt x 286.671
+<./figure/Acc/Trasformata/Frequency CentroidY.png, id=188, 370.5042pt x 286.671
 pt>
 File: ./figure/Acc/Trasformata/Frequency CentroidY.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Frequency CentroidY.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Frequency CentroidY.png  used
- on input line 118.
+ on input line 281.
 (pdftex.def)             Requested size: 124.4507pt x 96.29018pt.
- [23
+ [27
 
  <./figure/Acc/Trasformata/Frequency CentroidX.png (PNG copy)> <./figure/Acc/Tr
 asformata/Frequency CentroidY.png (PNG copy)>]
-<./figure/Acc/Trasformata/Frequency VarianceX.png, id=169, 366.168pt x 286.671p
+<./figure/Acc/Trasformata/Frequency VarianceX.png, id=194, 366.168pt x 286.671p
 t>
 File: ./figure/Acc/Trasformata/Frequency VarianceX.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Frequency VarianceX.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Frequency VarianceX.png  used
- on input line 128.
+ on input line 291.
 (pdftex.def)             Requested size: 124.4507pt x 97.43184pt.
-<./figure/Acc/Trasformata/Frequency VarianceY.png, id=170, 366.168pt x 286.671p
+<./figure/Acc/Trasformata/Frequency VarianceY.png, id=195, 366.168pt x 286.671p
 t>
 File: ./figure/Acc/Trasformata/Frequency VarianceY.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Frequency VarianceY.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Frequency VarianceY.png  used
- on input line 128.
+ on input line 291.
 (pdftex.def)             Requested size: 124.4507pt x 97.43184pt.
- [24
+ [28
 
  <./figure/Acc/Trasformata/Frequency VarianceX.png (PNG copy)> <./figure/Acc/Tr
-asformata/Frequency VarianceY.png (PNG copy)>] [25
+asformata/Frequency VarianceY.png (PNG copy)>] [29
 
 ]
-<./figure/Acc/Trasformata/Spettro Accelerazione 1.png, id=182, 361.8318pt x 302
-.5704pt>
+<./figure/Acc/Trasformata/Spettro Accelerazione 1.png, id=206, 351.714pt x 291.
+0072pt>
 File: ./figure/Acc/Trasformata/Spettro Accelerazione 1.png Graphic file (type p
 ng)
 <use ./figure/Acc/Trasformata/Spettro Accelerazione 1.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spettro Accelerazione 1.png  
-used on input line 136.
-(pdftex.def)             Requested size: 257.49313pt x 215.31812pt.
- [26
+used on input line 299.
+(pdftex.def)             Requested size: 260.23746pt x 215.31812pt.
+ [30
 
  <./figure/Acc/Trasformata/Spettro Accelerazione 1.png (PNG copy)>]
-<./figure/Acc/Trasformata/Spettro Idle 1.png, id=188, 366.6498pt x 302.5704pt>
+<./figure/Acc/Trasformata/Spettro Idle 1.png, id=212, 363.759pt x 291.0072pt>
 File: ./figure/Acc/Trasformata/Spettro Idle 1.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Spettro Idle 1.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spettro Idle 1.png  used on i
-nput line 140.
-(pdftex.def)             Requested size: 260.92178pt x 215.31812pt.
- [27
+nput line 303.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+ [31
 
  <./figure/Acc/Trasformata/Spettro Idle 1.png (PNG copy)>]
-<./figure/Acc/Trasformata/Spettro Accelerazione 2.png, id=194, 361.8318pt x 302
-.5704pt>
+<./figure/Acc/Trasformata/Spettro Accelerazione 2.png, id=219, 356.532pt x 291.
+0072pt>
 File: ./figure/Acc/Trasformata/Spettro Accelerazione 2.png Graphic file (type p
 ng)
 <use ./figure/Acc/Trasformata/Spettro Accelerazione 2.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spettro Accelerazione 2.png  
-used on input line 144.
-(pdftex.def)             Requested size: 257.49313pt x 215.31812pt.
- [28
+used on input line 307.
+(pdftex.def)             Requested size: 263.80234pt x 215.31812pt.
+ [32
 
  <./figure/Acc/Trasformata/Spettro Accelerazione 2.png (PNG copy)>]
-<./figure/Acc/Trasformata/Spettro Idle 2.png, id=200, 371.4678pt x 302.5704pt>
+<./figure/Acc/Trasformata/Spettro Idle 2.png, id=225, 363.759pt x 291.0072pt>
 File: ./figure/Acc/Trasformata/Spettro Idle 2.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Spettro Idle 2.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spettro Idle 2.png  used on i
-nput line 148.
-(pdftex.def)             Requested size: 264.35046pt x 215.31812pt.
- [29
+nput line 311.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+ [33
 
  <./figure/Acc/Trasformata/Spettro Idle 2.png (PNG copy)>]
-<./figure/Acc/Trasformata/Spettro Brake.png, id=206, 366.6498pt x 302.5704pt>
+<./figure/Acc/Trasformata/Spettro Brake.png, id=231, 358.941pt x 291.0072pt>
 File: ./figure/Acc/Trasformata/Spettro Brake.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Spettro Brake.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spettro Brake.png  used on in
-put line 152.
-(pdftex.def)             Requested size: 260.92178pt x 215.31812pt.
- [30
+put line 315.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [34
 
  <./figure/Acc/Trasformata/Spettro Brake.png (PNG copy)>]
-<./figure/Acc/Trasformata/Spectral EntropyX.png, id=212, 366.168pt x 286.671pt>
+<./figure/Acc/Trasformata/Spectral EntropyX.png, id=237, 366.168pt x 286.671pt>
 
 File: ./figure/Acc/Trasformata/Spectral EntropyX.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Spectral EntropyX.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spectral EntropyX.png  used o
-n input line 162.
+n input line 325.
 (pdftex.def)             Requested size: 124.4507pt x 97.43184pt.
-<./figure/Acc/Trasformata/Spectral EntropyY.png, id=213, 366.168pt x 286.671pt>
+<./figure/Acc/Trasformata/Spectral EntropyY.png, id=238, 366.168pt x 286.671pt>
 
 File: ./figure/Acc/Trasformata/Spectral EntropyY.png Graphic file (type png)
 <use ./figure/Acc/Trasformata/Spectral EntropyY.png>
 Package pdftex.def Info: ./figure/Acc/Trasformata/Spectral EntropyY.png  used o
-n input line 162.
+n input line 325.
 (pdftex.def)             Requested size: 124.4507pt x 97.43184pt.
 
-[31
+[35
 
  <./figure/Acc/Trasformata/Spectral EntropyX.png (PNG copy)> <./figure/Acc/Tras
-formata/Spectral EntropyY.png (PNG copy)>]) (./Vel.tex [32
+formata/Spectral EntropyY.png (PNG copy)>]) (./Vel.tex [36
 
 ]
-<./figure/Vel/Vel.png, id=225, 358.941pt x 304.4976pt>
+<./figure/Vel/Vel.png, id=249, 363.759pt x 292.9344pt>
 File: ./figure/Vel/Vel.png Graphic file (type png)
 <use ./figure/Vel/Vel.png>
-Package pdftex.def Info: ./figure/Vel/Vel.png  used on input line 10.
-(pdftex.def)             Requested size: 253.82568pt x 215.31812pt.
- [33
-
- <./figure/Vel/Vel.png (PNG copy)>]
-<./figure/Vel/Varianza.png, id=231, 361.8318pt x 304.9794pt>
-File: ./figure/Vel/Varianza.png Graphic file (type png)
-<use ./figure/Vel/Varianza.png>
-Package pdftex.def Info: ./figure/Vel/Varianza.png  used on input line 22.
-(pdftex.def)             Requested size: 255.46136pt x 215.31812pt.
- [34
-
- <./figure/Vel/Varianza.png (PNG copy)>]) (./VAng.tex [35
-
-]
-<./figure/VAng/VAng.png, id=242, 359.4228pt x 292.9344pt>
-File: ./figure/VAng/VAng.png Graphic file (type png)
-<use ./figure/VAng/VAng.png>
-Package pdftex.def Info: ./figure/VAng/VAng.png  used on input line 10.
-(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
- [36
-
- <./figure/VAng/VAng.png (PNG copy)>]
-<./figure/VAng/Media.png, id=248, 359.4228pt x 292.9344pt>
-File: ./figure/VAng/Media.png Graphic file (type png)
-<use ./figure/VAng/Media.png>
-Package pdftex.def Info: ./figure/VAng/Media.png  used on input line 14.
-(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+Package pdftex.def Info: ./figure/Vel/Vel.png  used on input line 173.
+(pdftex.def)             Requested size: 267.38463pt x 215.31812pt.
  [37
 
- <./figure/VAng/Media.png (PNG copy)>]
-<./figure/VAng/Varianza.png, id=255, 361.35pt x 292.9344pt>
-File: ./figure/VAng/Varianza.png Graphic file (type png)
-<use ./figure/VAng/Varianza.png>
-Package pdftex.def Info: ./figure/VAng/Varianza.png  used on input line 22.
-(pdftex.def)             Requested size: 265.61388pt x 215.31812pt.
+ <./figure/Vel/Vel.png (PNG copy)>]
+<./figure/Vel/Media.png, id=256, 363.759pt x 292.9344pt>
+File: ./figure/Vel/Media.png Graphic file (type png)
+<use ./figure/Vel/Media.png>
+Package pdftex.def Info: ./figure/Vel/Media.png  used on input line 177.
+(pdftex.def)             Requested size: 267.38463pt x 215.31812pt.
  [38
 
- <./figure/VAng/Varianza.png (PNG copy)>]
-<./figure/VAng/Kurtosi.png, id=261, 356.532pt x 292.9344pt>
-File: ./figure/VAng/Kurtosi.png Graphic file (type png)
-<use ./figure/VAng/Kurtosi.png>
-Package pdftex.def Info: ./figure/VAng/Kurtosi.png  used on input line 46.
-(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ <./figure/Vel/Media.png (PNG copy)>]
+<./figure/Vel/Media Rettificata.png, id=262, 360.8682pt x 292.9344pt>
+File: ./figure/Vel/Media Rettificata.png Graphic file (type png)
+<use ./figure/Vel/Media Rettificata.png>
+Package pdftex.def Info: ./figure/Vel/Media Rettificata.png  used on input line
+ 181.
+(pdftex.def)             Requested size: 265.2597pt x 215.31812pt.
  [39
 
- <./figure/VAng/Kurtosi.png (PNG copy)>]
-<./figure/VAng/Impulse Factor.png, id=267, 356.532pt x 292.9344pt>
-File: ./figure/VAng/Impulse Factor.png Graphic file (type png)
-<use ./figure/VAng/Impulse Factor.png>
-Package pdftex.def Info: ./figure/VAng/Impulse Factor.png  used on input line 6
-2.
-(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ <./figure/Vel/Media Rettificata.png (PNG copy)>]
+<./figure/Vel/Varianza.png, id=268, 356.0502pt x 292.9344pt>
+File: ./figure/Vel/Varianza.png Graphic file (type png)
+<use ./figure/Vel/Varianza.png>
+Package pdftex.def Info: ./figure/Vel/Varianza.png  used on input line 185.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
  [40
 
- <./figure/VAng/Impulse Factor.png (PNG copy)>]
-<./figure/VAng/Margin Factor.png, id=273, 356.532pt x 292.9344pt>
-File: ./figure/VAng/Margin Factor.png Graphic file (type png)
-<use ./figure/VAng/Margin Factor.png>
-Package pdftex.def Info: ./figure/VAng/Margin Factor.png  used on input line 66
-.
-(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ <./figure/Vel/Varianza.png (PNG copy)>]
+<./figure/Vel/Deviazione Standard.png, id=274, 351.2322pt x 292.9344pt>
+File: ./figure/Vel/Deviazione Standard.png Graphic file (type png)
+<use ./figure/Vel/Deviazione Standard.png>
+Package pdftex.def Info: ./figure/Vel/Deviazione Standard.png  used on input li
+ne 189.
+(pdftex.def)             Requested size: 258.17668pt x 215.31812pt.
  [41
 
+ <./figure/Vel/Deviazione Standard.png (PNG copy)>]
+<./figure/Vel/Scarto Quadratico Medio.png, id=280, 360.8682pt x 292.9344pt>
+File: ./figure/Vel/Scarto Quadratico Medio.png Graphic file (type png)
+<use ./figure/Vel/Scarto Quadratico Medio.png>
+Package pdftex.def Info: ./figure/Vel/Scarto Quadratico Medio.png  used on inpu
+t line 193.
+(pdftex.def)             Requested size: 265.2597pt x 215.31812pt.
+ [42
+
+ <./figure/Vel/Scarto Quadratico Medio.png (PNG copy)>]
+<./figure/Vel/Max.png, id=286, 363.759pt x 292.9344pt>
+File: ./figure/Vel/Max.png Graphic file (type png)
+<use ./figure/Vel/Max.png>
+Package pdftex.def Info: ./figure/Vel/Max.png  used on input line 197.
+(pdftex.def)             Requested size: 267.38463pt x 215.31812pt.
+ [43
+
+ <./figure/Vel/Max.png (PNG copy)>]
+<./figure/Vel/Min.png, id=293, 363.759pt x 292.9344pt>
+File: ./figure/Vel/Min.png Graphic file (type png)
+<use ./figure/Vel/Min.png>
+Package pdftex.def Info: ./figure/Vel/Min.png  used on input line 201.
+(pdftex.def)             Requested size: 267.38463pt x 215.31812pt.
+
+[44
+
+ <./figure/Vel/Min.png (PNG copy)>]
+<./figure/Vel/Peak.png, id=299, 351.2322pt x 292.9344pt>
+File: ./figure/Vel/Peak.png Graphic file (type png)
+<use ./figure/Vel/Peak.png>
+Package pdftex.def Info: ./figure/Vel/Peak.png  used on input line 205.
+(pdftex.def)             Requested size: 258.17668pt x 215.31812pt.
+ [45
+
+ <./figure/Vel/Peak.png (PNG copy)>]
+<./figure/Vel/Kurtosi.png, id=305, 356.0502pt x 292.9344pt>
+File: ./figure/Vel/Kurtosi.png Graphic file (type png)
+<use ./figure/Vel/Kurtosi.png>
+Package pdftex.def Info: ./figure/Vel/Kurtosi.png  used on input line 209.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+
+[46
+
+ <./figure/Vel/Kurtosi.png (PNG copy)>]
+<./figure/Vel/Skewness.png, id=311, 356.0502pt x 292.9344pt>
+File: ./figure/Vel/Skewness.png Graphic file (type png)
+<use ./figure/Vel/Skewness.png>
+Package pdftex.def Info: ./figure/Vel/Skewness.png  used on input line 213.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+ [47
+
+ <./figure/Vel/Skewness.png (PNG copy)>]
+<./figure/Vel/Shape Factor.png, id=317, 351.2322pt x 292.9344pt>
+File: ./figure/Vel/Shape Factor.png Graphic file (type png)
+<use ./figure/Vel/Shape Factor.png>
+Package pdftex.def Info: ./figure/Vel/Shape Factor.png  used on input line 217.
+
+(pdftex.def)             Requested size: 258.17668pt x 215.31812pt.
+ [48
+
+ <./figure/Vel/Shape Factor.png (PNG copy)>]
+<./figure/Vel/Crest Factor.png, id=323, 354.123pt x 292.9344pt>
+File: ./figure/Vel/Crest Factor.png Graphic file (type png)
+<use ./figure/Vel/Crest Factor.png>
+Package pdftex.def Info: ./figure/Vel/Crest Factor.png  used on input line 221.
+
+(pdftex.def)             Requested size: 260.30157pt x 215.31812pt.
+ [49
+
+ <./figure/Vel/Crest Factor.png (PNG copy)>]
+<./figure/Vel/Impulse Factor.png, id=330, 356.0502pt x 292.9344pt>
+File: ./figure/Vel/Impulse Factor.png Graphic file (type png)
+<use ./figure/Vel/Impulse Factor.png>
+Package pdftex.def Info: ./figure/Vel/Impulse Factor.png  used on input line 22
+5.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+ [50
+
+ <./figure/Vel/Impulse Factor.png (PNG copy)>]
+<./figure/Vel/Margin Factor.png, id=336, 356.0502pt x 292.9344pt>
+File: ./figure/Vel/Margin Factor.png Graphic file (type png)
+<use ./figure/Vel/Margin Factor.png>
+Package pdftex.def Info: ./figure/Vel/Margin Factor.png  used on input line 229
+.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+
+[51
+
+ <./figure/Vel/Margin Factor.png (PNG copy)>]
+<./figure/Vel/Trasformata/Trasformata.png, id=342, 363.759pt x 291.0072pt>
+File: ./figure/Vel/Trasformata/Trasformata.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Trasformata.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Trasformata.png  used on inpu
+t line 233.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+ [52
+
+ <./figure/Vel/Trasformata/Trasformata.png (PNG copy)>]
+<./figure/Vel/Trasformata/Spettro.png, id=348, 368.577pt x 291.0072pt>
+File: ./figure/Vel/Trasformata/Spettro.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Spettro.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spettro.png  used on input li
+ne 237.
+(pdftex.def)             Requested size: 272.71457pt x 215.31812pt.
+ [53
+
+ <./figure/Vel/Trasformata/Spettro.png (PNG copy)>] [54
+
+]
+<./figure/Vel/Trasformata/Trasformata Accelerazione 1.png, id=359, 363.759pt x 
+291.0072pt>
+File: ./figure/Vel/Trasformata/Trasformata Accelerazione 1.png Graphic file (ty
+pe png)
+<use ./figure/Vel/Trasformata/Trasformata Accelerazione 1.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Trasformata Accelerazione 1.p
+ng  used on input line 245.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+ [55
+
+ <./figure/Vel/Trasformata/Trasformata Accelerazione 1.png (PNG copy)>]
+<./figure/Vel/Trasformata/Trasformata Idle 1.png, id=366, 363.759pt x 291.0072p
+t>
+File: ./figure/Vel/Trasformata/Trasformata Idle 1.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Trasformata Idle 1.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Trasformata Idle 1.png  used 
+on input line 249.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+ [56
+
+ <./figure/Vel/Trasformata/Trasformata Idle 1.png (PNG copy)>]
+<./figure/Vel/Trasformata/Trasformata Accelerazione 2.png, id=372, 363.759pt x 
+291.0072pt>
+File: ./figure/Vel/Trasformata/Trasformata Accelerazione 2.png Graphic file (ty
+pe png)
+<use ./figure/Vel/Trasformata/Trasformata Accelerazione 2.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Trasformata Accelerazione 2.p
+ng  used on input line 253.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+
+[57
+
+ <./figure/Vel/Trasformata/Trasformata Accelerazione 2.png (PNG copy)>]
+<./figure/Vel/Trasformata/Trasformata Idle 2.png, id=378, 363.759pt x 291.0072p
+t>
+File: ./figure/Vel/Trasformata/Trasformata Idle 2.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Trasformata Idle 2.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Trasformata Idle 2.png  used 
+on input line 257.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+
+[58
+
+ <./figure/Vel/Trasformata/Trasformata Idle 2.png (PNG copy)>]
+<./figure/Vel/Trasformata/Trasformata Brake.png, id=384, 363.759pt x 291.0072pt
+>
+File: ./figure/Vel/Trasformata/Trasformata Brake.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Trasformata Brake.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Trasformata Brake.png  used o
+n input line 261.
+(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
+ [59
+
+ <./figure/Vel/Trasformata/Trasformata Brake.png (PNG copy)>]
+<./figure/Vel/Trasformata/Ampiezza MediaX.png, id=390, 369.0588pt x 286.671pt>
+File: ./figure/Vel/Trasformata/Ampiezza MediaX.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Ampiezza MediaX.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Ampiezza MediaX.png  used on 
+input line 271.
+(pdftex.def)             Requested size: 124.4507pt x 96.66635pt.
+<./figure/Vel/Trasformata/Ampiezza MediaY.png, id=391, 369.0588pt x 286.671pt>
+File: ./figure/Vel/Trasformata/Ampiezza MediaY.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Ampiezza MediaY.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Ampiezza MediaY.png  used on 
+input line 271.
+(pdftex.def)             Requested size: 124.4507pt x 96.66635pt.
+ [60
+
+ <./figure/Vel/Trasformata/Ampiezza MediaX.png (PNG copy)> <./figure/Vel/Trasfo
+rmata/Ampiezza MediaY.png (PNG copy)>]
+<./figure/Vel/Trasformata/Frequency CentroidX.png, id=397, 375.804pt x 286.671p
+t>
+File: ./figure/Vel/Trasformata/Frequency CentroidX.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Frequency CentroidX.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Frequency CentroidX.png  used
+ on input line 281.
+(pdftex.def)             Requested size: 124.4507pt x 94.93416pt.
+<./figure/Vel/Trasformata/Frequency CentroidY.png, id=398, 375.804pt x 286.671p
+t>
+File: ./figure/Vel/Trasformata/Frequency CentroidY.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Frequency CentroidY.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Frequency CentroidY.png  used
+ on input line 281.
+(pdftex.def)             Requested size: 124.4507pt x 94.93416pt.
+ [61
+
+ <./figure/Vel/Trasformata/Frequency CentroidX.png (PNG copy)> <./figure/Vel/Tr
+asformata/Frequency CentroidY.png (PNG copy)>]
+<./figure/Vel/Trasformata/Frequency VarianceX.png, id=405, 370.5042pt x 286.671
+pt>
+File: ./figure/Vel/Trasformata/Frequency VarianceX.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Frequency VarianceX.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Frequency VarianceX.png  used
+ on input line 291.
+(pdftex.def)             Requested size: 124.4507pt x 96.29018pt.
+<./figure/Vel/Trasformata/Frequency VarianceY.png, id=406, 370.5042pt x 286.671
+pt>
+File: ./figure/Vel/Trasformata/Frequency VarianceY.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Frequency VarianceY.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Frequency VarianceY.png  used
+ on input line 291.
+(pdftex.def)             Requested size: 124.4507pt x 96.29018pt.
+ [62
+
+ <./figure/Vel/Trasformata/Frequency VarianceX.png (PNG copy)> <./figure/Vel/Tr
+asformata/Frequency VarianceY.png (PNG copy)>] [63
+
+]
+<./figure/Vel/Trasformata/Spettro Accelerazione 1.png, id=417, 368.577pt x 291.
+0072pt>
+File: ./figure/Vel/Trasformata/Spettro Accelerazione 1.png Graphic file (type p
+ng)
+<use ./figure/Vel/Trasformata/Spettro Accelerazione 1.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spettro Accelerazione 1.png  
+used on input line 299.
+(pdftex.def)             Requested size: 272.71457pt x 215.31812pt.
+ [64
+
+ <./figure/Vel/Trasformata/Spettro Accelerazione 1.png (PNG copy)>]
+<./figure/Vel/Trasformata/Spettro Idle 1.png, id=423, 351.714pt x 291.0072pt>
+File: ./figure/Vel/Trasformata/Spettro Idle 1.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Spettro Idle 1.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spettro Idle 1.png  used on i
+nput line 303.
+(pdftex.def)             Requested size: 260.23746pt x 215.31812pt.
+ [65
+
+ <./figure/Vel/Trasformata/Spettro Idle 1.png (PNG copy)>]
+<./figure/Vel/Trasformata/Spettro Accelerazione 2.png, id=429, 368.577pt x 291.
+0072pt>
+File: ./figure/Vel/Trasformata/Spettro Accelerazione 2.png Graphic file (type p
+ng)
+<use ./figure/Vel/Trasformata/Spettro Accelerazione 2.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spettro Accelerazione 2.png  
+used on input line 307.
+(pdftex.def)             Requested size: 272.71457pt x 215.31812pt.
+ [66
+
+ <./figure/Vel/Trasformata/Spettro Accelerazione 2.png (PNG copy)>]
+<./figure/Vel/Trasformata/Spettro Idle 2.png, id=435, 351.714pt x 291.0072pt>
+File: ./figure/Vel/Trasformata/Spettro Idle 2.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Spettro Idle 2.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spettro Idle 2.png  used on i
+nput line 311.
+(pdftex.def)             Requested size: 260.23746pt x 215.31812pt.
+ [67
+
+ <./figure/Vel/Trasformata/Spettro Idle 2.png (PNG copy)>]
+<./figure/Vel/Trasformata/Spettro Brake.png, id=442, 358.941pt x 291.0072pt>
+File: ./figure/Vel/Trasformata/Spettro Brake.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Spettro Brake.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spettro Brake.png  used on in
+put line 315.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [68
+
+ <./figure/Vel/Trasformata/Spettro Brake.png (PNG copy)>]
+<./figure/Vel/Trasformata/Spectral EntropyX.png, id=448, 366.168pt x 286.671pt>
+
+File: ./figure/Vel/Trasformata/Spectral EntropyX.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Spectral EntropyX.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spectral EntropyX.png  used o
+n input line 325.
+(pdftex.def)             Requested size: 124.4507pt x 97.43184pt.
+<./figure/Vel/Trasformata/Spectral EntropyY.png, id=449, 370.5042pt x 286.671pt
+>
+File: ./figure/Vel/Trasformata/Spectral EntropyY.png Graphic file (type png)
+<use ./figure/Vel/Trasformata/Spectral EntropyY.png>
+Package pdftex.def Info: ./figure/Vel/Trasformata/Spectral EntropyY.png  used o
+n input line 325.
+(pdftex.def)             Requested size: 124.4507pt x 96.29018pt.
+ [69
+
+ <./figure/Vel/Trasformata/Spectral EntropyX.png (PNG copy)> <./figure/Vel/Tras
+formata/Spectral EntropyY.png (PNG copy)>]) (./VAng.tex [70
+
+]
+<./figure/VAng/VAng.png, id=460, 359.4228pt x 292.9344pt>
+File: ./figure/VAng/VAng.png Graphic file (type png)
+<use ./figure/VAng/VAng.png>
+Package pdftex.def Info: ./figure/VAng/VAng.png  used on input line 181.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+ [71
+
+ <./figure/VAng/VAng.png (PNG copy)>]
+<./figure/VAng/Media.png, id=466, 359.4228pt x 292.9344pt>
+File: ./figure/VAng/Media.png Graphic file (type png)
+<use ./figure/VAng/Media.png>
+Package pdftex.def Info: ./figure/VAng/Media.png  used on input line 185.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+
+[72
+
+ <./figure/VAng/Media.png (PNG copy)>]
+<./figure/VAng/Media Rettificata.png, id=472, 356.532pt x 292.9344pt>
+File: ./figure/VAng/Media Rettificata.png Graphic file (type png)
+<use ./figure/VAng/Media Rettificata.png>
+Package pdftex.def Info: ./figure/VAng/Media Rettificata.png  used on input lin
+e 189.
+(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ [73
+
+ <./figure/VAng/Media Rettificata.png (PNG copy)>]
+<./figure/VAng/Varianza.png, id=479, 361.35pt x 292.9344pt>
+File: ./figure/VAng/Varianza.png Graphic file (type png)
+<use ./figure/VAng/Varianza.png>
+Package pdftex.def Info: ./figure/VAng/Varianza.png  used on input line 193.
+(pdftex.def)             Requested size: 265.61388pt x 215.31812pt.
+ [74
+
+ <./figure/VAng/Varianza.png (PNG copy)>]
+<./figure/VAng/Deviazione Standard.png, id=485, 356.532pt x 292.9344pt>
+File: ./figure/VAng/Deviazione Standard.png Graphic file (type png)
+<use ./figure/VAng/Deviazione Standard.png>
+Package pdftex.def Info: ./figure/VAng/Deviazione Standard.png  used on input l
+ine 197.
+(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ [75
+
+ <./figure/VAng/Deviazione Standard.png (PNG copy)>]
+<./figure/VAng/Scarto Quadratico Medio.png, id=491, 356.532pt x 292.9344pt>
+File: ./figure/VAng/Scarto Quadratico Medio.png Graphic file (type png)
+<use ./figure/VAng/Scarto Quadratico Medio.png>
+Package pdftex.def Info: ./figure/VAng/Scarto Quadratico Medio.png  used on inp
+ut line 201.
+(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ [76
+
+ <./figure/VAng/Scarto Quadratico Medio.png (PNG copy)>]
+<./figure/VAng/Max.png, id=497, 359.4228pt x 292.9344pt>
+File: ./figure/VAng/Max.png Graphic file (type png)
+<use ./figure/VAng/Max.png>
+Package pdftex.def Info: ./figure/VAng/Max.png  used on input line 205.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+ [77
+
+ <./figure/VAng/Max.png (PNG copy)>]
+<./figure/VAng/Min.png, id=503, 359.4228pt x 292.9344pt>
+File: ./figure/VAng/Min.png Graphic file (type png)
+<use ./figure/VAng/Min.png>
+Package pdftex.def Info: ./figure/VAng/Min.png  used on input line 209.
+(pdftex.def)             Requested size: 264.19727pt x 215.31812pt.
+ [78
+
+ <./figure/VAng/Min.png (PNG copy)>]
+<./figure/VAng/Peak.png, id=509, 356.532pt x 292.9344pt>
+File: ./figure/VAng/Peak.png Graphic file (type png)
+<use ./figure/VAng/Peak.png>
+Package pdftex.def Info: ./figure/VAng/Peak.png  used on input line 213.
+(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ [79
+
+ <./figure/VAng/Peak.png (PNG copy)>]
+<./figure/VAng/Kurtosi.png, id=516, 356.532pt x 292.9344pt>
+File: ./figure/VAng/Kurtosi.png Graphic file (type png)
+<use ./figure/VAng/Kurtosi.png>
+Package pdftex.def Info: ./figure/VAng/Kurtosi.png  used on input line 217.
+(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ [80
+
+ <./figure/VAng/Kurtosi.png (PNG copy)>]
+<./figure/VAng/Skewness.png, id=522, 354.6048pt x 292.9344pt>
+File: ./figure/VAng/Skewness.png Graphic file (type png)
+<use ./figure/VAng/Skewness.png>
+Package pdftex.def Info: ./figure/VAng/Skewness.png  used on input line 221.
+(pdftex.def)             Requested size: 260.65573pt x 215.31812pt.
+ [81
+
+ <./figure/VAng/Skewness.png (PNG copy)>]
+<./figure/VAng/Shape Factor.png, id=528, 351.714pt x 292.9344pt>
+File: ./figure/VAng/Shape Factor.png Graphic file (type png)
+<use ./figure/VAng/Shape Factor.png>
+Package pdftex.def Info: ./figure/VAng/Shape Factor.png  used on input line 225
+.
+(pdftex.def)             Requested size: 258.53084pt x 215.31812pt.
+
+[82
+
+ <./figure/VAng/Shape Factor.png (PNG copy)>]
+<./figure/VAng/Crest Factor.png, id=534, 351.714pt x 292.9344pt>
+File: ./figure/VAng/Crest Factor.png Graphic file (type png)
+<use ./figure/VAng/Crest Factor.png>
+Package pdftex.def Info: ./figure/VAng/Crest Factor.png  used on input line 229
+.
+(pdftex.def)             Requested size: 258.53084pt x 215.31812pt.
+ [83
+
+ <./figure/VAng/Crest Factor.png (PNG copy)>]
+<./figure/VAng/Impulse Factor.png, id=540, 356.532pt x 292.9344pt>
+File: ./figure/VAng/Impulse Factor.png Graphic file (type png)
+<use ./figure/VAng/Impulse Factor.png>
+Package pdftex.def Info: ./figure/VAng/Impulse Factor.png  used on input line 2
+33.
+(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ [84
+
+ <./figure/VAng/Impulse Factor.png (PNG copy)>]
+<./figure/VAng/Margin Factor.png, id=546, 356.532pt x 292.9344pt>
+File: ./figure/VAng/Margin Factor.png Graphic file (type png)
+<use ./figure/VAng/Margin Factor.png>
+Package pdftex.def Info: ./figure/VAng/Margin Factor.png  used on input line 23
+7.
+(pdftex.def)             Requested size: 262.07234pt x 215.31812pt.
+ [85
+
  <./figure/VAng/Margin Factor.png (PNG copy)>]
-<./figure/VAng/Trasformata/Trasformata.png, id=279, 358.941pt x 291.0072pt>
+<./figure/VAng/Trasformata/Trasformata.png, id=553, 358.941pt x 291.0072pt>
 File: ./figure/VAng/Trasformata/Trasformata.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Trasformata.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Trasformata.png  used on inp
-ut line 70.
+ut line 241.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [42
+ [86
 
  <./figure/VAng/Trasformata/Trasformata.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spettro.png, id=285, 361.35pt x 291.0072pt>
+<./figure/VAng/Trasformata/Spettro.png, id=559, 361.35pt x 291.0072pt>
 File: ./figure/VAng/Trasformata/Spettro.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Spettro.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spettro.png  used on input l
-ine 74.
+ine 245.
 (pdftex.def)             Requested size: 267.36725pt x 215.31812pt.
- [43
+ [87
 
  <./figure/VAng/Trasformata/Spettro.png (PNG copy)>]
-[44
+[88
 
 ]
-<./figure/VAng/Trasformata/Trasformata Accelerazione 1.png, id=297, 358.941pt x
+<./figure/VAng/Trasformata/Trasformata Accelerazione 1.png, id=570, 358.941pt x
  291.0072pt>
 File: ./figure/VAng/Trasformata/Trasformata Accelerazione 1.png Graphic file (t
 ype png)
 <use ./figure/VAng/Trasformata/Trasformata Accelerazione 1.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Trasformata Accelerazione 1.
-png  used on input line 82.
+png  used on input line 253.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [45
+ [89
 
  <./figure/VAng/Trasformata/Trasformata Accelerazione 1.png (PNG copy)>]
-<./figure/VAng/Trasformata/Trasformata Idle 1.png, id=303, 351.714pt x 291.0072
+<./figure/VAng/Trasformata/Trasformata Idle 1.png, id=576, 351.714pt x 291.0072
 pt>
 File: ./figure/VAng/Trasformata/Trasformata Idle 1.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Trasformata Idle 1.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Trasformata Idle 1.png  used
- on input line 86.
+ on input line 257.
 (pdftex.def)             Requested size: 260.23746pt x 215.31812pt.
- [46
+ [90
 
  <./figure/VAng/Trasformata/Trasformata Idle 1.png (PNG copy)>]
-<./figure/VAng/Trasformata/Trasformata Accelerazione 2.png, id=309, 358.941pt x
+<./figure/VAng/Trasformata/Trasformata Accelerazione 2.png, id=582, 358.941pt x
  291.0072pt>
 File: ./figure/VAng/Trasformata/Trasformata Accelerazione 2.png Graphic file (t
 ype png)
 <use ./figure/VAng/Trasformata/Trasformata Accelerazione 2.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Trasformata Accelerazione 2.
-png  used on input line 90.
+png  used on input line 261.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [47
+ [91
 
  <./figure/VAng/Trasformata/Trasformata Accelerazione 2.png (PNG copy)>]
-<./figure/VAng/Trasformata/Trasformata Idle 2.png, id=315, 351.714pt x 291.0072
+<./figure/VAng/Trasformata/Trasformata Idle 2.png, id=589, 351.714pt x 291.0072
 pt>
 File: ./figure/VAng/Trasformata/Trasformata Idle 2.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Trasformata Idle 2.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Trasformata Idle 2.png  used
- on input line 94.
+ on input line 265.
 (pdftex.def)             Requested size: 260.23746pt x 215.31812pt.
- [48
+ [92
 
  <./figure/VAng/Trasformata/Trasformata Idle 2.png (PNG copy)>]
-<./figure/VAng/Trasformata/Trasformata Brake.png, id=321, 356.532pt x 291.0072p
+<./figure/VAng/Trasformata/Trasformata Brake.png, id=595, 356.532pt x 291.0072p
 t>
 File: ./figure/VAng/Trasformata/Trasformata Brake.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Trasformata Brake.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Trasformata Brake.png  used 
-on input line 98.
+on input line 269.
 (pdftex.def)             Requested size: 263.80234pt x 215.31812pt.
- [49
+ [93
 
  <./figure/VAng/Trasformata/Trasformata Brake.png (PNG copy)>]
-<./figure/VAng/Trasformata/Ampiezza MediaRoll.png, id=328, 369.0588pt x 286.671
+<./figure/VAng/Trasformata/Ampiezza MediaRoll.png, id=601, 369.0588pt x 286.671
 pt>
 File: ./figure/VAng/Trasformata/Ampiezza MediaRoll.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Ampiezza MediaRoll.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Ampiezza MediaRoll.png  used
- on input line 102.
+ on input line 273.
 (pdftex.def)             Requested size: 277.21013pt x 215.31812pt.
- [50
+ [94
 
  <./figure/VAng/Trasformata/Ampiezza MediaRoll.png (PNG copy)>]
-<./figure/VAng/Trasformata/Ampiezza MediaPitch.png, id=334, 369.0588pt x 286.67
+<./figure/VAng/Trasformata/Ampiezza MediaPitch.png, id=607, 369.0588pt x 286.67
 1pt>
 File: ./figure/VAng/Trasformata/Ampiezza MediaPitch.png Graphic file (type png)
 
 <use ./figure/VAng/Trasformata/Ampiezza MediaPitch.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Ampiezza MediaPitch.png  use
-d on input line 106.
+d on input line 277.
 (pdftex.def)             Requested size: 277.21013pt x 215.31812pt.
- [51
+ [95
 
  <./figure/VAng/Trasformata/Ampiezza MediaPitch.png (PNG copy)>]
-<./figure/VAng/Trasformata/Ampiezza MediaYaw.png, id=340, 369.0588pt x 286.671p
+<./figure/VAng/Trasformata/Ampiezza MediaYaw.png, id=613, 369.0588pt x 286.671p
 t>
 File: ./figure/VAng/Trasformata/Ampiezza MediaYaw.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Ampiezza MediaYaw.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Ampiezza MediaYaw.png  used 
-on input line 110.
+on input line 281.
 (pdftex.def)             Requested size: 277.21013pt x 215.31812pt.
- [52
+ [96
 
  <./figure/VAng/Trasformata/Ampiezza MediaYaw.png (PNG copy)>]
-<./figure/VAng/Trasformata/Frequency CentroidRoll.png, id=346, 366.168pt x 286.
+<./figure/VAng/Trasformata/Frequency CentroidRoll.png, id=619, 366.168pt x 286.
 671pt>
 File: ./figure/VAng/Trasformata/Frequency CentroidRoll.png Graphic file (type p
 ng)
 <use ./figure/VAng/Trasformata/Frequency CentroidRoll.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Frequency CentroidRoll.png  
-used on input line 114.
+used on input line 285.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
- [53
+ [97
 
  <./figure/VAng/Trasformata/Frequency CentroidRoll.png (PNG copy)>]
-<./figure/VAng/Trasformata/Frequency CentroidPitch.png, id=352, 366.168pt x 286
+<./figure/VAng/Trasformata/Frequency CentroidPitch.png, id=626, 366.168pt x 286
 .671pt>
 File: ./figure/VAng/Trasformata/Frequency CentroidPitch.png Graphic file (type 
 png)
 <use ./figure/VAng/Trasformata/Frequency CentroidPitch.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Frequency CentroidPitch.png 
- used on input line 118.
+ used on input line 289.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
 
-[54
+[98
 
  <./figure/VAng/Trasformata/Frequency CentroidPitch.png (PNG copy)>]
-<./figure/VAng/Trasformata/Frequency CentroidYaw.png, id=358, 366.168pt x 286.6
+<./figure/VAng/Trasformata/Frequency CentroidYaw.png, id=632, 366.168pt x 286.6
 71pt>
 File: ./figure/VAng/Trasformata/Frequency CentroidYaw.png Graphic file (type pn
 g)
 <use ./figure/VAng/Trasformata/Frequency CentroidYaw.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Frequency CentroidYaw.png  u
-sed on input line 122.
+sed on input line 293.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
 
-[55
+[99
 
  <./figure/VAng/Trasformata/Frequency CentroidYaw.png (PNG copy)>]
-<./figure/VAng/Trasformata/Frequency VarianceRoll.png, id=365, 370.5042pt x 286
+<./figure/VAng/Trasformata/Frequency VarianceRoll.png, id=638, 370.5042pt x 286
 .671pt>
 File: ./figure/VAng/Trasformata/Frequency VarianceRoll.png Graphic file (type p
 ng)
 <use ./figure/VAng/Trasformata/Frequency VarianceRoll.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Frequency VarianceRoll.png  
-used on input line 126.
+used on input line 297.
 (pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
- [56
+ [100
 
  <./figure/VAng/Trasformata/Frequency VarianceRoll.png (PNG copy)>]
-<./figure/VAng/Trasformata/Frequency VariancePitch.png, id=371, 366.168pt x 286
+<./figure/VAng/Trasformata/Frequency VariancePitch.png, id=644, 366.168pt x 286
 .671pt>
 File: ./figure/VAng/Trasformata/Frequency VariancePitch.png Graphic file (type 
 png)
 <use ./figure/VAng/Trasformata/Frequency VariancePitch.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Frequency VariancePitch.png 
- used on input line 130.
+ used on input line 301.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
- [57
+ [101
 
  <./figure/VAng/Trasformata/Frequency VariancePitch.png (PNG copy)>]
-<./figure/VAng/Trasformata/Frequency VarianceYaw.png, id=377, 366.168pt x 286.6
+<./figure/VAng/Trasformata/Frequency VarianceYaw.png, id=650, 366.168pt x 286.6
 71pt>
 File: ./figure/VAng/Trasformata/Frequency VarianceYaw.png Graphic file (type pn
 g)
 <use ./figure/VAng/Trasformata/Frequency VarianceYaw.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Frequency VarianceYaw.png  u
-sed on input line 134.
+sed on input line 305.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
- [58
+ [102
 
- <./figure/VAng/Trasformata/Frequency VarianceYaw.png (PNG copy)>] [59
+ <./figure/VAng/Trasformata/Frequency VarianceYaw.png (PNG copy)>] [103
 
 ]
-<./figure/VAng/Trasformata/Spettro Accelerazione 1.png, id=388, 361.35pt x 291.
+<./figure/VAng/Trasformata/Spettro Accelerazione 1.png, id=662, 361.35pt x 291.
 0072pt>
 File: ./figure/VAng/Trasformata/Spettro Accelerazione 1.png Graphic file (type 
 png)
 <use ./figure/VAng/Trasformata/Spettro Accelerazione 1.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spettro Accelerazione 1.png 
- used on input line 142.
+ used on input line 313.
 (pdftex.def)             Requested size: 267.36725pt x 215.31812pt.
- [60
+ [104
 
  <./figure/VAng/Trasformata/Spettro Accelerazione 1.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spettro Idle 1.png, id=394, 356.532pt x 291.0072pt>
+<./figure/VAng/Trasformata/Spettro Idle 1.png, id=668, 356.532pt x 291.0072pt>
 File: ./figure/VAng/Trasformata/Spettro Idle 1.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Spettro Idle 1.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spettro Idle 1.png  used on 
-input line 146.
+input line 317.
 (pdftex.def)             Requested size: 263.80234pt x 215.31812pt.
- [61
+ [105
 
  <./figure/VAng/Trasformata/Spettro Idle 1.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spettro Accelerazione 2.png, id=401, 361.35pt x 291.
+<./figure/VAng/Trasformata/Spettro Accelerazione 2.png, id=674, 361.35pt x 291.
 0072pt>
 File: ./figure/VAng/Trasformata/Spettro Accelerazione 2.png Graphic file (type 
 png)
 <use ./figure/VAng/Trasformata/Spettro Accelerazione 2.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spettro Accelerazione 2.png 
- used on input line 150.
+ used on input line 321.
 (pdftex.def)             Requested size: 267.36725pt x 215.31812pt.
- [62
+ [106
 
  <./figure/VAng/Trasformata/Spettro Accelerazione 2.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spettro Idle 2.png, id=407, 356.532pt x 291.0072pt>
+<./figure/VAng/Trasformata/Spettro Idle 2.png, id=680, 356.532pt x 291.0072pt>
 File: ./figure/VAng/Trasformata/Spettro Idle 2.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Spettro Idle 2.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spettro Idle 2.png  used on 
-input line 154.
+input line 325.
 (pdftex.def)             Requested size: 263.80234pt x 215.31812pt.
- [63
+ [107
 
  <./figure/VAng/Trasformata/Spettro Idle 2.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spettro Brake.png, id=413, 361.35pt x 291.0072pt>
+<./figure/VAng/Trasformata/Spettro Brake.png, id=686, 361.35pt x 291.0072pt>
 File: ./figure/VAng/Trasformata/Spettro Brake.png Graphic file (type png)
 <use ./figure/VAng/Trasformata/Spettro Brake.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spettro Brake.png  used on i
-nput line 158.
+nput line 329.
 (pdftex.def)             Requested size: 267.36725pt x 215.31812pt.
- [64
+ [108
 
  <./figure/VAng/Trasformata/Spettro Brake.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spectral EntropyRoll.png, id=419, 366.168pt x 286.67
+<./figure/VAng/Trasformata/Spectral EntropyRoll.png, id=692, 366.168pt x 286.67
 1pt>
 File: ./figure/VAng/Trasformata/Spectral EntropyRoll.png Graphic file (type png
 )
 <use ./figure/VAng/Trasformata/Spectral EntropyRoll.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spectral EntropyRoll.png  us
-ed on input line 162.
+ed on input line 333.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
- [65
+
+[109
 
  <./figure/VAng/Trasformata/Spectral EntropyRoll.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spectral EntropyPitch.png, id=425, 370.5042pt x 286.
+<./figure/VAng/Trasformata/Spectral EntropyPitch.png, id=699, 370.5042pt x 286.
 671pt>
 File: ./figure/VAng/Trasformata/Spectral EntropyPitch.png Graphic file (type pn
 g)
 <use ./figure/VAng/Trasformata/Spectral EntropyPitch.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spectral EntropyPitch.png  u
-sed on input line 166.
+sed on input line 337.
 (pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
- [66
+ [110
 
  <./figure/VAng/Trasformata/Spectral EntropyPitch.png (PNG copy)>]
-<./figure/VAng/Trasformata/Spectral EntropyYaw.png, id=431, 370.5042pt x 286.67
+<./figure/VAng/Trasformata/Spectral EntropyYaw.png, id=705, 370.5042pt x 286.67
 1pt>
 File: ./figure/VAng/Trasformata/Spectral EntropyYaw.png Graphic file (type png)
 
 <use ./figure/VAng/Trasformata/Spectral EntropyYaw.png>
 Package pdftex.def Info: ./figure/VAng/Trasformata/Spectral EntropyYaw.png  use
-d on input line 170.
+d on input line 341.
 (pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
- [67
+ [111
 
- <./figure/VAng/Trasformata/Spectral EntropyYaw.png (PNG copy)>]) (./Mag.tex [6
-8
+ <./figure/VAng/Trasformata/Spectral EntropyYaw.png (PNG copy)>]) (./Mag.tex [1
+12
 
 ]
-<./figure/Mag/Mag.png, id=443, 356.0502pt x 292.9344pt>
+<./figure/Mag/Mag.png, id=716, 358.941pt x 292.9344pt>
 File: ./figure/Mag/Mag.png Graphic file (type png)
 <use ./figure/Mag/Mag.png>
-Package pdftex.def Info: ./figure/Mag/Mag.png  used on input line 10.
-(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
- [69
+Package pdftex.def Info: ./figure/Mag/Mag.png  used on input line 181.
+(pdftex.def)             Requested size: 263.8431pt x 215.31812pt.
+ [113
 
  <./figure/Mag/Mag.png (PNG copy)>]
-<./figure/Mag/Media.png, id=449, 356.0502pt x 292.9344pt>
+<./figure/Mag/Media.png, id=722, 358.941pt x 292.9344pt>
 File: ./figure/Mag/Media.png Graphic file (type png)
 <use ./figure/Mag/Media.png>
-Package pdftex.def Info: ./figure/Mag/Media.png  used on input line 14.
-(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
- [70
+Package pdftex.def Info: ./figure/Mag/Media.png  used on input line 185.
+(pdftex.def)             Requested size: 263.8431pt x 215.31812pt.
+ [114
 
  <./figure/Mag/Media.png (PNG copy)>]
-<./figure/Mag/Varianza.png, id=455, 356.0502pt x 292.9344pt>
+<./figure/Mag/Media Rettificata.png, id=728, 356.0502pt x 292.9344pt>
+File: ./figure/Mag/Media Rettificata.png Graphic file (type png)
+<use ./figure/Mag/Media Rettificata.png>
+Package pdftex.def Info: ./figure/Mag/Media Rettificata.png  used on input line
+ 189.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+
+[115
+
+ <./figure/Mag/Media Rettificata.png (PNG copy)>]
+<./figure/Mag/Varianza.png, id=735, 356.0502pt x 292.9344pt>
 File: ./figure/Mag/Varianza.png Graphic file (type png)
 <use ./figure/Mag/Varianza.png>
-Package pdftex.def Info: ./figure/Mag/Varianza.png  used on input line 22.
+Package pdftex.def Info: ./figure/Mag/Varianza.png  used on input line 193.
 (pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
- [71
+ [116
 
  <./figure/Mag/Varianza.png (PNG copy)>]
-<./figure/Mag/Trasformata/Trasformata.png, id=461, 358.941pt x 291.0072pt>
+<./figure/Mag/Deviazione Standard.png, id=741, 356.0502pt x 292.9344pt>
+File: ./figure/Mag/Deviazione Standard.png Graphic file (type png)
+<use ./figure/Mag/Deviazione Standard.png>
+Package pdftex.def Info: ./figure/Mag/Deviazione Standard.png  used on input li
+ne 197.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+ [117
+
+ <./figure/Mag/Deviazione Standard.png (PNG copy)>]
+<./figure/Mag/Scarto Quadratico Medio.png, id=747, 356.0502pt x 292.9344pt>
+File: ./figure/Mag/Scarto Quadratico Medio.png Graphic file (type png)
+<use ./figure/Mag/Scarto Quadratico Medio.png>
+Package pdftex.def Info: ./figure/Mag/Scarto Quadratico Medio.png  used on inpu
+t line 201.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+
+[118
+
+ <./figure/Mag/Scarto Quadratico Medio.png (PNG copy)>]
+<./figure/Mag/Max.png, id=753, 358.941pt x 292.9344pt>
+File: ./figure/Mag/Max.png Graphic file (type png)
+<use ./figure/Mag/Max.png>
+Package pdftex.def Info: ./figure/Mag/Max.png  used on input line 205.
+(pdftex.def)             Requested size: 263.8431pt x 215.31812pt.
+ [119
+
+ <./figure/Mag/Max.png (PNG copy)>]
+<./figure/Mag/Min.png, id=759, 358.941pt x 292.9344pt>
+File: ./figure/Mag/Min.png Graphic file (type png)
+<use ./figure/Mag/Min.png>
+Package pdftex.def Info: ./figure/Mag/Min.png  used on input line 209.
+(pdftex.def)             Requested size: 263.8431pt x 215.31812pt.
+ [120
+
+ <./figure/Mag/Min.png (PNG copy)>]
+<./figure/Mag/Peak.png, id=765, 356.0502pt x 292.9344pt>
+File: ./figure/Mag/Peak.png Graphic file (type png)
+<use ./figure/Mag/Peak.png>
+Package pdftex.def Info: ./figure/Mag/Peak.png  used on input line 213.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+ [121
+
+ <./figure/Mag/Peak.png (PNG copy)>]
+<./figure/Mag/Kurtosi.png, id=772, 356.0502pt x 292.9344pt>
+File: ./figure/Mag/Kurtosi.png Graphic file (type png)
+<use ./figure/Mag/Kurtosi.png>
+Package pdftex.def Info: ./figure/Mag/Kurtosi.png  used on input line 217.
+(pdftex.def)             Requested size: 261.71819pt x 215.31812pt.
+ [122
+
+ <./figure/Mag/Kurtosi.png (PNG copy)>]
+<./figure/Mag/Skewness.png, id=778, 354.123pt x 292.9344pt>
+File: ./figure/Mag/Skewness.png Graphic file (type png)
+<use ./figure/Mag/Skewness.png>
+Package pdftex.def Info: ./figure/Mag/Skewness.png  used on input line 221.
+(pdftex.def)             Requested size: 260.30157pt x 215.31812pt.
+ [123
+
+ <./figure/Mag/Skewness.png (PNG copy)>]
+<./figure/Mag/Shape Factor.png, id=784, 351.2322pt x 292.9344pt>
+File: ./figure/Mag/Shape Factor.png Graphic file (type png)
+<use ./figure/Mag/Shape Factor.png>
+Package pdftex.def Info: ./figure/Mag/Shape Factor.png  used on input line 225.
+
+(pdftex.def)             Requested size: 258.17668pt x 215.31812pt.
+ [124
+
+ <./figure/Mag/Shape Factor.png (PNG copy)>]
+<./figure/Mag/Crest Factor.png, id=790, 354.123pt x 292.9344pt>
+File: ./figure/Mag/Crest Factor.png Graphic file (type png)
+<use ./figure/Mag/Crest Factor.png>
+Package pdftex.def Info: ./figure/Mag/Crest Factor.png  used on input line 229.
+
+(pdftex.def)             Requested size: 260.30157pt x 215.31812pt.
+ [125
+
+ <./figure/Mag/Crest Factor.png (PNG copy)>]
+<./figure/Mag/Impulse Factor.png, id=796, 354.123pt x 292.9344pt>
+File: ./figure/Mag/Impulse Factor.png Graphic file (type png)
+<use ./figure/Mag/Impulse Factor.png>
+Package pdftex.def Info: ./figure/Mag/Impulse Factor.png  used on input line 23
+3.
+(pdftex.def)             Requested size: 260.30157pt x 215.31812pt.
+ [126
+
+ <./figure/Mag/Impulse Factor.png (PNG copy)>]
+<./figure/Mag/Margin Factor.png, id=802, 354.123pt x 292.9344pt>
+File: ./figure/Mag/Margin Factor.png Graphic file (type png)
+<use ./figure/Mag/Margin Factor.png>
+Package pdftex.def Info: ./figure/Mag/Margin Factor.png  used on input line 237
+.
+(pdftex.def)             Requested size: 260.30157pt x 215.31812pt.
+ [127
+
+ <./figure/Mag/Margin Factor.png (PNG copy)>]
+<./figure/Mag/Trasformata/Trasformata.png, id=809, 358.941pt x 291.0072pt>
 File: ./figure/Mag/Trasformata/Trasformata.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Trasformata.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Trasformata.png  used on inpu
-t line 70.
+t line 241.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [72
+
+[128
 
  <./figure/Mag/Trasformata/Trasformata.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spettro.png, id=467, 358.941pt x 291.0072pt>
+<./figure/Mag/Trasformata/Spettro.png, id=815, 358.941pt x 291.0072pt>
 File: ./figure/Mag/Trasformata/Spettro.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Spettro.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spettro.png  used on input li
-ne 74.
+ne 245.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [129
 
-[73
-
- <./figure/Mag/Trasformata/Spettro.png (PNG copy)>] [74
+ <./figure/Mag/Trasformata/Spettro.png (PNG copy)>] [130
 
 ]
-<./figure/Mag/Trasformata/Trasformata Accelerazione 1.png, id=479, 358.941pt x 
+<./figure/Mag/Trasformata/Trasformata Accelerazione 1.png, id=826, 358.941pt x 
 291.0072pt>
 File: ./figure/Mag/Trasformata/Trasformata Accelerazione 1.png Graphic file (ty
 pe png)
 <use ./figure/Mag/Trasformata/Trasformata Accelerazione 1.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Trasformata Accelerazione 1.p
-ng  used on input line 82.
+ng  used on input line 253.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [75
+ [131
 
  <./figure/Mag/Trasformata/Trasformata Accelerazione 1.png (PNG copy)>]
-<./figure/Mag/Trasformata/Trasformata Idle 1.png, id=485, 358.941pt x 291.0072p
+<./figure/Mag/Trasformata/Trasformata Idle 1.png, id=832, 358.941pt x 291.0072p
 t>
 File: ./figure/Mag/Trasformata/Trasformata Idle 1.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Trasformata Idle 1.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Trasformata Idle 1.png  used 
-on input line 86.
+on input line 257.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [76
+ [132
 
  <./figure/Mag/Trasformata/Trasformata Idle 1.png (PNG copy)>]
-<./figure/Mag/Trasformata/Trasformata Accelerazione 2.png, id=491, 358.941pt x 
+<./figure/Mag/Trasformata/Trasformata Accelerazione 2.png, id=838, 358.941pt x 
 291.0072pt>
 File: ./figure/Mag/Trasformata/Trasformata Accelerazione 2.png Graphic file (ty
 pe png)
 <use ./figure/Mag/Trasformata/Trasformata Accelerazione 2.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Trasformata Accelerazione 2.p
-ng  used on input line 90.
+ng  used on input line 261.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [77
+ [133
 
  <./figure/Mag/Trasformata/Trasformata Accelerazione 2.png (PNG copy)>]
-<./figure/Mag/Trasformata/Trasformata Idle 2.png, id=497, 358.941pt x 291.0072p
+<./figure/Mag/Trasformata/Trasformata Idle 2.png, id=845, 358.941pt x 291.0072p
 t>
 File: ./figure/Mag/Trasformata/Trasformata Idle 2.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Trasformata Idle 2.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Trasformata Idle 2.png  used 
-on input line 94.
+on input line 265.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [78
+ [134
 
  <./figure/Mag/Trasformata/Trasformata Idle 2.png (PNG copy)>]
-<./figure/Mag/Trasformata/Trasformata Brake.png, id=503, 358.941pt x 291.0072pt
+<./figure/Mag/Trasformata/Trasformata Brake.png, id=851, 358.941pt x 291.0072pt
 >
 File: ./figure/Mag/Trasformata/Trasformata Brake.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Trasformata Brake.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Trasformata Brake.png  used o
-n input line 98.
+n input line 269.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [79
+ [135
 
  <./figure/Mag/Trasformata/Trasformata Brake.png (PNG copy)>]
-<./figure/Mag/Trasformata/Ampiezza MediaX.png, id=510, 369.0588pt x 286.671pt>
+<./figure/Mag/Trasformata/Ampiezza MediaX.png, id=857, 369.0588pt x 286.671pt>
 File: ./figure/Mag/Trasformata/Ampiezza MediaX.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Ampiezza MediaX.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Ampiezza MediaX.png  used on 
-input line 102.
+input line 273.
 (pdftex.def)             Requested size: 277.21013pt x 215.31812pt.
- [80
+
+[136
 
  <./figure/Mag/Trasformata/Ampiezza MediaX.png (PNG copy)>]
-<./figure/Mag/Trasformata/Ampiezza MediaY.png, id=516, 369.0588pt x 286.671pt>
+<./figure/Mag/Trasformata/Ampiezza MediaY.png, id=863, 369.0588pt x 286.671pt>
 File: ./figure/Mag/Trasformata/Ampiezza MediaY.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Ampiezza MediaY.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Ampiezza MediaY.png  used on 
-input line 106.
+input line 277.
 (pdftex.def)             Requested size: 277.21013pt x 215.31812pt.
-
-[81
+ [137
 
  <./figure/Mag/Trasformata/Ampiezza MediaY.png (PNG copy)>]
-<./figure/Mag/Trasformata/Ampiezza MediaZ.png, id=522, 369.0588pt x 286.671pt>
+<./figure/Mag/Trasformata/Ampiezza MediaZ.png, id=869, 369.0588pt x 286.671pt>
 File: ./figure/Mag/Trasformata/Ampiezza MediaZ.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Ampiezza MediaZ.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Ampiezza MediaZ.png  used on 
-input line 110.
+input line 281.
 (pdftex.def)             Requested size: 277.21013pt x 215.31812pt.
- [82
+ [138
 
  <./figure/Mag/Trasformata/Ampiezza MediaZ.png (PNG copy)>]
-<./figure/Mag/Trasformata/Frequency CentroidX.png, id=528, 370.5042pt x 286.671
+<./figure/Mag/Trasformata/Frequency CentroidX.png, id=875, 370.5042pt x 286.671
 pt>
 File: ./figure/Mag/Trasformata/Frequency CentroidX.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Frequency CentroidX.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Frequency CentroidX.png  used
- on input line 114.
+ on input line 285.
 (pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
- [83
+ [139
 
  <./figure/Mag/Trasformata/Frequency CentroidX.png (PNG copy)>]
-<./figure/Mag/Trasformata/Frequency CentroidY.png, id=534, 370.5042pt x 286.671
+<./figure/Mag/Trasformata/Frequency CentroidY.png, id=882, 370.5042pt x 286.671
 pt>
 File: ./figure/Mag/Trasformata/Frequency CentroidY.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Frequency CentroidY.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Frequency CentroidY.png  used
- on input line 118.
+ on input line 289.
 (pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
- [84
+ [140
 
  <./figure/Mag/Trasformata/Frequency CentroidY.png (PNG copy)>]
-<./figure/Mag/Trasformata/Frequency CentroidZ.png, id=540, 369.0588pt x 286.671
+<./figure/Mag/Trasformata/Frequency CentroidZ.png, id=888, 370.5042pt x 286.671
 pt>
 File: ./figure/Mag/Trasformata/Frequency CentroidZ.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Frequency CentroidZ.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Frequency CentroidZ.png  used
- on input line 122.
-(pdftex.def)             Requested size: 277.21013pt x 215.31812pt.
- [85
+ on input line 293.
+(pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
+ [141
 
  <./figure/Mag/Trasformata/Frequency CentroidZ.png (PNG copy)>]
-<./figure/Mag/Trasformata/Frequency VarianceX.png, id=547, 370.5042pt x 286.671
+<./figure/Mag/Trasformata/Frequency VarianceX.png, id=894, 370.5042pt x 286.671
 pt>
 File: ./figure/Mag/Trasformata/Frequency VarianceX.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Frequency VarianceX.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Frequency VarianceX.png  used
- on input line 126.
+ on input line 297.
 (pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
- [86
+[142
 
  <./figure/Mag/Trasformata/Frequency VarianceX.png (PNG copy)>]
-<./figure/Mag/Trasformata/Frequency VarianceY.png, id=553, 366.168pt x 286.671p
+<./figure/Mag/Trasformata/Frequency VarianceY.png, id=900, 366.168pt x 286.671p
 t>
 File: ./figure/Mag/Trasformata/Frequency VarianceY.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Frequency VarianceY.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Frequency VarianceY.png  used
- on input line 130.
+ on input line 301.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
-
-[87
+ [143
 
  <./figure/Mag/Trasformata/Frequency VarianceY.png (PNG copy)>]
-<./figure/Mag/Trasformata/Frequency VarianceZ.png, id=559, 364.2408pt x 286.671
+<./figure/Mag/Trasformata/Frequency VarianceZ.png, id=906, 370.5042pt x 286.671
 pt>
 File: ./figure/Mag/Trasformata/Frequency VarianceZ.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Frequency VarianceZ.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Frequency VarianceZ.png  used
- on input line 134.
-(pdftex.def)             Requested size: 273.59122pt x 215.31812pt.
- [88
+ on input line 305.
+(pdftex.def)             Requested size: 278.2958pt x 215.31812pt.
+ [144
 
- <./figure/Mag/Trasformata/Frequency VarianceZ.png (PNG copy)>] [89
+ <./figure/Mag/Trasformata/Frequency VarianceZ.png (PNG copy)>] [145
 
 ]
-<./figure/Mag/Trasformata/Spettro Accelerazione 1.png, id=570, 358.941pt x 291.
+<./figure/Mag/Trasformata/Spettro Accelerazione 1.png, id=918, 358.941pt x 291.
 0072pt>
 File: ./figure/Mag/Trasformata/Spettro Accelerazione 1.png Graphic file (type p
 ng)
 <use ./figure/Mag/Trasformata/Spettro Accelerazione 1.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spettro Accelerazione 1.png  
-used on input line 142.
+used on input line 313.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [90
+ [146
 
  <./figure/Mag/Trasformata/Spettro Accelerazione 1.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spettro Idle 1.png, id=576, 363.759pt x 291.0072pt>
+<./figure/Mag/Trasformata/Spettro Idle 1.png, id=924, 358.941pt x 291.0072pt>
 File: ./figure/Mag/Trasformata/Spettro Idle 1.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Spettro Idle 1.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spettro Idle 1.png  used on i
-nput line 146.
-(pdftex.def)             Requested size: 269.14969pt x 215.31812pt.
- [91
+nput line 317.
+(pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
+ [147
 
  <./figure/Mag/Trasformata/Spettro Idle 1.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spettro Accelerazione 2.png, id=583, 358.941pt x 291.
+<./figure/Mag/Trasformata/Spettro Accelerazione 2.png, id=930, 358.941pt x 291.
 0072pt>
 File: ./figure/Mag/Trasformata/Spettro Accelerazione 2.png Graphic file (type p
 ng)
 <use ./figure/Mag/Trasformata/Spettro Accelerazione 2.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spettro Accelerazione 2.png  
-used on input line 150.
+used on input line 321.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [92
+ [148
 
  <./figure/Mag/Trasformata/Spettro Accelerazione 2.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spettro Idle 2.png, id=589, 358.941pt x 291.0072pt>
+<./figure/Mag/Trasformata/Spettro Idle 2.png, id=936, 358.941pt x 291.0072pt>
 File: ./figure/Mag/Trasformata/Spettro Idle 2.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Spettro Idle 2.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spettro Idle 2.png  used on i
-nput line 154.
+nput line 325.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [93
+ [149
 
  <./figure/Mag/Trasformata/Spettro Idle 2.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spettro Brake.png, id=595, 358.941pt x 291.0072pt>
+<./figure/Mag/Trasformata/Spettro Brake.png, id=942, 358.941pt x 291.0072pt>
 File: ./figure/Mag/Trasformata/Spettro Brake.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Spettro Brake.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spettro Brake.png  used on in
-put line 158.
+put line 329.
 (pdftex.def)             Requested size: 265.58478pt x 215.31812pt.
- [94
+ [150
 
  <./figure/Mag/Trasformata/Spettro Brake.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spectral EntropyX.png, id=601, 366.168pt x 286.671pt>
+<./figure/Mag/Trasformata/Spectral EntropyX.png, id=948, 366.168pt x 286.671pt>
 
 File: ./figure/Mag/Trasformata/Spectral EntropyX.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Spectral EntropyX.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spectral EntropyX.png  used o
-n input line 162.
+n input line 333.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
- [95
+ [151
 
  <./figure/Mag/Trasformata/Spectral EntropyX.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spectral EntropyY.png, id=607, 366.168pt x 286.671pt>
+<./figure/Mag/Trasformata/Spectral EntropyY.png, id=955, 366.168pt x 286.671pt>
 
 File: ./figure/Mag/Trasformata/Spectral EntropyY.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Spectral EntropyY.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spectral EntropyY.png  used o
-n input line 166.
+n input line 337.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
- [96
+ [152
 
  <./figure/Mag/Trasformata/Spectral EntropyY.png (PNG copy)>]
-<./figure/Mag/Trasformata/Spectral EntropyZ.png, id=613, 366.168pt x 286.671pt>
+<./figure/Mag/Trasformata/Spectral EntropyZ.png, id=961, 366.168pt x 286.671pt>
 
 File: ./figure/Mag/Trasformata/Spectral EntropyZ.png Graphic file (type png)
 <use ./figure/Mag/Trasformata/Spectral EntropyZ.png>
 Package pdftex.def Info: ./figure/Mag/Trasformata/Spectral EntropyZ.png  used o
-n input line 170.
+n input line 341.
 (pdftex.def)             Requested size: 275.03877pt x 215.31812pt.
- [97
+ [153
 
  <./figure/Mag/Trasformata/Spectral EntropyZ.png (PNG copy)>])
 \tf@nav=\write6
@@ -1996,21 +2523,21 @@ Package rerunfilecheck Info: File `lunga.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26109 strings out of 475389
- 531451 string characters out of 2776056
- 788846 words of memory out of 3000000
- 46646 multiletter control sequences out of 15000+600000
+ 26765 strings out of 475389
+ 554818 string characters out of 2776056
+ 788844 words of memory out of 3000000
+ 47184 multiletter control sequences out of 15000+600000
  482560 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,11n,122p,411b,737s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 128i,11n,122p,411b,791s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Daniele\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 bx1095.pk> <C:\Users\Daniele\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\ecbx1728.pk> <C:\Users\Daniele\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\ecbx0900.pk> <C:\Users\Daniele\AppData\Local\MiKTeX\fonts/pk/ljfo
 ur/jknappen/ec/dpi600\ecbx1440.pk>
-Output written on lunga.pdf (97 pages, 3198171 bytes).
+Output written on lunga.pdf (153 pages, 5483037 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 195 named destinations out of 1000 (max. 500000)
- 529 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1164 PDF objects out of 1200 (max. 8388607)
+ 307 named destinations out of 1000 (max. 500000)
+ 819 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -24,10 +24,10 @@ mag_rotta=([db(:,8),-db(:,9),db(:,10)]*1e-1)*gzRot;
 [t,acc,vang,mag]=AggiustaFrequenza(t_rotta,acc_rotta,vang_rotta,mag_rotta);
 vel=cumsum(acc)*0.04;
 
-fun={acc(:,1:2),vang,mag,vel(:,1:2)};
+fun={acc,vang,mag,vel};
 % fun={acc};
 fun_str=["Acc","VAng","Mag","Vel"];
-fun_axes={["X","Y"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y"]};
+fun_axes={["X","Y","Z"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y","Z"]};
 % fun_axes={["X","Y","Z"]};
 fun_units=["m/s^2","deg/s","µT","m/s"];
 

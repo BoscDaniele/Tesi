@@ -14,7 +14,7 @@ maxbibnames=99
 \begin{document}
 	
 	% TITOLO
-%	\include{header}
+	\include{header}
 	
 	% INDICE
 	\pagenumbering{Roman}
@@ -26,22 +26,29 @@ maxbibnames=99
 	
 	\newpage
 	\pagenumbering{arabic}
-	\import{./Introduzione}{intro}
 	
-	\newpage
-	\import{./StatoArte}{arte}
+	\import{./0_Introduzione}{intro}
 	
-	\newpage
-	\import{./Sistema}{sistema}
+%	\newpage
+	\import{./1_StatoArte}{arte}
+	
+%	\newpage
+	\import{./2_Fisica}{fisica}
 
 %	\newpage
-%	\import{./Esperimento}{esperimento}
+	\import{./3_Sistema}{sistema}
 
-	\newpage
-	\import{./AnalisiDati}{analisi}
+%	\newpage
+	\import{./4_Dati}{dati}
 	
 	\newpage
-	\import{./SviluppiFuturi}{sviluppi}
+	\import{./5_Indicatori}{indicatori}
+
+	\newpage
+	\import{./6_Sviluppi}{sviluppi}
+
+	\newpage
+	\import{./7_Conclusioni}{conclusioni}
 
 
 	\newpage

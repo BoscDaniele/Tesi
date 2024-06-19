@@ -1,0 +1,19 @@
+\documentclass[12pt]{article}
+
+\usepackage{../preambolo}
+
+\begin{document}
+	\section*{I Problemi del Sensore}
+	Di seguito i problemi che ha il sensore
+	\begin{itemize}
+		\item La raccolta dati avviene tramite thread
+		\item I thread non sono limitati in numero e non vengono mai terminati (viene solo sospesa la raccolta dati)
+		\item Di frequente succede che partano più thread contemporaneamente, ognuno dei quali raccoglie dai con cadenza regolare, ma non sono chiaramente sincronizzati tra loro. Il risultato è che nell'arco di 0.04 secondi (il tempo di campionamento dei thread) diversi thread salvano i dati a intervalli non regolari (nel senso che il primo arriva all'inizio, il secondo dopo, per esempio 0.01s, il terzo dopo altri 0.005s e la cosa si ripete uguale ogni 0.04s). Si è reso quindi necessario sviluppare una funzione che selezionasse solo i dati provenienti dal primo thread (prende in ingresso i dati e seleziona un dato ogni \(0.039s<t<0.041s\))
+		\item La gestione degli errori consiste in while(true) completamente vuoto. Questo causa il completo blocco del sensore ogni volta che si verifica un qualsivoglia errore (come la presenza di un po' troppi thread).
+		\item Ogni volta che si verifica un errore, evento piuttosto frequente, è necessario spegnere il sensore... Ma il tasto di spegnimento non funziona perchè il sensore smette di raccogliere gli input... Risulta quindi necessario smontare il sensore per rimuovere la batteria
+		\item Quando il sensore vine acceso cancella completamente la memoria della scheda sd
+		\item Non si capisce bene quale sia il sistema di riferimento utilizzato dal magnetometro
+		\item Differenti funzioni di acquisizione dati utilizzano differenti sistemi di riferimento
+		\item Documentazione non pervenuta
+	\end{itemize}
+\end{document}

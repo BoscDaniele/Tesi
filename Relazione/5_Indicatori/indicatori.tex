@@ -1,0 +1,147 @@
+%\documentclass[class=article]{standalone}
+
+\documentclass[12pt]{article}
+
+\usepackage{../preambolo}
+
+\usepackage[
+style=numeric,
+natbib=true,
+backend=biber,
+sorting=ynt,
+maxbibnames=99
+]{biblatex}
+\addbibresource{../bibliografia.bib}
+
+\begin{document}
+\section{Indicatori}
+	Numerosi sono gli studi condotti al fine di comprendere lo stile di guida adottato dal conducente di un veicolo, tuttavia la maggior parte di questi si sono focalizzati sulle automobili.
+	In questi articoli la componente \(z\) dell'accelerazione e le rotazioni attorno agli angoli di \(rollio\) e \(beccheggio\) sono stati trascurati in quanto ritenuti poco rilevanti per descrivere il comportamento dinamico dalle automobili.
+	Una bicicletta, però, si muove in modo significativamente differente rispetto a un'auto.
+	In particolare, durante le curve, la bicicletta ruota sia attorno all'asse di \(rollio\) che a quello di \(beccheggio\) mentre lungo l'asse \(z\) è possibile osservare la forza centrifuga.
+	
+	
+	Negli articoli consultati, gli indicatori più comunemente utilizzati sono risultati essere media, varianza e distanza picco-picco. Oltre a quelli citati, però, ne sono stati utilizzati degli altri. In particolare, l'articolo \cite{chen}, riguardante lo stile di guida delle automobili, fornisce una lista molto completa di indicatori e sperimenta l'introduzione di nuovi come, per esempio, lo shape factor e il margin factor.\hfill\break
+	
+	
+	Durante questa ricerca sono stati utilizzati i seguenti indicatori:
+	\begin{itemize}
+		\item Indicatori temporali
+		\begin{itemize}
+			\item Media (\(mean\)), Valor Medio Rettificato (\(arv\)) e Media Quadratica (\(rms\))
+			\item Varianza (\(var\)) e Deviazione Standard (\(std\))
+			\item Kurtosis (\(krt\))
+			\item Skewness (\(skw\))
+			\item Massimo (\(max\)), Minimo (\(min\)) e Distanza Picco-Picco (\(pk\))
+		\end{itemize}
+		\item Indicatori adimensionali
+		\begin{itemize}
+			\item Shape factor (\(sf\))
+			\item Crest factor (\(cf\))
+			\item Impulse factor (\(if\))
+			\item Margin factor (\(mf\))
+		\end{itemize}
+		\item Indicatori basati sulla frequenza
+		\begin{itemize}
+			\item Ampiezza media (\(amp\))
+			\item Frequency centroid (\(cnt\))
+			\item Varianza delle frequenze(\(fvar\))
+			\item Entropia spettrale (\(ent\))
+		\end{itemize}
+	\end{itemize}
+	
+%	magari aggiungere la tabella con le formule
+	
+	Questi indicatori sono stati applicati ai dati provenienti dall'accelerometro, dal giroscopio e dal magnetometro e alla velocità durante le fasi di accelerazione, curva e frenata. Di seguito verranno descritti gli indicatori che si sono rivelati più interessanti durante le tre fasi appena citate.
+	
+	\subsection{Accelerazione e Frenata}
+	Durante le fasi di accelerazione e frenata gli indicatori che si sono rivelati maggiormente utili sono:
+	\begin{itemize}
+		\item media accelerazione in \(x\)
+		\item varianza accelerazione in \(x\) e \(y\)
+		\item massimo accelerazione in \(x\)
+		\item distanza picco-picco accelerazione in \(x\) e \(y\)
+		\item varianza velocità in \(x\)
+		\item distanza picco-picco velocità in \(x\)
+		\item deviazione standard \(rollio\)
+		\item distanza picco-picco \(rollio\)
+	\end{itemize}
+	
+	L'andamento medio dell'accelerazione in \(x\), calcolata come media degli ultimi \(1.6s\), mostra un incremento durante le fasi di accelerazione della bicicletta che tende a diminuire fino a \(0\) all'aumentare della velocità.
+	Risulta essere negativa solo nei momenti in cui il ciclista smette di pedalare, procedendo per inerzia, e quando frena. In quest'ultimo caso è visibile una netta e rapida diminuzione di questo parametro in funzione dell'intensità della frenata.
+	
+	Per quanto riguarda la media rettificata, la media quadratica, la varianza e la deviazione standard dell'accelerazione lungo gli assi \(x\) e \(y\) hanno tutte un andamento molto simile. Di questi parametri è stata selezionata la varianza in quanto ha un range di valori più ampio e consente, quindi, una migliore identificazione degli eventi. In particolare la varianza lungo gli assi \(x\) e \(y\) è in grado di evidenziare lo sforzo del ciclista nel pedalare, con valori tanto più elevati quanto più l'accelerazione lungo questi assi oscilla. La varianza dell'accelerazione in \(x\) è inoltre in grado di evidenziare le frenate.
+	Anche il massimo dell'accelerazione in \(x\) si comporta come la varianza, con la differenza che le frenate vengono segnalate con un valore negativo più o meno evidente a seconda del numero di dati utilizzati per calcolarlo. Questo rende più facile distinguere le fasi di accelerazione dalle fasi di frenata.
+	
+	Comportamento analogo a quello della varianza è stato osservato nella distanza picco-picco dell'accelerazione degli assi \(x\) e \(y\).\hfill\break
+	
+	Per quanto riguarda la velocità, sia la varianza che la deviazione standard identificano molto bene le frenate.\hfill\break
+	
+	Come per l'accelerazione anche nel caso della velocità angolare dell'angolo di rollio la media rettificata, la media quadratica, la varianza e la deviazione standard hanno comportamenti simili che identificano bene la foga con cui il ciclista pedala, così come la distanza picco-picco del rollio.\hfill\break
+	
+	Il campo magnetico, infine, non fornisce molte informazioni per quanto riguarda i percorsi rettilinei.
+	
+	\subsection{Curva}
+	Durante la fase di curva gli indicatori che si sono rivelati maggiormente utili sono:
+	\begin{itemize}
+		\item media accelerazione in \(x\)
+		\item varianza accelerazione in \(x\)
+		\item varianza velocità in \(x\)
+		\item distanza picco-picco velocità in \(x\)
+		\item media \(beccheggio\) e \(imbardata\)
+		\item deviazione standard \(rollio\) e \(imbardata\)
+		\item massimo \(beccheggio\) e \(imbardata\)
+		\item media campo magnetico in \(x\)
+		\item varianza campo magnetico in \(x\)
+
+	\end{itemize}
+	
+%	L'accelerazione media lungo l'asse \(x\) è in grado di rilevare le curve in quanto, durante queste, si nota una decelerazione della bicicletta.
+	
+	L'accelerazione media lungo l'asse \(x\) mostra una decelerazione durante le curve, rendendo così possibile una loro identificazione.
+	
+	Anche in questo caso media rettificata, media quadratica, varianza e deviazione standard dell'accelerazione lungo \(x\) hanno un andamento molto simile e mostrano un picco durante le fasi di curva.\hfill\break
+	
+	Per quanto riguarda la velocità, gli indicatori varianza e deviazione standard rilevano le curve in corrispondenza del rallentamento della bicicletta durante le stesse.\hfill\break
+	
+	La velocità angolare è un ottimo modo per riconoscere le curve. La media della velocità angolare degli angoli di \(rollio\), \(beccheggio\) e \(imbardata\) riesce a fornire una chiara indicazione di quando avviene una curva. Tra questi, si distinguono in particolare gli ultimi due. La media del \(beccheggio\) fornisce informazioni sull'entità della curva e sulla velocità alla quale la si sta percorrendo: più ampia è la curva minore sarà il suo valore, maggiore è la velocità della bicicletta più questo sarà elevato. Il \(beccheggio\) non può, però, fornirci informazioni sul verso della curva stessa. Per risalire a questa informazione è stata selezionata l'\(imbardata\). Anche il massimo di questi angoli si comporta in modo analogo.
+	
+	Infine, nella varianza e nella deviazione standard degli angoli di \(rollio\) e \(imbardata\) è possibile notare due picchi all'inizio e alla fine della curva.\hfill\break
+	
+	La varianza del campo magnetico in \(x\) mostra dei picchi, più o meno pronunciati, a seconda dell'orientamento della bicicletta all'inizio e alla fine della curva.
+	
+	\subsection{Utilizzo degli Indicatori}
+	Lo studio fatto mostra come gli indicatori possano essere utilizzati per valutare i diversi stati dipendentemente dalla loro efficacia nel leggere una determinata situazione. \textbf{non capisco cosa vuol dire}
+	
+	Di seguito verranno selezionati quegli indicatori in grado di identificare uno specifico evento o un'insieme di indicatori più generici che consentano di dedurre ciò che sta accadendo.
+	
+	Identifichiamo l'impegno che il ciclista mette nel pedalare e come affronta curve e frenate. \textbf{sì, è quello per cui sto facendo la tesi}
+	
+	La foga del ciclista viene misurata in modo efficace dalla varianza dell'accelerazione dell'asse \(x\) dove più l'accelerazione oscilla tanto più la varianza è elevata. 
+	
+	Quindi si nota di più quando il ciclista pedala piuttosto che quando procede per inerzia. Se ne può dedurre una scala di valori dai quali si può stabilire se si pedala forte o piano.\textbf{non mi piace}
+	
+	Dalla media dell'accelerazione in \(x\), invece, si può dedurre l'efficacia della pedalata: più la media è elevata, maggiore è l'accelerazione della bicicletta e, quindi, maggiore è l'utilità dello sforzo del ciclista. \textbf{rivedere questo pezzo}
+	
+	(\textbf{L'accoppiata varianza e media dell'accelerazione in \(x\) sono quindi in grado di determinare lo sforzo impiegato nel pedalare e la sua efficacia.})
+	
+	Utilizzando solo questo indicatore (\textbf{quele? si sta parlando sia di varianza che di media}) non riusciamo a distinguere la foga dalla curva e dalla frenata. \textbf{rivedere}
+	
+	Il problema si può risolvere utilizzando la varianza dell'accelerazione lungo l'asse \(y\), che, pur con meno precisione, registra principalmente l'impegno del ciclista escludendo curva e frenate. In alternativa, accoppiando la varianza dell'accelerazione dell'asse \(x\) con \textbf{indicatori specifici} è possibile dedurre se il valore è riferibile alla curva, alla frenata o alla foga. Questi indicatori sono: la varianza della velocità in \(x\) per le frenate e la media della velocità angolare del \(beccheggio\) e dell'\(imbardata\) per capire quando sta curvando.
+	
+	Un'altra possibilità è controllare quando la media dell'accelerazione diventa negativa in quanto, oltre a una certa soglia, questo succede solo quando la bicicletta curva e, sopratutto, frena.
+	
+	Analogo discorso si può fare con l'indicatore distanza picco-picco che ha un andamento simile alla varianza.\hfill\break
+	
+	Per rilevare frenate e curve abbiamo invece degli indicatori specifici. \textbf{abbiamo detto la stessa cosa prima}
+	
+	La media o il massimo della velocità angolare di \(beccheggio\) e \(imbardata\) consentono di evidenziare le curve e la loro intensità, mentre la varianza del campo magnetico lungo l'asse \(x\) identifica la differenza nell'orientamento all'inizio e alla fine della curva.
+	
+	La frenata si rileva in modo efficace dalla varianza della velocità, che mostra un picco molto evidente in queste fasi.
+	
+	Con la distanza picco-picco non si distingue così nettamente la frenata, risultando meno utile.
+	
+	Su questi ultimi due indicatori si possono rilevare anche le curve ma in modo molto meno marcato rispetto a quanto rileviamo le frenate, specialmente per quanto riguarda la varianza della velocità. \textbf{sarebbe utile metterlo prima così da far capire cosa si intende per "non si distingue così nettamente la frenata"}
+	
+	
+\end{document}

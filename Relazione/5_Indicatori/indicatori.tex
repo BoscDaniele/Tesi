@@ -1,19 +1,20 @@
-%\documentclass[class=article]{standalone}
+\documentclass[class=article]{standalone}
 
-\documentclass[12pt]{article}
-
-\usepackage{../preambolo}
-
-\usepackage[
-style=numeric,
-natbib=true,
-backend=biber,
-sorting=ynt,
-maxbibnames=99
-]{biblatex}
-\addbibresource{../bibliografia.bib}
+%\documentclass[12pt,a4paper]{article}
+%
+%\usepackage{../preambolo}
+%
+%\usepackage[
+%style=numeric,
+%natbib=true,
+%backend=biber,
+%sorting=ynt,
+%maxbibnames=99
+%]{biblatex}
+%\addbibresource{../bibliografia.bib}
 
 \begin{document}
+%\justifying
 \section{Indicatori}
 	Numerosi sono gli studi condotti al fine di comprendere lo stile di guida adottato dal conducente di un veicolo, tuttavia la maggior parte di questi si sono focalizzati sulle automobili.
 	In questi articoli la componente \(z\) dell'accelerazione e le rotazioni attorno agli angoli di \(rollio\) e \(beccheggio\) sono stati trascurati in quanto ritenuti poco rilevanti per descrivere il comportamento dinamico dalle automobili.
@@ -111,37 +112,31 @@ maxbibnames=99
 	La varianza del campo magnetico in \(x\) mostra dei picchi, più o meno pronunciati, a seconda dell'orientamento della bicicletta all'inizio e alla fine della curva.
 	
 	\subsection{Utilizzo degli Indicatori}
-	Lo studio fatto mostra come gli indicatori possano essere utilizzati per valutare i diversi stati dipendentemente dalla loro efficacia nel leggere una determinata situazione. \textbf{non capisco cosa vuol dire}
+	Lo studio fatto serve per selezionare un'insieme di indicatori che consentano di dedurre l'impegno che il ciclista mette nel pedalare o in grado di identificare uno specifico evento come curve e frenate.
 	
-	Di seguito verranno selezionati quegli indicatori in grado di identificare uno specifico evento o un'insieme di indicatori più generici che consentano di dedurre ciò che sta accadendo.
+	Dalla varianza dell'accelerazione dell'asse \(x\) è possibile rilevare in modo efficace l'oscillazione della stessa, dovuta alla foga che il ciclista mette nel pedalare. Maggiore è la varianza, tanto più il ciclista sta pedalando velocemente. Di conseguenza, quando il ciclista procede per inerzia senza pedalare, la varianza risulta essere molto bassa.
 	
-	Identifichiamo l'impegno che il ciclista mette nel pedalare e come affronta curve e frenate. \textbf{sì, è quello per cui sto facendo la tesi}
+	Grazie alla media dell'accelerazione in \(x\) si può, invece, dedurre l'efficacia della pedalata: più la media è elevata, maggiore è l'accelerazione della bicicletta e, quindi, maggiore è l'utilità dello sforzo del ciclista.
 	
-	La foga del ciclista viene misurata in modo efficace dalla varianza dell'accelerazione dell'asse \(x\) dove più l'accelerazione oscilla tanto più la varianza è elevata. 
+	L'accoppiata varianza e media dell'accelerazione in \(x\) sono quindi in grado di determinare lo sforzo impiegato nel pedalare e la sua efficacia.
 	
-	Quindi si nota di più quando il ciclista pedala piuttosto che quando procede per inerzia. Se ne può dedurre una scala di valori dai quali si può stabilire se si pedala forte o piano.\textbf{non mi piace}
+	Dalla sola varianza non è però possibile distinguere la foga del ciclista dalle curve e dalle frenate. In queste occasioni, infatti, la varianza si comporta nello stesso modo.
 	
-	Dalla media dell'accelerazione in \(x\), invece, si può dedurre l'efficacia della pedalata: più la media è elevata, maggiore è l'accelerazione della bicicletta e, quindi, maggiore è l'utilità dello sforzo del ciclista. \textbf{rivedere questo pezzo}
+	Questo problema si può risolvere utilizzando la varianza dell'accelerazione lungo l'asse \(y\), che, pur con meno precisione, registra principalmente l'impegno del ciclista escludendo curva e frenate.
 	
-	(\textbf{L'accoppiata varianza e media dell'accelerazione in \(x\) sono quindi in grado di determinare lo sforzo impiegato nel pedalare e la sua efficacia.})
+	Un'altra possibilità è controllare quando la media dell'accelerazione diventa negativa. Questo succede solamente in quei momenti in cui la bicicletta rallenta, ovvero quando procede per inerzia e, sopratutto, quando curva o frena.	
 	
-	Utilizzando solo questo indicatore (\textbf{quele? si sta parlando sia di varianza che di media}) non riusciamo a distinguere la foga dalla curva e dalla frenata. \textbf{rivedere}
+	In alternativa, accoppiando la varianza dell'accelerazione dell'asse \(x\) con altri indicatori, in grado di rilevare specificatamente curve e frenate, è possibile discernere se il valore è riferibile alla foga o meno.
+%	Questi indicatori sono: la varianza della velocità in \(x\) per le frenate e la media della velocità angolare del \(beccheggio\) e dell'\(imbardata\) per capire quando sta curvando.
 	
-	Il problema si può risolvere utilizzando la varianza dell'accelerazione lungo l'asse \(y\), che, pur con meno precisione, registra principalmente l'impegno del ciclista escludendo curva e frenate. In alternativa, accoppiando la varianza dell'accelerazione dell'asse \(x\) con \textbf{indicatori specifici} è possibile dedurre se il valore è riferibile alla curva, alla frenata o alla foga. Questi indicatori sono: la varianza della velocità in \(x\) per le frenate e la media della velocità angolare del \(beccheggio\) e dell'\(imbardata\) per capire quando sta curvando.
+	Analogo discorso si può fare con gli indicatori distanza picco-picco e media rettificata che hanno un andamento simile a quello della varianza.\hfill\break
 	
-	Un'altra possibilità è controllare quando la media dell'accelerazione diventa negativa in quanto, oltre a una certa soglia, questo succede solo quando la bicicletta curva e, sopratutto, frena.
+	Per quanto riguarda il rilevamento delle curve e della loro intensità abbiamo la media o il massimo della velocità angolare di \(beccheggio\) e \(imbardata\). In particolare il primo si dimostra molto efficace a identificare la velocità alla quale viene percorsa in quanto, in base a quest'ultima, cambia l'inclinazione della bicicletta e, quindi, la velocità di rotazione attorno all'angolo di \(beccheggio\). Grazie all'\(imbardata\), invece, possiamo capire il verso di rotazione della bicicletta.
 	
-	Analogo discorso si può fare con l'indicatore distanza picco-picco che ha un andamento simile alla varianza.\hfill\break
+	La varianza del campo magnetico lungo l'asse \(x\), infine, riesce a identificare la differenza tra l'orientamento iniziale e finale della curva.\hfill\break
 	
-	Per rilevare frenate e curve abbiamo invece degli indicatori specifici. \textbf{abbiamo detto la stessa cosa prima}
+	La frenata, invece, si rileva in modo efficace grazie varianza della velocità in \(x\), che mostra un picco tanto più evidente quanto maggiore è la differenza di velocità della bicicletta prima e dopo la frenata. Per questo motivo è in grado di evidenziare anche curve e i momenti di forte aumento di velocità, in particolare quando la bicicletta parte da ferma, seppur in modo molto meno marcato.
 	
-	La media o il massimo della velocità angolare di \(beccheggio\) e \(imbardata\) consentono di evidenziare le curve e la loro intensità, mentre la varianza del campo magnetico lungo l'asse \(x\) identifica la differenza nell'orientamento all'inizio e alla fine della curva.
-	
-	La frenata si rileva in modo efficace dalla varianza della velocità, che mostra un picco molto evidente in queste fasi.
-	
-	Con la distanza picco-picco non si distingue così nettamente la frenata, risultando meno utile.
-	
-	Su questi ultimi due indicatori si possono rilevare anche le curve ma in modo molto meno marcato rispetto a quanto rileviamo le frenate, specialmente per quanto riguarda la varianza della velocità. \textbf{sarebbe utile metterlo prima così da far capire cosa si intende per "non si distingue così nettamente la frenata"}
-	
-	
+	Discorso analogo può essere fatto con la distanza picco-picco e con la deviazione standard, in questo caso, però, è meno evidente la differenza tra frenate e curve.
+		
 \end{document}

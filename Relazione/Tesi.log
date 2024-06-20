@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  16 JUN 2024 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  20 JUN 2024 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -56,6 +56,23 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
+)
+(C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2021/12/15 v3.1 ragged2e Package
+\CenteringLeftskip=\skip49
+\RaggedLeftLeftskip=\skip50
+\RaggedRightLeftskip=\skip51
+\CenteringRightskip=\skip52
+\RaggedLeftRightskip=\skip53
+\RaggedRightRightskip=\skip54
+\CenteringParfillskip=\skip55
+\RaggedLeftParfillskip=\skip56
+\RaggedRightParfillskip=\skip57
+\JustifyingParfillskip=\skip58
+\CenteringParindent=\skip59
+\RaggedLeftParindent=\skip60
+\RaggedRightParindent=\skip61
+\JustifyingParindent=\skip62
 ) (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2022/08/29 3.79 The Babel package
 \babel@savecnt=\count196
@@ -106,8 +123,8 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box51
-\beforetitleunit=\skip49
-\aftertitleunit=\skip50
+\beforetitleunit=\skip63
+\aftertitleunit=\skip64
 \ttl@plus=\dimen148
 \ttl@minus=\dimen149
 \ttl@toksa=\toks20
@@ -135,12 +152,12 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \ar@mcellbox=\box52
 \extrarowheight=\dimen154
 \NC@list=\toks21
-\extratabsurround=\skip51
-\backup@length=\skip52
+\extratabsurround=\skip65
+\backup@length=\skip66
 \ar@cellbox=\box53
 )
 \everycr=\toks22
-\minrowclearance=\skip53
+\minrowclearance=\skip67
 \rownum=\count268
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex-dev/graphics\mathcolo
@@ -307,7 +324,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip54
+\Hy@SectionHShift=\skip68
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
 Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
@@ -320,12 +337,12 @@ Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count281
 \calc@Adimen=\dimen159
 \calc@Bdimen=\dimen160
-\calc@Askip=\skip55
-\calc@Bskip=\skip56
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count282
-\calc@Cskip=\skip57
+\calc@Cskip=\skip71
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
@@ -393,7 +410,7 @@ Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
-\@mathmargin=\skip58
+\@mathmargin=\skip72
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -453,8 +470,8 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \totwidth@=\dimen179
 \lineht@=\dimen180
 \@envbody=\toks30
-\multlinegap=\skip59
-\multlinetaggap=\skip60
+\multlinegap=\skip73
+\multlinetaggap=\skip74
 \mathdisplay@stack=\toks31
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
@@ -493,7 +510,7 @@ Package caption Info: listings package is loaded.
 Package: wrapfig 2003/01/31  v 3.6
 )
 Package caption Info: Option `figurename' requires the `newfloat' package on in
-put line 23.
+put line 26.
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/newfloat\newfloat.sty
 Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
@@ -663,14 +680,14 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@sectionciteorderinternal@0=\count356
 \blx@entrysetcounter=\count357
 \blx@biblioinstance=\count358
-\labelnumberwidth=\skip61
-\labelalphawidth=\skip62
-\biblabelsep=\skip63
-\bibitemsep=\skip64
-\bibnamesep=\skip65
-\bibinitsep=\skip66
-\bibparsep=\skip67
-\bibhang=\skip68
+\labelnumberwidth=\skip75
+\labelalphawidth=\skip76
+\biblabelsep=\skip77
+\bibitemsep=\skip78
+\bibnamesep=\skip79
+\bibinitsep=\skip80
+\bibparsep=\skip81
+\bibhang=\skip82
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language80
@@ -755,20 +772,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count427
 \c@pageref=\count428
 \c@savedpageref=\count429
-\shorthandwidth=\skip69
-\shortjournalwidth=\skip70
-\shortserieswidth=\skip71
-\shorttitlewidth=\skip72
-\shortauthorwidth=\skip73
-\shorteditorwidth=\skip74
-\locallabelnumberwidth=\skip75
-\locallabelalphawidth=\skip76
-\localshorthandwidth=\skip77
-\localshortjournalwidth=\skip78
-\localshortserieswidth=\skip79
-\localshorttitlewidth=\skip80
-\localshortauthorwidth=\skip81
-\localshorteditorwidth=\skip82
+\shorthandwidth=\skip83
+\shortjournalwidth=\skip84
+\shortserieswidth=\skip85
+\shorttitlewidth=\skip86
+\shortauthorwidth=\skip87
+\shorteditorwidth=\skip88
+\locallabelnumberwidth=\skip89
+\locallabelalphawidth=\skip90
+\localshorthandwidth=\skip91
+\localshortjournalwidth=\skip92
+\localshortserieswidth=\skip93
+\localshorttitlewidth=\skip94
+\localshortauthorwidth=\skip95
+\localshorteditorwidth=\skip96
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -905,16 +922,16 @@ LaTeX Font Info:    ... okay on input line 14.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
-* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=443.57848pt
-* \textheight=624.25346pt
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
 * \topmargin=-23.91173pt
@@ -922,7 +939,7 @@ LaTeX Font Info:    ... okay on input line 14.
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -1023,16 +1040,16 @@ Package biblatex Info: Reference segment=0 on input line 14.
 \openout2 = `header.aux'.
 
  (header.tex
-Overfull \hbox (5.97514pt too wide) in paragraph at lines 4--6
+Overfull \hbox (22.76227pt too wide) in paragraph at lines 4--6
  [] 
  []
 
 
-Overfull \hbox (5.97514pt too wide) in paragraph at lines 4--6
+Overfull \hbox (22.76227pt too wide) in paragraph at lines 4--6
  [] 
  []
 
-<unibg_logo.pdf, id=83, 162.90863pt x 149.50858pt>
+<unibg_logo.pdf, id=87, 162.90863pt x 149.50858pt>
 File: unibg_logo.pdf Graphic file (type pdf)
 <use unibg_logo.pdf>
 Package pdftex.def Info: unibg_logo.pdf  used on input line 14.
@@ -1049,59 +1066,124 @@ go.pdf>]) (Tesi.toc)
 
 
 ] (0_Introduzione/intro.tex) (1_StatoArte/arte.tex
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 	
-       [1]) (2_Fisica/fisica.tex
+l.13 	
+       [1]
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+) (2_Fisica/fisica.tex
+Overfull \hbox (3.44032pt too wide) in paragraph at lines 18--19
+\OT1/ptm/m/n/12 Per meglio com-pren-dere i capi-toli seguenti an-dremo ora ad a
+nal-iz-zare i prin-ci-pali fenomeni
+ []
+
+[2]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
 3.
-
-(C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+ (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-[2] [3] [4]) (3_Sistema/sistema.tex
+) [3] [4] [5] [6]) (3_Sistema/sistema.tex
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
 3.
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-[5]
+Overfull \hbox (4.92702pt too wide) in paragraph at lines 13--16
+\OT1/ptm/m/n/12 Il sen-sore uti-liz-zato per rac-cogliere i dati []e il Blue Co
+in della ST Mi-croelet-tron-ics ([][]$\OT1/pcr/m/n/12 https :
+ []
+
+
+Overfull \hbox (14.50008pt too wide) in paragraph at lines 27--28
+[]\OT1/ptm/m/n/12 Durante i nos-tri es-per-i-menti sono stati uti-liz-zati solo
+ i dati prove-ni-enti dall'accelerometro,
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-) (4_Dati/dati.tex [6] [7] [8]) [9] (5_Indicatori/indicatori.tex
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[7]) (4_Dati/dati.tex
+Overfull \hbox (5.32436pt too wide) in paragraph at lines 9--10
+\OT1/ptm/m/n/12 In questo capi-tolo ver-ranno de-scritte le ses-sioni di rac-co
+lta dati e verr[]a for-nita una panoram-
+ []
+
+[8] [9] [10]) (5_Indicatori/indicatori.tex [11]
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-[10]) [11] (6_Sviluppi/sviluppi.tex) [12] (7_Conclusioni/conclusioni.tex)
-[13] [14] (Tesi.aux (header.aux))
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
-LaTeX Warning: There were undefined references.
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+) (6_Sviluppi/sviluppi.tex
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+[17]) [18] (7_Conclusioni/conclusioni.tex) [19]
+Overfull \hbox (26.75026pt too wide) in paragraph at lines 56--56
+\OT1/pcr/m/n/12 www . sciencedirect . com / science / article / pii / S00014575
+23000696$[][]\OT1/ptm/m/n/12 . 
+ []
+
+[20] (Tesi.aux (header.aux))
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 5CC0D6901C9BFE68D3B1E62281CE8B66;2333.
-
-Package biblatex Warning: Please rerun LaTeX.
-
+(rerunfilecheck)             Checksum: 1D0645488510F6DC93DEB771C5A437C7;2706.
 Package logreq Info: Writing requests to 'Tesi.run.xml'.
 \openout1 = `Tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24852 strings out of 475389
- 442296 string characters out of 2776056
- 1219175 words of memory out of 3000000
- 45733 multiletter control sequences out of 15000+600000
+ 24925 strings out of 475389
+ 444180 string characters out of 2776056
+ 1218692 words of memory out of 3000000
+ 45813 multiletter control sequences out of 15000+600000
  491451 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,8n,106p,1749b,1873s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1119,9 +1201,9 @@ Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C
 :/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 <C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on Tesi.pdf (16 pages, 208084 bytes).
+Output written on Tesi.pdf (22 pages, 218658 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

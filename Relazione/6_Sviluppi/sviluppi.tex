@@ -1,29 +1,70 @@
-\documentclass[class=article]{standalone}
+%\documentclass[class=article]{standalone}
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{../preambolo}
+
+\usepackage[
+style=numeric,
+natbib=true,
+backend=biber,
+sorting=ynt,
+maxbibnames=99
+]{biblatex}
+\addbibresource{../bibliografia.bib}
 
 \begin{document}
-%	\section{Sviluppi Futuri}
-%	Sviluppi futuri:
-%	\begin{itemize}
-%		\item articolo sullo stabilire se una persona sta pedalando in piedi, sta andando contromano,...
-%		\item dinamic time warping
-%	\end{itemize}	
-	
+	\justifying	
 	\section{Sviluppi Futuri}
-	\begin{enumerate}
-		\item ulteriori test
-		\begin{enumerate}
-			\item Cambio dei Rapporti (Marcia)
-			\item Salita/Discesa (algoritmo di sensor fusion per calcolare l'angolo di pitch e rimuovere quindi la gravità, sensore di pressione per capire se si sta andando in salita o in discesa)
-		\end{enumerate}
-		\item come interpretare i dati ottenuti
-		\begin{enumerate}
-			\item impostare di valori soglia
-			\item k nearest neighborhood (transfun)
-			\item machine learning
-			\item dynamic time warping
-			\item altro
-		\end{enumerate}
-		
-	\end{enumerate}
+	In questo capitolo andremo a trattare degli ulteriori rilievi che possono essere fatti per migliorare la comprensione di ciò che sta accadendo e faremo alcuni esempi di come possono essere interpretati i dati ottenuti dagli indicatori.
+	
+	\subsection{Ulteriori Rilievi}
+	Per quanto riguarda la guida in piano, potrebbe essere interessante fare dei test riguardo al cambio dei rapporti in corsa e come questo si riflette sugli indicatori. Probabilmente l'effetto sarebbe visibile, sulla media dell'accelerazione lungo l'asse \(x\), come una rampa dovuta a una migliore efficacia nel trasferimento della forza dai pedali alla ruota e, quindi, alla bicicletta. Questo effetto si rifletterebbe allo stesso modo anche sulla velocità e potrebbe, quindi, essere visibile anche nella varianza della stessa come un leggero picco, facilmente distinguibile dalle frenate, evento per cui la varianza è stata scelta come indicatore.\hfill\break
+	
+	Un altro aspetto interessante per cui è utile raccogliere dei dati, sono le salite e le discese.  Questi cambi di pendenza, infatti, influenzano tutte le misure prese. Quando affrontiamo una salita o una discesa, l'angolo di \(beccheggio\) varia, questo può essere osservato nella velocità angolare dello stesso, in funzione della velocità con cui ci avviciniamo alla pendenza e all'inclinazione stessa.
+	
+	La rotazione attorno all'angolo di \(beccheggio\) è, inoltre, visibile nelle misure di accelerazione. Come discusso nella sezione relativa alla fisica, il sensore percepisce la gravità come un vettore orientato verso l'alto. Di conseguenza, durante una discesa, si rileva un'accelerazione costante diretta dietro di noi, mentre, durante una salita, ne vedremo una che ci trascina in avanti.
+	
+	Il problema dell'effetto della pendenza sulle misure di accelerazione può essere affrontato in due modi.
+	
+	Si può rimuovere il vettore gravità dalle misure ma, durante le discese, la bicicletta sembrerebbe ferma in quanto, in questi tratti, la componente principale del movimento è proprio la gravità.
+	
+	In alternativa si può cercare di capire quando ci stiamo muovendo su di un piano inclinato e aggiustare i dati di conseguenza. A tal fine si può utilizzare, per esempio, un sensore di pressione. Se la pressione aumenta, significa che ci si sta muovendo in discesa; se diminuisce, si sta affrontando una salita.
+	
+	
+	\subsection{Elaborazione Dati}
+	
+	
+	
+%	Lo studio effettuato pone le basi per ulteriori approfondimenti
+	
+%	\section{scaletta}
+%	\begin{itemize}
+%		\item ulteriori test
+%		\begin{itemize}
+%			\item Cambio dei Rapporti (Marcia)
+%			\item Salita/Discesa
+%			\begin{itemize}
+%				\item calcolare l'angolo di pitch per rimuovere la gravità (discesa = retromarcia, salita = velocità supersonica)
+%				\item sensore di pressione per capire se si sta andando in salita o in discesa
+%				\item il cambio di pendenza si nota sulla velocità angolare dell'angolo di \(beccheggio\)
+%				\item se uno va in discesa potrebbe essere necessario trovare un modo differente per capire se sta andando forte o meno perchè, in discesa, non si pedala
+%			\end{itemize}
+%			\item inserire qualcosa per misurare la velocità
+%			\begin{itemize}
+%				\item gps, sensore magnetico sulla ruota, o quant'altro
+%				\item potrebbe risolvere il problema legato alla gravità
+%			\end{itemize}
+%		\end{itemize}
+%		\item come interpretare i dati ottenuti
+%		\begin{enumerate}
+%			\item impostare di valori soglia
+%			\item k nearest neighborhood (transfun)
+%			\item machine learning
+%			\item dynamic time warping
+%			\item altro
+%		\end{enumerate}
+%		
+%	\end{itemize}
 	
 \end{document}

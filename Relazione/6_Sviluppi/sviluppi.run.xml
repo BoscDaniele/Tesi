@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Tesi.bcf</file>
+      <file>sviluppi.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>Tesi.bbl</file>
+      <file>sviluppi.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -66,22 +66,22 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>Tesi</infile>
+      <infile>sviluppi</infile>
     </cmdline>
     <input>
-      <file>Tesi.bcf</file>
+      <file>sviluppi.bcf</file>
     </input>
     <output>
-      <file>Tesi.bbl</file>
+      <file>sviluppi.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Tesi.bbl</file>
+      <file>sviluppi.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Tesi.bcf</file>
+      <file>sviluppi.bcf</file>
     </requires>
     <requires type="editable">
-      <file>bibliografia.bib</file>
+      <file>../bibliografia.bib</file>
     </requires>
   </external>
 </requests>

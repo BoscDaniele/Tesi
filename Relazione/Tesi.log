@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  20 JUN 2024 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  22 JUN 2024 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,37 +1156,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
-) (6_Sviluppi/sviluppi.tex
+[16]) (6_Sviluppi/sviluppi.tex
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[17]) [18] (7_Conclusioni/conclusioni.tex) [19]
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+[17]) (7_Conclusioni/conclusioni.tex
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+[18]) [19]
 Overfull \hbox (26.75026pt too wide) in paragraph at lines 56--56
 \OT1/pcr/m/n/12 www . sciencedirect . com / science / article / pii / S00014575
 23000696$[][]\OT1/ptm/m/n/12 . 
  []
 
+
+Overfull \hbox (5.22978pt too wide) in paragraph at lines 56--56
+\OT1/pcr/m/n/12 106096$[][]\OT1/ptm/m/n/12 . \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/1
+2 : [][]$\OT1/pcr/m/n/12 https : / / www . sciencedirect . com / science / arti
+cle /
+ []
+
+
+Overfull \hbox (6.0069pt too wide) in paragraph at lines 56--56
+[]\OT1/ptm/m/n/12 Yuri US-AMI, Kazuaki ISHIKAWA, Toshi-nori TAKAYAMA, Masao YAN
+AG-I-SAWA,
+ []
+
 [20] (Tesi.aux (header.aux))
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 1D0645488510F6DC93DEB771C5A437C7;2706.
+(rerunfilecheck)             Checksum: 82B718B3B921C72D0DA75856D41EE39A;2711.
 Package logreq Info: Writing requests to 'Tesi.run.xml'.
 \openout1 = `Tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24925 strings out of 475389
- 444180 string characters out of 2776056
- 1218692 words of memory out of 3000000
- 45813 multiletter control sequences out of 15000+600000
+ 24937 strings out of 475389
+ 444800 string characters out of 2776056
+ 1218887 words of memory out of 3000000
+ 45826 multiletter control sequences out of 15000+600000
  491451 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,8n,106p,1749b,1873s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 110i,8n,106p,1174b,1873s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
 C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mex10.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
@@ -1201,9 +1224,9 @@ Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C
 :/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 <C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on Tesi.pdf (22 pages, 218658 bytes).
+Output written on Tesi.pdf (22 pages, 227259 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
  174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

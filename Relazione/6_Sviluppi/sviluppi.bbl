@@ -1,0 +1,186 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{MA2021106096}{article}{}
+      \name{author}{5}{}{%
+        {{hash=eacc0987fc32ef06777c81f29cc16dde}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Yongfeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=18eaa9606f699f9c77fb0c58298ed523}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wenlu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=71c243c96de5e88a84c62a8d28ca0280}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7550d5b95dc690406f128ee12f0707f1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ziyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e6f759c252c24139f8e50290793bdd45}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shuyan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a10ac5355c2358a0b2277bdb1245e35}
+      \strng{fullhash}{c716f35de22f3114185eea0be1929079}
+      \strng{bibnamehash}{c716f35de22f3114185eea0be1929079}
+      \strng{authorbibnamehash}{c716f35de22f3114185eea0be1929079}
+      \strng{authornamehash}{5a10ac5355c2358a0b2277bdb1245e35}
+      \strng{authorfullhash}{c716f35de22f3114185eea0be1929079}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-4575}
+      \field{journaltitle}{Accident Analysis \& Prevention}
+      \field{title}{Driving style recognition and comparisons among driving tasks based on driver behavior in the online car-hailing industry}
+      \field{volume}{154}
+      \field{year}{2021}
+      \field{pages}{106096}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.aap.2021.106096
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
+      \endverb
+    \endentry
+    \entry{transfun}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6fc8488eaef527cbe6eae24251ec5892}{%
+           family={USAMI},
+           familyi={U\bibinitperiod},
+           given={Yuri},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=246ad5fdd1bc4e5062436b95f14781f8}{%
+           family={ISHIKAWA},
+           familyi={I\bibinitperiod},
+           given={Kazuaki},
+           giveni={K\bibinitperiod}}}%
+        {{hash=12f6c954609c62b021a1f44e3d901c88}{%
+           family={TAKAYAMA},
+           familyi={T\bibinitperiod},
+           given={Toshinori},
+           giveni={T\bibinitperiod}}}%
+        {{hash=24bca561661f158508a40a32649bd47b}{%
+           family={YANAGISAWA},
+           familyi={Y\bibinitperiod},
+           given={Masao},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eb8da7cbbf67ae3fa5e1f8bf78e1dd65}{%
+           family={TOGAWA},
+           familyi={T\bibinitperiod},
+           given={Nozomu},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ffd21092a0f88e5fa2a0291575669cd}
+      \strng{fullhash}{889a7dc861f21a6684215e30021bbaa3}
+      \strng{bibnamehash}{889a7dc861f21a6684215e30021bbaa3}
+      \strng{authorbibnamehash}{889a7dc861f21a6684215e30021bbaa3}
+      \strng{authornamehash}{9ffd21092a0f88e5fa2a0291575669cd}
+      \strng{authorfullhash}{889a7dc861f21a6684215e30021bbaa3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences}
+      \field{month}{08}
+      \field{title}{Bicycle Behavior Recognition Using 3-Axis Acceleration Sensor and 3-Axis Gyro Sensor Equipped with Smartphone}
+      \field{volume}{E102.A}
+      \field{year}{2019}
+      \field{pages}{953\bibrangedash 965}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1587/transfun.E102.A.953
+      \endverb
+    \endentry
+    \entry{dtw}{article}{}
+      \name{author}{2}{}{%
+        {{hash=957decacf4aceb83687bea501d500560}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Derick\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5d197b5176ff929bae824213006a1e07}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Mohan\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{fullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{bibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authorbibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authornamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authorfullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 14th International IEEE Conference on Intelligent Transportation Systems (ITSC)}
+      \field{title}{Driving style recognition using a smartphone as a sensor platform}
+      \field{year}{2011}
+      \field{pages}{1609\bibrangedash 1615}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ITSC.2011.6083078
+      \endverb
+      \keyw{Vehicles;Accelerometers;Acceleration;Gyroscopes;Monitoring;Safety;Global Positioning System}
+    \endentry
+    \entry{dtwAndCo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4682d47c9294cbfec93c2e1a3d4feef3}{%
+           family={Saiprasert\bibnamedelima C.},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Thajchayapong\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           suffix={Pholprasit\bibnamedelima T.},
+           suffixi={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{fullhash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{bibnamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authorbibnamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authornamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authorfullhash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{booktitle}{Detection of Driving Events using Sensory Data on Smartphone.}
+      \verb{doi}
+      \verb https://doi.org/10.1007/s13177-015-0116-5
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

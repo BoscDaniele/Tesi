@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  20 JUN 2024 11:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  22 JUN 2024 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,9 +1037,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `sviluppi.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'sviluppi.bbl' not found.
-
-No file sviluppi.bbl.
+Package biblatex Info: ... file 'sviluppi.bbl' found.
+ (sviluppi.bbl)
 Package biblatex Info: Reference section=0 on input line 16.
 Package biblatex Info: Reference segment=0 on input line 16.
 
@@ -1051,28 +1050,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
 {C:/Users/Daniele/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 (sviluppi.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `sviluppi.out' has not changed.
-(rerunfilecheck)             Checksum: 8E4CCFF70B067E95FC0C88F07A90B08A;449.
+(rerunfilecheck)             Checksum: 2265439232FB6158A7FE5D9C998652A7;454.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                sviluppi
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'sviluppi.run.xml'.
 \openout1 = `sviluppi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24441 strings out of 475389
- 435064 string characters out of 2776056
- 1215104 words of memory out of 3000000
- 45450 multiletter control sequences out of 15000+600000
+ 24663 strings out of 475389
+ 439681 string characters out of 2776056
+ 1215026 words of memory out of 3000000
+ 45666 multiletter control sequences out of 15000+600000
  478520 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,5n,106p,699b,1759s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
-C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
-/utmb8a.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
-es/utmr8a.pfb>
-Output written on sviluppi.pdf (2 pages, 42603 bytes).
+ 110i,5n,106p,683b,1760s stack positions out of 10000i,1000n,20000p,200000b,80000s
+
+pdfTeX warning (dest): name{cite.0@dtwAndCo} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@dtw} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@transfun} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@MA2021106096} has been referenced but does n
+ot exist, replaced by a fixed one
+
+{C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
+/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmb8a.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
+/utmr8a.pfb>
+Output written on sviluppi.pdf (2 pages, 46858 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
+ 54 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

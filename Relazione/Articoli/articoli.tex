@@ -1,0 +1,51 @@
+%\documentclass[class=article]{standalone}
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{../preambolo}
+
+\usepackage[
+style=numeric,
+natbib=true,
+backend=biber,
+sorting=none,
+maxbibnames=99
+]{biblatex}
+\addbibresource{../bibliografia.bib}
+
+\begin{document}
+	\section*{Articoli per Argomento}
+	\begin{itemize}
+		\item Sensori
+		\begin{itemize}
+			\item Assessing e-scooters safety and drivability \cite{leoni}: IMU + GPS
+			\item Driving style recognition using a smartphone as a sensor platform \cite{dtw}: Dynamic Time Warping (DTW) and smartphone based sensor-fusion (accelerometer,
+			gyroscope, magnetometer, GPS, video)
+			\item Detection of Driving Events using Sensory Data on Smartphone \cite{dtwAndCo}: smartphone
+		\end{itemize}
+		\item Elaborazione
+		\begin{itemize}
+			\item Driving style recognition using a smartphone as a sensor platform \cite{dtw}: Dynamic Time Warping (DTW) and smartphone based sensor-fusion (accelerometer,
+			gyroscope, magnetometer, GPS, video) per riconoscere potenziali comportamenti aggressivi
+			
+			\item Detection of Driving Events using Sensory Data on Smartphone \cite{dtwAndCo}: smartphone, 3 diversi algoritmi per riconoscere l'aggressività del pilota
+			
+			\item Driving style recognition and comparisons among driving tasks based on driver behavior in the online car-hailing industry \cite{MA2021106096}: In this study, we used longitudinal acceleration to identify acceleration and deceleration maneuvers and we also used a threshold-based algorithm to detect these maneuvers
+		\end{itemize}
+		\item Utilizzo
+		\begin{itemize}
+			\item
+		\end{itemize}
+	\end{itemize}
+
+\section*{Articoli}
+\begin{itemize}
+	\item Assessing e-scooters safety and drivability \cite{leoni}: studio sulla stability e sul comfort
+	\item Driving style recognition using a smartphone as a sensor platform \cite{dtw}: Dynamic Time Warping (DTW) and smartphone based sensor-fusion (accelerometer,
+	gyroscope, magnetometer, GPS, video) per riconoscere potenziali comportamenti aggressivi \textbf{Automobile}.
+\end{itemize}
+
+\newpage
+\printbibliography[title={Bibliografia}]
+	
+\end{document}

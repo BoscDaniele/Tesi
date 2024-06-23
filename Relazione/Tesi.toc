@@ -15,8 +15,8 @@
 \contentsline {section}{\numberline {6}Indicatori}{11}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Accelerazione e Frenata}{13}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Curva}{14}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Utilizzo degli Indicatori}{16}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Utilizzo degli Indicatori}{15}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Sviluppi Futuri}{17}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Ulteriori Rilievi}{17}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Interpretazione dei Dati}{18}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2}Utilizzo degli Indicatori}{18}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Conclusioni}{19}{section.8}%

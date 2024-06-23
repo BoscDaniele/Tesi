@@ -1,0 +1,15 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'sviluppi.blg'
+[292] biber-MSWIN64:340> INFO - === 
+[380] Biber.pm:418> INFO - Reading 'sviluppi.bcf'
+[702] Biber.pm:978> INFO - Found 4 citekeys in bib section 0
+[758] Biber.pm:4401> INFO - Processing section 0
+[819] Biber.pm:4592> INFO - Looking for bibtex file '../bibliografia.bib' for section 0
+[946] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1007] bibtex.pm:1518> INFO - Found BibTeX data source '../bibliografia.bib'
+[1218] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1218] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1222] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1222] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[1300] bbl.pm:654> INFO - Writing 'sviluppi.bbl' with encoding 'UTF-8'
+[1307] bbl.pm:757> INFO - Output to sviluppi.bbl

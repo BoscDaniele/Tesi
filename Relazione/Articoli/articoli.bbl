@@ -1,0 +1,191 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{leoni}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ed3f98c6457c60ca4fba99edb4e287c2}{%
+           family={Leoni},
+           familyi={L\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cde3455c30d807aa4246eb754c48508a}{%
+           family={Tanelli},
+           familyi={T\bibinitperiod},
+           given={Mara},
+           giveni={M\bibinitperiod}}}%
+        {{hash=afd1a7ad922c30d582db1d4abaed1f8f}{%
+           family={Strada},
+           familyi={S\bibinitperiod},
+           given={Silvia\bibnamedelima Carla},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=c95cb365e399dc350e2db14c99b20303}{%
+           family={Savaresi},
+           familyi={S\bibinitperiod},
+           given={Sergio\bibnamedelima Matteo},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc251bcc5d401d5177a3a601b6a87d11}
+      \strng{fullhash}{3386b677278475e0a70bad94d8d4d6f5}
+      \strng{bibnamehash}{3386b677278475e0a70bad94d8d4d6f5}
+      \strng{authorbibnamehash}{3386b677278475e0a70bad94d8d4d6f5}
+      \strng{authornamehash}{dc251bcc5d401d5177a3a601b6a87d11}
+      \strng{authorfullhash}{3386b677278475e0a70bad94d8d4d6f5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{E-scooters are now massively present in urban environments as a shared last-mile solution. Their apparent ease of drivability favored their diffusion, but also actually raises safety concerns. In this work, we propose a data-driven approach to map e-scooters mechanical specifications to drivability and safety metrics, the latter appropriately defined and computed based on experimental data. An ad-hoc HW/SW platform was designed for this purpose, so as to be portable and installed on seven different e-Scooters that were tested in trips carried out in the city of Milan. The proposed approach allowed us to characterize both stability and comfort metrics on the different vehicles, and compare them also with a qualitative driving test carried out by a journalist making driving tests. The quantitative analysis matched the impressions of the human driver, and it disclosed an interesting mapping between the perceived risk and the vehicle characteristics evaluated according to the two metrics proposed.}
+      \field{issn}{2405-8963}
+      \field{journaltitle}{IFAC-PapersOnLine}
+      \field{note}{10th IFAC Symposium on Advances in Automotive Control AAC 2022}
+      \field{number}{24}
+      \field{title}{Assessing e-scooters safety and drivability: a quantitative analysis}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{pages}{260\bibrangedash 265}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ifacol.2022.10.294
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2405896322023266
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2405896322023266
+      \endverb
+      \keyw{E-scooters,drivability,safety,comfort,vehicle dynamics}
+    \endentry
+    \entry{dtw}{article}{}
+      \name{author}{2}{}{%
+        {{hash=957decacf4aceb83687bea501d500560}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Derick\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5d197b5176ff929bae824213006a1e07}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Mohan\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{fullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{bibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authorbibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authornamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authorfullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 14th International IEEE Conference on Intelligent Transportation Systems (ITSC)}
+      \field{title}{Driving style recognition using a smartphone as a sensor platform}
+      \field{year}{2011}
+      \field{pages}{1609\bibrangedash 1615}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ITSC.2011.6083078
+      \endverb
+      \keyw{Vehicles;Accelerometers;Acceleration;Gyroscopes;Monitoring;Safety;Global Positioning System}
+    \endentry
+    \entry{dtwAndCo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4682d47c9294cbfec93c2e1a3d4feef3}{%
+           family={Saiprasert\bibnamedelima C.},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Thajchayapong\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           suffix={Pholprasit\bibnamedelima T.},
+           suffixi={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{fullhash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{bibnamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authorbibnamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authornamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authorfullhash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{booktitle}{Detection of Driving Events using Sensory Data on Smartphone.}
+      \verb{doi}
+      \verb https://doi.org/10.1007/s13177-015-0116-5
+      \endverb
+    \endentry
+    \entry{MA2021106096}{article}{}
+      \name{author}{5}{}{%
+        {{hash=eacc0987fc32ef06777c81f29cc16dde}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Yongfeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=18eaa9606f699f9c77fb0c58298ed523}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wenlu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=71c243c96de5e88a84c62a8d28ca0280}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7550d5b95dc690406f128ee12f0707f1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ziyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e6f759c252c24139f8e50290793bdd45}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shuyan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a10ac5355c2358a0b2277bdb1245e35}
+      \strng{fullhash}{c716f35de22f3114185eea0be1929079}
+      \strng{bibnamehash}{c716f35de22f3114185eea0be1929079}
+      \strng{authorbibnamehash}{c716f35de22f3114185eea0be1929079}
+      \strng{authornamehash}{5a10ac5355c2358a0b2277bdb1245e35}
+      \strng{authorfullhash}{c716f35de22f3114185eea0be1929079}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-4575}
+      \field{journaltitle}{Accident Analysis \& Prevention}
+      \field{title}{Driving style recognition and comparisons among driving tasks based on driver behavior in the online car-hailing industry}
+      \field{volume}{154}
+      \field{year}{2021}
+      \field{pages}{106096}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.aap.2021.106096
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

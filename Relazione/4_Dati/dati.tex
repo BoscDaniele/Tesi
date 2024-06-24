@@ -1,11 +1,12 @@
-%\documentclass[class=article]{standalone}
+\documentclass[class=article]{standalone}
 
-\documentclass[12pt]{article}
-
-\usepackage{../preambolo}
+%\documentclass[12pt, a4paper]{article}
+%
+%\usepackage{../preambolo}
 
 \begin{document}
-\section{Raccolta Dati}
+%	\justifying	
+	\section{Raccolta Dati}
 	In questo capitolo verranno descritte le sessioni di raccolta dati e verrà fornita una panoramica dei dati stessi.
 	
 	\subsection{Gli Esperimenti}
@@ -50,6 +51,19 @@
 	\subsection{Dati Raccolti}
 	Durante i vari esperimenti il sensore ha raccolto i dati di accelerazione, velocità angolare e campo magnetico con una frequenza di campionamento di \(25Hz\) (un campione ogni \(0.04s\)). In questa sezione verrà trattato di come si comportano queste grandezze durante i vari esperimenti fatti.
 	
+	\begin{center}
+		\begin{figure}[h]
+			\centering\includegraphics[width=.9\textwidth]{img/Acc LungaF.pdf}
+			\caption[]{Grafico dei dati di accelerazione raccolti durante un percorso rettilineo. Dalle immagini si può notare come nelle fasi di accelerazione (\(Accelerate\))  lungo gli assi \(X\) e \(Y\) siano più ampie rispetto alle fasi di \(idle\).}
+			\label{fig:AccLunga}
+		\end{figure}
+		\begin{figure}[h]
+			\centering\includegraphics[width=.9\textwidth]{img/Vang LungaF.pdf}
+			\caption[]{Grafici dei dati delle velocità angolari raccolti durante un percorso rettilineo. Dalle immagini si può notare come nelle fasi di \(Accelerate\) le oscillazioni degli angoli \(roll\) e \(yaw\) siano più ampie rispetto alle fasi di \(idle\).}
+			\label{fig:VAngLunga}
+		\end{figure}
+	\end{center}
+	
 	\subsubsection{Accelerazione}
 	Le fasi accelerazione si sono svolte su un percorso rettilineo. Durante queste fasi, delle tre grandezze considerate, solo l'accelerazione e la velocità angolare hanno prodotto variazioni apprezzabili.
 	
@@ -64,6 +78,26 @@
 	
 	In caso di frenate particolarmente intense, è inoltre possibile notare l'effetto della frenata anche come rotazione attorno all'asse \(y\). Questo è dovuto all'inerzia del ciclista che, facendogli spostare il peso in avanti, causa un'inclinazione della bicicletta.
 	
+	\begin{center}
+		\begin{figure}[h]
+			\centering\includegraphics[width=.9\textwidth]{img/Acc CurvaUF.pdf}
+			\caption[]{Grafico dei dati di accelerazione raccolti durante un percorso con curva a U. Dalle immagini si può notare come, nella fase di curva (\(Turning\)), vi sia un abbassamento dell'andamento medio dell'accelerazione in \(X\).}
+			\label{fig:AccCurvaU}
+		\end{figure}
+		
+		\begin{figure}[h]
+			\centering\includegraphics[width=.9\textwidth]{img/VAng CurvaUF.pdf}
+			\caption[]{Grafico dei dati di velocità angolare raccolti durante un percorso con curva a U. Dalle immagini si può notare un picco all'inizio e alla fine della curva (\(Turning\)) attorno all'angolo di rollio (\(Roll\)). Negli altri angoli, invece, si può notare in incremento/decremento del loro valore durante la curva.}
+			\label{fig:VAngCurvaU}
+		\end{figure}
+		
+		\begin{figure}[h]
+			\centering\includegraphics[width=.9\textwidth]{img/Mag CurvaUF.pdf}
+			\caption[]{Grafico dei dati del campo magnetico raccolti durante un percorso con curva a U. Dalle immagini si può notare un deciso abbassamento del campo magnetico in \(X\) dovuto al cambiamento di direzione.}
+			\label{fig:MagCurvaU}
+		\end{figure}
+	\end{center}
+	
 	\subsubsection{Curva}	
 	Durante le curve le misure di accelerazione diventano meno rilevanti, si assiste principalmente a una riduzione della componente in \(x\).
 	
@@ -72,6 +106,7 @@
 	Inoltre, il valore dell'angolo di imbardata (\(yaw\)) aumenta o decresce a seconda del verso della curva (se si ruota in senso orario o antiorario).
 	
 	Anche il campo magnetico, che finora non era stato particolarmente rilevante, riesce a fornirci importanti informazioni. Infatti, il magnetometro, agendo come una bussola, ci dice molto riguardo all'orientamento della bicicletta. In particolare l'asse \(x\), durante la curva, subisce un rapido aumento o diminuzione a seconda di dove si colloca il nord magnetico terrestre rispetto alla bicicletta.
+	
 	
 %	\subsection{To Do?}
 %	Magari aggiungere:

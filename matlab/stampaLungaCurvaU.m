@@ -83,7 +83,7 @@ for f=1:length(fun)
     %% Varianza
     funP_var=movvar(funzioneLunga,40);
     funF_var=movvar(funzioneCurvaU,40);
-    stampa(tLunga,tCurvaU,funP_var,funF_var,fun_str(f),axes,"Varianza",'t(s)',fun_units(f))
+    stampa(tLunga,tCurvaU,funP_var,funF_var,fun_str(f),axes,"Varianza",'t(s)',"("+fun_units(f)+")^2")
 
 
     %% Deviazione Standard
@@ -313,7 +313,7 @@ for i=3:2:2*n+1
     end
     subtitle(fun_axes(j),FontName=font)
     xlabel(xlbl,FontName=font)
-    ylabel(ylbl,FontName=font)
+    ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(j,:))
     grid
 end
@@ -326,12 +326,12 @@ for i=2:2:2*n
     end
     subtitle(fun_axes(i/2),FontName=font)
     xlabel(xlbl,FontName=font)
-    ylabel(ylbl,FontName=font)
+    ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(i/2,:))
     grid
 end
 
-exportgraphics(f,"..\slide\lunga_curvaU\figure\"+fun_str+"\"+tit+".png")
+exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurva\"+fun_str+"\"+tit+".pdf",ContentType="vector")
 
 end
 
@@ -391,7 +391,7 @@ for i=2:2:2*n
     end
 end
 
-exportgraphics(f,"..\slide\lunga_curvaU\figure\"+fun_str+"\Trasformata\"+tit+".png")
+exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurva\"+fun_str+"\"+tit+".pdf",ContentType="vector")
 
 end
 

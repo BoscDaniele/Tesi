@@ -58,14 +58,14 @@ for f=1:length(fun)
     funzioneF=fun{f}{2};
     axes=fun_axes{f};
 
-    %% Parametro
-    stampa(tP,tF,funzioneP,funzioneF,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
+    % %% Parametro
+    % stampa(tP,tF,funzioneP,funzioneF,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
 
 
-    %% LowPass
-    funP_low=lowpass(funzioneP,0.5,25);
-    funF_low=lowpass(funzioneF,0.5,25);
-    stampa(tP,tF,funP_low,funF_low,fun_str(f),axes,"LowPass",'t(s)',fun_units(f))
+    % %% LowPass
+    % funP_low=lowpass(funzioneP,0.5,25);
+    % funF_low=lowpass(funzioneF,0.5,25);
+    % stampa(tP,tF,funP_low,funF_low,fun_str(f),axes,"LowPass",'t(s)',fun_units(f))
 
 
     %% Media
@@ -83,7 +83,7 @@ for f=1:length(fun)
     %% Varianza
     funP_var=movvar(funzioneP,40);
     funF_var=movvar(funzioneF,40);
-    stampa(tP,tF,funP_var,funF_var,fun_str(f),axes,"Varianza",'t(s)',fun_units(f))
+    stampa(tP,tF,funP_var,funF_var,fun_str(f),axes,"Varianza",'t(s)',"("+fun_units(f)+")^2")
 
 
     %% Deviazione Standard
@@ -92,22 +92,22 @@ for f=1:length(fun)
     stampa(tP,tF,funP_std,funF_std,fun_str(f),axes,"Deviazione Standard",'t(s)',fun_units(f))
 
 
-    %% Scarto Quadratico Medio
+    %% Media Quadratica
     funP_rms=movrms(funzioneP,40);
     funF_rms=movrms(funzioneF,40);
-    stampa(tP,tF,funP_rms,funF_rms,fun_str(f),axes,"Scarto Quadratico Medio",'t(s)',fun_units(f))
+    stampa(tP,tF,funP_rms,funF_rms,fun_str(f),axes,"Media Quadratica",'t(s)',fun_units(f))
 
 
-    %% Kurtosi
-    funP_krt=movkurt(funzioneP,40);
-    funF_krt=movkurt(funzioneF,40);
-    stampa(tP,tF,funP_krt,funF_krt,fun_str(f),axes,"Kurtosi",'t(s)',fun_units(f))
-
-
-    %% Skewness
-    funP_skw=movskw(funzioneP,40);
-    funF_skw=movskw(funzioneF,40);
-    stampa(tP,tF,funP_skw,funF_skw,fun_str(f),axes,"Skewness",'t(s)',fun_units(f))
+    % %% Kurtosi
+    % funP_krt=movkurt(funzioneP,40);
+    % funF_krt=movkurt(funzioneF,40);
+    % stampa(tP,tF,funP_krt,funF_krt,fun_str(f),axes,"Kurtosi",'t(s)',fun_units(f))
+    % 
+    % 
+    % %% Skewness
+    % funP_skw=movskw(funzioneP,40);
+    % funF_skw=movskw(funzioneF,40);
+    % stampa(tP,tF,funP_skw,funF_skw,fun_str(f),axes,"Skewness",'t(s)',fun_units(f))
 
 
     %% Max
@@ -122,7 +122,7 @@ for f=1:length(fun)
     funP_min=movmin(funzioneP,n_min);
     funF_min=movmin(funzioneF,n_min);
 
-    stampa(tP,tF,funP_min,funF_min,fun_str(f),axes,"Min",'t(s)',fun_units(f))
+    % stampa(tP,tF,funP_min,funF_min,fun_str(f),axes,"Min",'t(s)',fun_units(f))
 
 
     %% Peak
@@ -131,104 +131,104 @@ for f=1:length(fun)
     stampa(tP,tF,funP_peak,funF_peak,fun_str(f),axes,"Peak",'t(s)',fun_units(f))
 
 
-    %% Shape Factor
-    funP_shf=funP_rms./funP_arv;
-    funF_shf=funF_rms./funF_arv;
-    stampa(tP,tF,funP_shf,funF_shf,fun_str(f),axes,"Shape Factor",'t(s)',fun_units(f))
+    % %% Shape Factor
+    % funP_shf=funP_rms./funP_arv;
+    % funF_shf=funF_rms./funF_arv;
+    % stampa(tP,tF,funP_shf,funF_shf,fun_str(f),axes,"Shape Factor",'t(s)',fun_units(f))
+    % 
+    % 
+    % %% Crest Factor
+    % funP_crf=funP_max./funP_rms;
+    % funF_crf=funF_max./funF_rms;
+    % stampa(tP,tF,funP_crf,funF_crf,fun_str(f),axes,"Crest Factor",'t(s)',fun_units(f))
+    % 
+    % 
+    % %% Impulse Factor
+    % funP_impf=funP_max./funP_arv;
+    % funF_impf=funF_max./funF_arv;
+    % stampa(tP,tF,funP_impf,funF_impf,fun_str(f),axes,"Impulse Factor",'t(s)',fun_units(f))
+    % 
+    % 
+    % %% Margin Factor
+    % funP_arvq=movmean(sqrt(abs(funzioneP)),40).^2;
+    % funF_arvq=movmean(sqrt(abs(funzioneF)),40).^2;
+    % 
+    % funP_mrgf=funP_max./funP_arvq;
+    % funF_mrgf=funF_max./funF_arvq;
+    % stampa(tP,tF,funP_mrgf,funF_mrgf,fun_str(f),axes,"Margin Factor",'t(s)',fun_units(f))
 
 
-    %% Crest Factor
-    funP_crf=funP_max./funP_rms;
-    funF_crf=funF_max./funF_rms;
-    stampa(tP,tF,funP_crf,funF_crf,fun_str(f),axes,"Crest Factor",'t(s)',fun_units(f))
-
-
-    %% Impulse Factor
-    funP_impf=funP_max./funP_arv;
-    funF_impf=funF_max./funF_arv;
-    stampa(tP,tF,funP_impf,funF_impf,fun_str(f),axes,"Impulse Factor",'t(s)',fun_units(f))
-
-
-    %% Margin Factor
-    funP_arvq=movmean(sqrt(abs(funzioneP)),40).^2;
-    funF_arvq=movmean(sqrt(abs(funzioneF)),40).^2;
-
-    funP_mrgf=funP_max./funP_arvq;
-    funF_mrgf=funF_max./funF_arvq;
-    stampa(tP,tF,funP_mrgf,funF_mrgf,fun_str(f),axes,"Margin Factor",'t(s)',fun_units(f))
-
-
-    %% Trasformata
-    LP=length(funzioneP);
-    frequenzaP=sr/LP*(0:(LP/2));
-
-    LF=length(funzioneF);
-    frequenzaF=sr/LF*(0:(LF/2));
-
-    YP_noMedia=fft(funzioneP-movmean(funzioneP,40));
-    P2P_noMedia=abs(YP_noMedia/LP);
-    trasformataP=P2P_noMedia(1:(LP/2+1),:);
-    trasformataP(2:end-1,:)=2*trasformataP(2:end-1,:);
-
-    YF_noMedia=fft(funzioneF-movmean(funzioneF,40));
-    P2F_noMedia=abs(YF_noMedia/LF);
-    trasformataF=P2F_noMedia(1:(LF/2+1),:);
-    trasformataF(2:end-1,:)=2*trasformataF(2:end-1,:);
-
-    stampa_freq(frequenzaP,frequenzaF,trasformataP,trasformataF,axes,fun_str(f),"Trasformata")
-
-
-    %% Spettro
-    xdftP=YP_noMedia(1:LP/2+1,:);
-    spettroP=(1/(sr*LP))*abs(xdftP).^2;
-    spettroP(2:end-1,:)=2*spettroP(2:end-1,:);
-
-    xdftF=YF_noMedia(1:LF/2+1,:);
-    spettroF=(1/(sr*LF))*abs(xdftF).^2;
-    spettroF(2:end-1,:)=2*spettroF(2:end-1,:);
-
-    stampa_freq(frequenzaP,frequenzaF,spettroP,spettroF,axes,fun_str(f),"Spettro")
-
-
-    %% Ampiezza Media
-    trasformP_mean=mean(trasformataP);
-    trasformF_mean=mean(trasformataF);
-
-    stampa_freqAmp(trasformP_mean,trasformF_mean,axes,fun_str(f),"Ampiezza Media")
-
-
-    %% Frequency Centroid
-    trasformP_cent=mean(trasformataP.*frequenzaP');
-    trasformF_cent=mean(trasformataF.*frequenzaF');
-
-    stampa_freqParam(trasformP_cent,trasformF_cent,axes,fun_str(f),"Frequency Centroid")
-
-
-    %% Frequency Variance
-    trasformP_var=zeros(length(axes));
-    trasformF_var=zeros(length(axes));
-
-    for i=1:length(axes)
-        trasformP_var(i)=sum((frequenzaP'-trasformP_cent(i)).*trasformataP(:,i))/sum(trasformataP(:,i));
-        trasformF_var(i)=sum((frequenzaF'-trasformF_cent(i)).*trasformataF(:,i))/sum(trasformataF(:,i));
-    end
-
-    stampa_freqParam(trasformP_var,trasformF_var,axes,fun_str(f),"Frequency Variance")
-
-
-    %% Spectral Entropy
-    entropiaP=zeros(length(axes));
-    entropiaF=zeros(length(axes));
-
-    for i=1:length(axes)
-        pP=spettroP(:,i)/sum(spettroP(:,i));
-        pF=spettroF(:,i)/sum(spettroF(:,i));
-
-        entropiaP(i)=-sum(pP.*log2(pP));
-        entropiaF(i)=-sum(pF.*log2(pF));
-    end
-
-    stampa_freqParam(entropiaP,entropiaF,axes,fun_str(f),"Spectral Entropy")
+    % %% Trasformata
+    % LP=length(funzioneP);
+    % frequenzaP=sr/LP*(0:(LP/2));
+    % 
+    % LF=length(funzioneF);
+    % frequenzaF=sr/LF*(0:(LF/2));
+    % 
+    % YP_noMedia=fft(funzioneP-movmean(funzioneP,40));
+    % P2P_noMedia=abs(YP_noMedia/LP);
+    % trasformataP=P2P_noMedia(1:(LP/2+1),:);
+    % trasformataP(2:end-1,:)=2*trasformataP(2:end-1,:);
+    % 
+    % YF_noMedia=fft(funzioneF-movmean(funzioneF,40));
+    % P2F_noMedia=abs(YF_noMedia/LF);
+    % trasformataF=P2F_noMedia(1:(LF/2+1),:);
+    % trasformataF(2:end-1,:)=2*trasformataF(2:end-1,:);
+    % 
+    % stampa_freq(frequenzaP,frequenzaF,trasformataP,trasformataF,axes,fun_str(f),"Trasformata")
+    % 
+    % 
+    % %% Spettro
+    % xdftP=YP_noMedia(1:LP/2+1,:);
+    % spettroP=(1/(sr*LP))*abs(xdftP).^2;
+    % spettroP(2:end-1,:)=2*spettroP(2:end-1,:);
+    % 
+    % xdftF=YF_noMedia(1:LF/2+1,:);
+    % spettroF=(1/(sr*LF))*abs(xdftF).^2;
+    % spettroF(2:end-1,:)=2*spettroF(2:end-1,:);
+    % 
+    % stampa_freq(frequenzaP,frequenzaF,spettroP,spettroF,axes,fun_str(f),"Spettro")
+    % 
+    % 
+    % %% Ampiezza Media
+    % trasformP_mean=mean(trasformataP);
+    % trasformF_mean=mean(trasformataF);
+    % 
+    % stampa_freqAmp(trasformP_mean,trasformF_mean,axes,fun_str(f),"Ampiezza Media")
+    % 
+    % 
+    % %% Frequency Centroid
+    % trasformP_cent=mean(trasformataP.*frequenzaP');
+    % trasformF_cent=mean(trasformataF.*frequenzaF');
+    % 
+    % stampa_freqParam(trasformP_cent,trasformF_cent,axes,fun_str(f),"Frequency Centroid")
+    % 
+    % 
+    % %% Frequency Variance
+    % trasformP_var=zeros(length(axes));
+    % trasformF_var=zeros(length(axes));
+    % 
+    % for i=1:length(axes)
+    %     trasformP_var(i)=sum((frequenzaP'-trasformP_cent(i)).*trasformataP(:,i))/sum(trasformataP(:,i));
+    %     trasformF_var(i)=sum((frequenzaF'-trasformF_cent(i)).*trasformataF(:,i))/sum(trasformataF(:,i));
+    % end
+    % 
+    % stampa_freqParam(trasformP_var,trasformF_var,axes,fun_str(f),"Frequency Variance")
+    % 
+    % 
+    % %% Spectral Entropy
+    % entropiaP=zeros(length(axes));
+    % entropiaF=zeros(length(axes));
+    % 
+    % for i=1:length(axes)
+    %     pP=spettroP(:,i)/sum(spettroP(:,i));
+    %     pF=spettroF(:,i)/sum(spettroF(:,i));
+    % 
+    %     entropiaP(i)=-sum(pP.*log2(pP));
+    %     entropiaF(i)=-sum(pF.*log2(pF));
+    % end
+    % 
+    % stampa_freqParam(entropiaP,entropiaF,axes,fun_str(f),"Spectral Entropy")
 
     close all
 end
@@ -313,7 +313,7 @@ for i=3:2:2*n+1
     end
     subtitle(fun_axes(j),FontName=font)
     xlabel(xlbl,FontName=font)
-    ylabel(ylbl,FontName=font)
+    ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(j,:))
     grid
 end
@@ -326,12 +326,12 @@ for i=2:2:2*n
     end
     subtitle(fun_axes(i/2),FontName=font)
     xlabel(xlbl,FontName=font)
-    ylabel(ylbl,FontName=font)
+    ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(i/2,:))
     grid
 end
 
-exportgraphics(f,"..\slide\curvaU_FP\figure\"+fun_str+"\"+tit+".png")
+exportgraphics(f,"..\Relazione\5_Indicatori\img\curvaUFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
 
 end
 
@@ -391,7 +391,7 @@ for i=2:2:2*n
     end
 end
 
-exportgraphics(f,"..\slide\curvaU_FP\figure\"+fun_str+"\Trasformata\"+tit+".png")
+exportgraphics(f,"..\Relazione\5_Indicatori\img\curvaUFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
 
 end
 

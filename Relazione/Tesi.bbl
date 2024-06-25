@@ -222,7 +222,12 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{number}{15}
       \field{title}{Detection of Driving Events using Sensory Data on Smartphone.}
+      \field{volume}{Int. J. ITS Res.}
+      \field{year}{2017}
+      \field{pages}{17\bibrangedash 28}
+      \range{pages}{12}
       \verb{doi}
       \verb https://doi.org/10.1007/s13177-015-0116-5
       \endverb

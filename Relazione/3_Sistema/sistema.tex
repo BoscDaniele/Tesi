@@ -25,8 +25,7 @@
 	\end{figure}
 	
 	\subsection{Il Sensore}
-	Il sensore utilizzato per raccogliere i dati è il Blue Coin della ST Microelettronics (\url{https://www.st.com/en/evaluation-tools/steval-bcnkt01v1.html}) sulla quale è stato montato il software \(FP_ALLMEMS1_V4.3.0\) presente sulla pagina web del produttore.\hfill\break
-%	È molto probabile che il software installato fosse FP_ALLMEMS1_V4.3.0, visto l'incertezza non lo metto
+	Il sensore utilizzato per raccogliere i dati è il Blue Coin della ST Microelettronics (\url{https://www.st.com/en/evaluation-tools/steval-bcnkt01v1.html}) sulla quale è stato montato il software \(FP\_ALLMEMS1\_V4.3.0\) presente sulla pagina web del produttore.\hfill\break
 	
 	Questo sensore è dotato di
 	\begin{itemize}
@@ -41,6 +40,14 @@
 	Durante i nostri esperimenti sono stati utilizzati solo i dati provenienti dall'accelerometro, dal giroscopio e dal magnetometro in quanto sufficienti per ottenere i risultati da noi cercati.
 		
 	Il sensore è stato montato di volta in volta sul telaio della bicicletta, sull'asse che dalla sella prosegue verso il manubrio, al di sotto di quest'ultimo. Sfortunatamente, in questo modello di bicicletta, quest'asse è inclinato rispetto all'orizzontale e leggermente curvo. Questo ha reso necessario trovare un modo per calcolare la rotazione dei dati al fine di far coincidere gli assi del sensore e con quelli della bicicletta, ma di questo tratteremo nel prossimo capitolo.\hfill\break
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.5\textwidth]{img/axis}
+			\caption[]{Bicicletta con il sistema di riferimento usato}
+			\label{fig:axis}
+		\end{figure}
+	\end{center}
 	
 	Il sistema di riferimento usato dal sensore è quello \(NED\) (north-east-down), avremo quindi che: la direzione positiva dell'asse \(x\) sarà quella di movimento della bicicletta (di fronte a noi), l'asse \(y\) avrà direzione positiva sul lato destro della bicicletta e l'asse \(z\) sarà diretto verso il basso.
 	Da notare che, nonostante sia diretta verso il basso, il sensore percepisce l'accelerazione gravitazionale come negativa in quanto, non vedendo i risultati della stessa (il sensore non sta precipitando), "ritiene" che ci sia un'accelerazione negativa (rivolta verso l'alto) che gli sta impedendo di cadere. 

@@ -24,6 +24,13 @@
 	
 	Negli articoli consultati, gli indicatori più comunemente utilizzati sono risultati essere media, varianza e distanza picco-picco. Oltre a quelli citati, però, ne sono stati utilizzati degli altri. In particolare, l'articolo \cite{chen}, riguardante lo stile di guida delle automobili, fornisce una lista molto completa di indicatori e sperimenta l'introduzione di nuovi come, per esempio, lo shape factor e il margin factor.\hfill\break
 	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/Acc/Media}
+			\caption[]{Media dei dati di accelerazione raccolti su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(X\) è possibile notare come le fasi di accelerazione siano più pronunciate adottando uno stile di guida aggressivo.}
+			\label{fig:AccMedia_lungaFP}
+		\end{figure}
+	\end{center}
 	
 	Durante questa ricerca sono stati utilizzati i seguenti indicatori:
 	\begin{itemize}
@@ -56,37 +63,22 @@
 	Questi indicatori sono stati applicati ai dati provenienti dall'accelerometro, dal giroscopio e dal magnetometro e alla velocità durante le fasi di accelerazione, curva e frenata. Di seguito verranno descritti gli indicatori che si sono rivelati più interessanti durante le tre fasi appena citate.
 	
 	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/Acc/Media}
-			\caption[]{}
-			\label{fig:AccMedia_lungaFP}
-		\end{figure}
-	\end{center}
-	
-	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/Acc/Varianza}
-			\caption[]{}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/Acc/Varianza}
+			\caption[]{Varianza dei dati di accelerazione raccolti su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(X\) è possibile notare come le fasi di accelerazione siano più pronunciate adottando uno stile di guida aggressivo. Inoltre, sono osservabili anche le frenate. Sull'asse \(Y\), invece, le frenate non sono osservabili.}
 			\label{fig:AccVar_lungaFP}
 		\end{figure}
 	\end{center}
 	
 	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/Acc/Max}
-			\caption[]{}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/Acc/Max}
+			\caption[]{Valore massimo dei dati di accelerazione raccolti su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). L'andamento è simile a quello della varianza (Figura \ref{fig:AccVar_lungaFP}) con la differenza che le frenate sono evidenziate con un valore negativo.}
 			\label{fig:AccMax_lungaFP}
 		\end{figure}
 	\end{center}
 	
-	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/Acc/Peak}
-			\caption[]{}
-			\label{fig:AccPeak_lungaFP}
-		\end{figure}
-	\end{center}
-		
+%	\newpage
 	\subsection{Accelerazione e Frenata}
 	Durante le fasi di accelerazione e frenata gli indicatori che si sono rivelati maggiormente utili sono:
 	\begin{itemize}
@@ -101,34 +93,34 @@
 	\end{itemize}
 	
 	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/Vel/Varianza}
-			\caption[]{}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/Acc/Peak}
+			\caption[]{Distanza picco-picco dei dati di accelerazione raccolti su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). L'andamento è simile a quello della varianza (Figura \ref{fig:AccVar_lungaFP}).}
+			\label{fig:AccPeak_lungaFP}
+		\end{figure}
+	\end{center}
+		
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/Vel/Varianza}
+			\caption[]{Varianza della velocità su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(X\) è possibile notare un picco in corrispondenza delle frenate. È, inoltre, possibile osservare un innalzamento in corrispondenza dei forti aumenti di velocità come, per esempio, quando la bicicletta parte da ferma.}
 			\label{fig:VelVar_lungaFP}
 		\end{figure}
 	\end{center}
 	
 	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/Vel/Peak}
-			\caption[]{}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/Vel/Peak}
+			\caption[]{Distanza picco-picco della velocità su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(X\) è possibile notare un picco in corrispondenza delle frenate. Inoltre, sugli assi \(X\) e \(Y\) sono visibili le fasi di accelerazione.}
 			\label{fig:VelPeak_lungaFP}
 		\end{figure}
 	\end{center}
 	
 	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/VAng/Deviazione Standard}
-			\caption[]{}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/VAng/Deviazione Standard}
+			\caption[]{Deviazione Standard della velocità angolare su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sugli assi sono visibili le fasi di accelerazione. Il picco finale è dovuto a una leggera curva.}
 			\label{fig:VAngStd_lungaFP}
-		\end{figure}
-	\end{center}
-	
-	\begin{center}
-		\begin{figure}[h]
-			\centering\includegraphics[width=.9\textwidth]{img/lungaFP/VAng/Peak}
-			\caption[]{}
-			\label{fig:VAngPeak_lungaFP}
 		\end{figure}
 	\end{center}
 	
@@ -140,12 +132,53 @@
 	
 	Comportamento analogo a quello della varianza è stato osservato nella distanza picco-picco dell'accelerazione degli assi \(x\) e \(y\).\hfill\break
 	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/lungaFP/VAng/Peak}
+			\caption[]{Distanza picco-picco della velocità angolare su un percorso rettilineo in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). L'andamento lungo i 3 assi è simile a quello della deviazione standard (Figura \ref{fig:VAngStd_lungaFP})}
+			\label{fig:VAngPeak_lungaFP}
+		\end{figure}
+	\end{center}
+	
 	Per quanto riguarda la velocità, sia la varianza che la deviazione standard identificano molto bene le frenate.\hfill\break
 	
 	Come per l'accelerazione anche nel caso della velocità angolare dell'angolo di rollio la media rettificata, la media quadratica, la varianza e la deviazione standard hanno comportamenti simili che identificano bene la foga con cui il ciclista pedala, così come la distanza picco-picco del rollio.\hfill\break
 	
 	Il campo magnetico, infine, non fornisce molte informazioni per quanto riguarda i percorsi rettilinei.
 	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/CurvaUFP/Acc/Media}
+			\caption[]{Media dell'accelerazione su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Oltre alle fasi di accelerazione e frenata anche la curva è visibile.}
+			\label{fig:AccMedia_CurvaUFP}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/curvaUFP/Acc/Varianza}
+			\caption[]{Varianza dell'accelerazione su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(X\), oltre alle fasi di accelerazione e frenata, anche la curva è molto evidente. Sull'asse \(Y\) le curve sono meno evidenti.}
+			\label{fig:AccVar_curvaUFP}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/curvaUFP/Vel/Varianza}
+			\caption[]{Varianza della velocità su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Della curva al centro è visibile l'effetto che essa ha sulla velocità della bicicletta.}
+			\label{fig:VelVar_curvaUFP}
+		\end{figure}
+	\end{center}
+	\newpage
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/curvaUFP/Vel/Peak}
+			\caption[]{Distanza picco-picco della velocità su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Della curva al centro è visibile l'effetto che essa ha sulla velocità della bicicletta.}
+			\label{fig:VelPeak_curvaUFP}
+		\end{figure}
+	\end{center}
+	
+	\newpage
 	\subsection{Curva}
 	Durante la fase di curva gli indicatori che si sono rivelati maggiormente utili sono:
 	\begin{itemize}
@@ -161,6 +194,30 @@
 
 	\end{itemize}
 	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/CurvaUFP/VAng/Media}
+			\caption[]{Media della velocità angolare su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(Roll\) sono visibili un picco negativo, all'inizio, e uno positivo, alla fine della curva. Sull'asse \(Pitch\) è visibile un picco sempre positivo tanto pronunciato quanto più la curva è percorsa velocemente. Sull'asse \(Yaw\) il picco è positivo quando la curva viene eseguita in senso orario, negativo altrimenti.}
+			\label{fig:VAngMedia_CurvaUFP}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/CurvaUFP/VAng/Deviazione Standard}
+			\caption[]{Deviazione standard della velocità angolare su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Oltre agli effetti dell'accelerazione sono visibili due picchi in corrispondenza dell'inizio e della fine della curva.}
+			\label{fig:VAngStd_CurvaUFP}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/CurvaUFP/VAng/Max}
+			\caption[]{Massimo della velocità angolare su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). L'andamento è simile a quello della media della velocità angolare (Figura \ref{fig:VAngMedia_CurvaUFP}).}
+			\label{fig:VAngMax_CurvaUFP}
+		\end{figure}
+	\end{center}
+	
 %	L'accelerazione media lungo l'asse \(x\) è in grado di rilevare le curve in quanto, durante queste, si nota una decelerazione della bicicletta.
 	
 	L'accelerazione media lungo l'asse \(x\) mostra una decelerazione durante le curve, rendendo così possibile una loro identificazione.
@@ -171,16 +228,64 @@
 	
 	La velocità angolare è un ottimo modo per riconoscere le curve. La media della velocità angolare degli angoli di \(rollio\), \(beccheggio\) e \(imbardata\) riesce a fornire una chiara indicazione di quando avviene una curva. Tra questi, si distinguono in particolare gli ultimi due. La media del \(beccheggio\) fornisce informazioni sull'entità della curva e sulla velocità alla quale la si sta percorrendo: più ampia è la curva minore sarà il suo valore, maggiore è la velocità della bicicletta più questo sarà elevato. Il \(beccheggio\) non può, però, fornirci informazioni sul verso della curva stessa. Per risalire a questa informazione è stata selezionata l'\(imbardata\). Anche il massimo di questi angoli si comporta in modo analogo.
 	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/CurvaUFP/Mag/Media}
+			\caption[]{Media del campo magnetico su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(X\) è visibile il cambio di orientamento della bicicletta durante la curva.}
+			\label{fig:MagMedia_CurvaUFP}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/curvaUFP/Mag/Varianza}
+			\caption[]{Varianza del campo magnetico su un percorso con una curva a U, al centro, in condizioni di guida tranquilla (a sinistra) e aggressiva (a destra). Sull'asse \(X\) è visibile un picco in corrispondenza del cambio di orientamento della bicicletta durante la curva, tanto più evidente quanto più la curva viene percorsa velocemente.}
+			\label{fig:MagVar_curvaUFP}
+		\end{figure}
+	\end{center}
+	
 	Infine, nella varianza e nella deviazione standard degli angoli di \(rollio\) e \(imbardata\) è possibile notare due picchi all'inizio e alla fine della curva.\hfill\break
 	
 	La varianza del campo magnetico in \(x\) mostra dei picchi, più o meno pronunciati, a seconda dell'orientamento della bicicletta all'inizio e alla fine della curva.
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Acc/Media}
+			\caption[]{Media dell'accelerazione su un percorso rettilineo (a sinistra) e curvo (a destra). Dalle immagini è possibile notare come questo indicatore riesca a evidenziare, sull'asse \(X\), sia le accelerazioni, sia le curve e sia le frenate.}
+			\label{fig:AccMedia_LungaCurvaU}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Acc/Varianza}
+			\caption[]{Varianza dell'accelerazione su un percorso rettilineo (a sinistra) e curvo (a destra). Sull'asse \(X\) è possibile notare come questo indicatore riesca a evidenziare, sia le accelerazioni, sia le curve e sia le frenate. Sull'asse \(Y\), invece, riesce a evidenziare solo le accelerazioni.}
+			\label{fig:AccVar_LungaCurvaU}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Acc/Media Rettificata}
+			\caption[]{Media Rettificata dell'accelerazione su un percorso rettilineo (a sinistra) e curvo (a destra). l'andamento dei tre assi è del tutto simile a quello della varianza (Figura \ref{fig:AccVar_LungaCurvaU}) ma le frenate risultano un po' più pronunciate.}
+			\label{fig:AccRett_LungaCurvaU}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Acc/Peak}
+			\caption[]{Distanza picco-picco dell'accelerazione su un percorso rettilineo (a sinistra) e curvo (a destra). L'andamento dei tre assi è del tutto simile a quello della varianza (Figura \ref{fig:AccVar_LungaCurvaU}).}
+			\label{fig:AccPeak_LungaCurvaU}
+		\end{figure}
+	\end{center}
 	
 	\subsection{Utilizzo degli Indicatori}
 	Lo studio fatto serve per selezionare un'insieme di indicatori che consentano di dedurre l'impegno che il ciclista mette nel pedalare o in grado di identificare uno specifico evento come curve e frenate.
 	
 	Dalla varianza dell'accelerazione dell'asse \(x\) è possibile rilevare in modo efficace l'oscillazione della stessa, dovuta alla foga che il ciclista mette nel pedalare. Maggiore è la varianza, tanto più il ciclista sta pedalando velocemente. Di conseguenza, quando il ciclista procede per inerzia senza pedalare, la varianza risulta essere molto bassa.
 	
-	Grazie alla media dell'accelerazione in \(x\) si può, invece, dedurre l'efficacia della pedalata: più la media è elevata, maggiore è l'accelerazione della bicicletta e, quindi, maggiore è l'utilità dello sforzo del ciclista.
+	Grazie alla media dell'accelerazione in \(x\) si può, invece, dedurre l'efficacia della pe-\\dalata: più la media è elevata, maggiore è l'accelerazione della bicicletta e, quindi, maggiore è l'utilità dello sforzo del ciclista.
 	
 	L'accoppiata varianza e media dell'accelerazione in \(x\) sono quindi in grado di determinare lo sforzo impiegato nel pedalare e la sua efficacia.
 	
@@ -195,12 +300,60 @@
 	
 	Analogo discorso si può fare con gli indicatori distanza picco-picco e media rettificata che hanno un andamento simile a quello della varianza.\hfill\break
 	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/VAng/Media}
+			\caption[]{Media della velocità angolare su un percorso rettilineo (a sinistra) e curvo (a destra). Dalle immagini si può notare come questo indicatore evidenzi molto bene le curve.}
+			\label{fig:VAngMedia_LungaCurvaU}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/VAng/Max}
+			\caption[]{Massimo della velocità angolare su un percorso rettilineo (a sinistra) e curvo (a destra). L'andamento di questo indicatore è molto simile a quello della media della velocità angolare (Figura \ref{fig:VAngMedia_LungaCurvaU}).}
+			\label{fig:VAngMax_LungaCurvaU}
+		\end{figure}
+	\end{center}
+
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Mag/Varianza}
+			\caption[]{Varianza del campo magnetico su un percorso rettilineo (a sinistra) e curvo (a destra). Sull'asse \(X\) è visibile un picco in corrispondenza del cambio di orientamento della bicicletta durante la curva, tanto più evidente quanto più la curva viene percorsa velocemente. Sui percorsi rettilinei, invece, non ci sono variazioni.}
+			\label{fig:MagVar_LungaCurvaU}
+		\end{figure}
+	\end{center}
+	
 	Per quanto riguarda il rilevamento delle curve e della loro intensità abbiamo la media o il massimo della velocità angolare di \(beccheggio\) e \(imbardata\). In particolare il primo si dimostra molto efficace a identificare la velocità alla quale viene percorsa in quanto, in base a quest'ultima, cambia l'inclinazione della bicicletta e, quindi, la velocità di rotazione attorno all'angolo di \(beccheggio\). Grazie all'\(imbardata\), invece, possiamo capire il verso di rotazione della bicicletta.
 	
 	La varianza del campo magnetico lungo l'asse \(x\), infine, riesce a identificare la differenza tra l'orientamento iniziale e finale della curva.\hfill\break
 	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Vel/Varianza}
+			\caption[]{Varianza della velocità su un percorso rettilineo (a sinistra) e curvo (a destra). Sull'asse \(X\) è visibile un picco in corrispondenza delle frenate. Inoltre, è possibile notare un leggero aumento in corrispondenza di forti aumenti di velocità. Questo si verifica quando la bicicletta parte da ferma o quando esce da una curva.}
+			\label{fig:VelVar_LungaCurvaU}
+		\end{figure}
+	\end{center}
+	
 	La frenata, invece, si rileva in modo efficace grazie varianza della velocità in \(x\), che mostra un picco tanto più evidente quanto maggiore è la differenza di velocità della bicicletta prima e dopo la frenata. Per questo motivo è in grado di evidenziare anche curve e i momenti di forte aumento di velocità, in particolare quando la bicicletta parte da ferma, seppur in modo molto meno marcato.
 	
 	Discorso analogo può essere fatto con la distanza picco-picco e con la deviazione standard, in questo caso, però, è meno evidente la differenza tra frenate e curve.
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Vel/Deviazione Standard}
+			\caption[]{Deviazione Standard della velocità su un percorso rettilineo (a sinistra) e curvo (a destra). L'andamento è simile a quello della varianza della velocità (Figura \ref{fig:VelVar_LungaCurvaU}) con la differenza che i forti aumenti di velocità e l'uscita dalle curve risulta più evidente.}
+			\label{fig:VelStd_LungaCurvaU}
+		\end{figure}
+	\end{center}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\centering\includegraphics[width=.7\textwidth]{img/LungaCurvaU/Vel/Peak}
+			\caption[]{Distanza picco-picco della velocità su un percorso rettilineo (a sinistra) e curvo (a destra). L'andamento in \(X\) è simile a quello della deviazione standard della velocità (Figura \ref{fig:VelStd_LungaCurvaU}).}
+			\label{fig:VelPeak_LungaCurvaU}
+		\end{figure}
+	\end{center}
 		
 \end{document}

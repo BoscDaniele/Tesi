@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  24 JUN 2024 23:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  29 JUN 2024 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,6 +525,23 @@ Package newfloat Info: \Hy@org@chapter = macro:[#1]#2->\NR@gettitle {#1}\NR@cha
 pter [{#1}]{#2}.
 Package newfloat Info: \algocf@original@chapter = undefined.
 Package newfloat Info: `wrapfig' package detected.
+) (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen191
+\TX@old@table=\dimen192
+\TX@old@col=\dimen193
+\TX@target=\dimen194
+\TX@delta=\dimen195
+\TX@cols=\count311
+\TX@ftn=\toks33
+)
+(C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count312
+\rotFPtop=\skip75
+\rotFPbot=\skip76
+\rot@float@box=\box61
+\rot@mess@toks=\toks34
 ) (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
@@ -544,10 +561,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.te
 x
-\XKV@toks=\toks33
-\XKV@tempa@toks=\toks34
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
 )
-\XKV@depth=\count311
+\XKV@depth=\count313
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/currfile\currfile.sty
@@ -561,7 +578,7 @@ Package: filehook 2022/10/25 v0.8b Hooks for input files
 0.sty
 Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
 ))
-\c@currfiledepth=\count312
+\c@currfiledepth=\count314
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/gincltex\gincltex.sty
 
@@ -585,40 +602,40 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox
 .sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box61
+\collectedbox=\box62
 )
-\tc@llx=\dimen191
-\tc@lly=\dimen192
-\tc@urx=\dimen193
-\tc@ury=\dimen194
+\tc@llx=\dimen196
+\tc@lly=\dimen197
+\tc@urx=\dimen198
+\tc@ury=\dimen199
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.d
 ef
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen195
-\adjbox@Height=\dimen196
-\adjbox@Depth=\dimen197
-\adjbox@Totalheight=\dimen198
-\adjbox@pwidth=\dimen199
-\adjbox@pheight=\dimen256
-\adjbox@pdepth=\dimen257
-\adjbox@ptotalheight=\dimen258
+\adjbox@Width=\dimen256
+\adjbox@Height=\dimen257
+\adjbox@Depth=\dimen258
+\adjbox@Totalheight=\dimen259
+\adjbox@pwidth=\dimen260
+\adjbox@pheight=\dimen261
+\adjbox@pdepth=\dimen262
+\adjbox@ptotalheight=\dimen263
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.s
 ty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count313
+\c@checkoddpage=\count315
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box62
-\sift@deathcycles=\count314
-\@vwid@loff=\dimen259
-\@vwid@roff=\dimen260
+\@vwid@box=\box63
+\sift@deathcycles=\count316
+\@vwid@loff=\dimen264
+\@vwid@roff=\dimen265
 ))
-\gincltex@box=\box63
+\gincltex@box=\box64
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/filemod\filemod-expmi
 n.sty
@@ -632,68 +649,68 @@ Package: import 2020/04/01  v 6.2
 Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count315
+\lrq@indent=\count317
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count316
-\c@listtotal=\count317
-\c@listcount=\count318
-\c@liststart=\count319
-\c@liststop=\count320
-\c@citecount=\count321
-\c@citetotal=\count322
-\c@multicitecount=\count323
-\c@multicitetotal=\count324
-\c@instcount=\count325
-\c@maxnames=\count326
-\c@minnames=\count327
-\c@maxitems=\count328
-\c@minitems=\count329
-\c@citecounter=\count330
-\c@maxcitecounter=\count331
-\c@savedcitecounter=\count332
-\c@uniquelist=\count333
-\c@uniquename=\count334
-\c@refsection=\count335
-\c@refsegment=\count336
-\c@maxextratitle=\count337
-\c@maxextratitleyear=\count338
-\c@maxextraname=\count339
-\c@maxextradate=\count340
-\c@maxextraalpha=\count341
-\c@abbrvpenalty=\count342
-\c@highnamepenalty=\count343
-\c@lownamepenalty=\count344
-\c@maxparens=\count345
-\c@parenlevel=\count346
-\blx@tempcnta=\count347
-\blx@tempcntb=\count348
-\blx@tempcntc=\count349
-\c@blx@maxsection=\count350
-\blx@maxsegment@0=\count351
-\blx@notetype=\count352
-\blx@parenlevel@text=\count353
-\blx@parenlevel@foot=\count354
-\blx@sectionciteorder@0=\count355
-\blx@sectionciteorderinternal@0=\count356
-\blx@entrysetcounter=\count357
-\blx@biblioinstance=\count358
-\labelnumberwidth=\skip75
-\labelalphawidth=\skip76
-\biblabelsep=\skip77
-\bibitemsep=\skip78
-\bibnamesep=\skip79
-\bibinitsep=\skip80
-\bibparsep=\skip81
-\bibhang=\skip82
+\c@tabx@nest=\count318
+\c@listtotal=\count319
+\c@listcount=\count320
+\c@liststart=\count321
+\c@liststop=\count322
+\c@citecount=\count323
+\c@citetotal=\count324
+\c@multicitecount=\count325
+\c@multicitetotal=\count326
+\c@instcount=\count327
+\c@maxnames=\count328
+\c@minnames=\count329
+\c@maxitems=\count330
+\c@minitems=\count331
+\c@citecounter=\count332
+\c@maxcitecounter=\count333
+\c@savedcitecounter=\count334
+\c@uniquelist=\count335
+\c@uniquename=\count336
+\c@refsection=\count337
+\c@refsegment=\count338
+\c@maxextratitle=\count339
+\c@maxextratitleyear=\count340
+\c@maxextraname=\count341
+\c@maxextradate=\count342
+\c@maxextraalpha=\count343
+\c@abbrvpenalty=\count344
+\c@highnamepenalty=\count345
+\c@lownamepenalty=\count346
+\c@maxparens=\count347
+\c@parenlevel=\count348
+\blx@tempcnta=\count349
+\blx@tempcntb=\count350
+\blx@tempcntc=\count351
+\c@blx@maxsection=\count352
+\blx@maxsegment@0=\count353
+\blx@notetype=\count354
+\blx@parenlevel@text=\count355
+\blx@parenlevel@foot=\count356
+\blx@sectionciteorder@0=\count357
+\blx@sectionciteorderinternal@0=\count358
+\blx@entrysetcounter=\count359
+\blx@biblioinstance=\count360
+\labelnumberwidth=\skip77
+\labelalphawidth=\skip78
+\biblabelsep=\skip79
+\bibitemsep=\skip80
+\bibnamesep=\skip81
+\bibinitsep=\skip82
+\bibparsep=\skip83
+\bibhang=\skip84
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language80
-\c@mincomprange=\count359
-\c@maxcomprange=\count360
-\c@mincompwidth=\count361
+\c@mincomprange=\count361
+\c@maxcomprange=\count362
+\c@mincompwidth=\count363
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -704,88 +721,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count362
-\c@savedafterword=\count363
-\c@annotator=\count364
-\c@savedannotator=\count365
-\c@author=\count366
-\c@savedauthor=\count367
-\c@bookauthor=\count368
-\c@savedbookauthor=\count369
-\c@commentator=\count370
-\c@savedcommentator=\count371
-\c@editor=\count372
-\c@savededitor=\count373
-\c@editora=\count374
-\c@savededitora=\count375
-\c@editorb=\count376
-\c@savededitorb=\count377
-\c@editorc=\count378
-\c@savededitorc=\count379
-\c@foreword=\count380
-\c@savedforeword=\count381
-\c@holder=\count382
-\c@savedholder=\count383
-\c@introduction=\count384
-\c@savedintroduction=\count385
-\c@namea=\count386
-\c@savednamea=\count387
-\c@nameb=\count388
-\c@savednameb=\count389
-\c@namec=\count390
-\c@savednamec=\count391
-\c@translator=\count392
-\c@savedtranslator=\count393
-\c@shortauthor=\count394
-\c@savedshortauthor=\count395
-\c@shorteditor=\count396
-\c@savedshorteditor=\count397
-\c@labelname=\count398
-\c@savedlabelname=\count399
-\c@institution=\count400
-\c@savedinstitution=\count401
-\c@lista=\count402
-\c@savedlista=\count403
-\c@listb=\count404
-\c@savedlistb=\count405
-\c@listc=\count406
-\c@savedlistc=\count407
-\c@listd=\count408
-\c@savedlistd=\count409
-\c@liste=\count410
-\c@savedliste=\count411
-\c@listf=\count412
-\c@savedlistf=\count413
-\c@location=\count414
-\c@savedlocation=\count415
-\c@organization=\count416
-\c@savedorganization=\count417
-\c@origlocation=\count418
-\c@savedoriglocation=\count419
-\c@origpublisher=\count420
-\c@savedorigpublisher=\count421
-\c@publisher=\count422
-\c@savedpublisher=\count423
-\c@language=\count424
-\c@savedlanguage=\count425
-\c@origlanguage=\count426
-\c@savedoriglanguage=\count427
-\c@pageref=\count428
-\c@savedpageref=\count429
-\shorthandwidth=\skip83
-\shortjournalwidth=\skip84
-\shortserieswidth=\skip85
-\shorttitlewidth=\skip86
-\shortauthorwidth=\skip87
-\shorteditorwidth=\skip88
-\locallabelnumberwidth=\skip89
-\locallabelalphawidth=\skip90
-\localshorthandwidth=\skip91
-\localshortjournalwidth=\skip92
-\localshortserieswidth=\skip93
-\localshorttitlewidth=\skip94
-\localshortauthorwidth=\skip95
-\localshorteditorwidth=\skip96
+\c@afterword=\count364
+\c@savedafterword=\count365
+\c@annotator=\count366
+\c@savedannotator=\count367
+\c@author=\count368
+\c@savedauthor=\count369
+\c@bookauthor=\count370
+\c@savedbookauthor=\count371
+\c@commentator=\count372
+\c@savedcommentator=\count373
+\c@editor=\count374
+\c@savededitor=\count375
+\c@editora=\count376
+\c@savededitora=\count377
+\c@editorb=\count378
+\c@savededitorb=\count379
+\c@editorc=\count380
+\c@savededitorc=\count381
+\c@foreword=\count382
+\c@savedforeword=\count383
+\c@holder=\count384
+\c@savedholder=\count385
+\c@introduction=\count386
+\c@savedintroduction=\count387
+\c@namea=\count388
+\c@savednamea=\count389
+\c@nameb=\count390
+\c@savednameb=\count391
+\c@namec=\count392
+\c@savednamec=\count393
+\c@translator=\count394
+\c@savedtranslator=\count395
+\c@shortauthor=\count396
+\c@savedshortauthor=\count397
+\c@shorteditor=\count398
+\c@savedshorteditor=\count399
+\c@labelname=\count400
+\c@savedlabelname=\count401
+\c@institution=\count402
+\c@savedinstitution=\count403
+\c@lista=\count404
+\c@savedlista=\count405
+\c@listb=\count406
+\c@savedlistb=\count407
+\c@listc=\count408
+\c@savedlistc=\count409
+\c@listd=\count410
+\c@savedlistd=\count411
+\c@liste=\count412
+\c@savedliste=\count413
+\c@listf=\count414
+\c@savedlistf=\count415
+\c@location=\count416
+\c@savedlocation=\count417
+\c@organization=\count418
+\c@savedorganization=\count419
+\c@origlocation=\count420
+\c@savedoriglocation=\count421
+\c@origpublisher=\count422
+\c@savedorigpublisher=\count423
+\c@publisher=\count424
+\c@savedpublisher=\count425
+\c@language=\count426
+\c@savedlanguage=\count427
+\c@origlanguage=\count428
+\c@savedoriglanguage=\count429
+\c@pageref=\count430
+\c@savedpageref=\count431
+\shorthandwidth=\skip85
+\shortjournalwidth=\skip86
+\shortserieswidth=\skip87
+\shorttitlewidth=\skip88
+\shortauthorwidth=\skip89
+\shorteditorwidth=\skip90
+\locallabelnumberwidth=\skip91
+\locallabelalphawidth=\skip92
+\localshorthandwidth=\skip93
+\localshortjournalwidth=\skip94
+\localshortserieswidth=\skip95
+\localshorttitlewidth=\skip96
+\localshortauthorwidth=\skip97
+\localshorteditorwidth=\skip98
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -798,19 +815,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
-\c@textcitecount=\count430
-\c@textcitetotal=\count431
-\c@textcitemaxnames=\count432
-\c@biburlbigbreakpenalty=\count433
-\c@biburlbreakpenalty=\count434
-\c@biburlnumpenalty=\count435
-\c@biburlucpenalty=\count436
-\c@biburllcpenalty=\count437
+\c@textcitecount=\count432
+\c@textcitetotal=\count433
+\c@textcitemaxnames=\count434
+\c@biburlbigbreakpenalty=\count435
+\c@biburlbreakpenalty=\count436
+\c@biburlnumpenalty=\count437
+\c@biburlucpenalty=\count438
+\c@biburllcpenalty=\count439
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count438
+\c@smartand=\count440
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
@@ -833,8 +850,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard
 .bbx
 File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count439
-\c@bbx:relatedtotal=\count440
+\c@bbx:relatedcount=\count441
+\c@bbx:relatedtotal=\count442
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -868,8 +885,8 @@ Package: expl3 2022-08-30 L3 programming layer (loader)
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
 dftex.def
 File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count441
-\l__pdf_internal_box=\box64
+\l__color_backend_stack_int=\count443
+\l__pdf_internal_box=\box65
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2022-08-30 L3 programming layer (loader) 
@@ -889,8 +906,8 @@ Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count442
-\@quotereset=\count443
+\@quotelevel=\count444
+\@quotereset=\count445
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
 4.
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
@@ -966,17 +983,17 @@ italian.ldf    on input line 14.
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count444
-\scratchdimen=\dimen261
-\scratchbox=\box65
-\nofMPsegments=\count445
-\nofMParguments=\count446
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count447
-\MPscratchDim=\dimen262
-\MPnumerator=\count448
-\makeMPintoPDFobject=\count449
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count446
+\scratchdimen=\dimen266
+\scratchbox=\box66
+\nofMPsegments=\count447
+\nofMParguments=\count448
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count449
+\MPscratchDim=\dimen267
+\MPnumerator=\count450
+\makeMPintoPDFobject=\count451
+\everyMPtoPDFconversion=\toks38
 )
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -1008,11 +1025,13 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-\c@lstlisting=\count450
+\c@lstlisting=\count452
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: rotating package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: Trying Plan B...
+Package newfloat Info: `rotating' package detected.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1065,19 +1084,30 @@ go.pdf>]) (Tesi.toc)
  [1
 
 
-] (0_Introduzione/intro.tex) (1_StatoArte/arte.tex
+] (0_Introduzione/intro.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14 	A
-       ltri articoli, per meglio catturare alcuni comportamenti del ciclista...
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-
+l.33 	\newpage
+               [1] (1_StatoArte/arte.tex
+Overfull \hbox (0.35608pt too wide) in paragraph at lines 32--33
+\OT1/ptm/m/n/12 colo, uti-liz-zando uno smart-phone come pi-attaforma in-erzial
+e e GPS. Gra-zie a quest'ultimo
  []
 
-) (2_Fisica/fisica.tex
+
+Overfull \hbox (38.81477pt too wide) in paragraph at lines 32--33
+[]\OT1/ptm/m/n/12 e pos-si-bile ot-tenere delle mis-ure di ve-locit[]a pi[]u pr
+e-cise rispetto all'integrazione dell'accelerazione.
+ []
+
+) [2] (2_Fisica/fisica.tex
 Overfull \hbox (3.44032pt too wide) in paragraph at lines 18--19
 \OT1/ptm/m/n/12 Per meglio com-pren-dere i capi-toli seguenti an-dremo ora ad a
 nal-iz-zare i prin-ci-pali fenomeni
@@ -1087,26 +1117,26 @@ nal-iz-zare i prin-ci-pali fenomeni
 
 pdfTeX warning: pdflatex.exe (file ./2_Fisica//img/potenze.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<./2_Fisica//img/potenze.pdf, id=126, 711.25723pt x 483.72722pt>
+<./2_Fisica//img/potenze.pdf, id=138, 711.25723pt x 483.72722pt>
 File: ./2_Fisica//img/potenze.pdf Graphic file (type pdf)
 <use ./2_Fisica//img/potenze.pdf>
 Package pdftex.def Info: ./2_Fisica//img/potenze.pdf  used on input line 22.
 (pdftex.def)             Requested size: 341.43437pt x 232.20856pt.
-[2 <./2_Fisica//img/potenze.pdf>]
+[3 <./2_Fisica//img/potenze.pdf>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
 1.
 
 (C:\Users\Daniele\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[3] [4] [5] [6]) (3_Sistema/sistema.tex
-<./3_Sistema//./img/bicicletta2.jpg, id=161, 4657.4pt x 2619.7875pt>
+[4] [5] [6] [7]) [8] (3_Sistema/sistema.tex
+<./3_Sistema//./img/bicicletta2.jpg, id=179, 4657.4pt x 2619.7875pt>
 File: ./3_Sistema//./img/bicicletta2.jpg Graphic file (type jpg)
 <use ./3_Sistema//./img/bicicletta2.jpg>
 Package pdftex.def Info: ./3_Sistema//./img/bicicletta2.jpg  used on input line
  14.
 (pdftex.def)             Requested size: 192.0548pt x 108.0116pt.
-<./3_Sistema//./img/bluecoin.jpg, id=162, 277.035pt x 178.41656pt>
+<./3_Sistema//./img/bluecoin.jpg, id=180, 277.035pt x 178.41656pt>
 File: ./3_Sistema//./img/bluecoin.jpg Graphic file (type jpg)
 <use ./3_Sistema//./img/bluecoin.jpg>
 Package pdftex.def Info: ./3_Sistema//./img/bluecoin.jpg  used on input line 19
@@ -1116,9 +1146,6 @@ Package pdftex.def Info: ./3_Sistema//./img/bluecoin.jpg  used on input line 19
 Overfull \hbox (2.28003pt too wide) in paragraph at lines 13--23
 []$[]$ $[]$ 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
 8.
@@ -1141,13 +1168,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-[7]
+
+Overfull \hbox (33.58417pt too wide) in paragraph at lines 32--33
+[]\OT1/ptm/m/n/12 Accelerometro: misura in $\OML/cmm/m/it/12 mg$ \OT1/ptm/m/n/1
+2 (milles-imi dell'accelerazione grav-i-tazionale) l'accelerazione
+ []
+
+
 Overfull \hbox (14.50008pt too wide) in paragraph at lines 40--41
 []\OT1/ptm/m/n/12 Durante i nos-tri es-per-i-menti sono stati uti-liz-zati solo
  i dati prove-ni-enti dall'accelerometro,
  []
 
-
+[9 <./3_Sistema//./img/bicicletta2.jpg> <./3_Sistema//./img/bluecoin.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
@@ -1156,358 +1189,418 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
 pdfTeX warning: pdflatex.exe (file ./3_Sistema//img/axis.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<./3_Sistema//img/axis.pdf, id=175, 426.8748pt x 341.35529pt>
+<./3_Sistema//img/axis.pdf, id=193, 426.8748pt x 341.35529pt>
 File: ./3_Sistema//img/axis.pdf Graphic file (type pdf)
 <use ./3_Sistema//img/axis.pdf>
-Package pdftex.def Info: ./3_Sistema//img/axis.pdf  used on input line 46.
-(pdftex.def)             Requested size: 213.39568pt x 170.64595pt.
+Package pdftex.def Info: ./3_Sistema//img/axis.pdf  used on input line 47.
+(pdftex.def)             Requested size: 192.0548pt x 153.5824pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <./3_Sistema//./img/bicicletta2.jpg> <./3_Sistema//./img/bluecoin.jpg>])
-(4_Dati/dati.tex [9 <./3_Sistema//img/axis.pdf>] [10]
-<./4_Dati//img/Acc LungaF.pdf, id=200, 360.34625pt x 294.09875pt>
+pdfTeX warning: pdflatex.exe (file ./3_Sistema//img/SensorAxes.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<./3_Sistema//img/SensorAxes.pdf, id=194, 540.70004pt x 725.5908pt>
+File: ./3_Sistema//img/SensorAxes.pdf Graphic file (type pdf)
+<use ./3_Sistema//img/SensorAxes.pdf>
+Package pdftex.def Info: ./3_Sistema//img/SensorAxes.pdf  used on input line 52
+.
+(pdftex.def)             Requested size: 149.37631pt x 200.45149pt.
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 46--56
+[]$[]$ $[]$ 
+ []
+
+[10 <./3_Sistema//img/axis.pdf> <./3_Sistema//img/SensorAxes.pdf
+
+pdfTeX warning: pdflatex.exe (file ./3_Sistema//img/SensorAxes.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]) [11] (4_Dati/dati.tex
+
+pdfTeX warning: pdflatex.exe (file ./4_Dati//img/percorsoDritto.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<./4_Dati//img/percorsoDritto.pdf, id=221, 540.70004pt x 540.70004pt>
+File: ./4_Dati//img/percorsoDritto.pdf Graphic file (type pdf)
+<use ./4_Dati//img/percorsoDritto.pdf>
+Package pdftex.def Info: ./4_Dati//img/percorsoDritto.pdf  used on input line 2
+5.
+(pdftex.def)             Requested size: 192.0548pt x 192.05298pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./4_Dati//img/percorsoCurvo.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<./4_Dati//img/percorsoCurvo.pdf, id=222, 540.70004pt x 540.70004pt>
+File: ./4_Dati//img/percorsoCurvo.pdf Graphic file (type pdf)
+<use ./4_Dati//img/percorsoCurvo.pdf>
+Package pdftex.def Info: ./4_Dati//img/percorsoCurvo.pdf  used on input line 30
+.
+(pdftex.def)             Requested size: 192.0548pt x 192.05298pt.
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 24--34
+[]$[]$ $[]$ 
+ []
+
+[12 <./4_Dati//img/percorsoDritto.pdf> <./4_Dati//img/percorsoCurvo.pdf
+
+pdfTeX warning: pdflatex.exe (file ./4_Dati//img/percorsoCurvo.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>] [13]
+<./4_Dati//img/Acc LungaF.pdf, id=254, 360.34625pt x 294.09875pt>
 File: ./4_Dati//img/Acc LungaF.pdf Graphic file (type pdf)
 <use ./4_Dati//img/Acc LungaF.pdf>
-Package pdftex.def Info: ./4_Dati//img/Acc LungaF.pdf  used on input line 53.
+Package pdftex.def Info: ./4_Dati//img/Acc LungaF.pdf  used on input line 69.
 (pdftex.def)             Requested size: 384.1096pt x 313.49333pt.
- [11 <./4_Dati//img/Acc LungaF.pdf>]
-<./4_Dati//img/Vang LungaF.pdf, id=265, 357.335pt x 294.09875pt>
+ [14 <./4_Dati//img/Acc LungaF.pdf>]
+<./4_Dati//img/Vang LungaF.pdf, id=318, 357.335pt x 294.09875pt>
 File: ./4_Dati//img/Vang LungaF.pdf Graphic file (type pdf)
 <use ./4_Dati//img/Vang LungaF.pdf>
-Package pdftex.def Info: ./4_Dati//img/Vang LungaF.pdf  used on input line 65.
+Package pdftex.def Info: ./4_Dati//img/Vang LungaF.pdf  used on input line 81.
 (pdftex.def)             Requested size: 384.1096pt x 316.14998pt.
- [12 <./4_Dati//img/Vang LungaF.pdf>]
-<./4_Dati//img/Acc CurvaUF.pdf, id=328, 360.34625pt x 294.09875pt>
+ [15 <./4_Dati//img/Vang LungaF.pdf>]
+<./4_Dati//img/Acc CurvaUF.pdf, id=381, 360.34625pt x 294.09875pt>
 File: ./4_Dati//img/Acc CurvaUF.pdf Graphic file (type pdf)
 <use ./4_Dati//img/Acc CurvaUF.pdf>
-Package pdftex.def Info: ./4_Dati//img/Acc CurvaUF.pdf  used on input line 82.
+Package pdftex.def Info: ./4_Dati//img/Acc CurvaUF.pdf  used on input line 98.
 (pdftex.def)             Requested size: 384.1096pt x 313.49333pt.
- [13 <./4_Dati//img/Acc CurvaUF.pdf>]
-<./4_Dati//img/VAng CurvaUF.pdf, id=392, 357.335pt x 294.09875pt>
+ [16 <./4_Dati//img/Acc CurvaUF.pdf>]
+<./4_Dati//img/VAng CurvaUF.pdf, id=443, 357.335pt x 294.09875pt>
 File: ./4_Dati//img/VAng CurvaUF.pdf Graphic file (type pdf)
 <use ./4_Dati//img/VAng CurvaUF.pdf>
-Package pdftex.def Info: ./4_Dati//img/VAng CurvaUF.pdf  used on input line 95.
-
+Package pdftex.def Info: ./4_Dati//img/VAng CurvaUF.pdf  used on input line 111
+.
 (pdftex.def)             Requested size: 384.1096pt x 316.14998pt.
- [14 <./4_Dati//img/VAng CurvaUF.pdf>]
-<./4_Dati//img/Mag CurvaUF.pdf, id=452, 357.335pt x 294.09875pt>
+ [17 <./4_Dati//img/VAng CurvaUF.pdf>]
+<./4_Dati//img/Mag CurvaUF.pdf, id=504, 357.335pt x 294.09875pt>
 File: ./4_Dati//img/Mag CurvaUF.pdf Graphic file (type pdf)
 <use ./4_Dati//img/Mag CurvaUF.pdf>
-Package pdftex.def Info: ./4_Dati//img/Mag CurvaUF.pdf  used on input line 113.
+Package pdftex.def Info: ./4_Dati//img/Mag CurvaUF.pdf  used on input line 129.
 
 (pdftex.def)             Requested size: 384.1096pt x 316.14998pt.
-) (5_Indicatori/indicatori.tex
-[15 <./4_Dati//img/Mag CurvaUF.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+)
+[18 <./4_Dati//img/Mag CurvaUF.pdf>] (5_Indicatori/indicatori.tex
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-<./5_Indicatori//img/lungaFP/Acc/Media.pdf, id=512, 358.33875pt x 294.09875pt>
+[19]
+<./5_Indicatori//img/lungaFP/Acc/Media.pdf, id=574, 358.33875pt x 294.09875pt>
 File: ./5_Indicatori//img/lungaFP/Acc/Media.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/lungaFP/Acc/Media.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/Acc/Media.pdf  used on inp
-ut line 29.
+ut line 61.
 (pdftex.def)             Requested size: 298.75264pt x 245.21033pt.
-[16 <./5_Indicatori//img/lungaFP/Acc/Media.pdf>]
-<./5_Indicatori//img/lungaFP/Acc/Varianza.pdf, id=587, 355.3275pt x 294.09875pt
+ [20 <./5_Indicatori//img/lungaFP/Acc/Media.pdf>] [21]
+<./5_Indicatori//img/lungaFP/Acc/Varianza.pdf, id=656, 355.3275pt x 294.09875pt
 >
 File: ./5_Indicatori//img/lungaFP/Acc/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/lungaFP/Acc/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/Acc/Varianza.pdf  used on 
-input line 67.
+input line 109.
 (pdftex.def)             Requested size: 298.75264pt x 247.2791pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./5_Indicatori//img/lungaFP/Acc/Max.pdf, id=588, 358.33875pt x 294.09875pt>
+<./5_Indicatori//img/lungaFP/Acc/Max.pdf, id=657, 358.33875pt x 294.09875pt>
 File: ./5_Indicatori//img/lungaFP/Acc/Max.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/lungaFP/Acc/Max.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/Acc/Max.pdf  used on input
- line 75.
+ line 117.
 (pdftex.def)             Requested size: 298.75264pt x 245.21033pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17] [18 <./5_Indicatori//img/lungaFP/Acc/Varianza.pdf> <./5_Indicatori//img/lu
-ngaFP/Acc/Max.pdf>]
-<./5_Indicatori//img/lungaFP/Acc/Peak.pdf, id=726, 355.3275pt x 294.09875pt>
+<./5_Indicatori//img/lungaFP/Acc/Peak.pdf, id=660, 355.3275pt x 294.09875pt>
 File: ./5_Indicatori//img/lungaFP/Acc/Peak.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/lungaFP/Acc/Peak.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/Acc/Peak.pdf  used on inpu
-t line 97.
+t line 125.
 (pdftex.def)             Requested size: 298.75264pt x 247.2791pt.
-<./5_Indicatori//img/lungaFP/Vel/Varianza.pdf, id=729, 357.335pt x 294.09875pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22 <./5_Indicatori//img/lungaFP/Acc/Varianza.pdf>] [23 <./5_Indicatori//img/lu
+ngaFP/Acc/Max.pdf> <./5_Indicatori//img/lungaFP/Acc/Peak.pdf>]
+<./5_Indicatori//img/lungaFP/Vel/Varianza.pdf, id=857, 357.335pt x 294.09875pt>
 
 File: ./5_Indicatori//img/lungaFP/Vel/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/lungaFP/Vel/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/Vel/Varianza.pdf  used on 
-input line 105.
+input line 148.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19 <./5_Indicatori//img/lungaFP/Acc/Peak.pdf>]
-<./5_Indicatori//img/lungaFP/Vel/Peak.pdf, id=793, 354.32375pt x 294.09875pt>
+<./5_Indicatori//img/lungaFP/Vel/Peak.pdf, id=858, 354.32375pt x 294.09875pt>
 File: ./5_Indicatori//img/lungaFP/Vel/Peak.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/lungaFP/Vel/Peak.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/Vel/Peak.pdf  used on inpu
-t line 113.
+t line 156.
 (pdftex.def)             Requested size: 298.75264pt x 247.97916pt.
- [20 <./5_Indicatori//img/lungaFP/Vel/Varianza.pdf> <./5_Indicatori//img/lungaF
-P/Vel/Peak.pdf>]
-<./5_Indicatori//img/lungaFP/VAng/Deviazione Standard.pdf, id=924, 352.31625pt 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./5_Indicatori//img/lungaFP/VAng/Deviazione Standard.pdf, id=859, 352.31625pt 
 x 294.09875pt>
 File: ./5_Indicatori//img/lungaFP/VAng/Deviazione Standard.pdf Graphic file (ty
 pe pdf)
 <use ./5_Indicatori//img/lungaFP/VAng/Deviazione Standard.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/VAng/Deviazione Standard.p
-df  used on input line 121.
+df  used on input line 169.
 (pdftex.def)             Requested size: 298.75264pt x 249.38377pt.
- [21 <./5_Indicatori//img/lungaFP/VAng/Deviazione Standard.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[24]
+
+LaTeX Warning: Text page 25 contains only floats.
+
+[25 <./5_Indicatori//img/lungaFP/Vel/Varianza.pdf> <./5_Indicatori//img/lungaFP
+/Vel/Peak.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
-<./5_Indicatori//img/lungaFP/VAng/Peak.pdf, id=990, 352.31625pt x 294.09875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+[26 <./5_Indicatori//img/lungaFP/VAng/Deviazione Standard.pdf>]
+<./5_Indicatori//img/lungaFP/VAng/Peak.pdf, id=1059, 352.31625pt x 294.09875pt>
+
 File: ./5_Indicatori//img/lungaFP/VAng/Peak.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/lungaFP/VAng/Peak.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/lungaFP/VAng/Peak.pdf  used on inp
-ut line 137.
+ut line 189.
 (pdftex.def)             Requested size: 298.75264pt x 249.38377pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-[22 <./5_Indicatori//img/lungaFP/VAng/Peak.pdf>]
-<./5_Indicatori//img/CurvaUFP/Acc/Media.pdf, id=1054, 367.3725pt x 294.09875pt>
+<./5_Indicatori//img/CurvaUFP/Acc/Media.pdf, id=1062, 367.3725pt x 294.09875pt>
 
 File: ./5_Indicatori//img/CurvaUFP/Acc/Media.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/CurvaUFP/Acc/Media.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/CurvaUFP/Acc/Media.pdf  used on in
-put line 151.
+put line 198.
 (pdftex.def)             Requested size: 298.75264pt x 239.17902pt.
-<./5_Indicatori//img/curvaUFP/Acc/Varianza.pdf, id=1055, 357.335pt x 294.09875p
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./5_Indicatori//img/curvaUFP/Acc/Varianza.pdf, id=1063, 357.335pt x 294.09875p
 t>
 File: ./5_Indicatori//img/curvaUFP/Acc/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/curvaUFP/Acc/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/curvaUFP/Acc/Varianza.pdf  used on
- input line 159.
+ input line 206.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./5_Indicatori//img/curvaUFP/Vel/Varianza.pdf, id=1056, 364.36125pt x 294.0987
+<./5_Indicatori//img/curvaUFP/Vel/Varianza.pdf, id=1064, 364.36125pt x 294.0987
 5pt>
 File: ./5_Indicatori//img/curvaUFP/Vel/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/curvaUFP/Vel/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/curvaUFP/Vel/Varianza.pdf  used on
- input line 167.
+ input line 214.
 (pdftex.def)             Requested size: 298.75264pt x 241.14906pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 <./5_Indicatori//img/CurvaUFP/Acc/Media.pdf>]
-<./5_Indicatori//img/curvaUFP/Vel/Peak.pdf, id=1135, 356.33125pt x 294.09875pt>
+[27 <./5_Indicatori//img/lungaFP/VAng/Peak.pdf>]
+<./5_Indicatori//img/curvaUFP/Vel/Peak.pdf, id=1126, 356.33125pt x 294.09875pt>
 
 File: ./5_Indicatori//img/curvaUFP/Vel/Peak.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/curvaUFP/Vel/Peak.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/curvaUFP/Vel/Peak.pdf  used on inp
-ut line 175.
+ut line 222.
 (pdftex.def)             Requested size: 298.75264pt x 246.58801pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24 <./5_Indicatori//img/curvaUFP/Acc/Varianza.pdf> <./5_Indicatori//img/curvaU
-FP/Vel/Varianza.pdf>]
-<./5_Indicatori//img/CurvaUFP/VAng/Media.pdf, id=1290, 357.335pt x 294.09875pt>
+[28 <./5_Indicatori//img/CurvaUFP/Acc/Media.pdf> <./5_Indicatori//img/curvaUFP/
+Acc/Varianza.pdf>] [29 <./5_Indicatori//img/curvaUFP/Vel/Varianza.pdf> <./5_Ind
+icatori//img/curvaUFP/Vel/Peak.pdf>]
+<./5_Indicatori//img/CurvaUFP/VAng/Media.pdf, id=1426, 357.335pt x 294.09875pt>
 
 File: ./5_Indicatori//img/CurvaUFP/VAng/Media.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/CurvaUFP/VAng/Media.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/CurvaUFP/VAng/Media.pdf  used on i
-nput line 199.
+nput line 246.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./5_Indicatori//img/CurvaUFP/VAng/Deviazione Standard.pdf, id=1291, 354.32375p
+<./5_Indicatori//img/CurvaUFP/VAng/Deviazione Standard.pdf, id=1427, 354.32375p
 t x 294.09875pt>
 File: ./5_Indicatori//img/CurvaUFP/VAng/Deviazione Standard.pdf Graphic file (t
 ype pdf)
 <use ./5_Indicatori//img/CurvaUFP/VAng/Deviazione Standard.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/CurvaUFP/VAng/Deviazione Standard.
-pdf  used on input line 207.
+pdf  used on input line 254.
 (pdftex.def)             Requested size: 298.75264pt x 247.97916pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25 <./5_Indicatori//img/curvaUFP/Vel/Peak.pdf>]
-
-LaTeX Warning: Text page 26 contains only floats.
-
-[26 <./5_Indicatori//img/CurvaUFP/VAng/Media.pdf> <./5_Indicatori//img/CurvaUFP
-/VAng/Deviazione Standard.pdf>]
-<./5_Indicatori//img/CurvaUFP/VAng/Max.pdf, id=1519, 357.335pt x 294.09875pt>
+<./5_Indicatori//img/CurvaUFP/VAng/Max.pdf, id=1428, 357.335pt x 294.09875pt>
 File: ./5_Indicatori//img/CurvaUFP/VAng/Max.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/CurvaUFP/VAng/Max.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/CurvaUFP/VAng/Max.pdf  used on inp
-ut line 215.
+ut line 262.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
-[27 <./5_Indicatori//img/CurvaUFP/VAng/Max.pdf>]
-<./5_Indicatori//img/CurvaUFP/Mag/Media.pdf, id=1601, 357.335pt x 294.09875pt>
+<./5_Indicatori//img/CurvaUFP/Mag/Media.pdf, id=1431, 357.335pt x 294.09875pt>
 File: ./5_Indicatori//img/CurvaUFP/Mag/Media.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/CurvaUFP/Mag/Media.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/CurvaUFP/Mag/Media.pdf  used on in
-put line 233.
+put line 278.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
-<./5_Indicatori//img/curvaUFP/Mag/Varianza.pdf, id=1602, 361.35pt x 294.09875pt
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
+
+ []
+
+<./5_Indicatori//img/curvaUFP/Mag/Varianza.pdf, id=1436, 361.35pt x 294.09875pt
 >
 File: ./5_Indicatori//img/curvaUFP/Mag/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/curvaUFP/Mag/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/curvaUFP/Mag/Varianza.pdf  used on
- input line 241.
+ input line 292.
 (pdftex.def)             Requested size: 298.75264pt x 243.15501pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[31 <./5_Indicatori//img/CurvaUFP/VAng/Media.pdf>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+LaTeX Warning: Text page 32 contains only floats.
 
- []
-
-<./5_Indicatori//img/LungaCurvaU/Acc/Media.pdf, id=1603, 362.35374pt x 294.0987
+[32 <./5_Indicatori//img/CurvaUFP/VAng/Deviazione Standard.pdf> <./5_Indicatori
+//img/CurvaUFP/VAng/Max.pdf>]
+<./5_Indicatori//img/LungaCurvaU/Acc/Media.pdf, id=1672, 362.35374pt x 294.0987
 5pt>
 File: ./5_Indicatori//img/LungaCurvaU/Acc/Media.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Acc/Media.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Acc/Media.pdf  used on
- input line 253.
+ input line 300.
 (pdftex.def)             Requested size: 298.75264pt x 242.48187pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./5_Indicatori//img/LungaCurvaU/Acc/Varianza.pdf, id=1604, 357.335pt x 294.098
+[33 <./5_Indicatori//img/CurvaUFP/Mag/Media.pdf> <./5_Indicatori//img/curvaUFP/
+Mag/Varianza.pdf>]
+<./5_Indicatori//img/LungaCurvaU/Acc/Varianza.pdf, id=1825, 357.335pt x 294.098
 75pt>
 File: ./5_Indicatori//img/LungaCurvaU/Acc/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Acc/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Acc/Varianza.pdf  used
- on input line 261.
+ on input line 308.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./5_Indicatori//img/LungaCurvaU/Acc/Media Rettificata.pdf, id=1605, 359.3425pt
+ [34 <./5_Indicatori//img/LungaCurvaU/Acc/Media.pdf> <./5_Indicatori//img/Lunga
+CurvaU/Acc/Varianza.pdf>]
+<./5_Indicatori//img/LungaCurvaU/Acc/Media Rettificata.pdf, id=1970, 359.3425pt
  x 294.09875pt>
 File: ./5_Indicatori//img/LungaCurvaU/Acc/Media Rettificata.pdf Graphic file (t
 ype pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Acc/Media Rettificata.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Acc/Media Rettificata.
-pdf  used on input line 269.
+pdf  used on input line 316.
 (pdftex.def)             Requested size: 298.75264pt x 244.52821pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./5_Indicatori//img/LungaCurvaU/Acc/Peak.pdf, id=1608, 357.335pt x 294.09875pt
+<./5_Indicatori//img/LungaCurvaU/Acc/Peak.pdf, id=1973, 357.335pt x 294.09875pt
 >
 File: ./5_Indicatori//img/LungaCurvaU/Acc/Peak.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Acc/Peak.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Acc/Peak.pdf  used on 
-input line 277.
+input line 324.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28 <./5_Indicatori//img/CurvaUFP/Mag/Media.pdf>] [29 <./5_Indicatori//img/curv
-aUFP/Mag/Varianza.pdf> <./5_Indicatori//img/LungaCurvaU/Acc/Media.pdf>]
-[30 <./5_Indicatori//img/LungaCurvaU/Acc/Varianza.pdf> <./5_Indicatori//img/Lun
-gaCurvaU/Acc/Media Rettificata.pdf>] [31 <./5_Indicatori//img/LungaCurvaU/Acc/P
-eak.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+[35 <./5_Indicatori//img/LungaCurvaU/Acc/Media Rettificata.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-<./5_Indicatori//img/LungaCurvaU/VAng/Media.pdf, id=2052, 357.335pt x 294.09875
+<./5_Indicatori//img/LungaCurvaU/VAng/Media.pdf, id=2045, 357.335pt x 294.09875
 pt>
 File: ./5_Indicatori//img/LungaCurvaU/VAng/Media.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/VAng/Media.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/VAng/Media.pdf  used o
-n input line 305.
+n input line 352.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
-<./5_Indicatori//img/LungaCurvaU/VAng/Max.pdf, id=2053, 357.335pt x 294.09875pt
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36 <./5_Indicatori//img/LungaCurvaU/Acc/Peak.pdf>]
+<./5_Indicatori//img/LungaCurvaU/VAng/Max.pdf, id=2122, 357.335pt x 294.09875pt
 >
 File: ./5_Indicatori//img/LungaCurvaU/VAng/Max.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/VAng/Max.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/VAng/Max.pdf  used on 
-input line 313.
+input line 360.
 (pdftex.def)             Requested size: 298.75264pt x 245.89693pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./5_Indicatori//img/LungaCurvaU/Mag/Varianza.pdf, id=2056, 361.35pt x 294.0987
+<./5_Indicatori//img/LungaCurvaU/Mag/Varianza.pdf, id=2125, 361.35pt x 294.0987
 5pt>
 File: ./5_Indicatori//img/LungaCurvaU/Mag/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Mag/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Mag/Varianza.pdf  used
- on input line 321.
+ on input line 368.
 (pdftex.def)             Requested size: 298.75264pt x 243.15501pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[32 <./5_Indicatori//img/LungaCurvaU/VAng/Media.pdf>] [33 <./5_Indicatori//img/
-LungaCurvaU/VAng/Max.pdf> <./5_Indicatori//img/LungaCurvaU/Mag/Varianza.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+ [37 <./5_Indicatori//img/LungaCurvaU/VAng/Media.pdf> <./5_Indicatori//img/Lung
+aCurvaU/VAng/Max.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
-<./5_Indicatori//img/LungaCurvaU/Vel/Varianza.pdf, id=2287, 364.36125pt x 294.0
+[38 <./5_Indicatori//img/LungaCurvaU/Mag/Varianza.pdf>]
+<./5_Indicatori//img/LungaCurvaU/Vel/Varianza.pdf, id=2356, 364.36125pt x 294.0
 9875pt>
 File: ./5_Indicatori//img/LungaCurvaU/Vel/Varianza.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Vel/Varianza.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Vel/Varianza.pdf  used
- on input line 333.
+ on input line 384.
 (pdftex.def)             Requested size: 298.75264pt x 241.14906pt.
-<./5_Indicatori//img/LungaCurvaU/Vel/Deviazione Standard.pdf, id=2288, 356.3312
+<./5_Indicatori//img/LungaCurvaU/Vel/Deviazione Standard.pdf, id=2357, 356.3312
 5pt x 294.09875pt>
 File: ./5_Indicatori//img/LungaCurvaU/Vel/Deviazione Standard.pdf Graphic file 
 (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Vel/Deviazione Standard.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Vel/Deviazione Standar
-d.pdf  used on input line 345.
+d.pdf  used on input line 392.
 (pdftex.def)             Requested size: 298.75264pt x 246.58801pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34 <./5_Indicatori//img/LungaCurvaU/Vel/Varianza.pdf>]
-<./5_Indicatori//img/LungaCurvaU/Vel/Peak.pdf, id=2363, 356.33125pt x 294.09875
+<./5_Indicatori//img/LungaCurvaU/Vel/Peak.pdf, id=2360, 356.33125pt x 294.09875
 pt>
 File: ./5_Indicatori//img/LungaCurvaU/Vel/Peak.pdf Graphic file (type pdf)
 <use ./5_Indicatori//img/LungaCurvaU/Vel/Peak.pdf>
 Package pdftex.def Info: ./5_Indicatori//img/LungaCurvaU/Vel/Peak.pdf  used on 
-input line 353.
+input line 400.
 (pdftex.def)             Requested size: 298.75264pt x 246.58801pt.
-)
-(6_Sviluppi/sviluppi.tex [35 <./5_Indicatori//img/LungaCurvaU/Vel/Deviazione St
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [39 <./5_Indicatori//img/LungaCurvaU/Vel/Varianza.pdf>]
+(6_Sviluppi/sviluppi.tex [40 <./5_Indicatori//img/LungaCurvaU/Vel/Deviazione St
 andard.pdf> <./5_Indicatori//img/LungaCurvaU/Vel/Peak.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
@@ -1518,23 +1611,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[36]) (7_Conclusioni/conclusioni.tex
+[41]) [42] (7_Conclusioni/conclusioni.tex
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-[37]) [38]
-Overfull \hbox (26.75026pt too wide) in paragraph at lines 56--56
-\OT1/pcr/m/n/12 www . sciencedirect . com / science / article / pii / S00014575
-23000696$[][]\OT1/ptm/m/n/12 . 
- []
+) [43]
 
-
-Overfull \hbox (5.22978pt too wide) in paragraph at lines 56--56
-\OT1/pcr/m/n/12 106096$[][]\OT1/ptm/m/n/12 . \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/1
-2 : [][]$\OT1/pcr/m/n/12 https : / / www . sciencedirect . com / science / arti
-cle /
- []
+Package biblatex Warning: No driver for 'artice'.
+(biblatex)                Using fallback driver on input line 56.
 
 
 Overfull \hbox (6.0069pt too wide) in paragraph at lines 56--56
@@ -1548,7 +1633,20 @@ Overfull \hbox (4.96013pt too wide) in paragraph at lines 56--56
 pp. 17{28. \OT1/ptm/m/sc/12 doi\OT1/ptm/m/n/12 : [][]$\OT1/pcr/m/n/12 https :
  []
 
-[39] (Tesi.aux (header.aux))
+
+Overfull \hbox (5.22978pt too wide) in paragraph at lines 56--56
+\OT1/pcr/m/n/12 106096$[][]\OT1/ptm/m/n/12 . \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/1
+2 : [][]$\OT1/pcr/m/n/12 https : / / www . sciencedirect . com / science / arti
+cle /
+ []
+
+
+Overfull \hbox (26.75026pt too wide) in paragraph at lines 56--56
+\OT1/pcr/m/n/12 www . sciencedirect . com / science / article / pii / S00014575
+23000696$[][]\OT1/ptm/m/n/12 . 
+ []
+
+[44] [45] (Tesi.aux (header.aux))
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 82B718B3B921C72D0DA75856D41EE39A;2711.
 Package logreq Info: Writing requests to 'Tesi.run.xml'.
@@ -1556,31 +1654,35 @@ Package logreq Info: Writing requests to 'Tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25422 strings out of 475389
- 462423 string characters out of 2776056
- 1219123 words of memory out of 3000000
- 46206 multiletter control sequences out of 15000+600000
+ 25620 strings out of 475389
+ 466970 string characters out of 2776056
+ 1226065 words of memory out of 3000000
+ 46384 multiletter control sequences out of 15000+600000
  494683 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,8n,106p,1174b,1873s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 110i,14n,106p,1174b,1873s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
 C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mex10.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Daniele/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Daniele/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Daniele/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
-rs/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.p
-fb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr
-8a.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
-mb8a.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
-utmr8a.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on Tesi.pdf (41 pages, 9287155 bytes).
+sfonts/cmextra/cmex8.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Daniele/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Daniele/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Daniele/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Da
+niele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr6.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniele/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniele/AppData/Local/
+Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Daniele/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Daniele/AppData/
+Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Daniele/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Tesi.pdf (47 pages, 9695517 bytes).
 PDF statistics:
- 2613 PDF objects out of 2984 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2706 PDF objects out of 2984 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
+ 369 words of extra memory for PDF output out of 10000 (max. 10000000)
 

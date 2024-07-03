@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  24 JUN 2024 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.19)  28 JUN 2024 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,18 +285,6 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-LaTeX Warning: Reference `fig:bici' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Reference `fig:sensore' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Reference `fig:bici' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Reference `fig:sensore' on page 1 undefined on input line 24.
-
 ! Undefined control sequence.
 l.28 ... Blue Coin della ST Microelettronics (\url
                                                   {https://www.st.com/en/eva...
@@ -311,26 +299,180 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 28.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
+
+
+! LaTeX Error: Environment subfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 			\begin{subfigure}
+                         [h]{.5\textwidth}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.46 			\begin{subfigure}[h]{.5\textwidth}
+                                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.46 			\begin{subfigure}[h]{.5\textwidth}
+                                          
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+l.47 				\centering\includegraphics
+                                   [width=.9\textwidth]{img/axis}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.47 ...tering\includegraphics[width=.9\textwidth]
+                                                  {img/axis}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.47 ...tering\includegraphics[width=.9\textwidth]
+                                                  {img/axis}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \begin{figure} on input line 45 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 			\end{subfigure}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment subfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 			\begin{subfigure}
+                         [h]{.5\textwidth}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.51 			\begin{subfigure}[h]{.5\textwidth}
+                                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.51 			\begin{subfigure}[h]{.5\textwidth}
+                                          
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+l.52 				\centering\includegraphics
+                                   [width=.7\textwidth]{img/SensorAxes}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.52 ...tering\includegraphics[width=.7\textwidth]
+                                                  {img/SensorAxes}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.52 ...tering\includegraphics[width=.7\textwidth]
+                                                  {img/SensorAxes}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \begin{figure} on input line 45 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 			\end{subfigure}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.56 \end{document}
+l.70 \end{document}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 ! Too many }'s.
 \endsa@boxit ...dvarwidth \color@endgroup \egroup 
                                                   
-l.56 \end{document}
+l.70 \end{document}
                    
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -340,28 +482,25 @@ Such booboos are generally harmless, so keep going.
 {C:/Users/Daniele/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 (sistema.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 1063 strings out of 475389
- 20529 string characters out of 2776056
- 365627 words of memory out of 3000000
- 22487 multiletter control sequences out of 15000+600000
- 471112 words of font info for 34 fonts, out of 8000000 for 9000
+ 1053 strings out of 475389
+ 20383 string characters out of 2776056
+ 366627 words of memory out of 3000000
+ 22478 multiletter control sequences out of 15000+600000
+ 470804 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,71p,528b,200s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 55i,5n,71p,528b,181s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Daniele\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
 rm1000.pk><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Daniele/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Daniele/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on sistema.pdf (2 pages, 72097 bytes).
+sfonts/cm/cmbx12.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Daniele/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Daniele/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Daniele/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on sistema.pdf (2 pages, 72349 bytes).
 PDF statistics:
  39 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -28,13 +28,13 @@
 	\subsection{Dinamica Longitudinale}
 	La dinamica longitudinale riguarda tutte quelle forze che consentono l'avanzamento della bicicletta. Affinché questa acceleri le deve essere applicata una forza
 	\[\vec{F}=m_{sys}\cdot a_{bike}\]
-	dove \(m_{sys}\) è la massa del sistema ovvero la somma della massa del ciclista e quella della bicicletta.
+	dove \(a_{bike}\) è l'accelerazione della bicicletta e \(m_{sys}\) è la massa del sistema ovvero la somma della massa del ciclista \(M_{ciclista}\) e quella della bicicletta \(m_{bike}\).
 	\[m_{sys}=m_{bike}+M_{ciclista}\]
 	
-	Possiamo quindi scomporre il vettore \(\vec{F}\) nelle due componenti \(\vec{F}_{P}\) e \(\vec{F}_{R}\)
+	Possiamo quindi scomporre il vettore \(\vec{F}\) nelle sue componenti \(\vec{F}_{P}\) e \(\vec{F}_{R}\)
 	
 	\[\vec{F}_{P}-\vec{F}_{R}=m_{sys}\cdot a_{bike}\]
-	dove la prima è la forza propulsiva, ovvero la forza che tende a far accelerare la bicicletta, mentre la seconda è la forza resistente, cioè la forza che si oppone al movimento della stessa.
+	dove \(\vec{F}_{P}\) è la forza propulsiva, ovvero la forza che tende a far accelerare la bicicletta, mentre \(\vec{F}_{R}\) è la forza resistente, cioè la forza che si oppone al movimento della stessa.
 	
 	Abbiamo quindi che:
 	\begin{itemize}
@@ -43,17 +43,17 @@
 		\item se \(\vec{F}_{P}=\vec{F}_{R} \rightarrow a_{sys}=0\) la bicicletta si muove a velocità costante.
 	\end{itemize}
 	
-	Per semplificare le cose consideriamo di trovarci in quest'ultimo caso, supponiamo quindi che il ciclista stia avanzando mantenendo la velocità della bicicletta (\(v_{bike}\)) costante.
+	Per semplificare le cose consideriamo di trovarci in quest'ultimo caso, supponiamo quindi che il ciclista stia avanzando mantenendo la velocità della bicicletta \(v_{bike}\) costante.
 		
 	\[a_{bike}=0 \rightarrow \vec{F}_{P}=\vec{F}_{R}\]
 	
 	Moltiplicando ora \(\vec{F}_{R}\) per \(v_{bike}\) possiamo convertire la forza resistente in potenza resistente
 	
 	\[P_{P}=P_{R}=\vec{F}_{R}\cdot v_{bike}\]
-	dove 
+	dove \(P_{P}\) è la potenza propulsiva che è pari a
 	
 	\[P_{P}=P_{in}\cdot\eta\]
-	con \(\eta\) il rapporto di trasmissione tra pedali e ruota e
+	con \(\eta\) il rapporto di trasmissione tra pedali e ruota e \(P_{in}\) la potenza in ingresso al sistema
 	
 	\[P_{in}=\vec{F}_{in}\cdot cos(\theta)\cdot l_{crank}\cdot\omega_{crank}\]
 	dove \(l_{crank}\) e \(\omega_{crank}\) sono, rispettivamente, la lunghezza e la velocità angolare della pedivella e \(\theta\) è angolo compreso tra la direzione del vettore \(\vec{F}_{in}\) (la forza che il ciclista applica sui pedali) e l'asse perpendicolare alla pedivella. Abbiamo quindi che, in funzione della posizione in cui si trova la pedivella, il ciclista sarà in grado di imprimere una forza maggiore o minore alla bicicletta. In particolare la forza propulsiva risulta massima quando le pedivelle sono parallele al terreno e minima quando sono perpendicolari allo stesso. L'accelerazione della bicicletta risulta quindi oscillante.
@@ -70,7 +70,7 @@
 	\begin{itemize}
 		\item \(\vec{F}_{air}\) è la forza di attrito dell'aria
 		\[\vec{F}_{air}=\frac{1}{2}\rho_{air}\cdot C_{d}\cdot A\cdot v_{air}^2\]
-		dove \(\rho_{air}\) è la densità dell'aria, \(C_{d}\) è il coefficiente d'attrito, \(A\) è l'area frontale del ciclista e della bicicletta e \(v_{air}\) è la velocità dell'aria rispetto alla bicicletta ed è quindi composta dalla velocità del ciclista e dalla velocità del vento 
+		dove \(\rho_{air}\) è la densità dell'aria, \(C_{d}\) è il coefficiente d'attrito, \(A\) è l'area frontale del ciclista e della bicicletta e \(v_{air}\) è la velocità dell'aria rispetto alla bicicletta ed è quindi composta dalla velocità del ciclista \(v_{bike}\) e dalla velocità del vento \(v_{wind}\) 
 		\[v_{air}=v_{bike}+v_{wind}\]
 		\[\vec{F}_{air}=\frac{1}{2}\rho_{air}\cdot C_{d}\cdot A\cdot (v_{bike}+v_{wind})^2\]
 		

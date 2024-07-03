@@ -1,0 +1,185 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ruota}{article}{}
+      \name{author}{3}{}{%
+        {{hash=54ec9d9d527342a5191b2f38e3cfb697}{%
+           family={R.},
+           familyi={R\bibinitperiod},
+           given={Dhinesh},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f9960b60e279a6a10f5a9b3e3fb9cfcd}{%
+           family={S.P.},
+           familyi={S\bibinitperiod},
+           given={Preejith},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e5a08523ea7b387496a4ae118fe2444f}{%
+           family={Sivaprakasam},
+           familyi={S\bibinitperiod},
+           given={Mohanasankar},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{626e90c6c4db62e372709c8524339520}
+      \strng{fullhash}{626e90c6c4db62e372709c8524339520}
+      \strng{bibnamehash}{626e90c6c4db62e372709c8524339520}
+      \strng{authorbibnamehash}{626e90c6c4db62e372709c8524339520}
+      \strng{authornamehash}{626e90c6c4db62e372709c8524339520}
+      \strng{authorfullhash}{626e90c6c4db62e372709c8524339520}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE International Symposium on Medical Measurements and Applications (MeMeA)}
+      \field{title}{Ride Profiling for a Single Speed Bicycle Using an Inertial Sensor}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/MeMeA.2019.8802138
+      \endverb
+      \keyw{Wheels;Acceleration;Gyroscopes;Force;Accelerometers;Bicycles;Propulsion;sports technology;cycling sensor;inertial sensors;athletic performance}
+    \endentry
+    \entry{brake}{artice}{}
+      \name{author}{4}{}{%
+        {{hash=cfe59272153a600119ce4e29f335fb4c}{%
+           family={Schnee},
+           familyi={S\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1613722136ba3e190ec7e0ccceedc42a}{%
+           family={Stegmaier},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=42ab58a2288f162bd80bae33f09e174b}{%
+           family={Lipowsky},
+           familyi={L\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=872675eb4859b44868c046a033349cff}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Pu},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{64089dad1e3ba1df10d37755b50f169b}
+      \strng{fullhash}{888a80b4561492a946db4aef425d32b7}
+      \strng{bibnamehash}{888a80b4561492a946db4aef425d32b7}
+      \strng{authorbibnamehash}{888a80b4561492a946db4aef425d32b7}
+      \strng{authornamehash}{64089dad1e3ba1df10d37755b50f169b}
+      \strng{authorfullhash}{888a80b4561492a946db4aef425d32b7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE Sensors Applications Symposium (SAS)}
+      \field{title}{Brake Detection for Electric Bicycles using Inertial Measurement Units}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/SAS.2019.8706001
+      \endverb
+      \keyw{Brakes;Estimation;Acceleration;Bicycles;Resistance;Vehicle dynamics;Wind speed;electric bicycle;MEMS;brake detection;mass estimation}
+    \endentry
+    \entry{transfun}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6fc8488eaef527cbe6eae24251ec5892}{%
+           family={USAMI},
+           familyi={U\bibinitperiod},
+           given={Yuri},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=246ad5fdd1bc4e5062436b95f14781f8}{%
+           family={ISHIKAWA},
+           familyi={I\bibinitperiod},
+           given={Kazuaki},
+           giveni={K\bibinitperiod}}}%
+        {{hash=12f6c954609c62b021a1f44e3d901c88}{%
+           family={TAKAYAMA},
+           familyi={T\bibinitperiod},
+           given={Toshinori},
+           giveni={T\bibinitperiod}}}%
+        {{hash=24bca561661f158508a40a32649bd47b}{%
+           family={YANAGISAWA},
+           familyi={Y\bibinitperiod},
+           given={Masao},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eb8da7cbbf67ae3fa5e1f8bf78e1dd65}{%
+           family={TOGAWA},
+           familyi={T\bibinitperiod},
+           given={Nozomu},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ffd21092a0f88e5fa2a0291575669cd}
+      \strng{fullhash}{889a7dc861f21a6684215e30021bbaa3}
+      \strng{bibnamehash}{889a7dc861f21a6684215e30021bbaa3}
+      \strng{authorbibnamehash}{889a7dc861f21a6684215e30021bbaa3}
+      \strng{authornamehash}{9ffd21092a0f88e5fa2a0291575669cd}
+      \strng{authorfullhash}{889a7dc861f21a6684215e30021bbaa3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences}
+      \field{month}{08}
+      \field{title}{Bicycle Behavior Recognition Using 3-Axis Acceleration Sensor and 3-Axis Gyro Sensor Equipped with Smartphone}
+      \field{volume}{E102.A}
+      \field{year}{2019}
+      \field{pages}{953\bibrangedash 965}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1587/transfun.E102.A.953
+      \endverb
+    \endentry
+    \entry{dtwAndCo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4682d47c9294cbfec93c2e1a3d4feef3}{%
+           family={Saiprasert\bibnamedelima C.},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Thajchayapong\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           suffix={Pholprasit\bibnamedelima T.},
+           suffixi={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{fullhash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{bibnamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authorbibnamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authornamehash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \strng{authorfullhash}{4682d47c9294cbfec93c2e1a3d4feef3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{15}
+      \field{title}{Detection of Driving Events using Sensory Data on Smartphone.}
+      \field{volume}{Int. J. ITS Res.}
+      \field{year}{2017}
+      \field{pages}{17\bibrangedash 28}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1007/s13177-015-0116-5
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

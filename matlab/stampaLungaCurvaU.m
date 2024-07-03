@@ -293,6 +293,19 @@ function stampa_gen(tP,tF,funP,funF,fun_str,fun_axes,tit,xlbl,ylbl,limY)
 n=length(fun_axes);
 font="Times New Roman";
 
+lineeLunga=ones(5,1);
+lineeLunga(1)=1;
+lineeLunga(2)=15;
+lineeLunga(3)=19.4;
+lineeLunga(4)=23.76;
+lineeLunga(5)=25.4;
+
+lineeCCurva=ones(4,1);
+lineeCCurva(1)=2;
+lineeCCurva(2)=15;
+lineeCCurva(3)=20.5;
+lineeCCurva(4)=28;
+
 for i=1:n
     if (fun_axes(i)=="X"||fun_axes(i)=="Roll")
         c(i)='r';
@@ -316,6 +329,10 @@ for i=3:2:2*n+1
     ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(j,:))
     grid
+    hold on
+    for k=1:length(lineeLunga)
+        line(lineeLunga(k)*[1,1],limY(j,:), 'Color','black')
+    end
 end
 
 for i=2:2:2*n
@@ -329,6 +346,9 @@ for i=2:2:2*n
     ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(i/2,:))
     grid
+    for j=1:length(lineeCCurva)
+        line(lineeCCurva(j)*[1,1],limY(i/2,:), 'Color','black')
+    end
 end
 
 exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurvaU\"+fun_str+"\"+tit+".pdf",ContentType="vector")

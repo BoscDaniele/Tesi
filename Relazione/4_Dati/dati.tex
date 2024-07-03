@@ -16,8 +16,24 @@
 %		\item lieve accelerazione: in questa fase i dati sono stati raccolti emulando una situazione di pedalata normale
 %		\item forte accelerazione: in questa fase i dati sono stati raccolti emulando una situazione di pedalata vigorosa
 		\item frenata: in questa fase i dati sono stati raccolti sia in situazioni di progressiva che di repentina perdita di velocità
-		\item curva: in questa fase sono stati raccolti dati inerenti a curve principalmente di 90° e 180° percorse più o meno velocemente
+		\item curva: in questa fase sono stati raccolti dati inerenti a curve principalmente di \(90^\circ\) e \(180^\circ\) percorse più o meno velocemente
 	\end{itemize}
+	
+	\begin{center}
+		\begin{figure}[h!]
+			\begin{subfigure}[h]{.5\textwidth}
+				\centering\includegraphics[width=.9\textwidth]{img/percorsoDritto}
+				\caption{}
+				\label{fig:percorsoDritto}
+			\end{subfigure}
+			\begin{subfigure}[h]{.5\textwidth}
+				\centering\includegraphics[width=.9\textwidth]{img/percorsoCurvo}
+				\caption{}
+				\label{fig:percorsoCurvo}
+			\end{subfigure}
+			\caption[]{Percorsi effettuati durante la raccolta dati. Nella figura \ref{fig:percorsoDritto}, a sinistra, un esempio di percorso dritto; nella figura \ref{fig:percorsoCurvo}, a destra, un esempio di percorso con curva di \(180^\circ\)}
+		\end{figure}
+	\end{center}
 	
 	Dato che il sensore non era integrato sulla bicicletta, ma andava fissato di volta in volta sulla stessa, all'inizio di ogni sessione è stato necessario determinare la matrice di rotazione da applicare ai dati per far coincidere il sistema di riferimento del sensore con quello della bicicletta. Per far ciò, una volta fissato il sensore, sono stati raccolti dati per un periodo di tempo di \(30s\) con la bicicletta mantenuta ferma dapprima in posizione verticale (in modo che la direzione dell'asse longitudinale fosse parallelo al terreno) e, successivamente, inclinata. Dei dati così raccolti sono stati tenuti i \(10s\) centrali, in modo da eliminare gli istanti successivi all'accensione e precedenti allo spegnimento del sensore, che sono i più sporchi. I primi dati ottenuti, quelli con la bicicletta in verticale, sono stati quindi utilizzati per calcolare la rotazione attorno all'asse \(x\). Questo è stato fatto calcolando il modulo del valor medio della componente gravitazionale che giace sul piano \(yz\) e calcolando poi la rotazione necessaria per annullare la componente \(x\) di tale vettore.
 	
@@ -115,14 +131,5 @@
 			\label{fig:MagCurvaU}
 		\end{figure}
 	\end{center}
-%	\subsection{To Do?}
-%	Magari aggiungere:
-%	\begin{itemize}
-%		\item qualcosa sulla bicicletta
-%		\item qualcosa sulla strada dove sono stati raccolti i dati
-%		\item accenni alla velocità
-%		\item (integrale della velocità angolare?)
-%		\item Trasformata e spettro
-%	\end{itemize}
 		
 \end{document}

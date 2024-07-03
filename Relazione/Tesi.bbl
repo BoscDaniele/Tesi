@@ -19,106 +19,86 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{chen}{article}{}
+    \entry{ruota}{article}{}
       \name{author}{3}{}{%
-        {{hash=156547ae78e1a840d1a511fd19df87d3}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Yao},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=9977c03c4025bd86cbe014ceb976aabe}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Ke},
-           giveni={K\bibinitperiod}}}%
-        {{hash=bad3fad568db86f6f27c52a74ab1b45e}{%
-           family={Lu},
-           familyi={L\bibinitperiod},
-           given={Jian\bibnamedelima John},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=54ec9d9d527342a5191b2f38e3cfb697}{%
+           family={R.},
+           familyi={R\bibinitperiod},
+           given={Dhinesh},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f9960b60e279a6a10f5a9b3e3fb9cfcd}{%
+           family={S.P.},
+           familyi={S\bibinitperiod},
+           given={Preejith},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e5a08523ea7b387496a4ae118fe2444f}{%
+           family={Sivaprakasam},
+           familyi={S\bibinitperiod},
+           given={Mohanasankar},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{e0b883e673e1aad6827d0ae39367d4d0}
-      \strng{fullhash}{e0b883e673e1aad6827d0ae39367d4d0}
-      \strng{bibnamehash}{e0b883e673e1aad6827d0ae39367d4d0}
-      \strng{authorbibnamehash}{e0b883e673e1aad6827d0ae39367d4d0}
-      \strng{authornamehash}{e0b883e673e1aad6827d0ae39367d4d0}
-      \strng{authorfullhash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{namehash}{626e90c6c4db62e372709c8524339520}
+      \strng{fullhash}{626e90c6c4db62e372709c8524339520}
+      \strng{bibnamehash}{626e90c6c4db62e372709c8524339520}
+      \strng{authorbibnamehash}{626e90c6c4db62e372709c8524339520}
+      \strng{authornamehash}{626e90c6c4db62e372709c8524339520}
+      \strng{authorfullhash}{626e90c6c4db62e372709c8524339520}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0001-4575}
-      \field{journaltitle}{Accident Analysis \& Prevention}
-      \field{title}{Feature selection for driving style and skill clustering using naturalistic driving data and driving behavior questionnaire}
-      \field{volume}{185}
-      \field{year}{2023}
-      \field{pages}{107022}
-      \range{pages}{1}
+      \field{booktitle}{2019 IEEE International Symposium on Medical Measurements and Applications (MeMeA)}
+      \field{title}{Ride Profiling for a Single Speed Bicycle Using an Inertial Sensor}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
       \verb{doi}
-      \verb https://doi.org/10.1016/j.aap.2023.107022
+      \verb 10.1109/MeMeA.2019.8802138
       \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0001457523000696
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0001457523000696
-      \endverb
-      \keyw{Driving behavior,Feature selection,Cluster analysis,Driving behavior questionnaire,Driving skill,Driving style}
+      \keyw{Wheels;Acceleration;Gyroscopes;Force;Accelerometers;Bicycles;Propulsion;sports technology;cycling sensor;inertial sensors;athletic performance}
     \endentry
-    \entry{MA2021106096}{article}{}
-      \name{author}{5}{}{%
-        {{hash=eacc0987fc32ef06777c81f29cc16dde}{%
-           family={Ma},
-           familyi={M\bibinitperiod},
-           given={Yongfeng},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=18eaa9606f699f9c77fb0c58298ed523}{%
+    \entry{brake}{artice}{}
+      \name{author}{4}{}{%
+        {{hash=cfe59272153a600119ce4e29f335fb4c}{%
+           family={Schnee},
+           familyi={S\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1613722136ba3e190ec7e0ccceedc42a}{%
+           family={Stegmaier},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=42ab58a2288f162bd80bae33f09e174b}{%
+           family={Lipowsky},
+           familyi={L\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=872675eb4859b44868c046a033349cff}{%
            family={Li},
            familyi={L\bibinitperiod},
-           given={Wenlu},
-           giveni={W\bibinitperiod}}}%
-        {{hash=71c243c96de5e88a84c62a8d28ca0280}{%
-           family={Tang},
-           familyi={T\bibinitperiod},
-           given={Kun},
-           giveni={K\bibinitperiod}}}%
-        {{hash=7550d5b95dc690406f128ee12f0707f1}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Ziyu},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=e6f759c252c24139f8e50290793bdd45}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Shuyan},
-           giveni={S\bibinitperiod}}}%
+           given={Pu},
+           giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{5a10ac5355c2358a0b2277bdb1245e35}
-      \strng{fullhash}{c716f35de22f3114185eea0be1929079}
-      \strng{bibnamehash}{c716f35de22f3114185eea0be1929079}
-      \strng{authorbibnamehash}{c716f35de22f3114185eea0be1929079}
-      \strng{authornamehash}{5a10ac5355c2358a0b2277bdb1245e35}
-      \strng{authorfullhash}{c716f35de22f3114185eea0be1929079}
+      \strng{namehash}{64089dad1e3ba1df10d37755b50f169b}
+      \strng{fullhash}{888a80b4561492a946db4aef425d32b7}
+      \strng{bibnamehash}{888a80b4561492a946db4aef425d32b7}
+      \strng{authorbibnamehash}{888a80b4561492a946db4aef425d32b7}
+      \strng{authornamehash}{64089dad1e3ba1df10d37755b50f169b}
+      \strng{authorfullhash}{888a80b4561492a946db4aef425d32b7}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0001-4575}
-      \field{journaltitle}{Accident Analysis \& Prevention}
-      \field{title}{Driving style recognition and comparisons among driving tasks based on driver behavior in the online car-hailing industry}
-      \field{volume}{154}
-      \field{year}{2021}
-      \field{pages}{106096}
-      \range{pages}{1}
+      \field{booktitle}{2019 IEEE Sensors Applications Symposium (SAS)}
+      \field{title}{Brake Detection for Electric Bicycles using Inertial Measurement Units}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
       \verb{doi}
-      \verb https://doi.org/10.1016/j.aap.2021.106096
+      \verb 10.1109/SAS.2019.8706001
       \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
-      \endverb
+      \keyw{Brakes;Estimation;Acceleration;Bicycles;Resistance;Vehicle dynamics;Wind speed;electric bicycle;MEMS;brake detection;mass estimation}
     \endentry
     \entry{transfun}{article}{}
       \name{author}{5}{}{%
@@ -169,39 +149,6 @@
       \verb 10.1587/transfun.E102.A.953
       \endverb
     \endentry
-    \entry{dtw}{article}{}
-      \name{author}{2}{}{%
-        {{hash=957decacf4aceb83687bea501d500560}{%
-           family={Johnson},
-           familyi={J\bibinitperiod},
-           given={Derick\bibnamedelima A.},
-           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=5d197b5176ff929bae824213006a1e07}{%
-           family={Trivedi},
-           familyi={T\bibinitperiod},
-           given={Mohan\bibnamedelima M.},
-           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
-      \strng{fullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
-      \strng{bibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
-      \strng{authorbibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
-      \strng{authornamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
-      \strng{authorfullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2011 14th International IEEE Conference on Intelligent Transportation Systems (ITSC)}
-      \field{title}{Driving style recognition using a smartphone as a sensor platform}
-      \field{year}{2011}
-      \field{pages}{1609\bibrangedash 1615}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1109/ITSC.2011.6083078
-      \endverb
-      \keyw{Vehicles;Accelerometers;Acceleration;Gyroscopes;Monitoring;Safety;Global Positioning System}
-    \endentry
     \entry{dtwAndCo}{article}{}
       \name{author}{1}{}{%
         {{hash=4682d47c9294cbfec93c2e1a3d4feef3}{%
@@ -231,6 +178,188 @@
       \verb{doi}
       \verb https://doi.org/10.1007/s13177-015-0116-5
       \endverb
+    \endentry
+    \entry{MA2021106096}{article}{}
+      \name{author}{5}{}{%
+        {{hash=eacc0987fc32ef06777c81f29cc16dde}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Yongfeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=18eaa9606f699f9c77fb0c58298ed523}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wenlu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=71c243c96de5e88a84c62a8d28ca0280}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7550d5b95dc690406f128ee12f0707f1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ziyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e6f759c252c24139f8e50290793bdd45}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shuyan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a10ac5355c2358a0b2277bdb1245e35}
+      \strng{fullhash}{c716f35de22f3114185eea0be1929079}
+      \strng{bibnamehash}{c716f35de22f3114185eea0be1929079}
+      \strng{authorbibnamehash}{c716f35de22f3114185eea0be1929079}
+      \strng{authornamehash}{5a10ac5355c2358a0b2277bdb1245e35}
+      \strng{authorfullhash}{c716f35de22f3114185eea0be1929079}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-4575}
+      \field{journaltitle}{Accident Analysis \& Prevention}
+      \field{title}{Driving style recognition and comparisons among driving tasks based on driver behavior in the online car-hailing industry}
+      \field{volume}{154}
+      \field{year}{2021}
+      \field{pages}{106096}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.aap.2021.106096
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457521001275
+      \endverb
+    \endentry
+    \entry{D&RSense}{article}{}
+      \name{author}{5}{}{%
+        {{hash=f873ba9e215a1175a49894fb3a33fb24}{%
+           family={Bose},
+           familyi={B\bibinitperiod},
+           given={Beepa},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6dbaaeac8138e51297182e5e8c039993}{%
+           family={Dutta},
+           familyi={D\bibinitperiod},
+           given={Joy},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e9c418b40eb48495682cffb53468e1c1}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Subhasish},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3c188d893055a26451591b9412193629}{%
+           family={Pramanick},
+           familyi={P\bibinitperiod},
+           given={Pradip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=dce1d8d9e724593a546789fc03d28435}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Sarbani},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{022d9e8fcd9a62768673cf13d7da2698}
+      \strng{fullhash}{f2216926683c80ccb60d1914a0eb7e96}
+      \strng{bibnamehash}{f2216926683c80ccb60d1914a0eb7e96}
+      \strng{authorbibnamehash}{f2216926683c80ccb60d1914a0eb7e96}
+      \strng{authornamehash}{022d9e8fcd9a62768673cf13d7da2698}
+      \strng{authorfullhash}{f2216926683c80ccb60d1914a0eb7e96}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 3rd International Conference On Internet of Things: Smart Innovation and Usages (IoT-SIU)}
+      \field{title}{D\&RSense: Detection of Driving Patterns and Road Anomalies}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/IoT-SIU.2018.8519861
+      \endverb
+      \keyw{Smart phones;Vehicles;Roads;Sensors;Acceleration;Accelerometers;Support vector machines;Driving style analysis;Road quality detection;FastDTW;SVM}
+    \endentry
+    \entry{chen}{article}{}
+      \name{author}{3}{}{%
+        {{hash=156547ae78e1a840d1a511fd19df87d3}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9977c03c4025bd86cbe014ceb976aabe}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ke},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bad3fad568db86f6f27c52a74ab1b45e}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jian\bibnamedelima John},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{fullhash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{bibnamehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{authorbibnamehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{authornamehash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \strng{authorfullhash}{e0b883e673e1aad6827d0ae39367d4d0}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-4575}
+      \field{journaltitle}{Accident Analysis \& Prevention}
+      \field{title}{Feature selection for driving style and skill clustering using naturalistic driving data and driving behavior questionnaire}
+      \field{volume}{185}
+      \field{year}{2023}
+      \field{pages}{107022}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.aap.2023.107022
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457523000696
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001457523000696
+      \endverb
+      \keyw{Driving behavior,Feature selection,Cluster analysis,Driving behavior questionnaire,Driving skill,Driving style}
+    \endentry
+    \entry{dtw}{article}{}
+      \name{author}{2}{}{%
+        {{hash=957decacf4aceb83687bea501d500560}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Derick\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5d197b5176ff929bae824213006a1e07}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Mohan\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{fullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{bibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authorbibnamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authornamehash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \strng{authorfullhash}{8ef6ffa58c3fc0b1c19e280d48b5afff}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 14th International IEEE Conference on Intelligent Transportation Systems (ITSC)}
+      \field{title}{Driving style recognition using a smartphone as a sensor platform}
+      \field{year}{2011}
+      \field{pages}{1609\bibrangedash 1615}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ITSC.2011.6083078
+      \endverb
+      \keyw{Vehicles;Accelerometers;Acceleration;Gyroscopes;Monitoring;Safety;Global Positioning System}
     \endentry
   \enddatalist
 \endrefsection

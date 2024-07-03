@@ -1,28 +1,37 @@
 \documentclass[class=article]{standalone}
 
+%\documentclass[12pt,a4paper]{article}
+%
+%\usepackage{../preambolo}
+%
+%\usepackage[
+%style=numeric,
+%natbib=true,
+%backend=biber,
+%sorting=none,
+%maxbibnames=99
+%]{biblatex}
+%\addbibresource{../bibliografia.bib}
+
 \begin{document}
+%	\justifying
 	\section{Stato dell'Arte}
-	Sono già stati effettuati numerosi studi riguardanti la definizione di indicatori per la caratterizzazione dello stile di guida.
-	Molti di questi si concentrano sulle automobili e altri, come in questo caso, su veicoli più leggeri, come le biciclette.
+	Sono già stati effettuati numerosi studi riguardo la definizione di indicatori per la caratterizzazione dello stile di guida.
+	Mentre la maggior parte di questi si concentrano sulle automobili, altri, come in questo caso, si focalizzano su veicoli più leggeri, come le biciclette.
 	
-	Ogni ricerca aveva la sua peculiarità, nonostante l'argomento fosse simile, alcune di queste utilizzano il machine learning o il dynamic time warping per ottenere pattern utili per il riconoscimento, altri studi utilizzano metodi di analisi statistica e altri algoritmi per evidenziare eventi specifici.
+	Gli approcci utilizzati per la caratterizzazione dello stile di guida variano notevolmente sia per finalità che per realizzazione. Nel nostro caso, abbiamo scelto di utilizzare una piattaforma inerziale montata sul telaio della bicicletta. Tuttavia non è sempre questo il caso.
 	
-	Le ricerche si differenziano anche in base ai sensori utilizzati, la maggior parte di queste fanno utilizzo di piattaforme inerziali oppure cellulari per raccogliere dati quali accelerazione e velocità angolari e ottengono poi la velocità e l'orientamento integrando le precedenti.
+	Per esempio, lo studio \cite{ruota}, utilizza lo stesso sensore ma agganciato alla ruota posteriore. Questo gli consente di misurare direttamente la velocità della bicicletta e la cadenza della pedalata utilizzando queste informazioni al fine di monitorare le prestazioni di un ciclista.
 	
-	In alcuni casi al fine di ottenere misure più attendibili la piattaforma inerziale è stata accompagnata da un altro sensore in grado di "catturare" la velocità del veicolo. In questi casi si è optato per un GPS o un altro sensore posto sulla ruota che consente di determinare in quanto tempo questa compie un giro completo e, quindi, la velocità della bicicletta.
+	Lo studio \cite{brake}, invece, si concentra sul riconoscere un evento specifico, utilizzando una piattaforma inerziale per rilevare le frenate, distinguendo quelle lunghe e progressive da quelle improvvise.
 	
-	Altri articoli, per meglio catturare alcuni comportamenti del ciclista, hanno provato a montare il sensore sul manubrio della bicicletta invece che sul telaio. In questo modo il sensore è riuscito a catturare il movimento che il ciclista fa con il manubrio per mantenere in equilibrio la bicicletta durante la corsa e, in base a questo, stabilire che stile di guida stesse adottando.
+	Vista la facile reperibilità, in altri articoli si è preferito utilizzare come sensore uno smartphone, i quali contengono al loro interno accelerometri, giroscopi e GPS. Questo approccio ha il vantaggio di sfruttare dispositivi già ampiamente diffusi.
 	
-	Infine altri articoli hanno fatto uso di telecamere e sensori montati sul ciclista stesso per valutare il comportamento di quest'ultimo durante la corsa.\hfill\break
+	Tra questi citiamo lo studio \cite{transfun} che utilizza uno smartphone montato sul manubrio della bicicletta. Questo consente di registrare i movimenti periodici necessari per il bilanciamento della bici. I dati raccolti vengono poi analizzati tramite l'algoritmo di machine learning Random Forest Classifier per determinare cosa stia avvenendo.
 	
+	Infine, l'articolo \cite{dtwAndCo} propone tre diversi algoritmi per rilevare lo stile di guida di un veicolo, utilizzando uno smartphone come piattaforma inerziale e GPS. Grazie a quest'ultimo è possibile ottenere delle misure di velocità più precise rispetto all'integrazione dell'accelerazione. Il riconoscimento degli eventi avviene poi tramite introduzione di livelli soglia o tramite Dynamic Time Warping.
 	
-%	(Per la bicicletta elettrica è stato provato a valutare lo stile di guida a partire dalla tensione in entrata e in uscita dalla batteria)
-%	
-%	(In altri casi i dati raccolti venivano usati per prevedere la traiettoria della bicicletta o per capire quando il ciclista sta frenando)
-	
-	
-%	Ogni ricerca aveva la sua peculiarità, nonostante l'argomento fosse simile, alcuni studi si concentravano sulla definizione di stili di guida mentre altri utilizzavano i dati raccolti per fini differenti come per esempio \Huge(Prendere qualche articolo già letto e inserirlo).
-	
-	
+%	\newpage
+%	\printbibliography[title={Bibliografia}]
 	
 \end{document}

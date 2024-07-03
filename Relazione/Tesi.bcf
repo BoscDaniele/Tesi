@@ -2349,11 +2349,18 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">chen</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">MA2021106096</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">ruota</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">brake</bcf:citekey>
     <bcf:citekey order="3" intorder="1">transfun</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">dtw</bcf:citekey>
-    <bcf:citekey order="4" intorder="2">dtwAndCo</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">dtwAndCo</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">transfun</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">MA2021106096</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">D&amp;RSense</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">chen</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">MA2021106096</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">transfun</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">dtw</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">dtwAndCo</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -292,6 +292,13 @@ function stampa_gen(tP,tF,funP,funF,fun_str,fun_axes,tit,xlbl,ylbl,limY)
 n=length(fun_axes);
 font="Times New Roman";
 
+linee=ones(5,1);
+linee(1)=1;
+linee(2)=15;
+linee(3)=19.4;
+linee(4)=23.76;
+linee(5)=25.4;
+
 for i=1:n
     if (fun_axes(i)=="X"||fun_axes(i)=="Roll")
         c(i)='r';
@@ -315,6 +322,9 @@ for i=3:2:2*n+1
     ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(j,:))
     grid
+    hold on
+    line(1*[1,1],limY(j,:), 'Color','black')
+    line(53.5*[1,1],limY(j,:), 'Color','black')
 end
 
 for i=2:2:2*n
@@ -328,6 +338,10 @@ for i=2:2:2*n
     ylabel(fun_str+"("+ylbl+")",FontName=font)
     ylim(limY(i/2,:))
     grid
+    hold on
+    for j=1:length(linee)
+        line(linee(j)*[1,1],limY(i/2,:), 'Color','black')
+    end
 end
 
 exportgraphics(f,"..\Relazione\5_Indicatori\img\lungaFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")

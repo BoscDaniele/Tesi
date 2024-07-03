@@ -293,7 +293,7 @@ font="Times New Roman";
 linee=ones(4,2);
 linee(1,:)=[2 2];
 linee(2,:)=[15 15];
-linee(3,:)=[20 20];
+linee(3,:)=[20.5 20.5];
 linee(4,:)=[28 28];
 
 str={'Accelerate 1','Tourning','Accelerate 2','Brake'};

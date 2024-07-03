@@ -4,7 +4,7 @@ clc
 
 dati={{".\dati\lunga_forte\",2},{".\dati\curvaU_forte\",4},{".\dati\curva_forte\",4},{".\db\secchia\",2}};
 
-n=1;
+n=2;
 
 path=dati{n}{1};
 rilievo=dati{n}{2};
@@ -31,35 +31,35 @@ vel=cumsum(acc)*0.04;
 
 font="Times New Roman";
 
-% Rettilineo
-linee=ones(5,1);
-linee(1)=1;
-linee(2)=15;
-linee(3)=19.4;
-linee(4)=23.76;
-linee(5)=25.4;
-
-str={'Accelerate','Idle','Accelerate','Idle','Brake + Turning'};
-
-
-% % Curva U
-% linee=ones(4,1);
-% linee(1)=2;
+% % Rettilineo
+% linee=ones(5,1);
+% linee(1)=1;
 % linee(2)=15;
-% linee(3)=20;
-% linee(4)=28;
+% linee(3)=19.4;
+% linee(4)=23.76;
+% linee(5)=25.4;
 % 
-% str={'Accelerate 1','Turning','Accelerate 2','Brake'};
+% str={'Accelerate','Idle','Accelerate','Idle','Brake + Turning'};
 
-fun=acc;
 
-axs={"X","Y","Z"};
-xlbl="t(s)";
-ylbl="Acc. (m/s^2)";
+% Curva U
+linee=ones(4,1);
+linee(1)=2;
+linee(2)=15;
+linee(3)=20.5;
+linee(4)=28;
 
-% axs={"Roll","Pitch","Yaw"};
+str={'Accelerate 1','Turning','Accelerate 2','Brake'};
+
+fun=vang;
+
+% axs={"X","Y","Z"};
 % xlbl="t(s)";
-% ylbl="V. Ang. (deg/s)";
+% ylbl="Acc. (m/s^2)";
+
+axs={"Roll","Pitch","Yaw"};
+xlbl="t(s)";
+ylbl="V. Ang. (deg/s)";
 
 % axs={"X","Y","Z"};
 % xlbl="t(s)";
@@ -72,31 +72,31 @@ limY(1,:)=[floor(min(fun(:,1))),ceil(max(fun(:,1)))];
 limY(2,:)=[floor(min(fun(:,2))),ceil(max(fun(:,2)))];
 limY(3,:)=[floor(min(fun(:,3))),ceil(max(fun(:,3)))];
 
-limY(2,:)=[min([limY(1,:),limY(2,:)]),max([limY(1,:),limY(2,:)])];
+% limY(2,:)=[min([limY(1,:),limY(2,:)]),max([limY(1,:),limY(2,:)])];
 
 
-textLimY=ones(3,5);
-
-for i=1:3
-    textLimY(i,:)=(limY(i,2)+abs(limY(i,2)).*0.1)*ones(5,1);
-end
-
-limY(:,2)=(limY(:,2)+1)+abs(limY(:,2)+1).*0.25;
-% limY(3,2)=limY(3,2)+1;
-
-% textLimY=ones(3,4);
-
+% textLimY=ones(3,5);
+% 
 % for i=1:3
-%     textLimY(i,:)=(limY(i,2)+abs(limY(i,2)).*0.1)*ones(4,1);
+%     textLimY(i,:)=(limY(i,2)+abs(limY(i,2)).*0.1)*ones(5,1);
 % end
 % 
 % limY(:,2)=(limY(:,2)+1)+abs(limY(:,2)+1).*0.25;
 % limY(3,2)=limY(3,2)+1;
 
+textLimY=ones(3,4);
+
+for i=1:3
+    textLimY(i,:)=(limY(i,2)+abs(limY(i,2)).*0.1)*ones(4,1);
+end
+
+limY(:,2)=(limY(:,2)+1)+abs(limY(:,2)+1).*0.25;
+limY(3,2)=limY(3,2)+10;
+
 % textLimY(1,:)=(limY(1,2)+abs(limY(1,2)).*0.1)*ones(4,1);
 % textLimY(2,:)=(limY(2,2)+abs(limY(2,2)).*0.1)*ones(4,1);
-% textLimY(3,:)=(40)*ones(4,1);
-% 
+textLimY(3,:)=(40)*ones(4,1);
+
 % limY(1,2)=(limY(1,2)+1)+abs(limY(1,2)+1).*0.25;
 % limY(2,2)=(limY(2,2)+1)+abs(limY(2,2)+1).*0.25;
 % limY(3,2)=(limY(3,2)+10)+abs(limY(3,2)+10).*0.25;
@@ -106,7 +106,7 @@ limY(:,2)=(limY(:,2)+1)+abs(limY(:,2)+1).*0.25;
 f=figure;
 subplot(3,1,1)
 plot(t,fun(:,1),LineWidth=1,color="r")
-title("Acceleration",FontName=font)
+title("Angular Velocity",FontName=font)
 subtitle(axs(1),FontName=font)
 xlabel(xlbl,FontName=font)
 ylabel(ylbl,FontName=font)
@@ -116,8 +116,8 @@ hold on
 for j=1:length(linee)
     line(linee(j)*[1,1],limY(1,:), 'Color','black')
 end
-text(linee(:)+0.5*[1,1,1,1/2,1]',textLimY(1,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
-% text(linee(:)+0.5*[1,1,1,1]',textLimY(1,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
+% text(linee(:)+0.5*[1,1,1,1/2,1]',textLimY(1,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
+text(linee(:)+0.5*[1,1,1,1]',textLimY(1,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
 
 subplot(3,1,2)
 plot(t,fun(:,2),LineWidth=1,color="g")
@@ -130,8 +130,8 @@ hold on
 for j=1:length(linee)
     line(linee(j)*[1,1],limY(2,:), 'Color','black')
 end
-text(linee(:)+0.5*[1,1,1,1/2,1]',textLimY(2,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
-% text(linee(:)+0.5*[1,1,1,1]',textLimY(2,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
+% text(linee(:)+0.5*[1,1,1,1/2,1]',textLimY(2,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
+text(linee(:)+0.5*[1,1,1,1]',textLimY(2,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
 
 subplot(3,1,3)
 plot(t,fun(:,3),LineWidth=1,color="b")
@@ -144,9 +144,9 @@ hold on
 for j=1:length(linee)
     line(linee(j)*[1,1],limY(3,:), 'Color','black')
 end
-text(linee(:)+0.5*[1,1,1,1/2,1]',textLimY(3,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
-% text(linee(:)+0.5*[1,1,1,1]',textLimY(3,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
+% text(linee(:)+0.5*[1,1,1,1/2,1]',textLimY(3,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
+text(linee(:)+0.5*[1,1,1,1]',textLimY(3,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
 
-exportgraphics(f,"..\Relazione\4_Dati\img\"+"Acc LungaF"+".pdf","ContentType","vector")
+exportgraphics(f,"..\Relazione\4_Dati\img\"+"VAng CurvaUF"+".pdf","ContentType","vector")
 
 

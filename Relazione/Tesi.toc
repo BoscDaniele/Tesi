@@ -1,22 +1,22 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduzione}{1}{section.1}%
-\contentsline {section}{\numberline {2}Stato dell'Arte}{1}{section.2}%
-\contentsline {section}{\numberline {3}Fisica della Bicicletta}{2}{section.3}%
+\contentsline {section}{\numberline {2}Stato dell'Arte}{2}{section.2}%
+\contentsline {section}{\numberline {3}Fisica della Bicicletta}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Dinamica Longitudinale}{3}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Dinamica Laterale}{6}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Il Sistema}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Il Sensore}{7}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Raccolta Dati}{9}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Gli Esperimenti}{9}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Dati Raccolti}{12}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Accelerazione}{12}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Frenata}{14}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Curva}{14}{subsubsection.5.2.3}%
-\contentsline {section}{\numberline {6}Indicatori}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Accelerazione e Frenata}{19}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Curva}{25}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Utilizzo degli Indicatori}{31}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Sviluppi Futuri}{36}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Ulteriori Rilievi}{36}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Utilizzo degli Indicatori}{37}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Conclusioni}{37}{section.8}%
+\contentsline {section}{\numberline {4}Il Sistema}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Il Sensore}{9}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Raccolta Dati}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Gli Esperimenti}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Dati Raccolti}{15}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Accelerazione}{15}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Frenata}{17}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Curva}{17}{subsubsection.5.2.3}%
+\contentsline {section}{\numberline {6}Indicatori}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Accelerazione e Frenata}{24}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Curva}{30}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Utilizzo degli Indicatori}{35}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Sviluppi Futuri}{41}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Ulteriori Rilievi}{41}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Utilizzo degli Indicatori}{42}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Conclusioni}{43}{section.8}%

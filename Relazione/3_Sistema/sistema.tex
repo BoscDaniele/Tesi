@@ -29,11 +29,11 @@
 	
 	Questo sensore è dotato di
 	\begin{itemize}
-		\item Accelerometro: misura in \(mg\) l'accelerazione lungo gli assi x,y e z
-		\item Giroscopio: misura in \(mdps\) la velocità angolare attorno agli angoli di rollio (\(roll\)), beccheggio (\(pitch\)) e imbardata (\(yaw\))
-		\item Magnetometro: misura in \(mG\) (\(milli Gauss\)) l'intensità del campo magnetico, può essere utilizzato per determinare l'orientamento
-		\item Barometro: misura la pressione atmosferica
-		\item Termometro: misura la temperatura
+		\item Accelerometro: misura in \(mg\) (millesimi dell'accelerazione gravitazionale) l'accelerazione lungo gli assi x,y e z. Successivamente convertita in \(m/s^2\)
+		\item Giroscopio: misura in \(mdps\) la velocità angolare attorno agli angoli di rollio (\(roll\)), beccheggio (\(pitch\)) e imbardata (\(yaw\)). Convertita, in seguito, in \(dps\)
+		\item Magnetometro: misura in \(mG\) (\(milli Gauss\)) l'intensità del campo magnetico, può essere utilizzato per determinare l'orientamento. Convertita in \(\mu T\)
+		\item Barometro: misura la pressione atmosferica in \(mBar\)
+		\item Termometro: misura la temperatura in gradi \(^{\circ}C\)
 		\item Microfono
 	\end{itemize}
 	
@@ -43,9 +43,16 @@
 	
 	\begin{center}
 		\begin{figure}[h!]
-			\centering\includegraphics[width=.5\textwidth]{img/axis}
-			\caption[]{Bicicletta con il sistema di riferimento usato}
-			\label{fig:axis}
+			\begin{subfigure}[h]{.5\textwidth}
+				\centering\includegraphics[width=.9\textwidth]{img/axis}
+				\caption[]{Bicicletta con il sistema di riferimento usato}
+				\label{fig:axes}
+			\end{subfigure}
+			\begin{subfigure}[h]{.5\textwidth}
+				\centering\includegraphics[width=.7\textwidth]{img/SensorAxes}
+				\caption[]{Il sensore, con il suo sistema di riferimento, montato sulla bicicletta}
+				\label{fig:SensorAxes}
+			\end{subfigure}
 		\end{figure}
 	\end{center}
 	

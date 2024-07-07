@@ -51,19 +51,19 @@ linee(4)=28;
 
 str={'Accelerate 1','Turning','Accelerate 2','Brake'};
 
-fun=vang;
+fun=mag;
 
 % axs={"X","Y","Z"};
 % xlbl="t(s)";
-% ylbl="Acc. (m/s^2)";
+% ylbl="Acc(m/s^2)";
 
-axs={"Roll","Pitch","Yaw"};
+% axs={"Roll","Pitch","Yaw"};
+% xlbl="t(s)";
+% ylbl="VAng(deg/s)";
+
+axs={"X","Y","Z"};
 xlbl="t(s)";
-ylbl="V. Ang. (deg/s)";
-
-% axs={"X","Y","Z"};
-% xlbl="t(s)";
-% ylbl="Mag. Field (µT)";
+ylbl="Mag(µT)";
 
 
 
@@ -91,11 +91,11 @@ for i=1:3
 end
 
 limY(:,2)=(limY(:,2)+1)+abs(limY(:,2)+1).*0.25;
-limY(3,2)=limY(3,2)+10;
+limY(3,2)=limY(3,2)+1;
 
 % textLimY(1,:)=(limY(1,2)+abs(limY(1,2)).*0.1)*ones(4,1);
 % textLimY(2,:)=(limY(2,2)+abs(limY(2,2)).*0.1)*ones(4,1);
-textLimY(3,:)=(40)*ones(4,1);
+% textLimY(3,:)=(40)*ones(4,1);
 
 % limY(1,2)=(limY(1,2)+1)+abs(limY(1,2)+1).*0.25;
 % limY(2,2)=(limY(2,2)+1)+abs(limY(2,2)+1).*0.25;
@@ -106,7 +106,7 @@ textLimY(3,:)=(40)*ones(4,1);
 f=figure;
 subplot(3,1,1)
 plot(t,fun(:,1),LineWidth=1,color="r")
-title("Angular Velocity",FontName=font)
+title("Magnetic Field",FontName=font)
 subtitle(axs(1),FontName=font)
 xlabel(xlbl,FontName=font)
 ylabel(ylbl,FontName=font)
@@ -147,6 +147,7 @@ end
 % text(linee(:)+0.5*[1,1,1,1/2,1]',textLimY(3,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
 text(linee(:)+0.5*[1,1,1,1]',textLimY(3,:),str,FontSize=6.5, FontWeight="bold",FontName=font)
 
-exportgraphics(f,"..\Relazione\4_Dati\img\"+"VAng CurvaUF"+".pdf","ContentType","vector")
+% exportgraphics(f,"..\Relazione\4_Dati\img\"+"VAng CurvaUF"+".pdf","ContentType","vector")
+exportgraphics(f,"..\Presentazione\img\curvaU\"+"Mag"+".jpeg",Resolution=600)
 
 

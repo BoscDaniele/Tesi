@@ -58,8 +58,8 @@ for f=1:length(fun)
     funzioneF=fun{f}{2};
     axes=fun_axes{f};
 
-    % %% Parametro
-    % stampa(tP,tF,funzioneP,funzioneF,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
+    %% Parametro
+    stampa(tP,tF,funzioneP,funzioneF,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
 
 
     % %% LowPass
@@ -349,7 +349,8 @@ for i=2:2:2*n
     end
 end
 
-exportgraphics(f,"..\Relazione\5_Indicatori\img\curvaUFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+% exportgraphics(f,"..\Relazione\5_Indicatori\img\curvaUFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+exportgraphics(f,"..\Presentazione\img\curvaUFP\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 
@@ -409,7 +410,8 @@ for i=2:2:2*n
     end
 end
 
-exportgraphics(f,"..\Relazione\5_Indicatori\img\curvaUFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+% exportgraphics(f,"..\Relazione\5_Indicatori\img\curvaUFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+exportgraphics(f,"..\Presentazione\img\curvaUFP\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 

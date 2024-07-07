@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{preambolo}
+
+\begin{document}
+	\section{Introduzione}
+	\section{Cos'è un indicatore}
+	Un indicatore è una misura sintetica in grado di riassumere l'andamento del fenomeno a cui è riferito.
+	
+	Nel corso di questa tesi andrò ad analizzare quegli indicatori in grado di valutare l'intensità con la quale il ciclista affronta le fasi di accelerazione, curva e frenata.
+	
+	\section{Il Sistema 1}
+	Per raccogliere i dati necessari, un sensore è stato montato su una bicicletta. Questo sensore è il Blue Coin della ST Microeletronics che è dotato di:
+	\begin{itemize}
+		\item Accelerometro, per le misure di accelerazione
+		\item Giroscopio, per le velocità angolari
+		\item Magnetometro, per il campo magnetico
+		\item Barometro, per misurare la pressione
+		\item Termometro, per la temperatura
+		\item e Microfono.
+	\end{itemize}
+	
+	Di questi solo Accelerometro, Giroscopio e Magnetometro sono stati utilizzati.
+	La velocità della bicicletta, invece, è stata ottenuta mediante integrazione dei dati di accelerazione.
+	
+	\section{Il Sistema 2}
+	Durante questa tesi è stato utilizzato il sistema di riferimento NED ovvero North, East, Down. Gli assi sono quindi disposti nel seguente ordine: la x di fronte al ciclista, la y alla sua destra e la z sotto di lui.
+	
+	Il sensore è stato montato nella zona sotto al manubrio. In quel punto, però, il telaio è inclinato rispetto all'orizzontale. All'inizio di ogni fase di raccolta dati è stato quindi necessario calcolare la matrice di rotazione che consenta di far coincidere il sistema di riferimento del sensore con quello della bicicletta.
+	
+	\section{Fisica della Bicicletta 1: Dinamica Longitudinale}
+	Per meglio comprendere le slide successive andremo ora ad accennare ai principali fenomeni fisici che riguardano il moto della bicicletta.
+	
+	Partiamo con la dinamica longitudinale.
+	
+	Per semplicità supponiamo che l'accelerazione della bicicletta sia nulla e che proceda, quindi, a velocità costante.
+	
+	Abbiamo quindi che la potenza in ingresso moltiplicata per il rapporto di trasmissione è pari alla potenza resistente.
+	
+	La potenza in ingresso è pari alla velocità di rotazione delle pedivelle moltiplicata per la componente perpendicolare alle stesse della forza con la quale il ciclista pedala. La forza dipende quindi dall'inclinazione del piede che cambia in funzione della posizione delle pedivelle. L'accelerazione della bicicletta risulta quindi essere oscillante.
+	
+	La potenza resistente, invece, dipende dall'attrito dell'aria, che a sua volta dipende dalla velocità del vento e della bicicletta; dalla forza d'attrito volvente e dalla forza causata dalla pendenza della strada percorsa. Tutte queste moltiplicate per la velocità della bicicletta. Abbiamo quindi che, maggiore è la velocità, più è difficile mantenerla o accelerare.
+	
+	\section{Fisica della Bicicletta 2: Dinamica Laterale}
+	Passiamo ora alla dinamica laterale.
+	
+	Questa si occupa delle forze e dei momenti che agiscono sulla bicicletta durante i movimenti laterali, in particolare le curve.
+	
+	Durante le curve entrano in gioco le seguenti forza:
+	\begin{itemize}
+		\item la forza di attrito laterale, che è la forza d'attrito tra gli pneumatici e il terreno
+		\item la forza centripeta, che agisce dall'esterno verso l'interno e che consente di mantenere la traiettoria durante la curva
+		\item la forza centrifuga, che è di modulo pari alla forza centripeta ma di verso opposto.
+	\end{itemize}
+	
+	In particolare la forza centrifuga è applicata al centro di massa del sistema \(ciclista + bicicletta\) e tende a farlo ruotare. Per evitare di cadere, il ciclista, è quindi costretto a inclinarsi.
+	
+	Infine, è importante considerare che, durante il moto, la bicicletta tende a oscillare per effetto della pedalata e che, per mantenere l'equilibrio, il ciclista deve continuare a sterzare.
+	
+	\section{Raccolta Dati}
+	
+\end{document}

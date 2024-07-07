@@ -58,8 +58,8 @@ for f=1:length(fun)
     funzioneCurvaU=fun{f}{2};
     axes=fun_axes{f};
 
-    % %% Parametro
-    % stampa(tLunga,tCurvaU,funzioneLunga,funzioneCurvaU,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
+    %% Parametro
+    stampa(tLunga,tCurvaU,funzioneLunga,funzioneCurvaU,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
 
 
     % %% LowPass
@@ -351,7 +351,8 @@ for i=2:2:2*n
     end
 end
 
-exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurvaU\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+% exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurvaU\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+exportgraphics(f,"..\Presentazione\img\LungaCurvaU\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 
@@ -411,7 +412,8 @@ for i=2:2:2*n
     end
 end
 
-exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurvaU\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+% exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurvaU\"+fun_str+"\"+tit+".pdf",ContentType="vector")
+exportgraphics(f,"..\Presentazione\img\LungaCurvaU\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 

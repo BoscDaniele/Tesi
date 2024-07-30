@@ -2,19 +2,23 @@ clear all
 close all
 clc
 
-pathCurvaU=".\dati\curvaU_forte\";
-pathLunga=".\dati\lunga_forte\";
+%% Questo script è stato utilizzato per stampare le immagini di confronto dei vari parametri quando la bicicletta percorreva un percorso rettilineo e con curva a U
+
+pathCurvaU=".\dati\curvaU_forte\"; % Cartella dalla quale vengono estratti i dati Percorso Curva U
+pathLunga=".\dati\lunga_forte\"; % Cartella dalla quale vengono estratti i dati Percorso Rettilineo
+
+rilievoCurvaU=4; % n° del rilievo di cui stampare i dati Percorso Curva U
+rilievoLunga=2; % n° del rilievo di cui stampare i dati Percorso Rettilineo
 
 sr=25; % sample rate
 
-rilievoCurvaU=4;
-rilievoLunga=2;
-
-%% CurvaU
-[gzRotCurvaU,gMedioCurvaU] = GZRot(pathCurvaU);
+%% import dati CurvaU
+[gzRotCurvaU,gMedioCurvaU] = GZRot(pathCurvaU); % Calcolo della matrice di rotazione e della gravità
 
 dbCurvaU=importdata(pathCurvaU + "BlueCoin_Log_N00"+rilievoCurvaU+".csv").data;
 
+% estrazione dei dati i parametri_rotta sono quei parametri di cui non è
+% ancora stata "aggiustata" la frequenza.
 tCurvaU_rotta=dbCurvaU(:,1)*1e-3;
 tCurvaU_rotta=tCurvaU_rotta-tCurvaU_rotta(1);
 
@@ -22,15 +26,17 @@ accCurvaU_rotta=dbCurvaU(:,2:4)*gzRotCurvaU*9.81/-gMedioCurvaU;
 vangCurvaU_rotta=(dbCurvaU(:,5:7)*1e-3);
 magCurvaU_rotta=([dbCurvaU(:,8),-dbCurvaU(:,9),dbCurvaU(:,10)]*1e-1)*gzRotCurvaU;
 
-[tCurvaU,accCurvaU,vangCurvaU,magCurvaU]=AggiustaFrequenza(tCurvaU_rotta,accCurvaU_rotta,vangCurvaU_rotta,magCurvaU_rotta);
+[tCurvaU,accCurvaU,vangCurvaU,magCurvaU]=AggiustaFrequenza(tCurvaU_rotta,accCurvaU_rotta,vangCurvaU_rotta,magCurvaU_rotta); % Funzione che "aggiusta" la frequenza dei parametri
 velCurvaU=cumsum(accCurvaU)*0.04;
 
 
-%% Lunga
-[gzRotLunga,gMedioLunga] = GZRot(pathLunga);
+%% import dati Lunga
+[gzRotLunga,gMedioLunga] = GZRot(pathLunga); % Calcolo della matrice di rotazione e della gravità
 
 dbLunga=importdata(pathLunga + "BlueCoin_Log_N00"+rilievoLunga+".csv").data;
 
+% estrazione dei dati i parametri_rotta sono quei parametri di cui non è
+% ancora stata "aggiustata" la frequenza.
 tLunga_rotta=dbLunga(:,1)*1e-3;
 tLunga_rotta=tLunga_rotta-tLunga_rotta(1);
 
@@ -38,7 +44,7 @@ accLunga_rotta=dbLunga(:,2:4)*gzRotLunga*9.81/-gMedioLunga;
 vangLunga_rotta=(dbLunga(:,5:7)*1e-3);
 magLunga_rotta=([dbLunga(:,8),-dbLunga(:,9),dbLunga(:,10)]*1e-1)*gzRotLunga;
 
-[tLunga,accLunga,vangLunga,magLunga]=AggiustaFrequenza(tLunga_rotta,accLunga_rotta,vangLunga_rotta,magLunga_rotta);
+[tLunga,accLunga,vangLunga,magLunga]=AggiustaFrequenza(tLunga_rotta,accLunga_rotta,vangLunga_rotta,magLunga_rotta); % Funzione che "aggiusta" la frequenza dei parametri
 velLunga=cumsum(accLunga)*0.04;
 
 %% Fun
@@ -48,7 +54,6 @@ mag={magLunga,magCurvaU};
 vel={velLunga,velCurvaU};
 
 fun={acc,vang,mag,vel};
-% fun={acc,vang,mag};
 fun_str=["Acc","VAng","Mag","Vel"];
 fun_axes={["X","Y","Z"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y","Z"]};
 fun_units=["m/s^2","deg/s","µT","m/s"];
@@ -92,10 +97,10 @@ for f=1:length(fun)
     stampa(tLunga,tCurvaU,funP_std,funF_std,fun_str(f),axes,"Deviazione Standard",'t(s)',fun_units(f))
 
 
-    %% Media Quadratica
+    %% Valore Efficace (radice della media dei quadrati)
     funP_rms=movrms(funzioneLunga,40);
     funF_rms=movrms(funzioneCurvaU,40);
-    stampa(tLunga,tCurvaU,funP_rms,funF_rms,fun_str(f),axes,"Media Quadratica",'t(s)',fun_units(f))
+    stampa(tLunga,tCurvaU,funP_rms,funF_rms,fun_str(f),axes,"Valore Efficace",'t(s)',fun_units(f))
 
 
     % %% Kurtosi
@@ -230,13 +235,14 @@ for f=1:length(fun)
     % 
     % stampa_freqParam(entropiaP,entropiaF,axes,fun_str(f),"Spectral Entropy")
 
-    close all
+    % close all
 end
 
 
 
 
 %% Funzioni
+% funzione per calcolare il Valore Efficace (radice della media dei quadrati)
 function[sqm] = movrms(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -249,6 +255,7 @@ end
 
 end
 
+% funzione per calcolare la kurtosis mobile
 function[kurt] = movkurt(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -261,6 +268,7 @@ end
 
 end
 
+% funzione per calcolare la skewness mobile
 function[skew] = movskw(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -352,7 +360,7 @@ for i=2:2:2*n
 end
 
 % exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurvaU\"+fun_str+"\"+tit+".pdf",ContentType="vector")
-exportgraphics(f,"..\Presentazione\img\LungaCurvaU\"+fun_str+"\"+tit+".jpeg",Resolution=600)
+% exportgraphics(f,"..\Presentazione\img\LungaCurvaU\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 
@@ -413,7 +421,7 @@ for i=2:2:2*n
 end
 
 % exportgraphics(f,"..\Relazione\5_Indicatori\img\LungaCurvaU\"+fun_str+"\"+tit+".pdf",ContentType="vector")
-exportgraphics(f,"..\Presentazione\img\LungaCurvaU\"+fun_str+"\"+tit+".jpeg",Resolution=600)
+% exportgraphics(f,"..\Presentazione\img\LungaCurvaU\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 
@@ -430,7 +438,7 @@ for i=1:length(fun_axes)
     plot(1:100,paramF(i)*ones(100,1),LineWidth=1,DisplayName=tit+" Curva U");
 
     legend
-    exportgraphics(f,"..\slide\lunga_curvaU\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
+    % exportgraphics(f,"..\slide\lunga_curvaU\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 end
 
 end
@@ -449,7 +457,7 @@ for i=1:length(fun_axes)
     plot(paramF(i)*ones(100,1),0:99,LineWidth=1,DisplayName=tit+" Curva U")
 
     legend
-    exportgraphics(f,"..\slide\lunga_curvaU\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
+    % exportgraphics(f,"..\slide\lunga_curvaU\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 
 end
 

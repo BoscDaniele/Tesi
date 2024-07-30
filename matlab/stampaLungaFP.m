@@ -2,19 +2,24 @@ clear all
 close all
 clc
 
-pathF=".\dati\lunga_forte\";
-pathP=".\dati\lunga_piano\";
+%% Questo script è stato utilizzato per stampare le immagini di confronto dello stile di guida dei vari parametri
+% quando la bicicletta percorreva un percorso rettilineo
+
+pathF=".\dati\lunga_forte\"; % Cartella dalla quale vengono estratti i dati Stile di guida aggressivo
+pathP=".\dati\lunga_piano\"; % Cartella dalla quale vengono estratti i dati Stile di guida tranquillo
+
+rilievoF=2; % n° del rilievo di cui stampare i dati Stile di guida aggressivo
+rilievoP=3; % n° del rilievo di cui stampare i dati Stile di guida tranquillo
 
 sr=25; % sample rate
 
-rilievoF=2;
-rilievoP=3;
-
-%% Forte
-[gzRotF,gMedioF] = GZRot(pathF);
+%% import dati Forte
+[gzRotF,gMedioF] = GZRot(pathF); % Calcolo della matrice di rotazione e della gravità
 
 dbF=importdata(pathF + "BlueCoin_Log_N00"+rilievoF+".csv").data;
 
+% estrazione dei dati i parametri_rotta sono quei parametri di cui non è
+% ancora stata "aggiustata" la frequenza.
 tF_rotta=dbF(:,1)*1e-3;
 tF_rotta=tF_rotta-tF_rotta(1);
 
@@ -22,16 +27,18 @@ accF_rotta=dbF(:,2:4)*gzRotF*9.81/-gMedioF;
 vangF_rotta=(dbF(:,5:7)*1e-3);
 magF_rotta=([dbF(:,8),-dbF(:,9),dbF(:,10)]*1e-1)*gzRotF;
 
-[tF,accF,vangF,magF]=AggiustaFrequenza(tF_rotta,accF_rotta,vangF_rotta,magF_rotta);
+[tF,accF,vangF,magF]=AggiustaFrequenza(tF_rotta,accF_rotta,vangF_rotta,magF_rotta); % Funzione che "aggiusta" la frequenza dei parametri
 velF=cumsum(accF)*0.04;
 angF=cumsum(vangF)*0.04;
 
 
-%% Piano
-[gzRotP,gMedioP] = GZRot(pathP);
+%% import dati Piano
+[gzRotP,gMedioP] = GZRot(pathP); % Calcolo della matrice di rotazione e della gravità
 
 dbP=importdata(pathP + "BlueCoin_Log_N00"+rilievoP+".csv").data;
 
+% estrazione dei dati i parametri_rotta sono quei parametri di cui non è
+% ancora stata "aggiustata" la frequenza.
 tP_rotta=dbP(:,1)*1e-3;
 tP_rotta=tP_rotta-tP_rotta(1);
 
@@ -39,7 +46,7 @@ accP_rotta=dbP(:,2:4)*gzRotP*9.81/-gMedioP;
 vangP_rotta=(dbP(:,5:7)*1e-3);
 magP_rotta=([dbP(:,8),-dbP(:,9),dbP(:,10)]*1e-1)*gzRotP;
 
-[tP,accP,vangP,magP]=AggiustaFrequenza(tP_rotta,accP_rotta,vangP_rotta,magP_rotta);
+[tP,accP,vangP,magP]=AggiustaFrequenza(tP_rotta,accP_rotta,vangP_rotta,magP_rotta); % Funzione che "aggiusta" la frequenza dei parametri
 velP=cumsum(accP)*0.04;
 angP=cumsum(vangP)*0.04;
 
@@ -48,9 +55,7 @@ acc={accP,accF};
 vang={vangP,vangF};
 mag={magP,magF};
 vel={velP,velF};
-ang={angP,angF};
 
-% fun={acc,vang,mag,vel,ang};
 fun={acc,vang,mag,vel};
 fun_str=["Acc","VAng","Mag","Vel"];
 fun_axes={["X","Y","Z"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y","Z"]};
@@ -95,10 +100,10 @@ for f=1:length(fun)
     stampa(tP,tF,funP_std,funF_std,fun_str(f),axes,"Deviazione Standard",'t(s)',fun_units(f))
 
 
-    %% Media Quadratica
+    %% Valore Efficace (radice della media dei quadrati)
     funP_rms=movrms(funzioneP,40);
     funF_rms=movrms(funzioneF,40);
-    stampa(tP,tF,funP_rms,funF_rms,fun_str(f),axes,"Media Quadratica",'t(s)',fun_units(f))
+    stampa(tP,tF,funP_rms,funF_rms,fun_str(f),axes,"Valore Efficace",'t(s)',fun_units(f))
 
 
     % %% Kurtosi
@@ -233,13 +238,14 @@ for f=1:length(fun)
     % 
     % stampa_freqParam(entropiaP,entropiaF,axes,fun_str(f),"Spectral Entropy")
 
-    close all
+    % close all
 end
 
 
 
 
 %% Funzioni
+% funzione per calcolare il Valore Efficace (radice della media dei quadrati)
 function[sqm] = movrms(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -252,6 +258,7 @@ end
 
 end
 
+% funzione per calcolare la kurtosis mobile
 function[kurt] = movkurt(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -264,6 +271,7 @@ end
 
 end
 
+% funzione per calcolare la skewness mobile
 function[skew] = movskw(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -345,7 +353,7 @@ for i=2:2:2*n
 end
 
 % exportgraphics(f,"..\Relazione\5_Indicatori\img\lungaFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
-exportgraphics(f,"..\Presentazione\img\lungaFP\"+fun_str+"\"+tit+".jpeg",Resolution=600)
+% exportgraphics(f,"..\Presentazione\img\lungaFP\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 
@@ -402,7 +410,7 @@ for i=2:2:2*n
 end
 
 % exportgraphics(f,"..\Relazione\5_Indicatori\img\lungaFP\"+fun_str+"\"+tit+".pdf",ContentType="vector")
-exportgraphics(f,"..\Presentazione\img\lungaFP\"+fun_str+"\"+tit+".jpeg",Resolution=600)
+% exportgraphics(f,"..\Presentazione\img\lungaFP\"+fun_str+"\"+tit+".jpeg",Resolution=600)
 
 end
 
@@ -419,7 +427,7 @@ for i=1:length(fun_axes)
     plot(1:100,paramF(i)*ones(100,1),LineWidth=1,DisplayName=tit+" Forte");
 
     legend
-    exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
+    % exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 end
 
 end
@@ -438,7 +446,7 @@ for i=1:length(fun_axes)
     plot(paramF(i)*ones(100,1),0:99,LineWidth=1,DisplayName=tit+" Forte")
 
     legend
-    exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
+    % exportgraphics(f,"..\slide\lungaFP\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(i)+".png")
 
 end
 

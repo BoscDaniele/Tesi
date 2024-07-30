@@ -2,18 +2,23 @@ clear all
 close all
 clc
 
-path=".\dati\lunga_forte\";
-rilievo=2;
+%% Questo script è stato utilizzato per stampare le immagini dei vari parametri quando la bicicletta percorreva un percorso rettilineo
 
-% path=".\db\secchia\";
-% rilievo=3;
+% Le fasi Accelerate|Idle|ecc.. si riferiscono al 2° rilievo dei dati
+% presenti nella cartella lunga_forte
+
+path=".\dati\lunga_forte\"; % Cartella dalla quale vengono estratti i dati
+rilievo=2; % n° del rilievo di cui stampare i dati
 
 sr=25; % sample rate
 
-[gzRot,gMedio] = GZRot(path);
+[gzRot,gMedio] = GZRot(path); % Calcolo della matrice di rotazione e della gravità
 
+%% import dati
 db=importdata(path + "BlueCoin_Log_N00"+rilievo+".csv").data;
 
+% estrazione dei dati i parametri_rotta sono quei parametri di cui non è
+% ancora stata "aggiustata" la frequenza.
 t_rotta=db(:,1)*1e-3;
 t_rotta=t_rotta-t_rotta(1);
 
@@ -21,14 +26,14 @@ acc_rotta=db(:,2:4)*gzRot*9.81/-gMedio;
 vang_rotta=(db(:,5:7)*1e-3);
 mag_rotta=([db(:,8),-db(:,9),db(:,10)]*1e-1)*gzRot;
 
-[t,acc,vang,mag]=AggiustaFrequenza(t_rotta,acc_rotta,vang_rotta,mag_rotta);
+[t,acc,vang,mag]=AggiustaFrequenza(t_rotta,acc_rotta,vang_rotta,mag_rotta); % Funzione che "aggiusta" la frequenza dei parametri
 vel=cumsum(acc)*0.04;
 
+
+%% 
 fun={acc,vang,mag,vel};
-% fun={acc};
 fun_str=["Acc","VAng","Mag","Vel"];
 fun_axes={["X","Y","Z"],["Roll","Pitch","Yaw"],["X","Y","Z"],["X","Y","Z"]};
-% fun_axes={["X","Y","Z"]};
 fun_units=["m/s^2","deg/s","µT","m/s"];
 
 for f=1:length(fun)
@@ -36,16 +41,16 @@ for f=1:length(fun)
     axes=fun_axes{f};
 
     %% Parametro
-    % stampa(t,funzione,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
+    stampa(t,funzione,fun_str(f),axes,fun_str(f),'t(s)',fun_units(f))
 
     % %% LowPass
     % fun_low=lowpass(funzione,0.5,25);
     % stampa(t,fun_low,fun_str(f),axes,"LowPass",'t(s)',fun_units(f))
 
 
-    % %% Media
-    % fun_media=movmean(funzione,40);
-    % stampa(t,fun_media,fun_str(f),axes,"Media",'t(s)',fun_units(f))
+    %% Media
+    fun_media=movmean(funzione,40);
+    stampa(t,fun_media,fun_str(f),axes,"Media",'t(s)',fun_units(f))
 
 
     % %% Valore Medio Rettificato
@@ -58,14 +63,14 @@ for f=1:length(fun)
     stampa(t,fun_var,fun_str(f),axes,"Varianza",'t(s)',fun_units(f))
 
 
-    % %% Deviazione Standard
-    % fun_std=movstd(funzione,40);
-    % stampa(t,fun_std,fun_str(f),axes,"Deviazione Standard",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Scarto Quadratico Medio
+    %% Deviazione Standard
+    fun_std=movstd(funzione,40);
+    stampa(t,fun_std,fun_str(f),axes,"Deviazione Standard",'t(s)',fun_units(f))
+
+
+    % %% Valore Efficace (radice della media dei quadrati)
     % fun_rms=movrms(funzione,40);
-    % stampa(t,fun_rms,fun_str(f),axes,"Scarto Quadratico Medio",'t(s)',fun_units(f))
+    % stampa(t,fun_rms,fun_str(f),axes,"Valore Efficace",'t(s)',fun_units(f))
     % 
     % 
     % %% Kurtosi
@@ -76,14 +81,14 @@ for f=1:length(fun)
     % %% Skewness
     % fun_skw=movskw(funzione,40);
     % stampa(t,fun_skw,fun_str(f),axes,"Skewness",'t(s)',fun_units(f))
-    % 
-    % 
-    % %% Max
-    % n_max=10;
-    % fun_max=movmax(funzione,n_max);
-    % stampa(t,fun_max,fun_str(f),axes,"Max",'t(s)',fun_units(f))
-    % 
-    % 
+
+
+    %% Max
+    n_max=10;
+    fun_max=movmax(funzione,n_max);
+    stampa(t,fun_max,fun_str(f),axes,"Max",'t(s)',fun_units(f))
+
+
     % %% Min
     % n_min=10;
     % fun_min=movmin(funzione,n_min);
@@ -102,17 +107,17 @@ for f=1:length(fun)
     % limY(:,2)=(limY(:,2)+1).*1.25;
     % 
     % stampa_gen(t,fun_min,fun_str(f),axes,"Min",'t(s)',fun_units(f),limY,textLimY)
-    % 
-    % 
-    % %% Peak
-    % n_Peak=10;
-    % fun_max=movmax(funzione,n_Peak);
-    % fun_min=movmin(funzione,n_Peak);
-    % 
-    % fun_peak=fun_max-fun_min;
-    % stampa(t,fun_peak,fun_str(f),axes,"Peak",'t(s)',fun_units(f))
-    % 
-    % 
+
+
+    %% Peak
+    n_Peak=10;
+    fun_max=movmax(funzione,n_Peak);
+    fun_min=movmin(funzione,n_Peak);
+
+    fun_peak=fun_max-fun_min;
+    stampa(t,fun_peak,fun_str(f),axes,"Peak",'t(s)',fun_units(f))
+
+
     % %% Shape Factor
     % fun_rms=movrms(funzione,40);
     % fun_arv=movmean(abs(funzione),40);
@@ -232,6 +237,7 @@ end
 
 
 %% Funzioni
+% funzione per calcolare il Valore Efficace (radice della media dei quadrati)
 function[sqm] = movrms(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -244,6 +250,7 @@ end
 
 end
 
+% funzione per calcolare la kurtosis mobile
 function[kurt] = movkurt(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -256,6 +263,7 @@ end
 
 end
 
+% funzione per calcolare la skewness mobile
 function[skew] = movskw(f,n)
 w=width(f);
 newf=[zeros(n/2,w);f;zeros(n/2,w)];
@@ -334,7 +342,7 @@ for i=1:n
 end
 
 % exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\"+tit+".png")
-exportgraphics(f,"D:\Users\Daniele\Desktop\"+fun_str+"_"+tit+".pdf","ContentType","vector")
+% exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"_"+tit+".pdf","ContentType","vector")
 
 end
 
@@ -362,7 +370,7 @@ for i=1:length(fun_axes)
     end
 end
 
-exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+".png")
+% exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+".png")
 
 end
 
@@ -384,7 +392,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    % exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end
@@ -405,7 +413,7 @@ for j=1:length(fun_axes)
     title(tit+" "+fun_axes(j),FontName=font)
     legend
 
-    exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
+    % exportgraphics(f,"..\slide\lunga\figure\"+fun_str+"\Trasformata\"+tit+fun_axes(j)+".png")
 end
 
 end
